@@ -231,13 +231,16 @@ def list_potential(kind: str = "all") -> str:
 
 @mcp.tool()
 def add_potential_pr(repo: str, issue: int, title: str, lang: str = "",
-                     org: str = "", why: str = "") -> str:
-    """Add a ready-to-pick-up issue to the potential-PRs list."""
+                     org: str = "", why: str = "", type: str = "",
+                     labels: list[str] | None = None) -> str:
+    """Add a ready-to-pick-up issue to the potential-PRs list.
+    type: bug | docs | feature | enhancement | test | fix | chore."""
     d = load()
     d.setdefault("potential_prs", []).append({
         "repo": repo, "issue": issue, "lang": lang, "org": org,
         "url": f"https://github.com/{repo}/issues/{issue}",
-        "title": title, "readiness": "ready", "why": why, "source": "added",
+        "title": title, "readiness": "ready", "type": type,
+        "labels": labels or [], "why": why, "source": "added",
     })
     save(d, updated_by="mcp")
     return f"Added potential PR {repo}#{issue}. (Run `sync` to push.)"
@@ -245,13 +248,16 @@ def add_potential_pr(repo: str, issue: int, title: str, lang: str = "",
 
 @mcp.tool()
 def add_potential_issue(repo: str, issue: int, title: str, lang: str = "",
-                        org: str = "", why: str = "") -> str:
-    """Add an issue to the watchlist (needs vetting before picking up)."""
+                        org: str = "", why: str = "", type: str = "",
+                        labels: list[str] | None = None) -> str:
+    """Add an issue to the watchlist (needs vetting before picking up).
+    type: bug | docs | feature | enhancement | test | fix | chore."""
     d = load()
     d.setdefault("potential_issues", []).append({
         "repo": repo, "issue": issue, "lang": lang, "org": org,
         "url": f"https://github.com/{repo}/issues/{issue}",
-        "title": title, "readiness": "watch", "why": why, "source": "added",
+        "title": title, "readiness": "watch", "type": type,
+        "labels": labels or [], "why": why, "source": "added",
     })
     save(d, updated_by="mcp")
     return f"Added watchlist issue {repo}#{issue}. (Run `sync` to push.)"
@@ -290,6 +296,79 @@ def sync(message: str = "chore: refresh contributions") -> str:
         if r.returncode != 0 and "nothing to commit" not in (r.stdout + r.stderr):
             return "Sync stopped:\n" + "\n".join(log)
     return "Synced:\n" + "\n".join(log)
+
+
+@mcp.tool()
+def people() -> str:
+    """List the maintainers who reviewed your work — who they are, where they work,
+    the strategic connection, and which PRs they touched."""
+    d = load()
+    ppl = d.get("people", {})
+    if not ppl:
+        return "No reviewers tracked yet. Run refresh_people."
+    out = []
+    for login, p in ppl.items():
+        prs = ", ".join(f"#{n}" for n in p.get("reviewed", [])) or "—"
+        out.append(f"{p.get('name', login)}  (@{login}) — {p.get('company') or '—'}"
+                   f"{', ' + p['location'] if p.get('location') else ''}\n"
+                   f"  reviewed: {prs} · {p.get('followers', 0)} followers · {p.get('url')}\n"
+                   f"  connection: {p.get('connection', '')}")
+    return "\n\n".join(out)
+
+
+@mcp.tool()
+def reviewer(login: str) -> str:
+    """Pull live GitHub profile data for one reviewer and show the stored connection +
+    which of your PRs they reviewed."""
+    d = load()
+    stored = d.get("people", {}).get(login, {})
+    try:
+        u = gh_json(["api", f"users/{login}"])
+    except Exception as e:
+        return f"Couldn't fetch @{login}: {e}"
+    prs = ", ".join(f"#{n}" for n in stored.get("reviewed", [])) or "—"
+    return (f"{u.get('name') or login}  (@{login})\n"
+            f"  company:  {u.get('company') or '—'}\n"
+            f"  location: {u.get('location') or '—'}\n"
+            f"  bio:      {u.get('bio') or '—'}\n"
+            f"  blog:     {u.get('blog') or '—'}\n"
+            f"  stats:    {u.get('followers', 0)} followers · {u.get('public_repos', 0)} repos\n"
+            f"  profile:  {u.get('html_url')}\n"
+            f"  reviewed your: {prs}\n"
+            f"  connection: {stored.get('connection', '(none stored — add one in data/contributions.json)')}")
+
+
+@mcp.tool()
+def refresh_people() -> str:
+    """Refresh every reviewer's GitHub profile (name/company/location/blog/followers) and
+    keep the reviewed-PRs list current. Preserves the human-written `connection` note."""
+    d = load()
+    reviewed = {}
+    for c in d["contributions"]:
+        r = c.get("reviewer")
+        if r:
+            reviewed.setdefault(r, []).append(c["id"])
+    ppl = d.setdefault("people", {})
+    notes = []
+    for login, prs in reviewed.items():
+        entry = ppl.setdefault(login, {"login": login, "connection": ""})
+        try:
+            u = gh_json(["api", f"users/{login}"])
+            entry.update({
+                "name": u.get("name") or login,
+                "company": u.get("company") or "",
+                "location": u.get("location"),
+                "blog": u.get("blog") or "",
+                "followers": u.get("followers", 0),
+                "url": u.get("html_url"),
+            })
+            entry["reviewed"] = prs
+            notes.append(f"@{login}: {entry['name']} · {entry['company'] or '—'}"
+                         + ("" if entry.get("connection") else "  ⚠ no connection note"))
+        except Exception as e:
+            notes.append(f"@{login}: ERROR {e}")
+    save(d, updated_by="mcp")
+    return "Refreshed reviewers:\n" + "\n".join(notes) + "\n\n(Run `sync` to push.)"
 
 
 if __name__ == "__main__":

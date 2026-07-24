@@ -114,6 +114,16 @@
   .lang .dot{width:7px;height:7px;border-radius:50%;background:var(--faint);flex:none}
   .kind{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:5px;white-space:nowrap}
   .k-docs{color:var(--awaiting);background:var(--awaiting-bg)} .k-fix{color:var(--ready);background:var(--ready-bg)} .k-feature{color:var(--merged);background:var(--merged-bg)}
+  .tbadge{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:5px;white-space:nowrap;justify-self:end}
+  .d-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 7px}
+  .revbox{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:11px 12px;margin:0 0 14px}
+  .rev-h{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .rev-name{font-weight:600;font-size:13px}
+  .rev-link{font-family:var(--mono);font-size:10.5px;color:var(--accent);text-decoration:none}
+  .rev-co{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:3px}
+  .rev-conn{font-size:12px;color:var(--muted);line-height:1.5;margin-top:8px}
+  .d-labels{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 12px}
+  .lchip{font-family:var(--mono);font-size:9.5px;color:var(--muted);background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:2px 8px}
   .pill{font-family:var(--mono);font-size:10.5px;font-weight:600;padding:4px 9px;border-radius:20px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
   .pill svg{width:11px;height:11px}
   .st-merged{color:var(--merged);background:var(--merged-bg)}.st-review{color:var(--review);background:var(--review-bg)}
@@ -171,40 +181,54 @@ const LANG_COLOR={"C++":"#f34b7d","Python":"#3572A5","Dart":"#00B4AB","SystemVer
 const esc=s=>(s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 const pill=s=>`<span class="pill st-${s}">${ICON[s]||""}${LABEL[s]||s}</span>`;
 const langBadge=l=>`<span class="lang"><span class="dot" style="background:${LANG_COLOR[l]||"var(--faint)"}"></span>${esc(l)}</span>`;
-const kindBadge=k=>k?`<span class="kind k-${esc(k)}">${esc(k)}</span>`:"";
+const TYPE_C={bug:"#d0555f",fix:"#1f9d57",docs:"#2f6fd6",feature:"#7c4ddb",enhancement:"#0b8fa3",test:"#b9770a",chore:"#6b7684",refactor:"#8a6d8b"};
+const typeBadge=t=>{if(!t)return"";const c=TYPE_C[t]||"var(--faint)";return `<span class="tbadge" style="color:${c};background:${c}26">${esc(t)}</span>`;};
+function reviewerBlock(login){
+  if(!login) return "";
+  const pe=(DATA.people||{})[login];
+  if(!pe) return `<div class="revbox"><div class="rev-name">@${esc(login)}</div></div>`;
+  return `<div class="revbox">
+    <div class="rev-h"><span class="rev-name">${esc(pe.name||login)}</span>
+      <a class="rev-link" href="${pe.url}" target="_blank" rel="noopener">@${esc(login)} ↗</a></div>
+    <div class="rev-co">${esc(pe.company||"—")}${pe.location?" · "+esc(pe.location):""} · ${pe.followers||0} followers</div>
+    ${pe.connection?`<div class="rev-conn">${esc(pe.connection)}</div>`:""}
+  </div>`;
+}
 
-/* ---- normalize an item into {key,type,status,proj,id,title,tag,rec} ---- */
-function normContrib(r){return {key:"c"+r.id,type:"c",status:r.status,proj:r.project,id:r.id,title:r.title,tag:r.lang,rec:r};}
-function normLead(p){return {key:"p"+p.repo+p.issue,type:"p",status:p.readiness==="ready"?"ready":"watch",proj:(p.repo.split("/")[1]||p.repo),id:p.issue,title:p.title,tag:p.lang,rec:p};}
+/* ---- normalize an item: type=c|p discriminator, itype=bug|docs|feature… ---- */
+function normContrib(r){return {key:"c"+r.id,type:"c",itype:r.kind,status:r.status,proj:r.project,id:r.id,title:r.title,tag:r.lang,rec:r};}
+function normLead(p){return {key:"p"+p.repo+p.issue,type:"p",itype:p.type,status:p.readiness==="ready"?"ready":"watch",proj:(p.repo.split("/")[1]||p.repo),id:p.issue,title:p.title,tag:p.lang,rec:p};}
 
 function rowHTML(it,sel){
   return `<button class="row${it.key===sel?" sel":""}" data-key="${it.key}">
     <span class="rdot" style="background:${SCOLOR[it.status]}"></span>
     <span class="rid"><b>${esc(it.proj)}</b> #${it.id}</span>
     <span class="rtitle">${esc(it.title)}</span>
-    <span class="rtag">${esc(it.tag)}</span>
+    ${it.itype?typeBadge(it.itype):`<span class="rtag">${esc(it.tag)}</span>`}
   </button>`;
 }
 
 function detailContrib(r){
   return `<div class="d-top"><span class="d-proj">${esc(r.project)} <span class="id">#${r.id}</span></span>${pill(r.status)}</div>
-    <div class="d-badges">${langBadge(r.lang)}${kindBadge(r.kind)}<span class="org">${esc(r.org)}</span></div>
+    <div class="d-badges">${langBadge(r.lang)}${typeBadge(r.kind)}<span class="org">${esc(r.org)}</span></div>
     <p class="d-title">${esc(r.title)}</p>
     ${r.recap?`<p class="d-recap">${esc(r.recap)}</p>`:""}
     <div class="d-meta">
       <div><div class="k">Diff</div><div class="v"><span class="add-t">+${r.additions??0}</span> <span class="del-t">−${r.deletions??0}</span> · ${r.files??0} files</div></div>
       <div><div class="k">Span</div><div class="v">${esc(r.created||"?")}${r.ended?" → "+esc(r.ended):" → …"}</div></div>
-      <div><div class="k">Reviewer</div><div class="v">${esc(r.reviewer||"—")}</div></div>
       <div><div class="k">Next</div><div class="v">${esc(r.next_action||"—")}</div></div>
+      <div><div class="k">Type</div><div class="v">${esc(r.kind||"—")}</div></div>
     </div>
     ${r.latest_comment?`<div class="d-cmt"><b>${esc(r.latest_comment.author)}</b> · ${esc(r.latest_comment.at||"")}<br>${esc(r.latest_comment.body)}</div>`:""}
+    ${r.reviewer?`<div class="d-k">Reviewer connection</div>${reviewerBlock(r.reviewer)}`:""}
     <a class="d-open" href="${r.url}" target="_blank" rel="noopener">Open PR on GitHub ↗</a>`;
 }
 function detailLead(p){
   const st=p.readiness==="ready"?"ready":"watch";
   return `<div class="d-top"><span class="d-proj">${esc(p.repo.split("/")[1]||p.repo)} <span class="id">#${p.issue}</span></span>${pill(st)}</div>
-    <div class="d-badges">${langBadge(p.lang)}<span class="org">${esc(p.org)}</span></div>
+    <div class="d-badges">${langBadge(p.lang)}${typeBadge(p.type)}<span class="org">${esc(p.org)}</span></div>
     <p class="d-title">${esc(p.title)}</p>
+    ${p.labels&&p.labels.length?`<div class="d-labels">${p.labels.map(l=>`<span class="lchip">${esc(l)}</span>`).join("")}</div>`:""}
     ${p.why?`<p class="d-why"><b>Why</b>${esc(p.why)}</p>`:""}
     <div class="d-meta"><div><div class="k">Repo</div><div class="v">${esc(p.repo)}</div></div><div><div class="k">Readiness</div><div class="v">${esc(LABEL[st])}</div></div></div>
     <a class="d-open" href="${p.url}" target="_blank" rel="noopener">Open issue on GitHub ↗</a>`;

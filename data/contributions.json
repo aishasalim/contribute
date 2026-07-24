@@ -151,7 +151,12 @@
       "title": "[kythe] Output to file capability",
       "readiness": "ready",
       "why": "Self-contained, no design debate, no competing PR history, repo already builds locally. Labeled good first issue.",
-      "source": "curated"
+      "source": "curated",
+      "type": "feature",
+      "labels": [
+        "good first issue",
+        "kythe"
+      ]
     },
     {
       "repo": "lowRISC/ibex",
@@ -162,7 +167,12 @@
       "title": "[dv] Directed test to check PoR values of CSRs",
       "readiness": "ready",
       "why": "Direct UVM/DV match to the background \u2014 the most memorable, on-niche pickup. Enhancement labeled Component:DV.",
-      "source": "curated"
+      "source": "curated",
+      "type": "test",
+      "labels": [
+        "Type:Enhancement",
+        "Component:DV"
+      ]
     }
   ],
   "potential_issues": [
@@ -175,7 +185,66 @@
       "title": "Add \"break\" support to \"pio test\"",
       "readiness": "watch",
       "why": "Good language + embedded fit, labeled help wanted \u2014 but it's a feature request; confirm maintainers want it before building.",
-      "source": "curated"
+      "source": "curated",
+      "type": "feature",
+      "labels": [
+        "help wanted",
+        "unit testing"
+      ]
     }
-  ]
+  ],
+  "people": {
+    "ktbarrett": {
+      "login": "ktbarrett",
+      "name": "Kaleb Barrett",
+      "company": "Hudson River Trading",
+      "location": "Denver, CO",
+      "blog": "",
+      "followers": 59,
+      "connection": "cocotb's lead maintainer (day job at Hudson River Trading). Gatekeeper for the FOSSi verification ecosystem \u2014 approved and merged your cocotb #5701.",
+      "url": "https://github.com/ktbarrett",
+      "reviewed": [
+        5701
+      ]
+    },
+    "mkorbel1": {
+      "login": "mkorbel1",
+      "name": "Max Korbel",
+      "company": "Intel Corporation",
+      "location": null,
+      "blog": "www.maxkorbel.com",
+      "followers": 44,
+      "connection": "Principal Engineer at Intel and ROHD's lead maintainer \u2014 the most direct Intel connection in your record. Approved and merged your ROHD #689.",
+      "url": "https://github.com/mkorbel1",
+      "reviewed": [
+        689
+      ]
+    },
+    "wsnyder": {
+      "login": "wsnyder",
+      "name": "Wilson Snyder",
+      "company": "Veripool",
+      "location": null,
+      "blog": "www.veripool.org",
+      "followers": 195,
+      "connection": "Author and lead maintainer of Verilator (via his org Veripool) \u2014 a foundational figure in open-source EDA. Reviewing your Verilator #7968; a high-signal reviewer to be known by.",
+      "url": "https://github.com/wsnyder",
+      "reviewed": [
+        7968
+      ]
+    },
+    "hzeller": {
+      "login": "hzeller",
+      "name": "Henner Zeller",
+      "company": "Google",
+      "location": "M\u00fcnchen, Germany",
+      "blog": "",
+      "followers": 862,
+      "connection": "Google engineer and Verible's maintainer (Verible is Google's SystemVerilog tooling). Reviewing your Verible #2551.",
+      "url": "https://github.com/hzeller",
+      "reviewed": [
+        2551
+      ]
+    }
+  }
 }
