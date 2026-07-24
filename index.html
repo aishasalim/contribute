@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contributie — Open-Source Contribution Tracker</title>
+<style>
+  :root {
+    --bg:#eef1f4; --surface:#fff; --surface-2:#f5f8fa; --border:#dce2e9;
+    --ink:#131922; --muted:#5b6773; --faint:#8a95a2;
+    --accent:#0b8fa3; --grid:#e4e9ee;
+    --merged:#7c4ddb; --review:#b9770a; --awaiting:#2f6fd6; --closed:#6b7684; --ready:#1f9d57;
+    --merged-bg:#7c4ddb1f; --review-bg:#b9770a1f; --awaiting-bg:#2f6fd61f; --closed-bg:#6b76841f; --ready-bg:#1f9d571f;
+    --shadow:0 1px 2px rgba(20,30,45,.06),0 8px 24px rgba(20,30,45,.05);
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#0b0f14; --surface:#121822; --surface-2:#0e141c; --border:#222c38;
+    --ink:#e7edf3; --muted:#8a97a6; --faint:#5e6a78;
+    --accent:#2bc2d6; --grid:#1b232e;
+    --merged:#a685f0; --review:#e0a63a; --awaiting:#5a95e8; --closed:#8894a2; --ready:#3fbd72;
+    --merged-bg:#a685f024; --review-bg:#e0a63a20; --awaiting-bg:#5a95e820; --closed-bg:#8894a220; --ready-bg:#3fbd7220;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  }}
+  :root[data-theme="light"]{
+    --bg:#eef1f4;--surface:#fff;--surface-2:#f5f8fa;--border:#dce2e9;--ink:#131922;--muted:#5b6773;--faint:#8a95a2;
+    --accent:#0b8fa3;--grid:#e4e9ee;--merged:#7c4ddb;--review:#b9770a;--awaiting:#2f6fd6;--closed:#6b7684;--ready:#1f9d57;
+    --merged-bg:#7c4ddb1f;--review-bg:#b9770a1f;--awaiting-bg:#2f6fd61f;--closed-bg:#6b76841f;--ready-bg:#1f9d571f;
+    --shadow:0 1px 2px rgba(20,30,45,.06),0 8px 24px rgba(20,30,45,.05);
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b0f14;--surface:#121822;--surface-2:#0e141c;--border:#222c38;--ink:#e7edf3;--muted:#8a97a6;--faint:#5e6a78;
+    --accent:#2bc2d6;--grid:#1b232e;--merged:#a685f0;--review:#e0a63a;--awaiting:#5a95e8;--closed:#8894a2;--ready:#3fbd72;
+    --merged-bg:#a685f024;--review-bg:#e0a63a20;--awaiting-bg:#5a95e820;--closed-bg:#8894a220;--ready-bg:#3fbd7220;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 64px}
+  header{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:14px;background:var(--surface);box-shadow:var(--shadow);padding:26px;margin-bottom:18px}
+  .trace{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+  .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 8px;position:relative}
+  h1{font-size:clamp(23px,4.2vw,32px);line-height:1.08;margin:0 0 10px;letter-spacing:-.02em;position:relative;max-width:24ch}
+  .sub{color:var(--muted);font-size:15px;margin:0;max-width:64ch;position:relative}
+  .toggle{position:absolute;top:20px;right:20px;z-index:3;font-family:var(--mono);font-size:11px;color:var(--muted);background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;cursor:pointer}
+  .toggle:hover{color:var(--ink);border-color:var(--accent)}
+  .toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:6px}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+  .stat .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+  .stat .v{font-family:var(--mono);font-size:30px;font-weight:600;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .stat .v .accent{color:var(--accent)} .stat .v .merged{color:var(--merged)}
+  .stat .n{font-size:12.5px;color:var(--faint);margin-top:6px}
+  .lbl{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:26px 2px 12px;display:flex;align-items:center;gap:10px}
+  .lbl .count{color:var(--faint)} .lbl::after{content:"";flex:1;height:1px;background:var(--border)}
+  .records{display:flex;flex-direction:column;gap:12px}
+  .rec{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:16px 18px;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:start;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+  .rec:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .rec:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .rec-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .proj{font-family:var(--mono);font-weight:600;font-size:13.5px}
+  .id{font-family:var(--mono);font-size:12px;color:var(--faint)}
+  .lang{font-family:var(--mono);font-size:10.5px;color:var(--muted);border:1px solid var(--border);border-radius:5px;padding:1px 6px}
+  .title{font-size:14.5px;margin:7px 0 0;grid-column:1/2;color:var(--ink)}
+  .recap{grid-column:1/2;margin:8px 0 0;font-size:13px;color:var(--muted);line-height:1.5;max-width:70ch}
+  .meta{grid-column:1/2;margin-top:9px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+  .add-t{color:#2f9e57}.del-t{color:#d0555f}
+  .cmt{grid-column:1/2;margin-top:9px;font-size:12.5px;color:var(--faint);border-left:2px solid var(--border);padding-left:10px}
+  .cmt b{color:var(--muted);font-family:var(--mono);font-weight:600;font-size:11.5px}
+  .side{display:flex;flex-direction:column;align-items:flex-end;gap:8px;grid-row:1/4}
+  .pill{font-family:var(--mono);font-size:11px;font-weight:600;padding:4px 9px;border-radius:20px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+  .pill svg{width:11px;height:11px}
+  .st-merged{color:var(--merged);background:var(--merged-bg)} .st-review{color:var(--review);background:var(--review-bg)}
+  .st-awaiting{color:var(--awaiting);background:var(--awaiting-bg)} .st-closed{color:var(--closed);background:var(--closed-bg)}
+  .st-ready{color:var(--ready);background:var(--ready-bg)} .st-watch{color:var(--awaiting);background:var(--awaiting-bg)}
+  .org{font-family:var(--mono);font-size:10.5px;color:var(--muted)} .arrow{color:var(--faint);font-size:13px}
+  .why{grid-column:1/2;margin-top:7px;font-size:12.5px;color:var(--muted)}
+  .why::before{content:"why ";font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--faint);text-transform:uppercase}
+  footer{margin-top:30px;font-family:var(--mono);font-size:11px;color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  footer a{color:var(--accent);text-decoration:none}
+  .err{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+  @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.rec{grid-template-columns:1fr}.side{grid-row:auto;flex-direction:row;align-items:flex-start}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg class="trace" preserveAspectRatio="none" viewBox="0 0 980 200" aria-hidden="true">
+      <path id="wave" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.28"></path>
+    </svg>
+    <button class="toggle" id="themeBtn" aria-label="Toggle theme">◐ theme</button>
+    <p class="eyebrow" id="eyebrow">Contribution Tracker · Hardware Verification &amp; EDA</p>
+    <h1 id="title">Open-source contributions, tracked end to end</h1>
+    <p class="sub" id="sub">Loading…</p>
+  </header>
+  <div class="stats" id="stats"></div>
+  <main id="main"></main>
+  <footer>
+    <span id="foot">—</span>
+    <span>Updated by the <a href="https://github.com/aishasalim/contributie">contributie</a> MCP</span>
+  </footer>
+</div>
+
+<script>
+const ICON = {
+  merged:'<svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 3.25a1.75 1.75 0 1 0-2.5 1.58v6.34a1.75 1.75 0 1 0 1.5 0V8.06c.3.2.66.32 1.05.36l2.2.23a1.75 1.75 0 0 0 1.74 1.6 1.75 1.75 0 1 0-.17-3.49l-2.2-.23A1.06 1.06 0 0 1 5 5.47Z"/></svg>',
+  review:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4v4l2.5 1.5"/><circle cx="8" cy="8" r="6"/></svg>',
+  awaiting:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6"/><path d="M8 8h3"/></svg>',
+  closed:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 5l6 6M11 5l-6 6"/></svg>',
+  ready:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 8.5 6.5 12 13 4"/></svg>',
+  watch:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5Z"/><circle cx="8" cy="8" r="2"/></svg>',
+};
+const LABEL = {merged:"Merged",review:"In review",awaiting:"Awaiting review",closed:"Closed",ready:"Ready to pick up",watch:"Watch"};
+const esc = s => (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+function pill(status){return `<span class="pill st-${status}">${ICON[status]||""}${LABEL[status]||status}</span>`;}
+
+function contribCard(r){
+  return `<a class="rec" href="${r.url}" target="_blank" rel="noopener">
+    <div class="rec-head"><span class="proj">${esc(r.project)}</span><span class="id">#${r.id}</span><span class="lang">${esc(r.lang)}</span></div>
+    <p class="title">${esc(r.title)}</p>
+    ${r.recap?`<p class="recap">${esc(r.recap)}</p>`:""}
+    <div class="meta"><span><span class="add-t">+${r.additions??0}</span> <span class="del-t">−${r.deletions??0}</span></span>
+      <span>${r.files??0} file${r.files===1?"":"s"}</span>
+      <span>${esc(r.created||"")}${r.ended?" → "+esc(r.ended):" → …"}</span>
+      ${r.reviewer?`<span>◍ ${esc(r.reviewer)}</span>`:""}</div>
+    ${r.latest_comment?`<div class="cmt"><b>${esc(r.latest_comment.author)}</b> · ${esc(r.latest_comment.at||"")} — ${esc(r.latest_comment.body)}</div>`:""}
+    <div class="side">${pill(r.status)}<span class="org">${esc(r.org)}</span><span class="arrow">↗</span></div>
+  </a>`;
+}
+function leadCard(p){
+  const st = p.readiness==="ready"?"ready":"watch";
+  return `<a class="rec" href="${p.url}" target="_blank" rel="noopener">
+    <div class="rec-head"><span class="proj">${esc(p.repo.split("/")[1]||p.repo)}</span><span class="id">#${p.issue}</span><span class="lang">${esc(p.lang)}</span></div>
+    <p class="title">${esc(p.title)}</p>
+    ${p.why?`<p class="why">${esc(p.why)}</p>`:""}
+    <div class="side">${pill(st)}<span class="org">${esc(p.org)}</span><span class="arrow">↗</span></div>
+  </a>`;
+}
+function section(label,count,cards){
+  if(!cards.length) return "";
+  return `<div class="lbl">${label} <span class="count">${count}</span></div><div class="records">${cards.join("")}</div>`;
+}
+
+async function render(){
+  let d;
+  try { d = await (await fetch("./data/contributions.json",{cache:"no-store"})).json(); }
+  catch(e){ document.getElementById("main").innerHTML=`<div class="err">Couldn't load data/contributions.json — run the <b>refresh</b> + <b>sync</b> tools, or serve over http (GitHub Pages). ${esc(String(e))}</div>`;
+    document.getElementById("sub").textContent="Data unavailable."; return; }
+
+  const c = d.contributions||[];
+  const by = s => c.filter(r=>r.status===s);
+  const active = c.filter(r=>r.status==="review"||r.status==="awaiting");
+  const merged = by("merged"), closed = by("closed");
+  const projects = [...new Set(c.map(r=>r.project))];
+
+  document.getElementById("eyebrow").innerHTML = `Contribution Tracker · ${esc(d.meta?.focus?d.meta.focus.split("—")[0].trim():"Open source")}`;
+  document.getElementById("sub").textContent = d.meta?.focus || "";
+  const stats = [
+    {k:"Authored",v:c.length,n:"pull requests"},
+    {k:"Merged",v:merged.length,n:merged.map(r=>r.project).join(" · ")||"—",cls:"merged"},
+    {k:"In review",v:active.length,n:"awaiting maintainers"},
+    {k:"To pick up",v:(d.potential_prs||[]).length,n:(d.potential_issues||[]).length+" more watched",cls:"accent"},
+  ];
+  document.getElementById("stats").innerHTML = stats.map(s=>`<div class="stat"><p class="k">${s.k}</p><div class="v"><span class="${s.cls||""}">${s.v}</span></div><div class="n">${esc(s.n)}</div></div>`).join("");
+
+  document.getElementById("main").innerHTML =
+    section("In review &amp; awaiting", active.length, active.map(contribCard)) +
+    section("Merged", merged.length, merged.map(contribCard)) +
+    section("Potential PRs to pick up", (d.potential_prs||[]).length, (d.potential_prs||[]).map(leadCard)) +
+    section("Issues to watch", (d.potential_issues||[]).length, (d.potential_issues||[]).map(leadCard)) +
+    section("Closed", closed.length, closed.map(contribCard));
+
+  document.getElementById("foot").textContent =
+    `${projects.length} projects · updated ${d.meta?.generated?.slice(0,10)||"?"} by ${d.meta?.updated_by||"?"} · snapshot, re-query GitHub for live state`;
+}
+
+// header signal trace
+(function(){const p=document.getElementById("wave");const W=980,H=200,steps=48;let d=`M0 ${H*0.62}`,y=H*0.62;
+  const rnd=(s=>()=>((s=s*16807%2147483647)/2147483647))(42);
+  for(let i=1;i<=steps;i++){const x=i/steps*W;if(rnd()>0.5){y=H*(0.3+rnd()*0.5);d+=` L${x-6} ${y}`;}y+=(rnd()-0.5)*14;d+=` L${x} ${y}`;}
+  p.setAttribute("d",d);})();
+
+// theme toggle
+document.getElementById("themeBtn").addEventListener("click",()=>{
+  const now = document.documentElement.getAttribute("data-theme");
+  const isDark = now ? now==="dark" : matchMedia("(prefers-color-scheme:dark)").matches;
+  document.documentElement.setAttribute("data-theme", isDark?"light":"dark");
+});
+render();
+</script>
+</body>
+</html>

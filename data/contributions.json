@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "owner": "aishasalim",
+    "title": "Open-source contribution tracker",
+    "focus": "Hardware verification & EDA \u2014 projects backed by Google, Intel, CHIPS Alliance, FOSSi.",
+    "generated": "2026-07-24T01:06:05Z",
+    "updated_by": "mcp",
+    "schema": 1,
+    "note": "Single source of truth for the tracker. Written by the `contributie` MCP server now (refresh/set_recap/add_* tools); designed so Hermes can write the same file later. index.html renders this at runtime.",
+    "hermes_seam": "Any writer that preserves this schema (meta + contributions[] + potential_prs[] + potential_issues[]) can own updates. Statuses: merged | review | awaiting | closed. Keep `recap` human-written; refresh only touches status/comments/diff/dates."
+  },
+  "contributions": [
+    {
+      "id": 5701,
+      "repo": "cocotb/cocotb",
+      "project": "cocotb",
+      "lang": "Python",
+      "org": "FOSSi Foundation",
+      "kind": "docs",
+      "url": "https://github.com/cocotb/cocotb/pull/5701",
+      "title": "docs: Add how-to guide on separating cocotb and simulator logs",
+      "status": "merged",
+      "created": "2026-07-21",
+      "ended": "2026-07-23",
+      "additions": 80,
+      "deletions": 0,
+      "files": 3,
+      "reviewer": "ktbarrett",
+      "review_decision": "APPROVED",
+      "recap": "Adds a how-to guide to cocotb's docs showing how to route cocotb's own log records to a file while leaving the simulator's stdout transcript untouched \u2014 by removing the root logger's handlers and registering your own. Verified on Icarus Verilog and Cadence Xcelium.",
+      "latest_comment": {
+        "author": "ktbarrett",
+        "at": "2026-07-23",
+        "body": "[review: APPROVED]"
+      },
+      "next_action": "done \u2014 merged",
+      "blocked_on": "none"
+    },
+    {
+      "id": 689,
+      "repo": "intel/rohd",
+      "project": "ROHD",
+      "lang": "Dart",
+      "org": "Intel",
+      "kind": "fix",
+      "url": "https://github.com/intel/rohd/pull/689",
+      "title": "Return the original signal when replicating by 1",
+      "status": "merged",
+      "created": "2026-07-21",
+      "ended": "2026-07-23",
+      "additions": 37,
+      "deletions": 1,
+      "files": 2,
+      "reviewer": "mkorbel1",
+      "review_decision": "",
+      "recap": "Fixes ROHD so replicating a signal one time returns the original signal instead of emitting redundant SystemVerilog (`{1{a}}`); signExtend inherits the fix. Adds regression tests asserting signal identity and the absence of `{1{` in generated SV \u2014 the invariants the old value-only test missed.",
+      "latest_comment": {
+        "author": "mkorbel1",
+        "at": "2026-07-23",
+        "body": "Looks great!  Thank you for the contribution!"
+      },
+      "next_action": "done \u2014 merged",
+      "blocked_on": "none"
+    },
+    {
+      "id": 7968,
+      "repo": "verilator/verilator",
+      "project": "Verilator",
+      "lang": "C++",
+      "org": "CHIPS Alliance",
+      "kind": "feature",
+      "url": "https://github.com/verilator/verilator/pull/7968",
+      "title": "Add MULTIDRIVENPROC warning for signals driven by multiple plain always blocks",
+      "status": "review",
+      "created": "2026-07-21",
+      "ended": null,
+      "additions": 181,
+      "deletions": 14,
+      "files": 9,
+      "reviewer": "wsnyder",
+      "review_decision": "CHANGES_REQUESTED",
+      "recap": "Adds a new Verilator lint warning, MULTIDRIVENPROC, that flags a signal whose whole value is driven from more than one plain `always` block \u2014 a synthesis hazard that still simulates fine. Classified as an off-by-default code-style warning, and suppressed when the two drivers are differently clocked (the on-by-default MULTIDRIVEN already covers that case). C++ across V3Undriven/V3Error, with a generated docs example and regression tests.",
+      "latest_comment": {
+        "author": "aishasalim",
+        "at": "2026-07-23",
+        "body": "Thanks \u2014 addressed all four:\n\n- `v_flags2` \u2192 `verilator_flags2`.\n- Reformatted the module header per verible-verilog-format (verified against the tool locally).\n- Merged the different-clock case into `t_lint_multidriven_proc_bad.v` as modul"
+      },
+      "next_action": "round-2 changes pushed \u2014 await re-review",
+      "blocked_on": "maintainer re-review"
+    },
+    {
+      "id": 2551,
+      "repo": "chipsalliance/verible",
+      "project": "Verible",
+      "lang": "C++",
+      "org": "Google \u00b7 CHIPS Alliance",
+      "kind": "fix",
+      "url": "https://github.com/chipsalliance/verible/pull/2551",
+      "title": "formatter: Keep space before # in unqualified typedef",
+      "status": "awaiting",
+      "created": "2026-07-19",
+      "ended": null,
+      "additions": 26,
+      "deletions": 1,
+      "files": 2,
+      "reviewer": "hzeller",
+      "review_decision": "",
+      "recap": "Fixes the SystemVerilog formatter to keep the space before `#` in an unqualified parameterized-typedef declaration (issue #850), following the merged sibling fix pattern from PR #705. Small, two-file change; green and rebased.",
+      "latest_comment": {
+        "author": "aishasalim",
+        "at": "2026-07-23",
+        "body": "Thanks! #2551 is rebased and green. My only other open PR (#2550) duplicates #2527, so I'm closing it \u2014 nothing to rebase there."
+      },
+      "next_action": "await hzeller review",
+      "blocked_on": "maintainer review"
+    },
+    {
+      "id": 2550,
+      "repo": "chipsalliance/verible",
+      "project": "Verible",
+      "lang": "C++",
+      "org": "Google \u00b7 CHIPS Alliance",
+      "kind": "fix",
+      "url": "https://github.com/chipsalliance/verible/pull/2550",
+      "title": "Exempt unique0 case statements from case-missing-default",
+      "status": "closed",
+      "created": "2026-07-19",
+      "ended": "2026-07-23",
+      "additions": 170,
+      "deletions": 4,
+      "files": 4,
+      "reviewer": null,
+      "review_decision": "",
+      "recap": "Proposed exempting `unique0` case statements from the case-missing-default lint. Closed as a duplicate of the earlier #2527; test coverage was offered there instead. Kept for the record \u2014 ceding a duplicate cleanly is part of the trail.",
+      "latest_comment": {
+        "author": "aishasalim",
+        "at": "2026-07-23",
+        "body": "Closing as a duplicate of #2527 (which predates this). I've offered test coverage there \u2014 nothing further needed here."
+      },
+      "next_action": "done \u2014 closed (ceded)",
+      "blocked_on": "none"
+    }
+  ],
+  "potential_prs": [
+    {
+      "repo": "chipsalliance/verible",
+      "issue": 736,
+      "lang": "C++",
+      "org": "Google \u00b7 CHIPS Alliance",
+      "url": "https://github.com/chipsalliance/verible/issues/736",
+      "title": "[kythe] Output to file capability",
+      "readiness": "ready",
+      "why": "Self-contained, no design debate, no competing PR history, repo already builds locally. Labeled good first issue.",
+      "source": "curated"
+    },
+    {
+      "repo": "lowRISC/ibex",
+      "issue": 2057,
+      "lang": "SystemVerilog/UVM",
+      "org": "lowRISC",
+      "url": "https://github.com/lowRISC/ibex/issues/2057",
+      "title": "[dv] Directed test to check PoR values of CSRs",
+      "readiness": "ready",
+      "why": "Direct UVM/DV match to the background \u2014 the most memorable, on-niche pickup. Enhancement labeled Component:DV.",
+      "source": "curated"
+    }
+  ],
+  "potential_issues": [
+    {
+      "repo": "platformio/platformio-core",
+      "issue": 5310,
+      "lang": "Python",
+      "org": "PlatformIO",
+      "url": "https://github.com/platformio/platformio-core/issues/5310",
+      "title": "Add \"break\" support to \"pio test\"",
+      "readiness": "watch",
+      "why": "Good language + embedded fit, labeled help wanted \u2014 but it's a feature request; confirm maintainers want it before building.",
+      "source": "curated"
+    }
+  ]
+}
