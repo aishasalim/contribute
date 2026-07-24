@@ -100,10 +100,6 @@
   </header>
   <div class="stats" id="stats"></div>
   <main id="main"></main>
-  <footer>
-    <span id="foot">—</span>
-    <span>Updated by the <a href="https://github.com/aishasalim/contributie">contributie</a> MCP</span>
-  </footer>
 </div>
 
 <script>
@@ -178,9 +174,6 @@ async function render(){
     section("Potential PRs to pick up", (d.potential_prs||[]).length, (d.potential_prs||[]).map(leadCard)) +
     section("Issues to watch", (d.potential_issues||[]).length, (d.potential_issues||[]).map(leadCard)) +
     section("Closed", closed.length, closed.map(contribCard));
-
-  document.getElementById("foot").textContent =
-    `${projects.length} projects · updated ${d.meta?.generated?.slice(0,10)||"?"} by ${d.meta?.updated_by||"?"} · snapshot, re-query GitHub for live state`;
 }
 
 // header signal trace
