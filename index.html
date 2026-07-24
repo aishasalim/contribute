@@ -29,7 +29,7 @@
   *{box-sizing:border-box}
   html,body{height:100%}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
-  .app{display:grid;grid-template-columns:224px minmax(0,1fr);min-height:100vh;transition:grid-template-columns .18s ease}
+  .app{display:grid;grid-template-columns:224px minmax(0,1fr) 360px;min-height:100vh;transition:grid-template-columns .18s ease}
 
   /* Sidebar */
   .sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--surface);padding:16px 14px;display:flex;flex-direction:column;gap:14px}
@@ -61,7 +61,7 @@
   .toggle:hover{color:var(--ink);border-color:var(--accent)}
   .toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-  .app.collapsed{grid-template-columns:52px minmax(0,1fr)}
+  .app.collapsed{grid-template-columns:52px minmax(0,1fr) 360px}
   .app.collapsed .sidebar{padding:16px 8px;align-items:stretch}
   .app.collapsed .brand,.app.collapsed .mini,.app.collapsed .navlbl,
   .app.collapsed .nav-i .lbl-t,.app.collapsed .nav-i .ct,.app.collapsed .toggle .t{display:none}
@@ -73,13 +73,13 @@
 
   /* Content: list + detail */
   .content{padding:20px 24px;min-width:0}
-  .head{display:flex;align-items:baseline;gap:10px;margin:2px 0 14px}
+  .head{display:flex;align-items:baseline;gap:10px;margin:2px 0 12px}
   .head h2{font-size:17px;margin:0;letter-spacing:-.01em}
   .head .ct{font-family:var(--mono);font-size:12px;color:var(--faint)}
-  .split{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:18px;align-items:start}
 
-  .list{display:flex;flex-direction:column;gap:2px;border:1px solid var(--border);border-radius:11px;background:var(--surface);padding:5px;box-shadow:var(--shadow)}
-  .row{display:grid;grid-template-columns:9px auto minmax(0,1fr) auto;gap:10px;align-items:center;width:100%;text-align:left;background:none;border:0;border-radius:8px;padding:9px 11px;cursor:pointer;color:inherit;font-family:var(--sans);border-left:2px solid transparent}
+  .list{display:flex;flex-direction:column}
+  .row{display:grid;grid-template-columns:9px auto minmax(0,1fr) auto;gap:10px;align-items:center;width:100%;text-align:left;background:none;border:0;border-left:2px solid transparent;border-bottom:1px solid var(--border);padding:10px 12px 10px 10px;cursor:pointer;color:inherit;font-family:var(--sans)}
+  .list .row:last-child{border-bottom:0}
   .row:hover{background:var(--surface-2)}
   .row.sel{background:var(--accent-bg);border-left-color:var(--accent)}
   .row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
@@ -91,8 +91,8 @@
   .rtag{font-family:var(--mono);font-size:10px;color:var(--faint);white-space:nowrap}
   .empty{color:var(--muted);font-family:var(--mono);font-size:13px;padding:22px;text-align:center}
 
-  /* Detail */
-  .detail{position:sticky;top:20px;border:1px solid var(--border);border-radius:12px;background:var(--surface);padding:18px;box-shadow:var(--shadow);min-height:200px}
+  /* Detail — full-height scrollable right rail */
+  .detailbar{position:sticky;top:0;height:100vh;overflow-y:auto;border-left:1px solid var(--border);background:var(--surface);padding:22px 20px}
   .d-empty{color:var(--faint);font-family:var(--mono);font-size:12.5px;padding:30px 6px;text-align:center}
   .d-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
   .d-proj{font-family:var(--mono);font-weight:600;font-size:14px}
@@ -131,9 +131,13 @@
   .st-ready{color:var(--ready);background:var(--ready-bg)}.st-watch{color:var(--awaiting);background:var(--awaiting-bg)}
   .org{font-family:var(--mono);font-size:10px;color:var(--muted)}
 
-  @media (max-width:860px){.split{grid-template-columns:1fr}.detail{position:static}}
+  @media (max-width:980px){
+    .app{grid-template-columns:224px minmax(0,1fr)}
+    .app.collapsed{grid-template-columns:52px minmax(0,1fr)}
+    .detailbar{grid-column:1 / -1;position:static;height:auto;border-left:0;border-top:1px solid var(--border)}
+  }
   @media (max-width:720px){
-    .app{grid-template-columns:1fr}
+    .app,.app.collapsed{grid-template-columns:1fr}
     .sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid var(--border)}
     nav{flex-direction:row;flex-wrap:wrap}.navlbl{display:none}.nav-i{width:auto}.spacer{display:none}
     .content{padding:16px}
@@ -159,11 +163,9 @@
   </aside>
   <main class="content">
     <div class="head"><h2 id="secTitle">…</h2><span class="ct" id="secCount"></span></div>
-    <div class="split">
-      <div class="list" id="list"></div>
-      <aside class="detail" id="detail"><div class="d-empty">Select a row to see details.</div></aside>
-    </div>
+    <div class="list" id="list"></div>
   </main>
+  <aside class="detailbar" id="detail"><div class="d-empty">Select a row to see details.</div></aside>
 </div>
 
 <script>
