@@ -29,11 +29,26 @@
   *{box-sizing:border-box}
   html,body{height:100%}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
-  .app{display:grid;grid-template-columns:224px minmax(0,1fr);min-height:100vh}
+  .app{display:grid;grid-template-columns:224px minmax(0,1fr);min-height:100vh;transition:grid-template-columns .18s ease}
 
   /* Sidebar */
   .sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--border);background:var(--surface);padding:16px 14px;display:flex;flex-direction:column;gap:14px}
-  .brand{position:relative;overflow:hidden;border-radius:10px;padding:2px 2px 6px}
+  .side-head{display:flex;align-items:flex-start;gap:8px}
+  .brand{position:relative;overflow:hidden;border-radius:10px;padding:2px 2px 6px;flex:1;min-width:0}
+  .collapse-btn{flex:none;width:26px;height:26px;border-radius:7px;border:1px solid var(--border);background:var(--surface-2);color:var(--muted);cursor:pointer;font-size:13px;line-height:1;display:flex;align-items:center;justify-content:center}
+  .collapse-btn:hover{color:var(--ink);border-color:var(--accent)}
+  .collapse-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  /* Collapsed rail */
+  .app.collapsed{grid-template-columns:52px minmax(0,1fr)}
+  .app.collapsed .sidebar{padding:16px 8px;align-items:stretch}
+  .app.collapsed .brand,.app.collapsed .mini,.app.collapsed .navlbl,
+  .app.collapsed .nav-i .lbl-t,.app.collapsed .nav-i .ct,.app.collapsed .toggle .t{display:none}
+  .app.collapsed .side-head{justify-content:center}
+  .app.collapsed .nav-i{justify-content:center;padding:9px 0}
+  .app.collapsed .nav-i .lft{gap:0}
+  .app.collapsed .nav-i .dot{width:9px;height:9px}
+  .app.collapsed .toggle{text-align:center;padding:7px 0}
   .eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 3px}
   .brand h1{font-size:16px;line-height:1.15;margin:0;letter-spacing:-.01em}
   .brand .sub{font-family:var(--mono);font-size:10px;color:var(--faint);margin:3px 0 0;letter-spacing:.02em}
@@ -107,15 +122,18 @@
 <body>
 <div class="app">
   <aside class="sidebar">
-    <div class="brand">
-      <p class="eyebrow">Contributie</p>
-      <h1>Contribution tracker</h1>
-      <p class="sub" id="focus">HW verification &amp; EDA</p>
+    <div class="side-head">
+      <div class="brand">
+        <p class="eyebrow">Contributie</p>
+        <h1>Contribution tracker</h1>
+        <p class="sub" id="focus">HW verification &amp; EDA</p>
+      </div>
+      <button class="collapse-btn" id="collapseBtn" aria-label="Collapse sidebar" title="Collapse">«</button>
     </div>
     <div class="mini" id="mini"></div>
     <nav id="nav"><div class="navlbl">Sections</div></nav>
     <div class="spacer"></div>
-    <button class="toggle" id="themeBtn">◐ theme</button>
+    <button class="toggle" id="themeBtn">◐<span class="t"> theme</span></button>
   </aside>
   <main class="content">
     <div class="head"><h2 id="secTitle">…</h2><span class="ct" id="secCount"></span></div>
@@ -169,8 +187,8 @@ function renderNav(){
   const nav=document.getElementById("nav");
   nav.innerHTML='<div class="navlbl">Sections</div>'+SECTIONS.map(s=>{
     const n=s.get(DATA).length;
-    return `<button class="nav-i${s.key===FILTER?" active":""}" data-k="${s.key}">
-      <span class="lft"><span class="dot" style="background:${s.color}"></span>${s.label}</span><span class="ct">${n}</span></button>`;
+    return `<button class="nav-i${s.key===FILTER?" active":""}" data-k="${s.key}" title="${s.label} · ${n}">
+      <span class="lft"><span class="dot" style="background:${s.color}"></span><span class="lbl-t">${s.label}</span></span><span class="ct">${n}</span></button>`;
   }).join("");
   nav.querySelectorAll(".nav-i").forEach(b=>b.addEventListener("click",()=>{FILTER=b.dataset.k;renderNav();renderMain();}));
 }
@@ -205,6 +223,12 @@ document.getElementById("themeBtn").addEventListener("click",()=>{
   const isDark=now?now==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
   document.documentElement.setAttribute("data-theme",isDark?"light":"dark");
 });
+
+const app=document.querySelector(".app"), cbtn=document.getElementById("collapseBtn");
+if(localStorage.getItem("ctb-collapsed")==="1") app.classList.add("collapsed");
+function syncCollapse(){const c=app.classList.contains("collapsed");cbtn.textContent=c?"»":"«";cbtn.title=c?"Expand":"Collapse";}
+cbtn.addEventListener("click",()=>{app.classList.toggle("collapsed");localStorage.setItem("ctb-collapsed",app.classList.contains("collapsed")?"1":"0");syncCollapse();});
+syncCollapse();
 boot();
 </script>
 </body>
