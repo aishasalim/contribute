@@ -104,6 +104,7 @@
   .d-why b{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600;display:block;margin-bottom:3px}
   .d-meta{display:grid;grid-template-columns:1fr 1fr;gap:9px 14px;font-family:var(--mono);font-size:11.5px;margin:0 0 14px;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
   .d-meta .k{color:var(--faint);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase} .d-meta .v{color:var(--ink);margin-top:2px}
+  .d-meta .wide{grid-column:1 / -1} .d-meta .wide .v{white-space:nowrap}
   .add-t{color:#2f9e57}.del-t{color:#d0555f}
   .d-cmt{font-size:12.5px;color:var(--muted);border-left:2px solid var(--border);padding-left:10px;margin:0 0 14px}
   .d-cmt b{color:var(--ink);font-family:var(--mono);font-weight:600;font-size:11.5px}
@@ -217,9 +218,9 @@ function detailContrib(r){
     ${r.recap?`<p class="d-recap">${esc(r.recap)}</p>`:""}
     <div class="d-meta">
       <div><div class="k">Diff</div><div class="v"><span class="add-t">+${r.additions??0}</span> <span class="del-t">−${r.deletions??0}</span> · ${r.files??0} files</div></div>
-      <div><div class="k">Span</div><div class="v">${esc(r.created||"?")}${r.ended?" → "+esc(r.ended):" → …"}</div></div>
-      <div><div class="k">Next</div><div class="v">${esc(r.next_action||"—")}</div></div>
       <div><div class="k">Type</div><div class="v">${esc(r.kind||"—")}</div></div>
+      <div class="wide"><div class="k">Span</div><div class="v">${esc(r.created||"?")}${r.ended?" → "+esc(r.ended):" → …"}</div></div>
+      <div class="wide"><div class="k">Next</div><div class="v">${esc(r.next_action||"—")}</div></div>
     </div>
     ${r.latest_comment?`<div class="d-cmt"><b>${esc(r.latest_comment.author)}</b> · ${esc(r.latest_comment.at||"")}<br>${esc(r.latest_comment.body)}</div>`:""}
     ${r.reviewer?`<div class="d-k">Reviewer connection</div>${reviewerBlock(r.reviewer)}`:""}
