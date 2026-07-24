@@ -61,7 +61,10 @@
   .rec-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
   .proj{font-family:var(--mono);font-weight:600;font-size:13.5px}
   .id{font-family:var(--mono);font-size:12px;color:var(--faint)}
-  .lang{font-family:var(--mono);font-size:10.5px;color:var(--muted);border:1px solid var(--border);border-radius:5px;padding:1px 6px}
+  .lang{font-family:var(--mono);font-size:10.5px;color:var(--muted);border:1px solid var(--border);border-radius:5px;padding:1px 6px 1px 5px;display:inline-flex;align-items:center;gap:5px}
+  .lang .dot{width:7px;height:7px;border-radius:50%;background:var(--faint);flex:none}
+  .kind{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:5px;white-space:nowrap}
+  .k-docs{color:var(--awaiting);background:var(--awaiting-bg)} .k-fix{color:var(--ready);background:var(--ready-bg)} .k-feature{color:var(--merged);background:var(--merged-bg)}
   .title{font-size:14.5px;margin:7px 0 0;grid-column:1/2;color:var(--ink)}
   .recap{grid-column:1/2;margin:8px 0 0;font-size:13px;color:var(--muted);line-height:1.5;max-width:70ch}
   .meta{grid-column:1/2;margin-top:9px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
@@ -115,11 +118,14 @@ const ICON = {
 const LABEL = {merged:"Merged",review:"In review",awaiting:"Awaiting review",closed:"Closed",ready:"Ready to pick up",watch:"Watch"};
 const esc = s => (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 
+const LANG_COLOR={"C++":"#f34b7d","Python":"#3572A5","Dart":"#00B4AB","SystemVerilog/UVM":"#12b5a5","SystemVerilog":"#12b5a5","Verilog":"#b2b7f8"};
 function pill(status){return `<span class="pill st-${status}">${ICON[status]||""}${LABEL[status]||status}</span>`;}
+function langBadge(l){const c=LANG_COLOR[l]||"var(--faint)";return `<span class="lang"><span class="dot" style="background:${c}"></span>${esc(l)}</span>`;}
+function kindBadge(k){return k?`<span class="kind k-${esc(k)}">${esc(k)}</span>`:"";}
 
 function contribCard(r){
   return `<a class="rec" href="${r.url}" target="_blank" rel="noopener">
-    <div class="rec-head"><span class="proj">${esc(r.project)}</span><span class="id">#${r.id}</span><span class="lang">${esc(r.lang)}</span></div>
+    <div class="rec-head"><span class="proj">${esc(r.project)}</span><span class="id">#${r.id}</span>${langBadge(r.lang)}${kindBadge(r.kind)}</div>
     <p class="title">${esc(r.title)}</p>
     ${r.recap?`<p class="recap">${esc(r.recap)}</p>`:""}
     <div class="meta"><span><span class="add-t">+${r.additions??0}</span> <span class="del-t">−${r.deletions??0}</span></span>
@@ -133,7 +139,7 @@ function contribCard(r){
 function leadCard(p){
   const st = p.readiness==="ready"?"ready":"watch";
   return `<a class="rec" href="${p.url}" target="_blank" rel="noopener">
-    <div class="rec-head"><span class="proj">${esc(p.repo.split("/")[1]||p.repo)}</span><span class="id">#${p.issue}</span><span class="lang">${esc(p.lang)}</span></div>
+    <div class="rec-head"><span class="proj">${esc(p.repo.split("/")[1]||p.repo)}</span><span class="id">#${p.issue}</span>${langBadge(p.lang)}</div>
     <p class="title">${esc(p.title)}</p>
     ${p.why?`<p class="why">${esc(p.why)}</p>`:""}
     <div class="side">${pill(st)}<span class="org">${esc(p.org)}</span><span class="arrow">↗</span></div>
