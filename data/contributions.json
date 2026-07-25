@@ -3,13 +3,35 @@
     "owner": "aishasalim",
     "title": "Open-source contribution tracker",
     "focus": "Hardware verification & EDA \u2014 projects backed by Google, Intel, CHIPS Alliance, FOSSi.",
-    "generated": "2026-07-24T01:06:05Z",
+    "generated": "2026-07-25T23:03:07Z",
     "updated_by": "mcp",
     "schema": 1,
     "note": "Single source of truth for the tracker. Written by the `contributie` MCP server now (refresh/set_recap/add_* tools); designed so Hermes can write the same file later. index.html renders this at runtime.",
     "hermes_seam": "Any writer that preserves this schema (meta + contributions[] + potential_prs[] + potential_issues[]) can own updates. Statuses: merged | review | awaiting | closed. Keep `recap` human-written; refresh only touches status/comments/diff/dates."
   },
   "contributions": [
+    {
+      "id": 5441,
+      "repo": "chipsalliance/chisel",
+      "project": "chisel",
+      "lang": "Scala",
+      "org": "CHIPS Alliance",
+      "kind": "docs",
+      "url": "https://github.com/chipsalliance/chisel/pull/5441",
+      "title": "Update docs/README.md",
+      "status": "awaiting",
+      "created": "2026-07-22",
+      "ended": null,
+      "additions": 56,
+      "deletions": 15,
+      "files": 1,
+      "reviewer": null,
+      "review_decision": "REVIEW_REQUIRED",
+      "recap": "Rewrites Chisel's docs/README.md, whose build instructions no longer worked: the build moved from SBT (`docs/mdoc`) to Mill (`./mill mdoc`), the undocumented Scala CLI and Verilator prerequisites made the build fail partway with confusing errors, the website moved from a separate repo into `website/` (Docusaurus), `ChiselStage.emitVerilog` became `emitSystemVerilog`, and the per-directory Contents links pointed one directory too deep. Adds the two sections the issue asked for: where each kind of documentation belongs, and how to render the website locally. Fixes #4402.",
+      "latest_comment": null,
+      "next_action": "await maintainer review",
+      "blocked_on": "maintainer"
+    },
     {
       "id": 5701,
       "repo": "cocotb/cocotb",
@@ -71,9 +93,9 @@
       "kind": "feature",
       "url": "https://github.com/verilator/verilator/pull/7968",
       "title": "Add MULTIDRIVENPROC warning for signals driven by multiple plain always blocks",
-      "status": "review",
+      "status": "merged",
       "created": "2026-07-21",
-      "ended": null,
+      "ended": "2026-07-24",
       "additions": 181,
       "deletions": 14,
       "files": 9,
@@ -85,8 +107,8 @@
         "at": "2026-07-23",
         "body": "Thanks \u2014 addressed all four:\n\n- `v_flags2` \u2192 `verilator_flags2`.\n- Reformatted the module header per verible-verilog-format (verified against the tool locally).\n- Merged the different-clock case into `t_lint_multidriven_proc_bad.v` as modul"
       },
-      "next_action": "round-2 changes pushed \u2014 await re-review",
-      "blocked_on": "maintainer re-review"
+      "next_action": "done \u2014 merged",
+      "blocked_on": "none"
     },
     {
       "id": 2551,
