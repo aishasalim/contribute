@@ -3,13 +3,39 @@
     "owner": "aishasalim",
     "title": "Open-source contribution tracker",
     "focus": "Hardware verification & EDA \u2014 projects backed by Google, Intel, CHIPS Alliance, FOSSi.",
-    "generated": "2026-07-25T23:30:35Z",
-    "updated_by": "mcp",
+    "generated": "2026-08-02T00:00:00Z",
+    "updated_by": "manual",
     "schema": 1,
     "note": "Single source of truth for the tracker. Written by the `contributie` MCP server now (refresh/set_recap/add_* tools); designed so Hermes can write the same file later. index.html renders this at runtime.",
     "hermes_seam": "Any writer that preserves this schema (meta + contributions[] + potential_prs[] + potential_issues[]) can own updates. Statuses: merged | review | awaiting | closed. Keep `recap` human-written; refresh only touches status/comments/diff/dates."
   },
   "contributions": [
+    {
+      "id": 5713,
+      "repo": "cocotb/cocotb",
+      "project": "cocotb",
+      "lang": "Python",
+      "org": "FOSSi Foundation",
+      "kind": "test",
+      "url": "https://github.com/cocotb/cocotb/pull/5713",
+      "title": "tests: Trim First and Combine tests to the wrapper behavior",
+      "status": "merged",
+      "created": "2026-07-30",
+      "ended": "2026-08-01",
+      "additions": 211,
+      "deletions": 412,
+      "files": 3,
+      "reviewer": "ktbarrett",
+      "review_decision": "APPROVED",
+      "recap": "Closes ktbarrett's issue #5662. First and Combine are now implemented in terms of select and gather, so most of their 27 tests re-tested the select/gather machinery already covered in test_waiters.py. Cut to the 12 that exercise what the wrappers actually add \u2014 argument checking, the deprecated Task arguments, await return values, nesting \u2014 plus a new test for Combine.__repr__, which had none. Tests that were really testing select/gather moved to test_waiters.py, including the trigger prime/unprime checks rewritten against gather and select; the Event repr test moved to test_synchronization_primitives.py. Approved two hours after opening.",
+      "latest_comment": {
+        "author": "ktbarrett",
+        "at": "2026-07-30",
+        "body": "The coverage hasn't changed so that's a good sign. [review: APPROVED]"
+      },
+      "next_action": "done \u2014 merged",
+      "blocked_on": "none"
+    },
     {
       "id": 7987,
       "repo": "verilator/verilator",
@@ -22,14 +48,18 @@
       "status": "awaiting",
       "created": "2026-07-25",
       "ended": null,
-      "additions": 228,
-      "deletions": 1,
+      "additions": 251,
+      "deletions": 3,
       "files": 5,
-      "reviewer": null,
-      "review_decision": "",
+      "reviewer": "wsnyder",
+      "review_decision": "CHANGES_REQUESTED",
       "recap": "Teaches Verilator that a clocking block `output` is a driver of the signal it names, so a signal the design also drives is flagged as multiply driven. V3Undriven already caught the always_ff/always_comb mixes \u2014 including the exact example in issue #5675, which turned out to be already fixed \u2014 but silently accepted continuous assignments, plain always blocks and second clocking blocks. Continuous-assignment and clocking-vs-clocking conflicts report under MULTIDRIVEN; the plain-always pairing goes to the off-by-default MULTIDRIVENPROC because Verilator's own testbenches rely on that idiom. Five distinct messages naming the conflicting driver, both declaration orders tested.",
-      "latest_comment": null,
-      "next_action": "await maintainer review; CI running",
+      "latest_comment": {
+        "author": "wsnyder",
+        "at": "2026-08-01",
+        "body": "@aishasalim, note this is blocked due to test failures - please fix and also merge in master, thanks."
+      },
+      "next_action": "round-2 pushed 2026-08-02: five review suggestions applied, two uncovered branches given tests, rebased onto master and split warnClockingDriven/warnClockingDrivenProc so each warning is gated on its own lint_off state (upstream #8000 broke the old single-gate call site). Builds green again; await wsnyder.",
       "blocked_on": "maintainer review"
     },
     {
@@ -141,22 +171,22 @@
       "kind": "fix",
       "url": "https://github.com/chipsalliance/verible/pull/2551",
       "title": "formatter: Keep space before # in unqualified typedef",
-      "status": "awaiting",
+      "status": "merged",
       "created": "2026-07-19",
-      "ended": null,
+      "ended": "2026-08-02",
       "additions": 26,
       "deletions": 1,
       "files": 2,
       "reviewer": "hzeller",
-      "review_decision": "",
+      "review_decision": "APPROVED",
       "recap": "Fixes the SystemVerilog formatter to keep the space before `#` in an unqualified parameterized-typedef declaration (issue #850), following the merged sibling fix pattern from PR #705. Small, two-file change; green and rebased.",
       "latest_comment": {
-        "author": "aishasalim",
-        "at": "2026-07-23",
-        "body": "Thanks! #2551 is rebased and green. My only other open PR (#2550) duplicates #2527, so I'm closing it \u2014 nothing to rebase there."
+        "author": "hzeller",
+        "at": "2026-08-02",
+        "body": "Thanks for your contribution! Sorry it took so long to review, I was a bit busy with other projects. [review: APPROVED]"
       },
-      "next_action": "await hzeller review",
-      "blocked_on": "maintainer review"
+      "next_action": "done \u2014 merged",
+      "blocked_on": "none"
     },
     {
       "id": 2550,
