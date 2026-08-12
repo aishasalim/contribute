@@ -3,13 +3,35 @@
     "owner": "aishasalim",
     "title": "Open-source contribution tracker",
     "focus": "Hardware verification & EDA \u2014 projects backed by Google, Intel, CHIPS Alliance, FOSSi.",
-    "generated": "2026-08-11T00:00:00Z",
+    "generated": "2026-08-12T00:00:00Z",
     "updated_by": "manual",
     "schema": 1,
     "note": "Single source of truth for the tracker. Written by the `contributie` MCP server now (refresh/set_recap/add_* tools); designed so Hermes can write the same file later. index.html renders this at runtime.",
     "hermes_seam": "Any writer that preserves this schema (meta + contributions[] + potential_prs[] + potential_issues[]) can own updates. Statuses: merged | review | awaiting | closed. Keep `recap` human-written; refresh only touches status/comments/diff/dates."
   },
   "contributions": [
+    {
+      "id": 2574,
+      "repo": "chipsalliance/verible",
+      "project": "Verible",
+      "lang": "C++",
+      "org": "Google \u00b7 CHIPS Alliance",
+      "kind": "feature",
+      "url": "https://github.com/chipsalliance/verible/pull/2574",
+      "title": "kythe: Add --output_path to write extracted facts to a file",
+      "status": "review",
+      "created": "2026-08-11",
+      "ended": null,
+      "additions": 144,
+      "deletions": 27,
+      "files": 5,
+      "reviewer": null,
+      "review_decision": "REVIEW_REQUIRED",
+      "recap": "Closes issue #736 (open since 2021). verible-verilog-kythe-extractor could only write Kythe facts to stdout, so every caller had to capture the stream. Adds --output_path to name a destination file; empty or \"-\" keeps the stdout behavior. To make one flag serve all four print modes, KytheProtoOutput now takes a std::ostream wrapped in an OstreamOutputStream instead of a file descriptor, and the dead int-fd constructor and _WIN32/STDOUT_FILENO block are removed. The PR body also corrects the issue's premise: the tool never buffered the whole output, since PrintJsonStream already emitted fact-by-fact. Tests assert every mode writes bytes identical to its stdout output, including the binary proto stream.",
+      "latest_comment": null,
+      "next_action": "await CI, then maintainer review (hzeller)",
+      "blocked_on": "maintainer"
+    },
     {
       "id": 694,
       "repo": "intel/rohd",
@@ -238,22 +260,6 @@
     }
   ],
   "potential_prs": [
-    {
-      "repo": "chipsalliance/verible",
-      "issue": 736,
-      "lang": "C++",
-      "org": "Google \u00b7 CHIPS Alliance",
-      "url": "https://github.com/chipsalliance/verible/issues/736",
-      "title": "[kythe] Output to file capability",
-      "readiness": "ready",
-      "why": "Self-contained, no design debate, no competing PR history, repo already builds locally. Labeled good first issue.",
-      "source": "curated",
-      "type": "feature",
-      "labels": [
-        "good first issue",
-        "kythe"
-      ]
-    },
     {
       "repo": "lowRISC/ibex",
       "issue": 2057,
