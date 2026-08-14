@@ -377,28 +377,20 @@ function renderMini(){
     `<div class="cell"><div class="n ${x.cls||""}">${x.n}</div><div class="l">${x.l}</div></div>`).join("");
 }
 
-/* Data source: the API when one is configured, the static file otherwise.
-   Set it once with ?api=https://host  (kept in localStorage), or ?api= to clear.
-   The API is live; the file is a snapshot from the last harvest. */
-const API=(()=>{
-  const q=new URLSearchParams(location.search);
-  if(q.has("api")){const v=q.get("api").replace(/\/$/,"");
-    v?localStorage.setItem("ctb-api",v):localStorage.removeItem("ctb-api");}
-  return localStorage.getItem("ctb-api")||"";
+/* Data source, in order of preference:
+     1. Supabase  — live, no server. ?sb=https://xxx.supabase.co&key=<anon key>
+     2. A self-hosted API          — ?api=https://host
+     3. data/roles.json            — the static snapshot, always works offline
+   The choice is kept in localStorage, so it survives a reload. Pass an empty
+   value (?sb= or ?api=) to clear it and fall back to the file. */
+const CFG=(()=>{
+  const q=new URLSearchParams(location.search), get=k=>{
+    if(q.has(k)){const v=(q.get(k)||"").replace(/\/$/,"");
+      v?localStorage.setItem("ctb-"+k,v):localStorage.removeItem("ctb-"+k);}
+    return localStorage.getItem("ctb-"+k)||"";
+  };
+  return {sb:get("sb"), key:get("key"), api:get("api")};
 })();
-
-async function fromAPI(){
-  const r=await fetch(`${API}/roles?limit=500&sort=fresh&include_dead=true`,{cache:"no-store"});
-  if(!r.ok) throw new Error(`API ${r.status}`);
-  const j=await r.json();
-  // the API returns flat rows; the page wants the nested shape
-  const roles=j.roles.map(x=>({...x,
-    tracks:{swe:x.score_swe,ml:x.score_ml,hwv:x.score_hwv},
-    eligibility:{sponsorship:x.sponsorship,citizenship:x.citizenship,class_year:[]},
-    application:{status:x.status||"none",applied:x.applied,resume:x.resume,
-                 notes:x.notes||"",sheet_row:null}}));
-  return {meta:{owner:"aishasalim",live:true,total:j.total},resumes:RESUME_DEFS,roles};
-}
 
 const RESUME_DEFS=[
   {id:"swe",label:"SWE",color:"#2f6fd6"},
@@ -406,20 +398,48 @@ const RESUME_DEFS=[
   {id:"hwv",label:"HW Verif",color:"#12b5a5"},
 ];
 
+/* Both live sources return flat rows; the page wants the nested shape. */
+function inflate(rows){
+  return rows.map(x=>({...x,
+    tracks:{swe:x.score_swe,ml:x.score_ml,hwv:x.score_hwv},
+    also_tracks:x.also_tracks||[],
+    eligibility:{sponsorship:x.sponsorship,citizenship:x.citizenship,class_year:[]},
+    application:{status:x.status||"none",applied:x.applied,resume:x.resume,
+                 notes:x.notes||"",sheet_row:x.sheet_row??null}}));
+}
+
+async function fromSupabase(){
+  const url=`${CFG.sb}/rest/v1/radar?select=*&order=age_days.asc.nullslast&limit=2000`;
+  const r=await fetch(url,{cache:"no-store",
+    headers:{apikey:CFG.key, Authorization:`Bearer ${CFG.key}`}});
+  if(!r.ok) throw new Error(`Supabase ${r.status} — check the anon key`);
+  const rows=await r.json();
+  return {meta:{live:"supabase",total:rows.length},resumes:RESUME_DEFS,roles:inflate(rows)};
+}
+
+async function fromAPI(){
+  const r=await fetch(`${CFG.api}/roles?limit=500&sort=fresh&include_dead=true`,{cache:"no-store"});
+  if(!r.ok) throw new Error(`API ${r.status}`);
+  const j=await r.json();
+  return {meta:{live:"api",total:j.total},resumes:RESUME_DEFS,roles:inflate(j.roles)};
+}
+
 async function boot(){
+  const source = CFG.sb&&CFG.key ? "supabase" : CFG.api ? "api" : "file";
   try{
-    DATA = API ? await fromAPI()
-               : await (await fetch("./data/roles.json",{cache:"no-store"})).json();
+    DATA = source==="supabase" ? await fromSupabase()
+         : source==="api"      ? await fromAPI()
+         : await (await fetch("./data/roles.json",{cache:"no-store"})).json();
   }
   catch(e){ document.getElementById("list").innerHTML=
-    `<div class="empty">Couldn't load ${API?"the API at "+esc(API):"data/roles.json"} — ${esc(String(e))}</div>`;
+    `<div class="empty">Couldn't load from ${esc(source)} — ${esc(String(e))}</div>`;
     return; }
   RESUMES=DATA.resumes||[]; RESUMES.forEach(r=>RMAP[r.id]=r);
   // "Today" means the newest harvest date in the file, so the page is never empty
   // just because nothing was polled today.
   TODAY=DATA.roles.reduce((m,r)=>r.found>m?r.found:m,"");
-  document.getElementById("stamp").textContent = API
-    ? `${DATA.meta.total ?? DATA.roles.length} roles · live from API`
+  document.getElementById("stamp").textContent = DATA.meta?.live
+    ? `${DATA.meta.total ?? DATA.roles.length} roles · live (${DATA.meta.live})`
     : `${DATA.roles.length} roles · snapshot ${TODAY}`;
   renderMini(); renderFilters(); renderNav(); renderSection();
 }

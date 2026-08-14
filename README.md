@@ -54,12 +54,24 @@ Sections: **Today** · **Strong fit** · **All open** · **Applied** · **Closed
 The page reads a static JSON file. It is **not** live — it changes when `find_roles` runs and
 the file is pushed.
 
-## Database
+## Backend (optional)
 
-Postgres is the durable store: `db/schema.sql`, driven by `db/sync.py`
-(`init` / `push` / `pull` / `stats`). `roles` is a cache the harvest overwrites;
-`applications` is your own state and a harvest never touches it. See
-[Database](docs/RADAR.md#database).
+The board needs none. `radar.html` reads `data/roles.json` and that is the whole product.
+
+A backend matters only when **Hermes** writes back: an agent cannot share a JSON file in git
+with a dashboard. The recommended target is **Supabase** — free, and it is Postgres *plus* an
+auto-generated REST API, so there is no server to deploy.
+
+```
+db/schema.sql     tables, indexes, status-change trigger, the `radar` view
+db/supabase.sql   row level security, the `hermes_queue` view, the four write functions
+db/sync.py        push / pull / stats between roles.json and Postgres
+api/main.py       a self-hosted FastAPI equivalent, if you would rather not use Supabase
+```
+
+`roles` is a cache the harvest overwrites. `applications` is your own state, and a harvest
+never touches it. Step-by-step: **[docs/SETUP.md](docs/SETUP.md)**. The agent loop:
+**[docs/HERMES.md](docs/HERMES.md)**.
 
 ---
 
