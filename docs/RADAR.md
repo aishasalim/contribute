@@ -1,7 +1,8 @@
 # Internship radar — specification
 
-The radar is page 2 of contributie (`radar.html`, backed by `data/roles.json`). It answers
-three questions in order:
+The radar is page 2 of contributie (`radar.html`, backed by `data/roles.json`). It covers
+**internships and co-ops only** — new grad, early career and campus full-time titles are
+filtered out. It answers three questions in order:
 
 1. **What opened today?**
 2. **Which of my three resumes fits it?**
@@ -81,7 +82,8 @@ need work.
 ### The `why` line
 
 Every role carries one sentence that names the top two signals that produced its score.
-`score_roles()` writes a machine draft. `set_why(id, why)` replaces it with a human sentence.
+`score_roles()` writes a machine draft and stamps `why_by: "auto"`. `set_why(id, why)` replaces
+it with a human sentence and stamps `why_by: "human"`, which `score_roles` then never overwrites.
 This mirrors `set_recap` on page 1: the machine ranks, the human explains.
 
 > Title matches "Design Verification Intern" and the description names UVM and SystemVerilog;
@@ -115,7 +117,7 @@ One role:
 | `title` | string | Job title, unedited |
 | `location` | string | Free text; multi-site postings keep every site |
 | `workmode` | enum | `onsite` \| `hybrid` \| `remote` \| `unspecified` |
-| `season` | enum | `summer-2027` \| `fall-2026` \| `winter-2027` |
+| `season` | enum | `summer-2027` \| `fall-2026` \| `winter-2027` \| `spring-2027` \| `null` when the posting does not say |
 | `url` | string | Direct apply link, not an aggregator |
 | `source` | enum | Which feed found it |
 | `posted` | date | The employer's own published date |
@@ -125,7 +127,10 @@ One role:
 | `tracks` | object | `{ swe: 0-100, ml: 0-100, hwv: 0-100 }` |
 | `best_track` | enum | `swe` \| `ml` \| `hwv` |
 | `tier` | enum | `strong` \| `fit` \| `stretch` |
-| `why` | string | One sentence. Human-written where it matters. |
+| `why` | string | One sentence naming the top two signals |
+| `why_by` | enum | `auto` \| `human`. A human `why` is never overwritten. |
+| `also_tracks` | string[] | Other tracks within 10 points of the best |
+| `snippet` | string | First 280 characters of the description, for the page |
 | `application` | object | See below |
 | `dead` | bool | The link 404s or the posting was pulled. Moves the role to **Closed**. |
 
@@ -194,21 +199,50 @@ Rule: **Step 1 columns flow radar → sheet. Step 2 columns flow sheet → radar
 
 ## Sourcing
 
-Poll public ATS endpoints first. They return JSON, they are stable, and they do not need a
-browser.
+Poll public ATS endpoints. They return JSON, they are stable, and they do not need a browser.
 
-| Source | Endpoint shape |
-|--------|----------------|
-| Greenhouse | `boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true` |
-| Lever | `api.lever.co/v0/postings/{company}?mode=json` |
-| Ashby | `api.ashbyhq.com/posting-api/job-board/{company}` |
-| SmartRecruiters | `api.smartrecruiters.com/v1/companies/{company}/postings` |
-| Workday | The site's own CxS JSON POST endpoint, per tenant |
+### The board registry
 
-Rules:
+`data/boards.json` holds **2,272** company-to-board rows. It is vendored from an MIT-licensed
+upstream list — see [NOTICE](../NOTICE) for the attribution. Rebuilding that list by hand
+would take days, so the radar does not try.
 
-- De-duplicate on `id` across sources. First `found` date wins and is never overwritten.
+| Source | Boards | Endpoint shape |
+|--------|-------:|----------------|
+| Greenhouse | 1,021 | `boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true` |
+| Ashby | 651 | `api.ashbyhq.com/posting-api/job-board/{board}` |
+| Lever | 358 | `api.lever.co/v0/postings/{board}?mode=json` |
+| SmartRecruiters | 242 | `api.smartrecruiters.com/v1/companies/{board}/postings` |
+
+Workday carries another 1,710 companies upstream, but each tenant needs its own CxS JSON POST
+endpoint. It is not wired up. That is the largest single gap in coverage.
+
+`find_roles` takes a scope:
+
+| Scope | Boards | Time | Use |
+|-------|-------:|------|-----|
+| `priority` | 33 | ~15 s | The hand-verified set. The daily poll. |
+| `all` | 2,272 | ~7 min | The weekly sweep. |
+
+Boards are polled 12 at a time. A board that 404s is counted and skipped; it never stops the
+sweep. About 117 of 2,272 fail on any given run, because slugs go stale upstream.
+
+### Rules
+
+- De-duplicate on `id` (company + title) across sources. The first `found` date wins and is
+  never overwritten, so a role cannot resurface as new every week.
 - Record the employer's `posted` date once. Do not refresh it, or every role looks new.
+- Filter on the **title** for internship and co-op wording, never the description. A
+  description filter let ~1,700 senior roles through, because full-time postings mention
+  "students" and "university" in the boilerplate.
+- `data/blocklist.json` drops rows at harvest time: blocked company slugs, and title
+  patterns for unpaid work (`volunteer`, `unpaid`, `pro bono`) and degrees you do not hold.
+  Without it, one media company's 52 unpaid "intern/volunteer" listings put 9 rows into the
+  fit tier. The convention comes from the reference internship-list projects.
+- Descriptions are stripped out of `roles.json` before it is written, and cached in
+  `data/descriptions.cache.json` (git-ignored). Several hundred descriptions at 5–20 KB each
+  would make the file too heavy for the page to fetch. The page keeps a 280-character
+  `snippet`; `score_roles` re-reads the cache.
 - **LinkedIn: link out, do not scrape.** It blocks automated reads and the terms forbid it.
 - Playwright is the last resort, for a board with no JSON at all. Run it locally, not in CI.
   It is not part of the current toolchain, so add it only when a target actually needs it.

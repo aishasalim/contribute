@@ -28,8 +28,8 @@ human-written through `set_recap`, so they read like a person wrote them.
 
 ## Page 2 — Internship radar
 
-A radar for internship roles, ranked against three resumes. Full specification:
-**[docs/RADAR.md](docs/RADAR.md)**.
+**Internships and co-ops only**, ranked against three resumes. New grad, early career and
+campus full-time titles are filtered out. Full specification: **[docs/RADAR.md](docs/RADAR.md)**.
 
 Three resume tracks. Every role gets a score per track, and the best track becomes its badge.
 
@@ -41,7 +41,7 @@ Three resume tracks. Every role gets a score per track, and the best track becom
 
 Sections: **Today** · **Strong fit** · **All open** · **Applied** · **Closed**.
 
-- **Today** lists the roles the radar first saw today, highest score first. This is the daily read.
+- **Today** lists the roles the latest harvest first saw, highest score first. The daily read.
 - **Applied** is the running list. It mirrors the
   [application spreadsheet](https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit),
   which stays the source of truth for application state.
@@ -53,7 +53,8 @@ Sections: **Today** · **Strong fit** · **All open** · **Applied** · **Closed
 ## MCP server
 
 Python + [FastMCP]. It shells out to the `gh` CLI (already authenticated), so there is no
-token to configure. Radar tools also read public ATS endpoints and the Google Sheet.
+token to configure. Radar tools read public ATS job-board endpoints over stdlib urllib —
+no extra dependency, no browser.
 
 ### Contribution tools
 
@@ -73,14 +74,21 @@ token to configure. Radar tools also read public ATS endpoints and the Google Sh
 
 | Tool | What it does |
 |------|--------------|
-| `radar_today()` | Roles first seen today, highest score first |
+| `radar_summary()` | Counts by tier, track, status + the strong fits you have not applied to |
+| `radar_today()` | Roles the latest harvest found, highest score first |
 | `list_roles(track, tier, status)` | Filter the board |
-| `find_roles(source, limit)` | Poll ATS feeds, de-duplicate, append new roles |
-| `score_roles(id=0)` | Re-run the relevancy formula (0 = all) |
-| `set_why(id, why)` | Store the human-written one-line reason |
+| `find_roles(scope, ats)` | Poll ATS boards, de-duplicate, score, append. `scope`: `priority` (33 boards, ~15 s) or `all` (2,272 boards, ~7 min) |
+| `score_roles(id)` | Re-run the relevancy formula (empty = all) |
+| `set_why(id, why)` | Replace the machine reason with a human sentence |
 | `mark_applied(id, resume, date)` | Flip status and stamp which resume you sent |
-| `sheet_pull()` | Read the spreadsheet; mirror application state into `roles.json` |
-| `sheet_push()` | Append newly applied roles back to the spreadsheet |
+| `set_status(id, status)` | Move an application along |
+| `sheet_push(limit)` | Print the tab-separated rows to paste into the spreadsheet |
+| `sheet_mark(id, row)` | Record which spreadsheet row a role lives in |
+| `needs_human()` | Rows the sync cannot resolve alone |
+
+`sheet_push` **prints** rows rather than writing them. The Sheets API is not wired up, and an
+append that cannot be undone should not happen behind your back. Paste the rows, then call
+`sheet_mark`.
 
 ### Shared
 
@@ -126,12 +134,14 @@ radar today?"*
 
 **Radar**
 
-1. `find_roles()` → poll the ATS feeds and append what is new.
-2. `score_roles()` → rank every open role against the three resumes.
-3. `radar_today()` → read the new strong fits.
-4. Apply, then `mark_applied(id, resume)` → `sheet_push()`.
-5. `sheet_pull()` → pull back status changes you made in the spreadsheet by hand.
-6. `sync` → push.
+1. `find_roles()` → poll the 33 priority boards and append what is new. Once a week,
+   `find_roles(scope="all")` for the full 2,272-board sweep.
+2. `radar_today()` → read what opened, highest score first.
+3. Apply, then `mark_applied(id, resume)`.
+4. `sheet_push()` → paste the printed rows into the spreadsheet → `sheet_mark(id, row)`.
+5. `sync` → push.
+
+`find_roles` scores as it goes, so `score_roles` is only needed after you edit a keyword list.
 
 ## Data
 
@@ -157,12 +167,18 @@ people{}           login -> name, company, location, followers, url, reviewed[],
 meta               owner, seasons[], generated, updated_by, schema, sources[]
 resumes[]          id (swe|ml|hwv), label, file, titles[], keywords[], color
 roles[]            id, company, title, location, workmode, season, url, source,
-                   posted, found, eligibility{}, tags[],
-                   tracks{swe,ml,hwv}, best_track, tier, why,
+                   posted, found, snippet, eligibility{}, tags[],
+                   tracks{swe,ml,hwv}, best_track, also_tracks[], tier, why, why_by,
                    application{status, applied, resume, sheet_row, recruiter,
                                network, thank_you, follow_up, notes},
                    dead
 ```
+
+`data/boards.json` holds the 2,272-row company-to-ATS registry, vendored from an
+MIT-licensed upstream list — see [NOTICE](NOTICE). `data/blocklist.json` drops junk at
+harvest time (unpaid "volunteer intern" listings, blocked companies). Full job descriptions are stripped out
+of `roles.json` and cached in `data/descriptions.cache.json`, which is git-ignored: they run
+5–20 KB each and would make the file too heavy for the page to fetch.
 
 Field-by-field definitions, the score formula, and the spreadsheet column map live in
 [docs/RADAR.md](docs/RADAR.md).

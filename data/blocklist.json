@@ -1,0 +1,11 @@
+{
+ "_note": "Rows dropped at harvest time. Convention borrowed from the reference internship-list projects (blacklist.txt / blocklist.json). Companies match on the registry slug; titles match as a case-insensitive regex.",
+ "companies": ["LuxeMediaLLC"],
+ "title_patterns": [
+  "volunteer",
+  "unpaid",
+  "pro\\s*bono",
+  "\\bmba\\b",
+  "\\bphd\\b(?!.*\\b(intern|co-?op)\\b)"
+ ]
+}
