@@ -23,13 +23,19 @@ Designed as the "seam" for Hermes: any writer that preserves the JSON schema
 
 import json
 import subprocess
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 from mcp.server.fastmcp import FastMCP
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import radar  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "contributions.json"
+ROLES = ROOT / "data" / "roles.json"
+CACHE = ROOT / "data" / "descriptions.cache.json"
 
 mcp = FastMCP("contributie")
 
@@ -369,6 +375,276 @@ def refresh_people() -> str:
             notes.append(f"@{login}: ERROR {e}")
     save(d, updated_by="mcp")
     return "Refreshed reviewers:\n" + "\n".join(notes) + "\n\n(Run `sync` to push.)"
+
+
+# ------------------------------------------------------------------ radar tools
+def load_roles() -> dict:
+    return json.loads(ROLES.read_text())
+
+
+def save_roles(data: dict, updated_by: str = "mcp") -> None:
+    data.setdefault("meta", {})
+    data["meta"]["updated_by"] = updated_by
+    data["meta"]["generated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    ROLES.write_text(json.dumps(data, indent=2) + "\n")
+
+
+def load_cache() -> dict:
+    return json.loads(CACHE.read_text()) if CACHE.exists() else {}
+
+
+def _find_role(data: dict, id: str) -> dict | None:
+    return next((r for r in data["roles"] if r["id"] == id), None)
+
+
+def _line(r: dict) -> str:
+    score = r["tracks"].get(r["best_track"], 0)
+    flag = "" if r["application"]["status"] == "none" else f"  [{r['application']['status'].upper()}]"
+    return (f"{score:>3} {r['best_track']:<4} {r['tier']:<7} {r['company']} — {r['title']}{flag}\n"
+            f"      {r.get('location') or '—'} · {r.get('season') or 'season n/a'} · "
+            f"found {r.get('found')} · {r['url'] or 'no link'}")
+
+
+@mcp.tool()
+def radar_today() -> str:
+    """Roles the radar first saw on its latest harvest, highest score first.
+    This is the daily read: what opened, and which resume fits it."""
+    data = load_roles()
+    if not data["roles"]:
+        return "No roles yet. Run find_roles."
+    latest = max(r.get("found") or "" for r in data["roles"])
+    new = [r for r in data["roles"]
+           if r.get("found") == latest and r["application"]["status"] == "none"]
+    new.sort(key=lambda r: -r["tracks"].get(r["best_track"], 0))
+    if not new:
+        return f"Nothing new on {latest}."
+    head = f"{len(new)} new role(s) found {latest}:"
+    return head + "\n\n" + "\n".join(_line(r) for r in new[:40])
+
+
+@mcp.tool()
+def list_roles(track: str = "all", tier: str = "all", status: str = "all",
+               limit: int = 40) -> str:
+    """Filter the board. track: all|swe|ml|hwv. tier: all|strong|fit|stretch.
+    status: all|none|applied|in_progress|rejected|offer ('none' = not applied yet)."""
+    rows = load_roles()["roles"]
+    if track != "all":
+        rows = [r for r in rows if r["best_track"] == track or track in (r.get("also_tracks") or [])]
+    if tier != "all":
+        rows = [r for r in rows if r["tier"] == tier]
+    if status != "all":
+        rows = [r for r in rows if r["application"]["status"] == status]
+    if not rows:
+        return f"No roles match track={track} tier={tier} status={status}."
+    rows.sort(key=lambda r: -r["tracks"].get(r["best_track"], 0))
+    more = f"\n\n(+{len(rows) - limit} more)" if len(rows) > limit else ""
+    return f"{len(rows)} role(s):\n\n" + "\n".join(_line(r) for r in rows[:limit]) + more
+
+
+@mcp.tool()
+def find_roles(scope: str = "priority", ats: str = "") -> str:
+    """Poll the ATS boards, keep PAID internships and co-ops in the US,
+    de-duplicate, score, and append what is new.
+
+    scope: priority   33 fast boards + 41 curated Workday employers  (~5 min)
+           all        every greenhouse/ashby/lever/smartrecruiters   (~7 min)
+           workday    all 1,710 Workday tenants                      (~25 min)
+           everything both
+    ats:   greenhouse | ashby | lever | smartrecruiters | workday"""
+    data = load_roles()
+    harvested, stats = radar.harvest(scope=scope, ats=ats or None)
+    added, updated = radar.merge(data["roles"], harvested)
+    cache = load_cache()
+    radar.attach_descriptions(data["roles"], cache)
+    for role in data["roles"]:
+        radar.score_role(role, data["resumes"])
+    data["roles"], dropped = radar.prune(data["roles"])
+    cache.update(radar.split_descriptions(data["roles"]))
+    CACHE.write_text(json.dumps(cache) + "\n")
+    save_roles(data)
+    tiers: dict[str, int] = {}
+    for r in data["roles"]:
+        tiers[r["tier"]] = tiers.get(r["tier"], 0) + 1
+    return (f"Harvest ({scope}): {stats['ok']}/{stats['boards']} boards ok, "
+            f"{stats['failed']} failed.\n"
+            f"{stats['seen']} postings seen, {stats['kept']} internships/co-ops kept.\n"
+            f"+{added} new roles, {updated} already known, {dropped} pruned. "
+            f"Total {len(data['roles'])}.\n"
+            f"Tiers: {tiers}\n\n(Run `sync` to push.)")
+
+
+@mcp.tool()
+def score_roles(id: str = "") -> str:
+    """Re-run the relevancy formula. Pass a role id, or leave empty for all.
+    Use after you edit the keyword lists in data/roles.json."""
+    data = load_roles()
+    radar.attach_descriptions(data["roles"], load_cache())
+    targets = [r for r in data["roles"] if not id or r["id"] == id]
+    if not targets:
+        return f"No role with id={id}."
+    before = {r["id"]: r["tier"] for r in targets}
+    for r in targets:
+        radar.score_role(r, data["resumes"])
+    moved = [r for r in targets if before[r["id"]] != r["tier"]]
+    radar.split_descriptions(data["roles"])
+    save_roles(data)
+    out = f"Scored {len(targets)} role(s). {len(moved)} changed tier."
+    if moved:
+        out += "\n" + "\n".join(f"  {r['company']} — {r['title']}: "
+                                f"{before[r['id']]} → {r['tier']}" for r in moved[:20])
+    return out + "\n\n(Run `sync` to push.)"
+
+
+@mcp.tool()
+def set_why(id: str, why: str) -> str:
+    """Replace a role's machine-drafted reason with a human sentence.
+    A human `why` is never overwritten by score_roles."""
+    data = load_roles()
+    role = _find_role(data, id)
+    if not role:
+        return f"No role with id={id}."
+    role["why"] = why.strip()
+    role["why_by"] = "human"
+    save_roles(data)
+    return f"Why saved for {role['company']} — {role['title']}. (Run `sync` to push.)"
+
+
+@mcp.tool()
+def mark_applied(id: str, resume: str = "", date: str = "", notes: str = "") -> str:
+    """Record that you applied. resume: swe|ml|hwv (defaults to the best track).
+    date: YYYY-MM-DD (defaults to today)."""
+    data = load_roles()
+    role = _find_role(data, id)
+    if not role:
+        return f"No role with id={id}."
+    valid = [r["id"] for r in data["resumes"]]
+    resume = resume or role["best_track"]
+    if resume not in valid:
+        return f"resume must be one of {valid}."
+    role["application"].update({
+        "status": "applied", "applied": date or radar.today(), "resume": resume,
+        "notes": notes or role["application"].get("notes", ""),
+    })
+    save_roles(data)
+    return (f"Marked applied: {role['company']} — {role['title']} "
+            f"({resume} resume, {role['application']['applied']}).\n"
+            f"Add it to the spreadsheet with sheet_push.")
+
+
+@mcp.tool()
+def set_status(id: str, status: str, notes: str = "") -> str:
+    """Move an application along. status: none|applied|in_progress|phone_screen|
+    rejected|offer. These match the spreadsheet's Status column exactly."""
+    allowed = ("none", "applied", "in_progress", "phone_screen", "rejected", "offer")
+    if status not in allowed:
+        return f"status must be one of {allowed}."
+    data = load_roles()
+    role = _find_role(data, id)
+    if not role:
+        return f"No role with id={id}."
+    was = role["application"]["status"]
+    role["application"]["status"] = status
+    if notes:
+        role["application"]["notes"] = notes
+    save_roles(data)
+    return f"{role['company']} — {role['title']}: {was} → {status}. (Run `sync` to push.)"
+
+
+@mcp.tool()
+def sheet_push(limit: int = 40) -> str:
+    """Print the rows to paste into the application spreadsheet: every role marked
+    applied in the radar that carries no sheet_row yet. Tab-separated, in the
+    sheet's own column order, so it pastes straight into the next empty row.
+
+    It prints rather than writes: the Sheets API is not wired up, and an append
+    that cannot be undone should not happen behind your back.
+    """
+    data = load_roles()
+    pending = [r for r in data["roles"]
+               if r["application"]["status"] != "none" and not r["application"].get("sheet_row")]
+    if not pending:
+        return "Nothing to push — every applied role already has a sheet row."
+    pending.sort(key=lambda r: str(r["application"].get("applied") or ""))
+    cols = ["Company", "Role", "Location", "App Link", "Recruiter", "Date Found",
+            "Network Connections?", "Date Applied", "App Attachments", "Status",
+            "Thank You Note Sent?", "Follow-Up Sent?", "Comments/Notes"]
+    lines = ["\t".join(cols)]
+    for r in pending[:limit]:
+        a = r["application"]
+        resume = next((x["label"] for x in data["resumes"] if x["id"] == a.get("resume")), "")
+        lines.append("\t".join([
+            r["company"], r["title"], r.get("location") or "", r.get("url") or "",
+            a.get("recruiter") or "", _mmdd(r.get("found")), a.get("network") or "",
+            _mmdd(a.get("applied")), f"Resume ({resume})" if resume else "",
+            a["status"].replace("_", " ").title(),
+            "Yes" if a.get("thank_you") else "", "Yes" if a.get("follow_up") else "",
+            a.get("notes") or "",
+        ]))
+    return (f"{len(pending)} row(s) to paste into the spreadsheet:\n\n" + "\n".join(lines)
+            + "\n\nAfter you paste, run sheet_mark(id, row) so the radar stops offering them.")
+
+
+def _mmdd(iso: str | None) -> str:
+    """ISO date back to the sheet's own MM/DD format."""
+    return f"{iso[5:7]}/{iso[8:10]}" if iso and len(iso) >= 10 else ""
+
+
+@mcp.tool()
+def sheet_mark(id: str, row: int) -> str:
+    """Record which spreadsheet row a role lives in, after you paste it."""
+    data = load_roles()
+    role = _find_role(data, id)
+    if not role:
+        return f"No role with id={id}."
+    role["application"]["sheet_row"] = row
+    save_roles(data)
+    return f"{role['company']} — {role['title']} is sheet row {row}."
+
+
+@mcp.tool()
+def needs_human() -> str:
+    """Every row the sync could not resolve on its own: a spreadsheet row with no
+    role title, or a role flagged for a decision. These block a clean sheet sync."""
+    rows = load_roles()["roles"]
+    flagged = [r for r in rows if str(r["application"].get("notes", "")).startswith("needs_human")]
+    untitled = [r for r in rows if r["source"] == "sheet" and "role not recorded" in r["title"]]
+    out = []
+    if untitled:
+        out.append(f"{len(untitled)} spreadsheet row(s) with no role title — "
+                   f"the radar cannot tell which posting it was:")
+        out += [f"  row {r['application']['sheet_row']}: {r['company']} "
+                f"(applied {r['application'].get('applied') or '?'})" for r in untitled]
+    other = [r for r in flagged if r not in untitled]
+    if other:
+        out.append(f"\n{len(other)} role(s) flagged:")
+        out += [f"  {r['company']} — {r['title']}: {r['application']['notes']}" for r in other]
+    return "\n".join(out) if out else "Nothing needs a human right now."
+
+
+@mcp.tool()
+def radar_summary() -> str:
+    """Counts by tier, track, and application status, plus what is worth a look."""
+    data = load_roles()
+    rows = data["roles"]
+    tiers, tracks, states = {}, {}, {}
+    for r in rows:
+        tiers[r["tier"]] = tiers.get(r["tier"], 0) + 1
+        tracks[r["best_track"]] = tracks.get(r["best_track"], 0) + 1
+        states[r["application"]["status"]] = states.get(r["application"]["status"], 0) + 1
+    open_strong = [r for r in rows if r["tier"] == "strong"
+                   and r["application"]["status"] == "none" and not r["dead"]]
+    open_strong.sort(key=lambda r: -r["tracks"][r["best_track"]])
+    lines = [
+        f"Internship radar — {data['meta'].get('owner')}",
+        f"Roles: {len(rows)}  |  tiers: {tiers}",
+        f"Best track: {tracks}",
+        f"Applications: {states}",
+        f"Last write: {data['meta'].get('generated')} by {data['meta'].get('updated_by')}",
+    ]
+    if open_strong:
+        lines.append(f"\nStrong fits not yet applied to ({len(open_strong)}):")
+        lines += ["  " + _line(r).split("\n")[0] for r in open_strong[:12]]
+    return "\n".join(lines)
 
 
 if __name__ == "__main__":
