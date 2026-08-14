@@ -458,6 +458,7 @@ def find_roles(scope: str = "priority", ats: str = "") -> str:
     radar.attach_descriptions(data["roles"], cache)
     for role in data["roles"]:
         radar.score_role(role, data["resumes"])
+    data["roles"], dropped = radar.prune(data["roles"])
     cache.update(radar.split_descriptions(data["roles"]))
     CACHE.write_text(json.dumps(cache) + "\n")
     save_roles(data)
@@ -467,7 +468,8 @@ def find_roles(scope: str = "priority", ats: str = "") -> str:
     return (f"Harvest ({scope}): {stats['ok']}/{stats['boards']} boards ok, "
             f"{stats['failed']} failed.\n"
             f"{stats['seen']} postings seen, {stats['kept']} internships/co-ops kept.\n"
-            f"+{added} new roles, {updated} already known. Total {len(data['roles'])}.\n"
+            f"+{added} new roles, {updated} already known, {dropped} pruned. "
+            f"Total {len(data['roles'])}.\n"
             f"Tiers: {tiers}\n\n(Run `sync` to push.)")
 
 

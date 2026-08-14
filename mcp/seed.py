@@ -222,6 +222,9 @@ def main() -> None:
     for role in roles:
         radar.score_role(role, RESUMES)
 
+    roles, dropped = radar.prune(roles)
+    print(f"prune: dropped {dropped} sub-threshold roles")
+
     cache = radar.split_descriptions(roles)
     CACHE.write_text(json.dumps(cache) + "\n")
 

@@ -113,23 +113,36 @@ NOT_INTERN_RE = re.compile(r"\bintern(al|ational)")
 # names one of these is rejected UNLESS it also carries an on-track signal, so
 # "Manufacturing Software Engineer Intern" survives and "Civil Engineering
 # Intern" does not.
+# Two groups, because a trailing \b after a prefix never matches: "pharmac\b"
+# cannot match "Pharmacy". PREFIX entries match the stem plus any suffix; EXACT
+# entries are whole words.
+OFF_TRACK_PREFIX = (
+    "civil", "structural", "geotechnical", "environmental", "chemical",
+    "petroleum", "mining", "biomedical", "bioengineer", "biolog", "biochem",
+    "chemistr", "agronom", "agricultur", "mechanic", "manufactur", "industrial",
+    "packaging", "welding", "architect", "construction", "surveying",
+    "market", "sales", "recruit", "journalis", "editorial", "copywrit",
+    "photograph", "legal", "paralegal", "complian", "audit", "accounting",
+    "bookkeep", "payroll", "nurs", "clinical", "pharmac", "dental", "veterinar",
+    "radiolog", "phlebotom", "therap", "teach", "tutor", "curriculum",
+    "admission", "underwrit", "actuar", "warehouse", "logistic", "procurement",
+    "facilit", "janitor", "culinar", "hospitality", "retail", "cashier",
+    "barista", "sponsorship", "philanthrop", "fundrais",
+)
+OFF_TRACK_EXACT = (
+    "hr", "human resources", "communications", "public relations", "social media",
+    "graphic design", "graphic designer", "fashion", "interior design",
+    "real estate", "supply chain", "claims", "tax", "content", "video",
+    "process", "finance", "financial", "bridge", "inspector", "planning",
+    "business development", "customer success", "customer service",
+    "customer experience", "customer support", "talent",
+)
 OFF_TRACK_RE = re.compile(
-    r"\b(civil|structural|geotechnical|environmental|chemical|petroleum|mining|"
-    r"biomedical|bioengineer|biology|biochem|chemistry|agronom|agricultur|"
-    r"mechanical|manufactur|industrial|process|packaging|welding|hvac|"
-    r"architect(ure|ural)|construction|interior design|surveying|bridge|"
-    r"marketing|sales|recruit(ing|er)|human resources|\bhr\b|talent|"
-    r"communications|public relations|journalis|editorial|content|copywrit|"
-    r"social media|graphic design(er)?|fashion|styl(ist|ing)|photograph|video|"
-    r"legal|paralegal|compliance|audit|tax|accounting|bookkeep|payroll|"
-    r"nursing|nurse|clinical|pharmac|medical assistant|dental|veterinar|"
-    r"teaching|tutor|curriculum|admissions|"
-    r"real estate|underwrit|claims|actuarial|"
-    r"customer (success|service|experience|support)|"
-    r"warehouse|logistics|supply chain|procurement|facilities|janitor|"
-    r"culinary|hospitality|retail|cashier|barista)\b", re.I)
+    r"\b(?:" + "|".join(OFF_TRACK_PREFIX) + r")\w*"
+    r"|\b(?:" + "|".join(OFF_TRACK_EXACT) + r")\b", re.I)
 
-# Any of these in the title rescues an otherwise off-track match.
+# Any of these in the title rescues an otherwise off-track match, so
+# "Manufacturing Software Engineer Intern" survives.
 ON_TRACK_RE = re.compile(
     r"\b(software|computer science|\bcs\b|developer|programming|"
     r"data (science|scientist|engineer|analytics)|machine learning|\bml\b|"
@@ -139,7 +152,7 @@ ON_TRACK_RE = re.compile(
     r"backend|back-end|frontend|front-end|full.?stack|platform|infrastructure|"
     r"devops|\bsre\b|site reliability|cloud|cyber ?security|"
     r"\bqa\b|test automation|compiler|robotics|quantitative|\bquant\b|"
-    r"systems engineer|\bit\b|information technology|technology|technical)\b",
+    r"systems engineer|information technology)\b",
     re.I)
 
 
@@ -304,10 +317,24 @@ def _date(value) -> str | None:
     return str(value)[:10]
 
 
+# The same employer arrives under different names from different sources —
+# "GE Vernova" from JobRight, "Gevernova" from its Workday tenant. Without this,
+# one role lands on the board twice.
+COMPANY_NOISE = re.compile(
+    r"\b(inc|incorporated|llc|l\.l\.c|corp|corporation|co|company|ltd|limited|plc|"
+    r"gmbh|nv|sa|ag|holdings?|group|technologies|technology|solutions|systems|"
+    r"labs?|the)\b\.?", re.I)
+
+
+def _norm_company(company: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", COMPANY_NOISE.sub(" ", company or "").lower())
+
+
 def role_id(company: str, title: str) -> str:
-    """Stable slug. Survives a URL change, so the spreadsheet can point at it."""
-    s = re.sub(r"[^a-z0-9]+", "-", f"{company} {title}".lower()).strip("-")
-    return s[:90] or "unknown"
+    """Stable slug. Survives a URL change and a name variant, so the spreadsheet
+    and the database can both point at it."""
+    slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+    return f"{_norm_company(company)}-{slug}"[:90] or "unknown"
 
 
 def today() -> str:
@@ -567,6 +594,72 @@ def fetch_smartrecruiters(board: str, display: str = "") -> list[dict]:
     return out
 
 
+# JobRight publishes its own daily-refreshed repos. That is the supported route:
+# it needs no login, no scraping and no email, and the listed URLs already carry
+# JobRight's utm parameters, so following them sends the credit back to them.
+# Only the last 7 days are listed, which is exactly the freshness window we want.
+JOBRIGHT_REPOS = (
+    "2026-Software-Engineer-Internship",
+    "2026-Engineer-Internship",
+    "2026-Data-Analysis-Internship",
+)
+JOBRIGHT_RAW = "https://raw.githubusercontent.com/jobright-ai/{repo}/master/README.md"
+# | **[Company](site)** | **[Title](jobright url)** | Location | Work Model | Aug 14 |
+JR_ROW_RE = re.compile(
+    r"^\|\s*\*\*\[(?P<company>[^\]]+)\]\([^)]*\)\*\*\s*"
+    r"\|\s*\*\*\[(?P<title>[^\]]+)\]\((?P<url>[^)]+)\)\*\*\s*"
+    r"\|\s*(?P<location>[^|]*)"
+    r"\|\s*(?P<mode>[^|]*)"
+    r"\|\s*(?P<posted>[^|]*)\|", re.M)
+MONTHS = {m: i for i, m in enumerate(
+    ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], start=1)}
+
+
+def _jr_date(text: str) -> str | None:
+    """'Aug 14' -> ISO. The table has no year, but it only lists the last 7 days,
+    so a date in the future must belong to last year."""
+    parts = (text or "").strip().split()
+    if len(parts) != 2 or parts[0] not in MONTHS:
+        return None
+    try:
+        day = int(parts[1])
+    except ValueError:
+        return None
+    today = date.today()
+    try:
+        d = date(today.year, MONTHS[parts[0]], day)
+    except ValueError:
+        return None
+    if d > today:
+        d = date(today.year - 1, MONTHS[parts[0]], day)
+    return d.isoformat()
+
+
+def fetch_jobright(repo: str, display: str = "") -> list[dict]:
+    req = urllib.request.Request(JOBRIGHT_RAW.format(repo=repo),
+                                 headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        md = r.read().decode("utf-8", "replace")
+
+    out = []
+    for m in JR_ROW_RE.finditer(md):
+        company = m.group("company").strip()
+        title = m.group("title").strip()
+        loc = m.group("location").strip()
+        mode = m.group("mode").strip().lower()
+        out.append(_blank_role(
+            id=role_id(company, title), company=company, title=title, location=loc,
+            workmode=("remote" if "remote" in mode else "hybrid" if "hybrid" in mode
+                      else "onsite" if "site" in mode or "office" in mode else "unspecified"),
+            season=season_of(title), url=m.group("url").strip(), source="jobright",
+            posted=_jr_date(m.group("posted")),
+            # the table carries no description, so scoring falls back to the title
+            description="", eligibility=eligibility_of(title), tags=tags_of(title),
+        ))
+    return out
+
+
 def fetch_lever(board: str, display: str = "") -> list[dict]:
     data = _get_json(f"https://api.lever.co/v0/postings/{board}?mode=json")
     out = []
@@ -649,6 +742,7 @@ FETCHERS = {
     "lever": fetch_lever,
     "smartrecruiters": fetch_smartrecruiters,
     "workday": fetch_workday,
+    "jobright": fetch_jobright,
 }
 
 
@@ -674,6 +768,9 @@ def harvest(scope: str = "priority", ats: str | None = None, early_only: bool = 
     """
     blocked, block_rx = load_blocklist()
     companies = [c for c in board_list(scope, ats) if c["slug"] not in blocked]
+    if scope in ("priority", "everything") and ats in (None, "", "jobright"):
+        companies += [{"name": f"JobRight {r}", "slug": r, "ats": "jobright"}
+                      for r in JOBRIGHT_REPOS]
     roles: list[dict] = []
     stats = {"boards": len(companies), "ok": 0, "failed": 0, "seen": 0,
              "kept": 0, "errors": {}, "top": []}
@@ -705,6 +802,20 @@ def harvest(scope: str = "priority", ats: str | None = None, early_only: bool = 
     stats["kept"] = len(roles)
     stats["top"] = sorted(per_board, key=lambda x: -x[1])[:12]
     return roles, stats
+
+
+def prune(roles: list[dict]) -> tuple[list[dict], int]:
+    """Drop harvested roles that scored below the stretch floor.
+
+    They are noise the page never shows, and at ~1,100 rows they were 60% of
+    roles.json. Spreadsheet history and anything applied to is kept whatever it
+    scores: that is your record, not a recommendation.
+    """
+    keep = [r for r in roles
+            if r.get("tier") != "none"
+            or r.get("source") == "sheet"
+            or (r.get("application") or {}).get("status", "none") != "none"]
+    return keep, len(roles) - len(keep)
 
 
 def split_descriptions(roles: list[dict]) -> dict[str, str]:
