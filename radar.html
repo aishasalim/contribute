@@ -98,7 +98,7 @@
   .search:focus{outline:2px solid var(--accent);outline-offset:-1px}
 
   .list{display:flex;flex-direction:column}
-  .row{display:grid;grid-template-columns:34px minmax(0,1.05fr) minmax(0,2fr) auto;gap:11px;align-items:center;width:100%;text-align:left;background:none;border:0;border-left:2px solid transparent;border-bottom:1px solid var(--border);padding:10px 12px 10px 8px;cursor:pointer;color:inherit;font-family:var(--sans)}
+  .row{display:grid;grid-template-columns:34px minmax(0,1.05fr) minmax(0,2fr) auto auto;gap:11px;align-items:center;width:100%;text-align:left;background:none;border:0;border-left:2px solid transparent;border-bottom:1px solid var(--border);padding:10px 12px 10px 8px;cursor:pointer;color:inherit;font-family:var(--sans)}
   .list .row:last-child{border-bottom:0}
   .row:hover{background:var(--surface-2)}
   .row.sel{background:var(--accent-bg);border-left-color:var(--accent)}
@@ -108,6 +108,10 @@
   .rtitle{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .row.sel .rtitle{color:var(--ink)}
   .rright{display:flex;gap:5px;align-items:center;justify-self:end}
+  .age{font-family:var(--mono);font-size:10.5px;color:var(--faint);white-space:nowrap;font-variant-numeric:tabular-nums;justify-self:end}
+  .age.fresh{color:var(--accent);font-weight:600}
+  .age.stale{opacity:.55}
+  .pay{font-family:var(--mono);font-size:10px;color:var(--strong);white-space:nowrap}
   .empty{color:var(--muted);font-family:var(--mono);font-size:13px;padding:22px;text-align:center}
 
   /* Badges */
@@ -133,8 +137,10 @@
   .bars{margin:0 0 14px;display:flex;flex-direction:column;gap:7px}
   .bar{display:grid;grid-template-columns:58px 1fr 28px;gap:9px;align-items:center}
   .bar .bn{font-family:var(--mono);font-size:10px;color:var(--muted)}
-  .bar .bt{height:6px;border-radius:4px;background:var(--surface-2);border:1px solid var(--border);overflow:hidden}
-  .bar .bf{height:100%;border-radius:4px}
+  /* display:block matters — these are spans, and an inline box ignores height
+     and width, so the fill never renders. */
+  .bar .bt{display:block;height:7px;border-radius:4px;background:var(--surface-2);border:1px solid var(--border);overflow:hidden}
+  .bar .bf{display:block;height:100%;border-radius:4px;min-width:2px}
   .bar .bv{font-family:var(--mono);font-size:11px;font-variant-numeric:tabular-nums;text-align:right;color:var(--ink)}
   .d-meta{display:grid;grid-template-columns:1fr 1fr;gap:9px 14px;font-family:var(--mono);font-size:11.5px;margin:0 0 14px;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
   .d-meta .k{color:var(--faint);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase} .d-meta .v{color:var(--ink);margin-top:2px;word-break:break-word}
@@ -165,7 +171,7 @@
     .mini{grid-template-columns:repeat(4,1fr)} .mini .n{font-size:17px}
     .content{padding:16px 14px}
     .head h2{font-size:16px}
-    .row{grid-template-columns:30px minmax(0,1fr) auto;gap:9px;padding:12px 8px}
+    .row{grid-template-columns:30px minmax(0,1fr) auto auto;gap:9px;padding:12px 8px}
     .row .rtitle{grid-column:2 / -1;grid-row:2}
     .search{margin-left:0;max-width:none}
   }
@@ -213,7 +219,7 @@ const TIER_VAR={strong:"var(--strong)",fit:"var(--fit)",stretch:"var(--stretch)"
 const STATUS_LABEL={none:"Not applied",applied:"Applied",in_progress:"In progress",
   phone_screen:"Phone screen",rejected:"Rejected",offer:"Offer"};
 
-let DATA=null, RESUMES=[], RMAP={}, FILTER="today", TRACK="all", QUERY="", SEL=null, CUR=[], TODAY="";
+let DATA=null, RESUMES=[], RMAP={}, FILTER="today", TRACK="all", QUERY="", SORT="fit", SEL=null, CUR=[], TODAY="";
 
 const trackBadge=id=>{const r=RMAP[id];if(!r)return"";
   return `<span class="trk" style="color:${r.color};background:${r.color}22">${esc(r.label)}</span>`;};
@@ -222,11 +228,13 @@ const best=r=>r.tracks?(r.tracks[r.best_track]||0):0;
 
 function rowHTML(r,sel){
   const isNew = r.found===TODAY && r.application.status==="none";
+  const a=ageDays(r);
   return `<button class="row${r.id===sel?" sel":""}" data-id="${esc(r.id)}">
     <span class="score" style="color:${TIER_VAR[r.tier]}">${best(r)}</span>
     <span class="rco">${isNew?'<span class="newdot"></span> ':""}${esc(r.company)}</span>
     <span class="rtitle">${esc(r.title)}</span>
     <span class="rright">${trackBadge(r.best_track)}</span>
+    <span class="age ${ageCls(a)}" title="${r.posted?"posted "+esc(r.posted):"first seen "+esc(r.found)}">${ageShort(a)}</span>
   </button>`;
 }
 
@@ -243,6 +251,8 @@ function eligChips(r){
   if(e.sponsorship===true) out.push('<span class="lchip good">sponsors visas</span>');
   if(e.sponsorship===false) out.push('<span class="lchip warn">no sponsorship</span>');
   if(e.citizenship) out.push(`<span class="lchip warn">${esc(e.citizenship)}</span>`);
+  if(r.pay) out.push(`<span class="lchip good">${esc(r.pay)}</span>`);
+  if(r.paid===false) out.push('<span class="lchip warn">unpaid</span>');
   if(r.season) out.push(`<span class="lchip">${esc(r.season)}</span>`);
   if(r.workmode&&r.workmode!=="unspecified") out.push(`<span class="lchip">${esc(r.workmode)}</span>`);
   return out.length?`<div class="d-labels">${out.join("")}</div>`:"";
@@ -270,8 +280,9 @@ function detailHTML(r){
     ${eligChips(r)}
     <div class="d-meta">
       <div class="wide"><div class="k">Location</div><div class="v">${esc(r.location||"—")}</div></div>
-      <div><div class="k">Posted</div><div class="v">${esc(r.posted||"—")}</div></div>
+      <div><div class="k">Posted</div><div class="v">${ageLong(ageDays(r))}${r.posted?` · ${esc(r.posted)}`:""}</div></div>
       <div><div class="k">Found</div><div class="v">${esc(r.found||"—")}</div></div>
+      <div class="wide"><div class="k">Pay</div><div class="v">${r.pay?esc(r.pay):(r.paid===true?"stated as paid, no range given":r.paid===false?"UNPAID":"not stated in the posting")}</div></div>
       <div><div class="k">Source</div><div class="v">${esc(r.source||"—")}</div></div>
       <div><div class="k">Season</div><div class="v">${esc(r.season||"—")}</div></div>
     </div>
@@ -281,6 +292,15 @@ function detailHTML(r){
             :'<div class="d-empty">No link recorded — this row came from the spreadsheet.</div>'}`;
 }
 
+const DAY=86400000;
+function ageDays(r){
+  const d=r.posted||r.found; if(!d) return null;
+  const t=Date.parse(d+"T00:00:00Z"); if(isNaN(t)) return null;
+  return Math.max(0,Math.floor((Date.now()-t)/DAY));
+}
+const ageShort=n=>n===null?"—":n===0?"today":n+"d";
+const ageLong=n=>n===null?"not stated":n===0?"today":n===1?"yesterday":n+" days ago";
+const ageCls=n=>n===null?"":n<=3?"fresh":n>30?"stale":"";
 const applied=r=>r.application.status!=="none";
 const SECTIONS=[
   {key:"today",  label:"Today",      color:"var(--accent)", get:d=>d.filter(r=>r.found===TODAY&&!applied(r))},
@@ -297,7 +317,9 @@ function visible(){
     rows=rows.filter(r=>(r.company+" "+r.title+" "+(r.tags||[]).join(" ")).toLowerCase().includes(q));}
   const key = FILTER==="applied"||FILTER==="closed"
     ? (a,b)=>String(b.application.applied||"").localeCompare(String(a.application.applied||""))
-    : (a,b)=>best(b)-best(a)||String(b.found).localeCompare(String(a.found));
+    : SORT==="new"
+      ? (a,b)=>(ageDays(a)??9e9)-(ageDays(b)??9e9)||best(b)-best(a)
+      : (a,b)=>best(b)-best(a)||(ageDays(a)??9e9)-(ageDays(b)??9e9);
   return rows.sort(key);
 }
 
@@ -308,9 +330,14 @@ function renderFilters(){
       const on=k===TRACK, c=k==="all"?"var(--accent)":RMAP[k].color;
       return `<button class="chip${on?" on":""}" data-t="${k}"${on?` style="background:${c}22;color:${c}"`:""}>${esc(l)}</button>`;
     }).join("")+
+    `<span class="chip" style="border:0;background:none;cursor:default;color:var(--faint)">sort</span>`+
+    [["fit","best fit"],["new","newest"]].map(([k,l])=>
+      `<button class="chip${k===SORT?" on":""}" data-s="${k}"${k===SORT?' style="background:var(--accent-bg);color:var(--accent)"':""}>${l}</button>`).join("")+
     `<input class="search" id="q" type="search" placeholder="filter company, title, skill" value="${esc(QUERY)}">`;
-  document.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("[data-t]").forEach(b=>b.addEventListener("click",()=>{
     TRACK=b.dataset.t;SEL=null;renderFilters();renderSection();}));
+  document.querySelectorAll("[data-s]").forEach(b=>b.addEventListener("click",()=>{
+    SORT=b.dataset.s;SEL=null;renderFilters();renderSection();}));
   const q=document.getElementById("q");
   q.addEventListener("input",()=>{QUERY=q.value;SEL=null;renderSection();
     const el=document.getElementById("q");el.focus();el.setSelectionRange(el.value.length,el.value.length);});

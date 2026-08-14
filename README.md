@@ -28,8 +28,9 @@ human-written through `set_recap`, so they read like a person wrote them.
 
 ## Page 2 — Internship radar
 
-**Internships and co-ops only**, ranked against three resumes. New grad, early career and
-campus full-time titles are filtered out. Full specification: **[docs/RADAR.md](docs/RADAR.md)**.
+**Paid internships and co-ops only**, ranked against three resumes. New grad, early career
+and campus full-time titles are filtered out, and so is anything the posting calls unpaid,
+volunteer, or credit-only. Where a pay range is stated it is extracted and shown. Full specification: **[docs/RADAR.md](docs/RADAR.md)**.
 
 Three resume tracks. Every role gets a score per track, and the best track becomes its badge.
 
@@ -45,8 +46,20 @@ Sections: **Today** · **Strong fit** · **All open** · **Applied** · **Closed
 - **Applied** is the running list. It mirrors the
   [application spreadsheet](https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit),
   which stays the source of truth for application state.
+- Every row shows **how many days ago the posting went up**, computed in the browser so it
+  stays correct between harvests. Sort by best fit or by newest.
 - Relevancy is a transparent formula, not a black box. Every score ships with a one-line
   reason. See [Relevancy model](docs/RADAR.md#relevancy-model).
+
+The page reads a static JSON file. It is **not** live — it changes when `find_roles` runs and
+the file is pushed.
+
+## Database
+
+Postgres is the durable store: `db/schema.sql`, driven by `db/sync.py`
+(`init` / `push` / `pull` / `stats`). `roles` is a cache the harvest overwrites;
+`applications` is your own state and a harvest never touches it. See
+[Database](docs/RADAR.md#database).
 
 ---
 

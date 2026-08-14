@@ -122,6 +122,8 @@ One role:
 | `source` | enum | Which feed found it |
 | `posted` | date | The employer's own published date |
 | `found` | date | When the radar first saw it. **Today** filters on this. |
+| `paid` | bool\|null | `false` only when the posting says unpaid. `null` means it is silent — most are. |
+| `pay` | string | The extracted range, e.g. `$45.00 – $60.00 / hour`. Empty when not stated. |
 | `eligibility` | object | `{ sponsorship: bool\|null, citizenship: string\|null, class_year: [] }`. `null` means the posting is silent. |
 | `tags[]` | string[] | Skills detected in the description (Python, C++, UVM, React) |
 | `tracks` | object | `{ swe: 0-100, ml: 0-100, hwv: 0-100 }` |
@@ -161,8 +163,13 @@ translation table.
 | **Applied** | `application.status != "none"`, sorted by `applied`, newest first |
 | **Closed** | `application.status == "rejected"` or `dead == true` |
 
-The detail rail shows the track scores as three bars, the `why` line, the eligibility flags,
-the skill tags, the application timeline, and one **Apply** link.
+Each row shows the score, the company, the title, the track badge, and the **posting age in
+days**. Age is computed in the browser from `posted` (falling back to `found`), so it stays
+correct without a re-harvest. Anything 3 days old or newer is highlighted; anything past 30
+days is dimmed. A sort toggle switches between **best fit** and **newest**.
+
+The detail rail shows the track scores as three bars, the `why` line, the pay, the
+eligibility flags, the skill tags, the application record, and one **Apply** link.
 
 ## Spreadsheet map
 
@@ -235,6 +242,13 @@ sweep. About 117 of 2,272 fail on any given run, because slugs go stale upstream
 - Filter on the **title** for internship and co-op wording, never the description. A
   description filter let ~1,700 senior roles through, because full-time postings mention
   "students" and "university" in the boilerplate.
+- **Paid only.** `pay_of()` reads the description and sets `paid` to `false` on `unpaid`,
+  `volunteer`, `pro bono`, `no compensation`, or `credit only`. Those rows are dropped.
+  `stipend` and `academic credit` are **not** unpaid signals on their own: a stipend is pay,
+  and many paid internships also offer credit. A silent posting (`paid: null`) is kept —
+  about half say nothing, and dropping them would empty the board.
+- Where a range is stated, it is extracted into `pay` (`$45.00 – $60.00 / hour`). Roughly a
+  quarter of postings state one.
 - `data/blocklist.json` drops rows at harvest time: blocked company slugs, and title
   patterns for unpaid work (`volunteer`, `unpaid`, `pro bono`) and degrees you do not hold.
   Without it, one media company's 52 unpaid "intern/volunteer" listings put 9 rows into the
@@ -246,6 +260,37 @@ sweep. About 117 of 2,272 fail on any given run, because slugs go stale upstream
 - **LinkedIn: link out, do not scrape.** It blocks automated reads and the terms forbid it.
 - Playwright is the last resort, for a board with no JSON at all. Run it locally, not in CI.
   It is not part of the current toolchain, so add it only when a target actually needs it.
+
+## Database
+
+The spreadsheet is not wired up. Postgres is the durable store instead —
+`db/schema.sql` and `db/sync.py`, sized for DigitalOcean Managed Postgres.
+
+Two tables, and the split is the point:
+
+| Table | Owner | A harvest |
+|-------|-------|-----------|
+| `roles` | The ATS boards | overwrites it |
+| `applications` | You | **never touches it** |
+
+The spreadsheet mixed both, so a re-import risked overwriting an application you had already
+sent. `applications` also carries a trigger that writes every status change to
+`application_events`, so a rejection that arrives months later still has a date.
+
+```bash
+export DATABASE_URL='postgresql://user:pass@host:25060/db?sslmode=require'
+uv run --with 'psycopg[binary]' python db/sync.py init    # create the schema
+uv run --with 'psycopg[binary]' python db/sync.py push    # roles.json -> DB
+uv run --with 'psycopg[binary]' python db/sync.py pull    # DB -> roles.json
+uv run --with 'psycopg[binary]' python db/sync.py stats
+```
+
+`push` upserts roles and seeds an application row **only when none exists**. `pull` writes DB
+application state back into `roles.json`, which the page reads.
+
+The page still fetches a static `roles.json`; it does not query Postgres. A browser cannot
+reach a managed database directly, so a live page needs a small read API in front of it.
+That is not built.
 
 ## Auto-apply contract
 

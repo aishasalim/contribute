@@ -111,6 +111,49 @@ TAG_RES = {
     "Distributed systems": r"distributed system", "Compilers": r"\bcompiler",
 }
 
+# ------------------------------------------------------------------------- pay
+# An unpaid or credit-only internship must never reach the board. "Stipend" and
+# "academic credit" are NOT unpaid signals on their own: a stipend is pay, and
+# many paid internships also offer credit.
+UNPAID_RE = re.compile(
+    r"\bunpaid\b|\bvolunteer\b|\bpro\s*bono\b|without\s+(pay|compensation)"
+    r"|no\s+(pay|compensation|salary)\b|\bfor\s+(academic\s+)?credit\s+only\b"
+    r"|(course|academic|school|college)\s+credit\s+only|unpaid\s+intern"
+)
+PAID_RE = re.compile(
+    r"\$\s*\d|\bper\s+hour\b|\bhourly\b|\bsalary\b|\bcompensation\b"
+    r"|\bpay\s+(range|rate)\b|\bpaid\s+intern|\bstipend\b|\busd\b"
+    r"|\bbase\s+pay\b|\bwage\b"
+)
+# "$45.00 - $60.00 per hour", "$30/hr", "$8,000 - $12,000 per month"
+PAY_RANGE_RE = re.compile(
+    r"\$\s?([\d,]+(?:\.\d{2})?)\s*(?:-|–|to)\s*\$?\s?([\d,]+(?:\.\d{2})?)"
+    r"\s*(?:per\s+|/\s*|a\s+)?(hour|hr|month|mo|year|yr|week|wk)?",
+    re.I)
+PAY_SINGLE_RE = re.compile(
+    r"\$\s?([\d,]+(?:\.\d{2})?)\s*(?:per\s+|/\s*|a\s+)(hour|hr|month|mo|year|yr|week|wk)",
+    re.I)
+UNIT = {"hr": "hour", "mo": "month", "yr": "year", "wk": "week"}
+
+
+def pay_of(text: str) -> tuple[bool | None, str]:
+    """Returns (paid, pay_range). paid: True | False | None when the posting is
+    silent. Most postings are silent, so None must not be treated as unpaid."""
+    low = text.lower()
+    if UNPAID_RE.search(low):
+        return False, ""
+    m = PAY_RANGE_RE.search(text) or PAY_SINGLE_RE.search(text)
+    if m:
+        g = m.groups()
+        unit = g[-1] or ""
+        unit = UNIT.get(unit.lower(), unit.lower())
+        rng = f"${g[0]}" + (f" – ${g[1]}" if len(g) == 3 and g[1] else "")
+        return True, (rng + (f" / {unit}" if unit else "")).strip()
+    if PAID_RE.search(low):
+        return True, ""
+    return None, ""
+
+
 SPONSOR_NO = re.compile(
     r"(unable|not able|do not|does not|cannot|will not|won't)[^.]{0,40}sponsor"
     r"|no\s+(visa\s+)?sponsorship|without\s+(visa\s+)?sponsorship"
@@ -330,11 +373,17 @@ def score_role(role: dict, resumes: list[dict]) -> dict:
 
 
 # ---------------------------------------------------------------------- fetchers
+def _pay_kw(desc: str) -> dict:
+    paid, pay = pay_of(desc)
+    return {"paid": paid, "pay": pay}
+
+
 def _blank_role(**kw) -> dict:
     role = {
         "id": "", "company": "", "title": "", "location": "", "workmode": "unspecified",
         "season": None, "url": "", "source": "manual", "posted": None, "found": today(),
-        "description": "", "eligibility": {"sponsorship": None, "citizenship": None, "class_year": []},
+        "description": "", "paid": None, "pay": "",
+        "eligibility": {"sponsorship": None, "citizenship": None, "class_year": []},
         "tags": [], "tracks": {}, "best_track": None, "also_tracks": [], "tier": "none",
         "why": "", "why_by": "auto", "dead": False,
         "application": {
@@ -373,7 +422,7 @@ def fetch_greenhouse(board: str, display: str = "") -> list[dict]:
             url=j.get("absolute_url") or "", source="greenhouse",
             posted=_date(j.get("first_published") or j.get("updated_at")),
             description=desc, eligibility=eligibility_of(desc),
-            tags=tags_of(f"{title} {desc}"),
+            tags=tags_of(f"{title} {desc}"), **_pay_kw(desc),
         ))
     return out
 
@@ -394,7 +443,7 @@ def fetch_ashby(board: str, display: str = "") -> list[dict]:
             season=season_of(f"{title} {desc[:1500]}"),
             url=j.get("jobUrl") or j.get("applyUrl") or "", source="ashby",
             posted=_date(j.get("publishedAt")), description=desc,
-            eligibility=eligibility_of(desc), tags=tags_of(f"{title} {desc}"),
+            eligibility=eligibility_of(desc), tags=tags_of(f"{title} {desc}"), **_pay_kw(desc),
         ))
     return out
 
@@ -431,7 +480,7 @@ def fetch_lever(board: str, display: str = "") -> list[dict]:
             season=season_of(f"{title} {desc[:1500]}"),
             url=j.get("hostedUrl") or j.get("applyUrl") or "", source="lever",
             posted=_date(j.get("createdAt")), description=desc,
-            eligibility=eligibility_of(desc), tags=tags_of(f"{title} {desc}"),
+            eligibility=eligibility_of(desc), tags=tags_of(f"{title} {desc}"), **_pay_kw(desc),
         ))
     return out
 
@@ -453,7 +502,7 @@ def _poll_one(company: dict) -> tuple[dict, list[dict] | None, str]:
 
 
 def harvest(scope: str = "priority", ats: str | None = None, early_only: bool = True,
-            us_only: bool = True, workers: int = 12,
+            us_only: bool = True, paid_only: bool = True, workers: int = 12,
             progress=None) -> tuple[list[dict], dict]:
     """Poll the registered boards in parallel. Returns (roles, stats).
 
@@ -483,6 +532,10 @@ def harvest(scope: str = "priority", ats: str | None = None, early_only: bool = 
                 found = [r for r in found if is_us(r["location"])]
             if block_rx:
                 found = [r for r in found if not block_rx.search(r["title"])]
+            if paid_only:
+                # only drop what says it is unpaid; `None` means the posting is
+                # silent, and dropping those would empty the board.
+                found = [r for r in found if r.get("paid") is not False]
             if found:
                 per_board.append((company["name"], len(found)))
                 roles.extend(found)
@@ -532,9 +585,11 @@ def merge(existing: list[dict], incoming: list[dict]) -> tuple[int, int]:
             continue
         # refresh only the volatile facts; discovery date and history are sticky
         for field in ("url", "location", "workmode", "description", "tags",
-                      "eligibility", "season"):
+                      "eligibility", "season", "pay"):
             if role.get(field):
                 old[field] = role[field]
+        if role.get("paid") is not None:
+            old["paid"] = role["paid"]
         old["dead"] = False
         updated += 1
     return added, updated
