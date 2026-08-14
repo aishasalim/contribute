@@ -1,0 +1,27 @@
+name: contributie-api
+region: nyc
+services:
+  - name: api
+    github:
+      repo: aishasalim/contributie
+      branch: main
+      deploy_on_push: true
+    dockerfile_path: api/Dockerfile
+    http_port: 8080
+    instance_size_slug: apps-s-1vcpu-0.5gb
+    instance_count: 1
+    health_check:
+      http_path: /health
+    envs:
+      - key: DATABASE_URL
+        scope: RUN_TIME
+        type: SECRET
+      - key: API_TOKEN
+        scope: RUN_TIME
+        type: SECRET
+      - key: DISCORD_WEBHOOK
+        scope: RUN_TIME
+        type: SECRET
+      - key: CORS_ORIGINS
+        scope: RUN_TIME
+        value: "https://aishasalim.github.io,https://contribute-drab.vercel.app"

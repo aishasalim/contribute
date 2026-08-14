@@ -214,22 +214,55 @@ Poll public ATS endpoints. They return JSON, they are stable, and they do not ne
 upstream list — see [NOTICE](../NOTICE) for the attribution. Rebuilding that list by hand
 would take days, so the radar does not try.
 
-| Source | Boards | Endpoint shape |
-|--------|-------:|----------------|
-| Greenhouse | 1,021 | `boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true` |
-| Ashby | 651 | `api.ashbyhq.com/posting-api/job-board/{board}` |
-| Lever | 358 | `api.lever.co/v0/postings/{board}?mode=json` |
-| SmartRecruiters | 242 | `api.smartrecruiters.com/v1/companies/{board}/postings` |
+| Source | Boards | Endpoint |
+|--------|-------:|----------|
+| Greenhouse | 1,021 | `GET boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true` |
+| Ashby | 651 | `GET api.ashbyhq.com/posting-api/job-board/{board}` |
+| Lever | 358 | `GET api.lever.co/v0/postings/{board}?mode=json` |
+| SmartRecruiters | 242 | `GET api.smartrecruiters.com/v1/companies/{board}/postings` |
+| Workday | 1,710 | `POST {slug}.{wd}.myworkdayjobs.com/wday/cxs/{slug}/{site}/jobs` |
 
-Workday carries another 1,710 companies upstream, but each tenant needs its own CxS JSON POST
-endpoint. It is not wired up. That is the largest single gap in coverage.
+### Workday
 
-`find_roles` takes a scope:
+Workday is not one API. Every employer is its own tenant, so a board needs **three** fields —
+`slug`, `wd` (the host number: `wd1`, `wd5`, `wd12`…) and `site` (the career-site name). All
+three ride in `data/boards.json`.
+
+```
+POST https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs
+Content-Type: application/json
+
+{"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": "intern"}
+```
+
+Two things make it awkward, and both shape the implementation:
+
+1. **The list endpoint carries no description**, and its `postedOn` is relative text
+   (`"Posted 11 Days Ago"`), not a date. A real `startDate` and the full `jobDescription` come
+   only from a per-job detail GET:
+   `GET .../wday/cxs/{slug}/{site}{externalPath}` → `jobPostingInfo`.
+2. **That makes it roughly 10 s per board**, against well under 1 s for a plain JSON board.
+
+So the fetcher pays for detail only after a role has already survived the cheap filters:
+list with `searchText` (server-side), drop on title, drop on location, **then** fetch details,
+capped at `WD_DETAIL_CAP` per board. `_wd_posted()` parses the relative string as a fallback
+when the detail GET fails.
+
+### Scopes
+
+`find_roles(scope=...)` decides how much to poll:
 
 | Scope | Boards | Time | Use |
 |-------|-------:|------|-----|
-| `priority` | 33 | ~15 s | The hand-verified set. The daily poll. |
-| `all` | 2,272 | ~7 min | The weekly sweep. |
+| `priority` | 74 | ~5 min | 33 verified fast boards + 41 curated Workday employers. The daily poll. |
+| `all` | 2,272 | ~7 min | Every greenhouse / ashby / lever / smartrecruiters board. |
+| `workday` | 1,710 | ~25 min | Every Workday tenant. |
+| `everything` | 3,982 | ~30 min | Both. The weekly sweep. |
+
+The 41 curated Workday employers are the ones that match the three tracks — NVIDIA, Intel,
+Micron, Western Digital, Analog Devices, Marvell, KLA, Applied Materials, Cadence, Boeing,
+RTX, Northrop, Caterpillar, JPMorgan-adjacent finance, and the large-cap software names.
+They sit in `workday_priority` in `data/boards.json`.
 
 Boards are polled 12 at a time. A board that 404s is counted and skipped; it never stops the
 sweep. About 117 of 2,272 fail on any given run, because slugs go stale upstream.

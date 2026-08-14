@@ -443,9 +443,14 @@ def list_roles(track: str = "all", tier: str = "all", status: str = "all",
 
 @mcp.tool()
 def find_roles(scope: str = "priority", ats: str = "") -> str:
-    """Poll the ATS boards, keep internships and co-ops in the US, de-duplicate,
-    score, and append what is new. scope: priority (~33 boards, seconds) or
-    all (2,272 boards, minutes). ats: greenhouse|ashby|lever|smartrecruiters."""
+    """Poll the ATS boards, keep PAID internships and co-ops in the US,
+    de-duplicate, score, and append what is new.
+
+    scope: priority   33 fast boards + 41 curated Workday employers  (~5 min)
+           all        every greenhouse/ashby/lever/smartrecruiters   (~7 min)
+           workday    all 1,710 Workday tenants                      (~25 min)
+           everything both
+    ats:   greenhouse | ashby | lever | smartrecruiters | workday"""
     data = load_roles()
     harvested, stats = radar.harvest(scope=scope, ats=ats or None)
     added, updated = radar.merge(data["roles"], harvested)

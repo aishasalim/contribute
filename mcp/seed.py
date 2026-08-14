@@ -206,7 +206,7 @@ def main() -> None:
     roles = from_sheet()
     print(f"spreadsheet: imported {len(roles)} rows")
 
-    scope = "all" if "--all" in sys.argv else "priority"
+    scope = next((a[2:] for a in sys.argv[1:] if a.startswith("--")), "priority")
     harvested, stats = radar.harvest(
         scope=scope, progress=lambda n, t: print(f"  ... {n}/{t} boards", flush=True))
     print(f"harvest ({scope}): {stats['ok']}/{stats['boards']} boards ok, "

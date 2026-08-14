@@ -134,9 +134,6 @@
   .d-title{font-size:15px;line-height:1.32;margin:0 0 10px;letter-spacing:-.01em}
   .d-why{font-size:13px;color:var(--muted);line-height:1.55;margin:0 0 14px}
   .d-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 7px}
-  .bars{margin:0 0 14px;display:flex;flex-direction:column;gap:7px}
-  .bar{display:grid;grid-template-columns:58px 1fr 28px;gap:9px;align-items:center}
-  .bar .bn{font-family:var(--mono);font-size:10px;color:var(--muted)}
   /* display:block matters — these are spans, and an inline box ignores height
      and width, so the fill never renders. */
   .bar .bt{display:block;height:7px;border-radius:4px;background:var(--surface-2);border:1px solid var(--border);overflow:hidden}
@@ -190,8 +187,8 @@
       <button class="collapse-btn" id="collapseBtn" aria-label="Collapse sidebar" title="Collapse">«</button>
     </div>
     <div class="pageswitch">
-      <a href="./index.html">Contributions</a>
-      <a href="./radar.html" class="on" aria-current="page">Radar</a>
+      <a href="./index.html">PRs</a>
+      <a href="./radar.html" class="on" aria-current="page">Jobs</a>
     </div>
     <div class="mini" id="mini"></div>
     <nav id="nav"><div class="navlbl">Sections</div></nav>
@@ -219,7 +216,7 @@ const TIER_VAR={strong:"var(--strong)",fit:"var(--fit)",stretch:"var(--stretch)"
 const STATUS_LABEL={none:"Not applied",applied:"Applied",in_progress:"In progress",
   phone_screen:"Phone screen",rejected:"Rejected",offer:"Offer"};
 
-let DATA=null, RESUMES=[], RMAP={}, FILTER="today", TRACK="all", QUERY="", SORT="fit", SEL=null, CUR=[], TODAY="";
+let DATA=null, RESUMES=[], RMAP={}, FILTER="fresh", TRACK="all", QUERY="", SORT="new", SEL=null, CUR=[], TODAY="";
 
 const trackBadge=id=>{const r=RMAP[id];if(!r)return"";
   return `<span class="trk" style="color:${r.color};background:${r.color}22">${esc(r.label)}</span>`;};
@@ -227,8 +224,8 @@ const tierPill=t=>`<span class="pill t-${t}">${TIER_LABEL[t]||t}</span>`;
 const best=r=>r.tracks?(r.tracks[r.best_track]||0):0;
 
 function rowHTML(r,sel){
-  const isNew = r.found===TODAY && r.application.status==="none";
   const a=ageDays(r);
+  const isNew = a!==null && a<=3 && r.application.status==="none";
   return `<button class="row${r.id===sel?" sel":""}" data-id="${esc(r.id)}">
     <span class="score" style="color:${TIER_VAR[r.tier]}">${best(r)}</span>
     <span class="rco">${isNew?'<span class="newdot"></span> ':""}${esc(r.company)}</span>
@@ -236,14 +233,6 @@ function rowHTML(r,sel){
     <span class="rright">${trackBadge(r.best_track)}</span>
     <span class="age ${ageCls(a)}" title="${r.posted?"posted "+esc(r.posted):"first seen "+esc(r.found)}">${ageShort(a)}</span>
   </button>`;
-}
-
-function bars(r){
-  return `<div class="bars">${RESUMES.map(x=>{
-    const v=(r.tracks||{})[x.id]||0;
-    return `<div class="bar"><span class="bn">${esc(x.label)}</span>
-      <span class="bt"><span class="bf" style="width:${v}%;background:${x.color}"></span></span>
-      <span class="bv">${v}</span></div>`;}).join("")}</div>`;
 }
 
 function eligChips(r){
@@ -276,7 +265,6 @@ function detailHTML(r){
     <div class="d-badges">${trackBadge(r.best_track)}${also}</div>
     <p class="d-title">${esc(r.title)}</p>
     ${r.why?`<p class="d-why">${esc(r.why)}</p>`:""}
-    <div class="d-k">Fit by resume</div>${bars(r)}
     ${eligChips(r)}
     <div class="d-meta">
       <div class="wide"><div class="k">Location</div><div class="v">${esc(r.location||"—")}</div></div>
@@ -303,7 +291,7 @@ const ageLong=n=>n===null?"not stated":n===0?"today":n===1?"yesterday":n+" days 
 const ageCls=n=>n===null?"":n<=3?"fresh":n>30?"stale":"";
 const applied=r=>r.application.status!=="none";
 const SECTIONS=[
-  {key:"today",  label:"Today",      color:"var(--accent)", get:d=>d.filter(r=>r.found===TODAY&&!applied(r))},
+  {key:"fresh",  label:"Last 3 days", color:"var(--accent)", get:d=>d.filter(r=>(ageDays(r)??99)<=3&&!applied(r)&&!r.dead&&r.tier!=="none")},
   {key:"strong", label:"Strong fit", color:"var(--strong)", get:d=>d.filter(r=>r.tier==="strong"&&!applied(r)&&!r.dead)},
   {key:"open",   label:"All open",   color:"var(--fit)",    get:d=>d.filter(r=>!applied(r)&&!r.dead&&r.tier!=="none")},
   {key:"applied",label:"Applied",    color:"var(--merged)", get:d=>d.filter(r=>applied(r)&&r.application.status!=="rejected")},
@@ -380,7 +368,7 @@ function renderSection(){
 function renderMini(){
   const r=DATA.roles;
   const cells=[
-    {n:r.filter(x=>x.found===TODAY&&!applied(x)).length,l:"Today",cls:"accent"},
+    {n:r.filter(x=>(ageDays(x)??99)<=3&&!applied(x)&&x.tier!=="none").length,l:"≤3 days",cls:"accent"},
     {n:r.filter(x=>x.tier==="strong"&&!applied(x)).length,l:"Strong",cls:"strong"},
     {n:r.filter(applied).length,l:"Applied"},
     {n:r.filter(x=>x.application.status==="rejected").length,l:"Rejected"},
@@ -389,17 +377,50 @@ function renderMini(){
     `<div class="cell"><div class="n ${x.cls||""}">${x.n}</div><div class="l">${x.l}</div></div>`).join("");
 }
 
+/* Data source: the API when one is configured, the static file otherwise.
+   Set it once with ?api=https://host  (kept in localStorage), or ?api= to clear.
+   The API is live; the file is a snapshot from the last harvest. */
+const API=(()=>{
+  const q=new URLSearchParams(location.search);
+  if(q.has("api")){const v=q.get("api").replace(/\/$/,"");
+    v?localStorage.setItem("ctb-api",v):localStorage.removeItem("ctb-api");}
+  return localStorage.getItem("ctb-api")||"";
+})();
+
+async function fromAPI(){
+  const r=await fetch(`${API}/roles?limit=500&sort=fresh&include_dead=true`,{cache:"no-store"});
+  if(!r.ok) throw new Error(`API ${r.status}`);
+  const j=await r.json();
+  // the API returns flat rows; the page wants the nested shape
+  const roles=j.roles.map(x=>({...x,
+    tracks:{swe:x.score_swe,ml:x.score_ml,hwv:x.score_hwv},
+    eligibility:{sponsorship:x.sponsorship,citizenship:x.citizenship,class_year:[]},
+    application:{status:x.status||"none",applied:x.applied,resume:x.resume,
+                 notes:x.notes||"",sheet_row:null}}));
+  return {meta:{owner:"aishasalim",live:true,total:j.total},resumes:RESUME_DEFS,roles};
+}
+
+const RESUME_DEFS=[
+  {id:"swe",label:"SWE",color:"#2f6fd6"},
+  {id:"ml",label:"ML",color:"#7c4ddb"},
+  {id:"hwv",label:"HW Verif",color:"#12b5a5"},
+];
+
 async function boot(){
-  try{ DATA=await (await fetch("./data/roles.json",{cache:"no-store"})).json(); }
+  try{
+    DATA = API ? await fromAPI()
+               : await (await fetch("./data/roles.json",{cache:"no-store"})).json();
+  }
   catch(e){ document.getElementById("list").innerHTML=
-    `<div class="empty">Couldn't load data/roles.json — serve over http (localhost / Pages / Vercel). ${esc(String(e))}</div>`;
+    `<div class="empty">Couldn't load ${API?"the API at "+esc(API):"data/roles.json"} — ${esc(String(e))}</div>`;
     return; }
   RESUMES=DATA.resumes||[]; RESUMES.forEach(r=>RMAP[r.id]=r);
   // "Today" means the newest harvest date in the file, so the page is never empty
   // just because nothing was polled today.
   TODAY=DATA.roles.reduce((m,r)=>r.found>m?r.found:m,"");
-  document.getElementById("stamp").textContent=
-    `${DATA.roles.length} roles · last harvest ${TODAY}`;
+  document.getElementById("stamp").textContent = API
+    ? `${DATA.meta.total ?? DATA.roles.length} roles · live from API`
+    : `${DATA.roles.length} roles · snapshot ${TODAY}`;
   renderMini(); renderFilters(); renderNav(); renderSection();
 }
 document.getElementById("themeBtn").addEventListener("click",()=>{

@@ -18,7 +18,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 UA = "contributie-radar/1 (+https://github.com/aishasalim/contributie)"
@@ -46,13 +46,37 @@ def load_boards() -> dict:
     return json.loads(BOARDS_FILE.read_text())
 
 
+SCOPES = ("priority", "all", "workday", "everything")
+
+
 def board_list(scope: str = "priority", ats: str | None = None) -> list[dict]:
-    """scope: priority | all. Optionally narrow to one ATS platform."""
+    """Which boards a harvest polls.
+
+    priority   ~33 fast JSON boards + 41 curated Workday employers  (~5 min)
+    all        every greenhouse/ashby/lever/smartrecruiters board    (~7 min)
+    workday    all 1,710 Workday tenants                            (~25 min)
+    everything both of the above
+
+    Workday is separated because it costs far more per board: the list endpoint
+    carries no description, so each surviving role needs its own detail GET.
+    """
     reg = load_boards()
     rows = reg["companies"]
+    fast = [c for c in rows if c["ats"] != "workday"]
+    wday = [c for c in rows if c["ats"] == "workday"]
+
     if scope == "priority":
-        wanted = set(reg["priority"])
-        rows = [c for c in rows if c["slug"] in wanted]
+        wanted = set(reg.get("priority") or [])
+        keys = {(w["slug"], w["site"]) for w in reg.get("workday_priority") or []}
+        rows = ([c for c in fast if c["slug"] in wanted]
+                + [c for c in wday if (c["slug"], c.get("site")) in keys])
+    elif scope == "all":
+        rows = fast
+    elif scope == "workday":
+        rows = wday
+    elif scope != "everything":
+        raise ValueError(f"scope must be one of {SCOPES}")
+
     if ats:
         rows = [c for c in rows if c["ats"] == ats]
     return rows
@@ -84,6 +108,45 @@ EARLY_TITLE_RE = re.compile(
 )
 # "internal", "international", "alternative" must not read as "intern"
 NOT_INTERN_RE = re.compile(r"\bintern(al|ational)")
+
+# Disciplines that are not software, ML, or hardware verification. A title that
+# names one of these is rejected UNLESS it also carries an on-track signal, so
+# "Manufacturing Software Engineer Intern" survives and "Civil Engineering
+# Intern" does not.
+OFF_TRACK_RE = re.compile(
+    r"\b(civil|structural|geotechnical|environmental|chemical|petroleum|mining|"
+    r"biomedical|bioengineer|biology|biochem|chemistry|agronom|agricultur|"
+    r"mechanical|manufactur|industrial|process|packaging|welding|hvac|"
+    r"architect(ure|ural)|construction|interior design|surveying|bridge|"
+    r"marketing|sales|recruit(ing|er)|human resources|\bhr\b|talent|"
+    r"communications|public relations|journalis|editorial|content|copywrit|"
+    r"social media|graphic design(er)?|fashion|styl(ist|ing)|photograph|video|"
+    r"legal|paralegal|compliance|audit|tax|accounting|bookkeep|payroll|"
+    r"nursing|nurse|clinical|pharmac|medical assistant|dental|veterinar|"
+    r"teaching|tutor|curriculum|admissions|"
+    r"real estate|underwrit|claims|actuarial|"
+    r"customer (success|service|experience|support)|"
+    r"warehouse|logistics|supply chain|procurement|facilities|janitor|"
+    r"culinary|hospitality|retail|cashier|barista)\b", re.I)
+
+# Any of these in the title rescues an otherwise off-track match.
+ON_TRACK_RE = re.compile(
+    r"\b(software|computer science|\bcs\b|developer|programming|"
+    r"data (science|scientist|engineer|analytics)|machine learning|\bml\b|"
+    r"\bai\b|artificial intelligence|deep learning|\bnlp\b|\bllm\b|"
+    r"firmware|hardware|silicon|\brtl\b|\bfpga\b|\basic\b|\bsoc\b|"
+    r"verification|validation engineer|embedded|electrical|\beda\b|"
+    r"backend|back-end|frontend|front-end|full.?stack|platform|infrastructure|"
+    r"devops|\bsre\b|site reliability|cloud|cyber ?security|"
+    r"\bqa\b|test automation|compiler|robotics|quantitative|\bquant\b|"
+    r"systems engineer|\bit\b|information technology|technology|technical)\b",
+    re.I)
+
+
+def is_on_track(title: str) -> bool:
+    """Reject a discipline that has nothing to do with the three resumes."""
+    low = title or ""
+    return not OFF_TRACK_RE.search(low) or bool(ON_TRACK_RE.search(low))
 SENIOR_WORDS = (
     "senior ", "staff ", "principal ", "lead ", "director", "head of",
     "manager,", "vp ", "architect",
@@ -179,6 +242,43 @@ NON_US = (
 
 
 # --------------------------------------------------------------------- utilities
+# Workday: every company is its own tenant, so a board needs three fields —
+# slug, wd host number, and site name. All three ride in data/boards.json.
+# The list endpoint filters server-side on searchText, which is what makes this
+# affordable: without it a sweep would pull every posting a company has.
+WD_TERMS = ("intern", "co-op")
+WD_LIMIT = 20
+WD_MAX_PAGES = 6          # 120 hits per term per board
+WD_DETAIL_CAP = 40        # detail GETs per board; the list gives no description
+WD_REL_RE = re.compile(r"posted\s+(today|yesterday|(\d+)\+?\s+days?)", re.I)
+
+
+def _post_json(url: str, payload: dict, timeout: int = 30):
+    body = json.dumps(payload).encode()
+    req = urllib.request.Request(url, data=body, headers={
+        "User-Agent": UA, "Accept": "application/json",
+        "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read().decode("utf-8", "replace"))
+
+
+def _wd_posted(relative: str | None) -> str | None:
+    """Workday's list endpoint gives 'Posted 11 Days Ago', not a date. The detail
+    endpoint gives a real startDate, so this is only the fallback."""
+    if not relative:
+        return None
+    m = WD_REL_RE.search(relative)
+    if not m:
+        return None
+    if m.group(1).lower() == "today":
+        days = 0
+    elif m.group(1).lower() == "yesterday":
+        days = 1
+    else:
+        days = int(m.group(2))
+    return (date.today() - timedelta(days=days)).isoformat()
+
+
 def _get_json(url: str, timeout: int = 30):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -249,7 +349,9 @@ def is_early_career(title: str, text: str = "") -> bool:
     low = NOT_INTERN_RE.sub(" ", (title or "").lower())
     if not EARLY_TITLE_RE.search(low):
         return False
-    return not any(w in low for w in SENIOR_WORDS)
+    if any(w in low for w in SENIOR_WORDS):
+        return False
+    return is_on_track(title or "")
 
 
 def is_us(location: str) -> bool:
@@ -485,18 +587,79 @@ def fetch_lever(board: str, display: str = "") -> list[dict]:
     return out
 
 
+def fetch_workday(board: str, display: str = "", wd: str = "", site: str = "") -> list[dict]:
+    base = f"https://{board}.{wd}.myworkdayjobs.com/wday/cxs/{board}/{site}"
+    company = display or board
+
+    # 1. list pages, filtered server-side, de-duplicated across search terms
+    listed: dict[str, dict] = {}
+    for term in WD_TERMS:
+        for page in range(WD_MAX_PAGES):
+            try:
+                data = _post_json(f"{base}/jobs", {
+                    "appliedFacets": {}, "limit": WD_LIMIT,
+                    "offset": page * WD_LIMIT, "searchText": term})
+            except Exception:
+                break
+            posts = data.get("jobPostings") or []
+            for j in posts:
+                if j.get("externalPath"):
+                    listed[j["externalPath"]] = j
+            if len(posts) < WD_LIMIT:
+                break
+
+    # 2. drop what the title and location already rule out, before paying for details
+    cheap = [(path, j) for path, j in listed.items()
+             if is_early_career(j.get("title") or "")
+             and is_us(j.get("locationsText") or "")]
+
+    # 3. only now fetch descriptions, since the list endpoint carries none
+    def _detail(item):
+        path, j = item
+        try:
+            return path, j, _get_json(base + path).get("jobPostingInfo") or {}
+        except Exception:
+            return path, j, {}
+
+    out = []
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for path, j, info in pool.map(_detail, cheap[:WD_DETAIL_CAP]):
+            title = info.get("title") or j.get("title") or ""
+            desc = _plain(info.get("jobDescription"))
+            loc = info.get("location") or j.get("locationsText") or ""
+            country = ((info.get("country") or {}).get("descriptor") or "")
+            if country and "united states" not in country.lower():
+                continue
+            out.append(_blank_role(
+                id=role_id(company, title), company=company, title=title, location=loc,
+                workmode=_workmode(f"{info.get('remoteType') or ''} {loc} {desc[:400]}"),
+                season=season_of(f"{title} {desc[:1500]}"),
+                url=info.get("externalUrl") or f"https://{board}.{wd}.myworkdayjobs.com/{site}{path}",
+                source="workday",
+                posted=info.get("startDate") or _wd_posted(j.get("postedOn")),
+                description=desc, eligibility=eligibility_of(desc),
+                tags=tags_of(f"{title} {desc}"), **_pay_kw(desc),
+            ))
+    return out
+
+
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "ashby": fetch_ashby,
     "lever": fetch_lever,
     "smartrecruiters": fetch_smartrecruiters,
+    "workday": fetch_workday,
 }
 
 
 def _poll_one(company: dict) -> tuple[dict, list[dict] | None, str]:
     """Poll one board. Never raises: a dead board must not stop the sweep."""
     try:
-        return company, FETCHERS[company["ats"]](company["slug"], company.get("name", "")), ""
+        fn = FETCHERS[company["ats"]]
+        if company["ats"] == "workday":
+            return company, fn(company["slug"], company.get("name", ""),
+                               company.get("wd", ""), company.get("site", "")), ""
+        return company, fn(company["slug"], company.get("name", "")), ""
     except Exception as e:  # network, JSON, or a board that no longer exists
         return company, None, type(e).__name__
 
