@@ -75,7 +75,22 @@ def _choice_label(element) -> str:
     )
 
 
+# The API records at most this many options per question. Country and
+# university dropdowns run long; recording every entry fails the request and
+# loses the whole attempt, which is far worse than a clipped audit list.
+MAX_RECORDED_OPTIONS = 300
+
+
 def _field_options(element, field_type: str) -> list[str]:
+    """Options recorded for the audit trail and the review page.
+
+    Clipped to the API's limit: filling reads the DOM directly, so a short
+    list here costs nothing, while an over-long one fails the request.
+    """
+    return _all_field_options(element, field_type)[:MAX_RECORDED_OPTIONS]
+
+
+def _all_field_options(element, field_type: str) -> list[str]:
     if field_type == "select":
         return [
             value.strip()

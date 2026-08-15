@@ -31,6 +31,7 @@ def queue_event(
     """Insert in the caller's transaction so state and alert cannot diverge."""
     title = {
         "applied": "Hermes applied",
+        "manual_applied": "You applied",
         "needs_human": "Needs you",
         "short_answer": "Quick answer needed",
         "human_handoff": "Application needs your voice",
@@ -114,6 +115,13 @@ def _message(payload: dict) -> str:
     track = payload.get("track", "?")
     if event_type == "applied":
         lines = [f"**I applied to the {track} role {role} at {company}.**"]
+    elif event_type == "manual_applied":
+        # You marked this one yourself; saying "I applied" here reads as though
+        # Hermes did it, which is the opposite of reassuring.
+        lines = [
+            f"**You applied to the {track} role {role} at {company}.**",
+            "Recorded in Contribute. I'll watch your inbox for a reply.",
+        ]
     elif event_type == "short_answer":
         lines = [
             f"**I’m applying to the {track} role {role} at {company}.**",

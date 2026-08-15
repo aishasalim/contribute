@@ -256,7 +256,7 @@ def mark_manually_applied(role_id: str) -> dict:
             [role_id, role["best_track"]],
         )
         notify.queue_event(
-            conn, "applied", role, f"manual-applied:{role_id}:{date.today()}",
+            conn, "manual_applied", role, f"manual-applied:{role_id}:{date.today()}",
             detail=f"Marked manually. Resume: {role['best_track']}",
         )
         conn.commit()
@@ -315,7 +315,7 @@ class Question(BaseModel):
     profile_key: str | None = Field(None, max_length=200)
     answer_redacted: str | None = Field(None, max_length=500)
     answer_hash: str | None = Field(None, max_length=128)
-    options: list[str] = Field(default_factory=list, max_length=100)
+    options: list[str] = Field(default_factory=list, max_length=300)
     proposed_answer: str | bool | int | float | None = None
     evidence: str | None = Field(None, max_length=500)
     blocker: str | None = Field(None, max_length=500)
