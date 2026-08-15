@@ -119,3 +119,26 @@ def test_major_falls_back_to_computer_science_when_needed(
         browser_state=tmp_path / "major",
     )
     assert result["state"] == "dry_run"
+
+
+def test_explicit_signup_uses_local_account_credentials_without_exposing_password(
+    fixture_server, tmp_path, monkeypatch
+):
+    monkeypatch.setenv("HERMES_HEADLESS", "true")
+    monkeypatch.setattr(browser, "validate_url", lambda _: None)
+    monkeypatch.setattr(browser, "adapter_for", lambda _: Greenhouse())
+    profile = {
+        **PROFILE,
+        "account": {"email": "aisha@example.com", "password": "test-password"},
+    }
+    result = browser.run_application(
+        role(f"{fixture_server}/greenhouse_account.html"),
+        profile,
+        dry_run=True,
+        browser_state=tmp_path / "account",
+    )
+    assert result["state"] == "dry_run"
+    account = result["questions"][0]
+    assert account["category"] == "credential"
+    assert account["proposed_answer"] is None
+    assert "test-password" not in str(result)

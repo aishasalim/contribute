@@ -1,0 +1,21 @@
+<!doctype html>
+<html><body>
+<form id="signup">
+  <label>Email <input type="email" required></label>
+  <label>Password <input type="password" required></label>
+  <label>Confirm password <input type="password" required></label>
+  <label><input type="checkbox" required> Accept terms</label>
+  <button type="submit">Create Account</button>
+</form>
+<script>
+document.getElementById("signup").addEventListener("submit", event => {
+  event.preventDefault();
+  document.body.innerHTML = `
+    <form>
+      <label for="first_name">First Name</label>
+      <input id="first_name" required>
+      <button type="submit">Submit application</button>
+    </form>`;
+});
+</script>
+</body></html>

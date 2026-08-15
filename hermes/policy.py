@@ -26,6 +26,7 @@ DEMOGRAPHIC_FIELDS: list[tuple[re.Pattern[str], str]] = [
 PROFILE_FIELDS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"first.?name", re.I), "identity.first_name"),
     (re.compile(r"last.?name|surname", re.I), "identity.last_name"),
+    (re.compile(r"\b(password|passcode)\b", re.I), "account.password"),
     (re.compile(r"\bemail\b", re.I), "identity.email"),
     (re.compile(r"\b(phone|mobile)\b", re.I), "identity.phone"),
     (re.compile(r"\b(?:date of birth|birth date|dob)\b", re.I),

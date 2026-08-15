@@ -37,6 +37,7 @@ PROFILE = {
         "gpa": 3.7,
     },
     "documents": {"transcript": "transcripts/aisha-unofficial-transcript.pdf"},
+    "account": {"password": "test-password"},
 }
 
 
@@ -142,6 +143,14 @@ def test_gpa_and_transcript_are_sourced_from_profile():
     assert gpa.value == 3.7
     assert transcript.category == "document"
     assert transcript.profile_key == "documents.transcript"
+
+
+def test_application_account_password_is_profile_sourced_and_redacted():
+    decision = classify("Create password", "password", True, PROFILE)
+    redacted, digest = audit_answer(decision)
+    assert decision.profile_key == "account.password"
+    assert redacted == "<from account.password>"
+    assert digest and "test-password" not in digest
 
 
 def test_unknown_required_field_stops():

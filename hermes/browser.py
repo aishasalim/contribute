@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import hashlib
 import ipaddress
 import os
+import re
 import socket
 from pathlib import Path
 from urllib.parse import urlparse
@@ -117,6 +119,82 @@ def _field_options(element, field_type: str) -> list[str]:
 
 def _normalized_question(text: str) -> str:
     return " ".join(text.lower().split())[:2000]
+
+
+def _create_account_if_requested(page, profile: dict) -> list[dict]:
+    """Create an ATS account only when the page explicitly presents signup."""
+    signup_text = re.compile(r"^(create (?:an )?account|sign up|register)$", re.I)
+
+    def signup_control():
+        controls = page.locator("button, a, input[type=submit]")
+        for index in range(controls.count()):
+            control = controls.nth(index)
+            if not control.is_visible():
+                continue
+            text = (
+                control.inner_text().strip()
+                or control.get_attribute("value")
+                or control.get_attribute("aria-label")
+                or ""
+            )
+            if signup_text.match(text.strip()):
+                return control
+        return None
+
+    passwords = page.locator('input[type="password"]:visible')
+    control = signup_control()
+    if not passwords.count() and control is not None:
+        control.click()
+        try:
+            page.wait_for_load_state("domcontentloaded", timeout=15_000)
+        except Exception:
+            pass
+        passwords = page.locator('input[type="password"]:visible')
+        control = signup_control()
+    if not passwords.count() or control is None:
+        return []
+
+    account = profile.get("account", {})
+    email = account.get("email") or profile.get("identity", {}).get("email")
+    password = account.get("password")
+    if not email or not password:
+        return []
+
+    form = passwords.first.locator("xpath=ancestor::form[1]")
+    scope = form if form.count() else page
+    emails = scope.locator('input[type="email"], input[name*="email" i]')
+    for index in range(emails.count()):
+        field = emails.nth(index)
+        if field.is_visible() and field.is_enabled():
+            field.fill(str(email))
+    for index in range(passwords.count()):
+        field = passwords.nth(index)
+        if field.is_visible() and field.is_enabled():
+            field.fill(str(password))
+    required_checks = scope.locator('input[type="checkbox"][required]')
+    for index in range(required_checks.count()):
+        checkbox = required_checks.nth(index)
+        if checkbox.is_visible() and checkbox.is_enabled():
+            checkbox.check()
+    control.click()
+    try:
+        page.wait_for_load_state("domcontentloaded", timeout=20_000)
+    except Exception:
+        pass
+    return [{
+        "text": "Create application account",
+        "field_type": "account",
+        "required": True,
+        "category": "credential",
+        "disposition": "filled",
+        "profile_key": "account.password",
+        "answer_redacted": "<from account.password>",
+        "answer_hash": hashlib.sha256(str(password).encode()).hexdigest(),
+        "options": [],
+        "proposed_answer": None,
+        "evidence": "From local application account credentials",
+        "blocker": None,
+    }]
 
 
 def _fill(element, decision: Decision, resume_path: Path | None) -> None:
@@ -236,6 +314,8 @@ def run_application(
         page.goto(role["url"], wait_until="domcontentloaded", timeout=60_000)
         validate_url(page.url)
         adapter.prepare(page)
+        questions.extend(_create_account_if_requested(page, profile))
+        adapter.prepare(page)
         fields = page.locator(
             "input:not([type=hidden]):not([type=submit]):not([type=button]), select, textarea"
         )
@@ -287,7 +367,9 @@ def run_application(
                 )
             redacted, answer_hash = audit_answer(decision)
             proposed_answer = (
-                decision.value[0]
+                None
+                if decision.profile_key == "account.password"
+                else decision.value[0]
                 if isinstance(decision.value, list) and decision.value
                 else decision.value
             )

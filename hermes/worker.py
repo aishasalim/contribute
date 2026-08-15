@@ -24,7 +24,15 @@ def load_profile(path: str | None = None) -> dict:
             f"missing profile {profile_path}; copy config/profile.example.toml and fill it"
         )
     with profile_path.open("rb") as handle:
-        return tomllib.load(handle)
+        profile = tomllib.load(handle)
+    profile["account"] = {
+        "email": os.environ.get(
+            "APPLICATION_ACCOUNT_EMAIL",
+            profile.get("identity", {}).get("email", ""),
+        ),
+        "password": os.environ.get("APPLICATION_ACCOUNT_PASSWORD", ""),
+    }
+    return profile
 
 
 def lease_body(claim: dict) -> dict:
