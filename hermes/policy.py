@@ -47,6 +47,7 @@ PROFILE_FIELDS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"school|university|college", re.I), "education.school"),
     (re.compile(r"\bdegree\b", re.I), "education.degree"),
     (re.compile(r"major|field of study|discipline", re.I), "education.major"),
+    (re.compile(r"\bgpa\b|grade point average", re.I), "education.gpa"),
     (re.compile(r"expected graduation date|graduate.*date", re.I),
      "education.graduation_date"),
     (re.compile(r"graduation.*month", re.I), "education.graduation_month"),
@@ -123,6 +124,14 @@ def classify(label: str, field_type: str, required: bool, profile: dict) -> Deci
         return Decision(
             "demographic", "pending" if required else "skipped_demographic"
         )
+    if re.search(r"\btranscript\b", text, re.I):
+        value = profile_value(profile, "documents.transcript")
+        if value not in (None, ""):
+            return Decision("document", "filled", "documents.transcript", value)
+        return Decision(
+            "document", "pending" if required else "skipped_optional",
+            "documents.transcript",
+        )
     if field_type == "file" or re.search(r"\b(resume|cv)\b", text, re.I):
         return Decision("resume", "filled", "resumes")
     if field_type == "textarea" or FREE_TEXT.search(text):
@@ -131,6 +140,10 @@ def classify(label: str, field_type: str, required: bool, profile: dict) -> Deci
         if pattern.search(text):
             value = profile_value(profile, key)
             if value not in (None, ""):
+                if key == "education.major":
+                    fallback = profile_value(profile, "education.major_fallback")
+                    if fallback not in (None, ""):
+                        value = [value, fallback]
                 return Decision("profile", "filled", key, value)
             return Decision("profile", "pending" if required else "skipped_optional", key)
     return Decision("unknown", "pending" if required else "skipped_optional")

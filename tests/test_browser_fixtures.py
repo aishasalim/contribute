@@ -97,3 +97,25 @@ def test_multiple_choice_is_captured_and_approved_answer_replays(
     )
     assert approved["state"] == "dry_run"
     assert approved["questions"][0]["category"] == "approved"
+
+
+def test_major_falls_back_to_computer_science_when_needed(
+    fixture_server, tmp_path, monkeypatch
+):
+    monkeypatch.setenv("HERMES_HEADLESS", "true")
+    monkeypatch.setattr(browser, "validate_url", lambda _: None)
+    monkeypatch.setattr(browser, "adapter_for", lambda _: Greenhouse())
+    profile = {
+        **PROFILE,
+        "education": {
+            "major": "Computer Engineering",
+            "major_fallback": "Computer Science",
+        },
+    }
+    result = browser.run_application(
+        role(f"{fixture_server}/greenhouse_major_fallback.html"),
+        profile,
+        dry_run=True,
+        browser_state=tmp_path / "major",
+    )
+    assert result["state"] == "dry_run"

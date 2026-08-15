@@ -6,6 +6,7 @@ data/descriptions.cache.json
 .env
 config/profile.toml
 resumes/
+transcripts/
 .hermes/
 credentials.json
 token.json

@@ -31,6 +31,12 @@ PROFILE = {
         "hourly_rate": 30,
         "salary_expectation": "$30 per hour",
     },
+    "education": {
+        "major": "Computer Engineering",
+        "major_fallback": "Computer Science",
+        "gpa": 3.7,
+    },
+    "documents": {"transcript": "transcripts/aisha-unofficial-transcript.pdf"},
 }
 
 
@@ -123,6 +129,19 @@ def test_split_start_date_fields_use_component_values():
     year = classify("Start date year", "number", True, PROFILE)
     assert month.value == "May"
     assert year.value == 2027
+
+
+def test_major_prefers_computer_engineering_with_cs_fallback():
+    decision = classify("Undergrad Discipline(s)", "checkbox", True, PROFILE)
+    assert decision.value == ["Computer Engineering", "Computer Science"]
+
+
+def test_gpa_and_transcript_are_sourced_from_profile():
+    gpa = classify("Current GPA", "number", True, PROFILE)
+    transcript = classify("Upload unofficial transcript", "file", True, PROFILE)
+    assert gpa.value == 3.7
+    assert transcript.category == "document"
+    assert transcript.profile_key == "documents.transcript"
 
 
 def test_unknown_required_field_stops():

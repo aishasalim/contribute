@@ -126,56 +126,77 @@ def _fill(element, decision: Decision, resume_path: Path | None) -> None:
             raise FileNotFoundError(f"resume is missing: {resume_path}")
         element.set_input_files(str(resume_path))
         return
+    if decision.category == "document":
+        document_path = Path(str(decision.value))
+        if not document_path.is_file():
+            raise FileNotFoundError(f"document is missing: {document_path}")
+        element.set_input_files(str(document_path))
+        return
     value = decision.value
     if value is None:
         return
+    values = value if isinstance(value, list) else [value]
+    answers = [
+        "Yes" if candidate is True
+        else "No" if candidate is False
+        else str(candidate)
+        for candidate in values
+    ]
     if field_type == "select":
-        answer = "Yes" if value is True else "No" if value is False else str(value)
-        try:
-            element.select_option(label=answer)
-        except Exception:
-            element.select_option(value=answer)
+        options = element.locator("option")
+        for answer in answers:
+            for index in range(options.count()):
+                option = options.nth(index)
+                label = option.inner_text().strip()
+                option_value = option.get_attribute("value") or ""
+                if answer.lower() == label.lower():
+                    element.select_option(label=label)
+                    return
+                if answer.lower() == option_value.lower():
+                    element.select_option(value=option_value)
+                    return
+        raise RuntimeError(f"no matching select option for {answers}")
     elif field_type == "combobox":
-        answer = "Yes" if value is True else "No" if value is False else str(value)
-        element.click()
-        element.fill(answer)
-        options = element.page.locator('[role="option"]')
-        for index in range(options.count()):
-            option = options.nth(index)
-            text = option.inner_text().strip()
-            if answer.lower() == text.lower() or answer.lower() in text.lower():
-                option.click()
-                return
-        element.press("Escape")
-        raise RuntimeError(f"no matching combobox option for {answer}")
+        for answer in answers:
+            element.click()
+            element.fill(answer)
+            options = element.page.locator('[role="option"]')
+            for index in range(options.count()):
+                option = options.nth(index)
+                text = option.inner_text().strip()
+                if answer.lower() == text.lower() or answer.lower() in text.lower():
+                    option.click()
+                    return
+            element.press("Escape")
+        raise RuntimeError(f"no matching combobox option for {answers}")
     elif field_type == "radio":
         name = element.get_attribute("name")
         if not name:
             raise RuntimeError("radio group has no name")
-        answer = "yes" if value is True else "no" if value is False else str(value).lower()
         group = element.page.locator(f'input[type="radio"][name="{name}"]')
-        for index in range(group.count()):
-            option = group.nth(index)
-            if answer in _label(option).lower() or answer == (option.get_attribute("value") or "").lower():
-                option.check()
-                return
-        raise RuntimeError(f"no matching radio option for {answer}")
+        for answer in (value.lower() for value in answers):
+            for index in range(group.count()):
+                option = group.nth(index)
+                if answer in _label(option).lower() or answer == (option.get_attribute("value") or "").lower():
+                    option.check()
+                    return
+        raise RuntimeError(f"no matching radio option for {answers}")
     elif field_type == "checkbox":
         name = element.get_attribute("name")
-        answer = str(value).lower()
         group = (
             element.page.locator(f'input[type="checkbox"][name="{name}"]')
             if name else element
         )
-        for index in range(group.count()):
-            option = group.nth(index)
-            label = _choice_label(option).lower()
-            if answer == label or answer in label:
-                option.check()
-                return
+        for answer in (value.lower() for value in answers):
+            for index in range(group.count()):
+                option = group.nth(index)
+                label = _choice_label(option).lower()
+                if answer == label or answer in label:
+                    option.check()
+                    return
         raise RuntimeError("checkbox answer requires human review")
     else:
-        element.fill(str(value))
+        element.fill(answers[0])
 
 
 def run_application(
@@ -252,7 +273,24 @@ def run_application(
                     f"resumes.{role['best_track']}",
                     str(resume_path) if resume_path else None,
                 )
+            elif decision.category == "document" and decision.value:
+                document_path = Path(str(decision.value)).expanduser()
+                if not document_path.is_absolute():
+                    document_path = Path(__file__).resolve().parent.parent / document_path
+                document_path = document_path.resolve()
+                decision = Decision(
+                    "document",
+                    "filled" if document_path.is_file()
+                    else ("pending" if required else "skipped_optional"),
+                    decision.profile_key,
+                    str(document_path),
+                )
             redacted, answer_hash = audit_answer(decision)
+            proposed_answer = (
+                decision.value[0]
+                if isinstance(decision.value, list) and decision.value
+                else decision.value
+            )
             question = {
                 "text": label or "<unlabelled field>",
                 "field_type": field_type,
@@ -263,7 +301,7 @@ def run_application(
                 "answer_redacted": redacted,
                 "answer_hash": answer_hash,
                 "options": _field_options(element, field_type),
-                "proposed_answer": decision.value,
+                "proposed_answer": proposed_answer,
                 "evidence": (
                     f"From {decision.profile_key}" if decision.profile_key else None
                 ),
