@@ -44,10 +44,13 @@ def db():
         yield conn
 
 
-def require_token(authorization: str = Header(default="")) -> None:
+def require_token(
+    authorization: str = Header(default=""), key: str = Query(default="")
+) -> None:
+    # `key` lets the browser-rendered pages authenticate; they cannot set headers.
     if not settings.api_token:
         raise HTTPException(503, "API_TOKEN is not configured; writes are disabled")
-    supplied = authorization.removeprefix("Bearer ").strip()
+    supplied = authorization.removeprefix("Bearer ").strip() or key.strip()
     if not hmac.compare_digest(supplied, settings.api_token):
         raise HTTPException(401, "bad or missing bearer token")
 
@@ -126,27 +129,6 @@ def _new_access_token() -> tuple[str, str]:
     return token, _lease_hash(token)
 
 
-def _manual_action_token(role_id: str, expires: int) -> str:
-    if not settings.api_token:
-        raise HTTPException(503, "API_TOKEN is required")
-    message = f"{role_id}:{expires}".encode()
-    signature = hmac.new(settings.api_token.encode(), message, hashlib.sha256).hexdigest()
-    return f"{expires}.{signature}"
-
-
-def _verify_manual_action_token(role_id: str, token: str) -> None:
-    try:
-        expires_text, supplied = token.split(".", 1)
-        expires = int(expires_text)
-    except (ValueError, AttributeError):
-        raise HTTPException(403, "invalid action token")
-    if expires < int(datetime.now(timezone.utc).timestamp()):
-        raise HTTPException(403, "action token expired")
-    expected = _manual_action_token(role_id, expires).split(".", 1)[1]
-    if not hmac.compare_digest(supplied, expected):
-        raise HTTPException(403, "invalid action token")
-
-
 def _attempt(conn, attempt_id: str, lease_token: str, *, lock: bool = False) -> dict:
     suffix = " for update" if lock else ""
     row = conn.execute(
@@ -171,7 +153,7 @@ def health() -> dict:
         raise HTTPException(503, f"database unreachable: {type(exc).__name__}")
 
 
-@app.get("/roles")
+@app.get("/roles", dependencies=[Depends(require_token)])
 def list_roles(
     track: str | None = None,
     tier: str | None = None,
@@ -224,13 +206,13 @@ def list_roles(
     return {"total": total, "limit": limit, "offset": offset, "roles": rows}
 
 
-@app.get("/roles/{role_id}")
+@app.get("/roles/{role_id}", dependencies=[Depends(require_token)])
 def get_role(role_id: str) -> dict:
     with db() as conn:
         return _role(conn, role_id)
 
 
-@app.get("/roles/{role_id}/activity")
+@app.get("/roles/{role_id}/activity", dependencies=[Depends(require_token)])
 def role_activity(role_id: str) -> dict:
     with db() as conn:
         _role(conn, role_id)
@@ -256,52 +238,9 @@ def role_activity(role_id: str) -> dict:
     return {"role_id": role_id, "attempts": attempts, "questions": questions, "events": events}
 
 
-class ManualAppliedBody(BaseModel):
-    action_token: str
-
-
-@app.get("/manual/{role_id}", response_class=HTMLResponse)
-def manual_apply_page(role_id: str) -> HTMLResponse:
-    with db() as conn:
-        role = _role(conn, role_id)
-    expires = int((datetime.now(timezone.utc) + timedelta(minutes=10)).timestamp())
-    token = _manual_action_token(role_id, expires)
-    disabled = " disabled" if role["status"] != "none" else ""
-    status = (
-        "This role is already marked "
-        f"{escape(role['status'])}."
-        if role["status"] != "none"
-        else "Use this only if you submitted the application yourself."
-    )
-    return HTMLResponse(f"""<!doctype html>
-<html><head><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mark application — {escape(role['company'])}</title>
-<style>
-body{{font:16px system-ui;max-width:620px;margin:auto;padding:24px;line-height:1.5}}
-.card{{border:1px solid #ccc;border-radius:12px;padding:18px}}
-button{{font:inherit;padding:14px;width:100%;margin-top:16px;cursor:pointer}}
-</style></head><body><div class="card">
-<h1>{escape(role['title'])}</h1><p>{escape(role['company'])} · {escape(role['best_track'].upper())}</p>
-<p>{status}</p>
-<button id="apply"{disabled}>Mark as applied</button><p id="result"></p>
-</div><script>
-document.getElementById('apply').addEventListener('click', async () => {{
-  const button=document.getElementById('apply');
-  button.disabled=true;
-  const response=await fetch('/manual/{escape(role_id)}/applied', {{
-    method:'POST', headers:{{'Content-Type':'application/json'}},
-    body:JSON.stringify({{action_token:'{token}'}})
-  }});
-  const body=await response.json();
-  document.getElementById('result').textContent =
-    response.ok ? 'Marked as applied. You can return to Contribute.' : (body.detail||'Failed');
-}});
-</script></body></html>""")
-
-
-@app.post("/manual/{role_id}/applied")
-def mark_manually_applied(role_id: str, body: ManualAppliedBody) -> dict:
-    _verify_manual_action_token(role_id, body.action_token)
+@app.post("/manual/{role_id}/applied", dependencies=[Depends(require_token)])
+def mark_manually_applied(role_id: str) -> dict:
+    """Called straight from the dashboard; there is no separate page to visit."""
     with db() as conn:
         role = _role(conn, role_id, lock=True)
         if role["status"] == "applied":
@@ -324,7 +263,7 @@ def mark_manually_applied(role_id: str, body: ManualAppliedBody) -> dict:
     return {"ok": True, "role_id": role_id, "status": "applied"}
 
 
-@app.get("/queue")
+@app.get("/queue", dependencies=[Depends(require_token)])
 def queue(limit: int = Query(20, ge=1, le=100)) -> dict:
     with db() as conn:
         rows = conn.execute(
@@ -970,7 +909,7 @@ def email_observation(body: EmailObservationBody) -> dict:
     return {"ok": True, "duplicate": False, "decision": body.decision}
 
 
-@app.get("/stats")
+@app.get("/stats", dependencies=[Depends(require_token)])
 def stats() -> dict:
     with db() as conn:
         return {

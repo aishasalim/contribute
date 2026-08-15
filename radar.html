@@ -263,9 +263,36 @@ function appBlock(r){
 
 function manualAppliedButton(r){
   if((r.application||{}).status!=="none") return "";
-  const api=CFG.api||"http://127.0.0.1:8080";
-  return `<a class="d-open" href="${esc(api)}/manual/${encodeURIComponent(r.id)}"
-    target="_blank" rel="noopener">Mark as applied</a>`;
+  if(!CFG.api) return "";
+  return `<button class="d-open" id="markApplied" data-id="${esc(r.id)}">Mark as applied</button>
+    <span id="markAppliedMsg" class="app-n"></span>`;
+}
+
+/* Marks the role applied and moves it straight into the Applied section.
+   No page to visit, so this works wherever the dashboard itself loads. */
+async function markApplied(roleId, button){
+  const msg=document.getElementById("markAppliedMsg");
+  button.disabled=true;
+  if(msg) msg.textContent="Marking…";
+  try{
+    const response=await fetch(
+      `${CFG.api}/manual/${encodeURIComponent(roleId)}/applied`,
+      {method:"POST", headers:apiHeaders()});
+    if(!response.ok){
+      const body=await response.json().catch(()=>({}));
+      throw new Error(body.detail||`API ${response.status}`);
+    }
+    const role=DATA.roles.find(x=>x.id===roleId);
+    if(role){
+      role.application.status="applied";
+      role.application.applied=new Date().toISOString().slice(0,10);
+      role.application.resume=role.best_track;
+    }
+    renderMini(); renderNav(); renderSection(); renderDetail();
+  }catch(e){
+    button.disabled=false;
+    if(msg) msg.textContent=String(e.message||e);
+  }
 }
 
 function activityHTML(a){
@@ -315,8 +342,9 @@ const SECTIONS=[
   {key:"fresh",  label:"Last 3 days", color:"var(--accent)", get:d=>d.filter(r=>(ageDays(r)??99)<=3&&!applied(r)&&!r.dead&&r.tier!=="none")},
   {key:"strong", label:"Strong fit", color:"var(--strong)", get:d=>d.filter(r=>r.tier==="strong"&&!applied(r)&&!r.dead)},
   {key:"open",   label:"All open",   color:"var(--fit)",    get:d=>d.filter(r=>!applied(r)&&!r.dead&&r.tier!=="none")},
-  {key:"applied",label:"Applied",    color:"var(--merged)", get:d=>d.filter(r=>applied(r)&&r.application.status!=="rejected")},
-  {key:"closed", label:"Closed",     color:"var(--closed)", get:d=>d.filter(r=>r.application.status==="rejected"||r.dead)},
+  // Every role with a status lives here, rejections included, so this tab
+  // always matches the "Applied" stat card.
+  {key:"applied",label:"Applied",    color:"var(--merged)", get:d=>d.filter(applied)},
 ];
 
 function visible(){
@@ -324,7 +352,7 @@ function visible(){
   if(TRACK!=="all") rows=rows.filter(r=>r.best_track===TRACK||(r.also_tracks||[]).includes(TRACK));
   if(QUERY){const q=QUERY.toLowerCase();
     rows=rows.filter(r=>(r.company+" "+r.title+" "+(r.tags||[]).join(" ")).toLowerCase().includes(q));}
-  const key = FILTER==="applied"||FILTER==="closed"
+  const key = FILTER==="applied"
     ? (a,b)=>String(b.application.applied||"").localeCompare(String(a.application.applied||""))
     : SORT==="new"
       ? (a,b)=>(ageDays(a)??9e9)-(ageDays(b)??9e9)||best(b)-best(a)
@@ -371,7 +399,8 @@ async function renderDetail(){
   document.getElementById("detail").scrollTop=0;
   if(r&&CFG.api){
     try{
-      const response=await fetch(`${CFG.api}/roles/${encodeURIComponent(r.id)}/activity`,{cache:"no-store"});
+      const response=await fetch(`${CFG.api}/roles/${encodeURIComponent(r.id)}/activity`,
+        {cache:"no-store",headers:apiHeaders()});
       if(response.ok&&SEL===r.id) el.insertAdjacentHTML("beforeend",activityHTML(await response.json()));
     }catch(_){}
   }
@@ -447,8 +476,13 @@ async function fromSupabase(){
   return {meta:{live:"supabase",total:rows.length},resumes:RESUME_DEFS,roles:inflate(rows)};
 }
 
+function apiHeaders(){
+  return CFG.key?{Authorization:`Bearer ${CFG.key}`}:{};
+}
+
 async function fromAPI(){
-  const r=await fetch(`${CFG.api}/roles?limit=500&sort=fresh&include_dead=true`,{cache:"no-store"});
+  const r=await fetch(`${CFG.api}/roles?limit=500&sort=fresh&include_dead=true`,
+    {cache:"no-store",headers:apiHeaders()});
   if(!r.ok) throw new Error(`API ${r.status}`);
   const j=await r.json();
   return {meta:{live:"api",total:j.total},resumes:RESUME_DEFS,roles:inflate(j.roles)};
@@ -472,15 +506,20 @@ async function boot(){
   if(linked&&DATA.roles.some(r=>r.id===linked)){
     SEL=linked;
     const r=DATA.roles.find(x=>x.id===linked);
-    FILTER=r.dead||r.application.status==="rejected"?"closed"
-      :r.application.status!=="none"?"applied"
-      :r.tier==="strong"?"strong":"open";
+    // Land on a tab that actually contains the linked role, whatever its state.
+    const home=SECTIONS.find(s=>s.get(DATA.roles).some(x=>x.id===linked));
+    FILTER=home?home.key:"applied";
   }
   document.getElementById("stamp").textContent = DATA.meta?.live
     ? `${DATA.meta.total ?? DATA.roles.length} roles · live (${DATA.meta.live})`
     : `${DATA.roles.length} roles · snapshot ${TODAY}`;
   renderMini(); renderFilters(); renderNav(); renderSection();
 }
+/* Delegated: the detail pane's innerHTML is replaced on every render. */
+document.getElementById("detailBody").addEventListener("click",event=>{
+  const button=event.target.closest("#markApplied");
+  if(button) markApplied(button.dataset.id,button);
+});
 document.getElementById("themeBtn").addEventListener("click",()=>{
   const now=document.documentElement.getAttribute("data-theme");
   const isDark=now?now==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
