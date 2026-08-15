@@ -108,6 +108,12 @@ def _discord_target() -> str:
     return f"discord:{dms[0]['id']}"
 
 
+def _link(label: str, url: str) -> str:
+    """Discord masked link. Parentheses in a URL would break out of the markup."""
+    safe = str(url).replace(" ", "%20").replace("(", "%28").replace(")", "%29")
+    return f"[{label}]({safe})"
+
+
 def _message(payload: dict) -> str:
     event_type = payload.get("event_type")
     role = payload.get("role", "?")
@@ -149,15 +155,24 @@ def _message(payload: dict) -> str:
         ]
     else:
         lines = [f"**{payload['title']}**", f"{role} at {company}"]
-    if payload.get("url"):
-        lines.append(f"Job posting: {payload['url']}")
     if payload.get("detail") and event_type not in {"failed", "unknown", "harvest_failed"}:
         lines.extend(["", payload["detail"]])
-    if payload.get("dashboard"):
-        lines.extend(["", f"Contribute: {payload['dashboard']}"])
+    # Discord renders [label](url) as a plain tappable word. Raw URLs here are
+    # long, carry tokens, and push the actual message off a phone screen.
+    links = []
     if payload.get("detail_url"):
-        label = "Review and respond" if event_type in {"short_answer", "human_handoff"} else "Private details"
-        lines.extend(["", f"{label}: {payload['detail_url']}"])
+        label = (
+            "Review and respond"
+            if event_type in {"short_answer", "human_handoff"}
+            else "Private details"
+        )
+        links.append(_link(label, payload["detail_url"]))
+    if payload.get("url"):
+        links.append(_link("Job posting", payload["url"]))
+    if payload.get("dashboard"):
+        links.append(_link("Open in Contribute", payload["dashboard"]))
+    if links:
+        lines.extend(["", " · ".join(links)])
     return "\n".join(line for line in lines if line is not None)
 
 

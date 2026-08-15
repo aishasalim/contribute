@@ -41,8 +41,9 @@ def test_formats_applied_message_with_detail_link():
         "dashboard": "https://example.com/radar#role=1",
     })
     assert "I applied to the SWE role Software Intern at Example" in text
-    assert "Contribute: https://example.com/radar#role=1" in text
-    assert "Private details: https://review.example/details/token" in text
+    assert "[Open in Contribute](https://example.com/radar#role=1)" in text
+    assert "[Private details](https://review.example/details/token)" in text
+    assert "[Job posting](https://example.com/job)" in text
 
 
 def test_formats_short_answer_review_message():
@@ -56,7 +57,7 @@ def test_formats_short_answer_review_message():
         "detail_url": "https://review.example/review/token",
     })
     assert "confirm a short answer" in text
-    assert "Review and respond:" in text
+    assert "[Review and respond](https://review.example/review/token)" in text
 
 
 def test_failed_message_hides_internal_exception_dump():
