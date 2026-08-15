@@ -249,14 +249,27 @@ function eligChips(r){
 
 function appBlock(r){
   const a=r.application||{};
-  if(a.status==="none") return "";
+  if(a.status==="none"&&!a.attempt_state) return "";
   const flag=(a.notes||"").startsWith("needs_human");
   return `<div class="d-k">Application</div><div class="appbox">
     <div class="app-h"><span class="app-s">${STATUS_LABEL[a.status]||a.status}</span>
       <span class="app-r">${a.applied?esc(a.applied):"date not recorded"}</span></div>
     <div class="app-r">resume: ${a.resume?esc(RMAP[a.resume]?.label||a.resume):"—"}${a.sheet_row?` · sheet row ${a.sheet_row}`:""}</div>
+    ${a.attempt_state?`<div class="app-r">Hermes: ${esc(a.attempt_state)}</div>`:""}
+    ${a.attempt_detail?`<div class="app-n${flag?" flag":""}">${esc(a.attempt_detail)}</div>`:""}
     ${a.notes?`<div class="app-n${flag?" flag":""}">${esc(a.notes)}</div>`:""}
   </div>`;
+}
+
+function activityHTML(a){
+  const attempts=(a.attempts||[]).map(x=>`<li><strong>${esc(x.state)}</strong> · ${esc(x.resume)}
+    ${x.dry_run?" · dry run":""}<br><small>${esc(x.detail||"")}</small></li>`).join("");
+  const questions=(a.questions||[]).map(x=>`<li>${esc(x.normalized_text)}
+    <br><small>${esc(x.category)} · ${esc(x.disposition)}</small></li>`).join("");
+  const events=(a.events||[]).map(x=>`<li><strong>${esc(x.event)}</strong> — ${esc(x.detail||"")}</li>`).join("");
+  return `<div class="d-k">Hermes attempts</div><div class="appbox"><ul>${attempts||"<li>None</li>"}</ul>
+    <div class="d-k">Questions</div><ul>${questions||"<li>None</li>"}</ul>
+    <div class="d-k">Events</div><ul>${events||"<li>None</li>"}</ul></div>`;
 }
 
 function detailHTML(r){
@@ -343,11 +356,17 @@ function renderNav(){
     renderNav();renderSection();}));
 }
 
-function renderDetail(){
+async function renderDetail(){
   const r=CUR.find(x=>x.id===SEL);
   const el=document.getElementById("detailBody");
   el.innerHTML = r?detailHTML(r):'<div class="d-empty">Select a role to see details.</div>';
   document.getElementById("detail").scrollTop=0;
+  if(r&&CFG.api){
+    try{
+      const response=await fetch(`${CFG.api}/roles/${encodeURIComponent(r.id)}/activity`,{cache:"no-store"});
+      if(response.ok&&SEL===r.id) el.insertAdjacentHTML("beforeend",activityHTML(await response.json()));
+    }catch(_){}
+  }
 }
 
 function renderSection(){
@@ -360,6 +379,7 @@ function renderSection(){
   list.innerHTML=CUR.length?CUR.map(r=>rowHTML(r,SEL)).join(""):'<div class="empty">Nothing here right now.</div>';
   list.querySelectorAll(".row").forEach(b=>b.addEventListener("click",()=>{
     SEL=b.dataset.id;
+    history.replaceState(null,"",`#role=${encodeURIComponent(SEL)}`);
     list.querySelectorAll(".row").forEach(x=>x.classList.toggle("sel",x.dataset.id===SEL));
     renderDetail();document.querySelector(".app").classList.add("detail-open");}));
   renderDetail();
@@ -405,7 +425,9 @@ function inflate(rows){
     also_tracks:x.also_tracks||[],
     eligibility:{sponsorship:x.sponsorship,citizenship:x.citizenship,class_year:[]},
     application:{status:x.status||"none",applied:x.applied,resume:x.resume,
-                 notes:x.notes||"",sheet_row:x.sheet_row??null}}));
+                 notes:x.notes||"",sheet_row:x.sheet_row??null,
+                 attempt_state:x.attempt_state||"",attempt_detail:x.attempt_detail||"",
+                 attempt_updated_at:x.attempt_updated_at||null}}));
 }
 
 async function fromSupabase(){
@@ -438,6 +460,14 @@ async function boot(){
   // "Today" means the newest harvest date in the file, so the page is never empty
   // just because nothing was polled today.
   TODAY=DATA.roles.reduce((m,r)=>r.found>m?r.found:m,"");
+  const linked=new URLSearchParams(location.hash.slice(1)).get("role");
+  if(linked&&DATA.roles.some(r=>r.id===linked)){
+    SEL=linked;
+    const r=DATA.roles.find(x=>x.id===linked);
+    FILTER=r.dead||r.application.status==="rejected"?"closed"
+      :r.application.status!=="none"?"applied"
+      :r.tier==="strong"?"strong":"open";
+  }
   document.getElementById("stamp").textContent = DATA.meta?.live
     ? `${DATA.meta.total ?? DATA.roles.length} roles · live (${DATA.meta.live})`
     : `${DATA.roles.length} roles · snapshot ${TODAY}`;

@@ -1,110 +1,157 @@
-# Setup — from a static page to a live board
+# Local Hermes setup
 
-The board works with no backend at all. `radar.html` reads `data/roles.json`, and a harvest
-regenerates it. That is the whole product, and it costs nothing.
+## 1. Install system prerequisites
 
-You only need the rest of this page when **Hermes** starts writing back. An agent cannot
-share a JSON file in git with a dashboard: there is no way to mark a role applied without a
-commit, and two writers race.
-
-## Pick a backend
-
-| | Free | Server to run | Setup | Good for |
-|---|---|---|---|---|
-| **Supabase** ← recommended | yes | **none** | ~10 min | what you want |
-| Neon + self-hosted API | yes | one | ~30 min | if you dislike Supabase |
-| Local Postgres in Docker | yes | one, on your Mac | ~15 min | Hermes runs only on this machine |
-| DigitalOcean Managed PG | no (~$15/mo) | one | ~30 min | not worth it here |
-
-**Supabase wins because it is Postgres plus an API.** `db/schema.sql` runs unchanged, and
-PostgREST turns the tables into a REST endpoint on its own, so `api/main.py` never has to be
-deployed. It stays in the repo for anyone self-hosting.
-
-The one catch: a free Supabase project **pauses after 7 days with no requests**. A daily
-Hermes run keeps it awake, so in practice it does not happen.
-
----
-
-## Supabase, start to finish
-
-### 1. Create the project
-
-<https://supabase.com> → new project. Any region. Save the database password it shows you —
-it appears once.
-
-From **Project Settings → API**, copy:
-
-| Key | Who gets it | Can do |
-|-----|-------------|--------|
-| Project URL | everyone | — |
-| `anon` key | the dashboard, safe in a URL | read the board |
-| `service_role` key | **Hermes only — never commit it** | apply, claim, set status |
-
-### 2. Create the schema
-
-**SQL Editor** → paste and run, in this order:
-
-1. `db/schema.sql` — tables, indexes, the status-change trigger, the `radar` view
-2. `db/supabase.sql` — row level security, the `hermes_queue` view, the four write functions
-
-Row level security is what makes the anon key safe to publish: it grants `select` and nothing
-else. Writes are not table grants at all — they are four `security definer` functions that
-only `service_role` may execute.
-
-### 3. Load the roles
-
-From **Project Settings → Database → Connection string → URI**, then:
+Ubuntu:
 
 ```bash
-export DATABASE_URL='postgresql://postgres:<password>@db.<ref>.supabase.co:5432/postgres'
-uv run --with 'psycopg[binary]' python db/sync.py push
-uv run --with 'psycopg[binary]' python db/sync.py stats
+sudo apt update
+sudo apt install -y docker.io docker-compose-v2
+sudo usermod -aG docker "$USER"
 ```
 
-`push` upserts the roles and seeds an application row **only where none exists**, so it never
-overwrites something you already sent.
-
-### 4. Point the dashboard at it
-
-Open it once with the project URL and the anon key:
-
-```
-radar.html?sb=https://<ref>.supabase.co&key=<anon key>
-```
-
-Both are stored in `localStorage`, so every later visit is live. The header then reads
-`live (supabase)` instead of `snapshot`. `?sb=` with an empty value clears it and falls back
-to the JSON file.
-
-### 5. Give Hermes the secret key
+Log out and back in after adding the Docker group. Docker is required for the
+local database and API. Python dependencies and Chromium are managed by `uv`:
 
 ```bash
-export SUPABASE_URL='https://<ref>.supabase.co'
-export SUPABASE_SERVICE_KEY='<service_role key>'
-export DISCORD_WEBHOOK='https://discord.com/api/webhooks/...'
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv sync --extra test
+uv run playwright install chromium
 ```
 
-The daily loop and the exact calls are in [HERMES.md](HERMES.md).
-
----
-
-## Keeping it fed
-
-A harvest still runs from this machine or from CI:
+## 2. Configure local secrets and profile
 
 ```bash
-python3 mcp/seed.py --priority          # ~5 min, the daily poll
-uv run --with 'psycopg[binary]' python db/sync.py push
+cp .env.example .env
+cp config/profile.example.toml config/profile.toml
+chmod 600 .env config/profile.toml
+mkdir -p resumes
 ```
 
-Nothing about the harvest changes when you add a backend. `roles.json` stays useful as the
-offline snapshot and as the thing GitHub Pages serves.
+In `.env`, set a long random `POSTGRES_PASSWORD` and `API_TOKEN`. Keep
+`AUTO_SUBMIT=false`. Fill `config/profile.toml` and place all three resume PDFs
+at the configured paths. These files are git-ignored.
 
-## Discord
+Keep `APPLICATION_BATCH_LIMIT=2` for the pilot. `CANARY_ROLE_IDS` can contain
+comma-separated role IDs when a dry run and its later live run must target the
+same postings.
 
-There is no server, so **the client sends the message**, not the database. `api/notify.py`
-posts the embeds; Hermes calls it after a successful write. A failed Discord call never
-blocks a write — Postgres is the record, Discord is only the ping.
+Notifications reuse the Discord bot already configured by Hermes. When there is
+exactly one Discord DM in `~/.hermes/channel_directory.json`, no Discord setting
+is needed. If Hermes knows multiple DMs, set `HERMES_DISCORD_TARGET` to the
+intended target shown by `hermes send --list discord --json`.
 
-Create the webhook in Discord: Server Settings → Integrations → Webhooks → New Webhook →
-copy the URL. It is a secret; keep it in the environment, never in the repo.
+Verify proactive delivery with:
+
+```bash
+hermes send --to discord:<dm-channel-id> "Hermes notification test"
+```
+
+Discord may reject proactive bot DMs with error `50278` when you and the bot no
+longer share a server, even though interaction replies still work. Add Hermes
+to a private server you belong to (you may continue chatting by DM), then retry.
+
+## 3. Start Postgres and the API
+
+```bash
+docker compose up -d --build
+set -a; . ./.env; set +a
+DATABASE_URL="$HOST_DATABASE_URL" uv run python db/sync.py migrate
+DATABASE_URL="$HOST_DATABASE_URL" uv run python db/sync.py push
+curl http://127.0.0.1:8080/health
+```
+
+Postgres data lives in the `contribute_pgdata` Docker volume. The API and
+database bind only to `127.0.0.1`. Use `docker compose logs -f` to diagnose
+startup problems.
+
+### Private phone review links
+
+Install Tailscale on this always-on machine and your phone, sign both into the
+same tailnet, then expose only the loopback API:
+
+```bash
+sudo tailscale up
+tailscale serve --bg http://127.0.0.1:8080
+tailscale serve status
+```
+
+Set `REVIEW_BASE_URL` in `.env` to the HTTPS Tailscale URL shown by the final
+command. Review links use expiring random tokens, never change state on GET,
+and remain private to authenticated tailnet devices.
+
+## 4. Configure Gmail read-only OAuth
+
+1. In Google Cloud Console, create/select a project.
+2. Enable the Gmail API.
+3. Configure the OAuth consent screen for your own account.
+4. Create an OAuth client of type **Desktop app**.
+5. Download it as `credentials.json` in the repository root.
+6. Run `set -a; . ./.env; set +a; uv run python -m hermes.gmail`.
+
+The first run opens Google consent. `token.json` is written with mode `0600`.
+Both files are git-ignored. Revoke access from your Google Account security
+page and delete `token.json` to disconnect Hermes.
+
+## 5. Verify dry-run behavior
+
+```bash
+set -a; . ./.env; set +a
+uv run pytest -q
+uv run python -m hermes.worker 1
+```
+
+The second command processes at most one queue role without submitting.
+Inspect:
+
+```sql
+select * from application_attempts order by claimed_at desc;
+select normalized_text, required, category, disposition, profile_key
+from application_questions order by encountered_at desc;
+```
+
+Unsupported ATS pages and unclear required questions should become
+`awaiting_human` and produce Discord messages. Do not enable live submission
+until that behavior is confirmed.
+
+For the two-role pilot, leave `AUTO_SUBMIT=false` and run:
+
+```bash
+uv run python -m hermes.worker 2
+```
+
+Each dry run sends a Discord details link. After reviewing both, set exact
+`CANARY_ROLE_IDS`, temporarily run the same command with `AUTO_SUBMIT=true`,
+one role at a time, then return `AUTO_SUBMIT=false`. Do not enable scheduled
+live submission until both canaries have positive ATS confirmations.
+
+## 6. Install the schedule
+
+```bash
+chmod +x scripts/install_cron.sh
+scripts/install_cron.sh
+crontab -l
+```
+
+The managed block runs harvest/apply at 11 AM, 1 PM, 3 PM, 5 PM, and 7 PM,
+then Gmail at 8 PM in `America/Chicago`. It also drains the notification outbox
+to your existing Hermes Discord DM every minute. Logs go to
+`artifacts/cron.log` and `artifacts/notify.log`.
+
+To disable all scheduled work, remove the block between
+`# contribute-hermes-managed begin` and `end` from `crontab -e`. To keep
+harvesting but prohibit final clicks, leave cron installed and set
+`AUTO_SUBMIT=false`.
+
+## 7. Enable live submission
+
+After reviewing dry runs:
+
+```bash
+# edit .env
+AUTO_SUBMIT=true
+```
+
+No restart is needed for cron because each invocation reloads `.env`. The API
+still enforces eligibility, season, resume, lease, confirmation, and daily
+company limits independently of the worker.

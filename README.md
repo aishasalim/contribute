@@ -59,14 +59,15 @@ the file is pushed.
 The board needs none. `radar.html` reads `data/roles.json` and that is the whole product.
 
 A backend matters only when **Hermes** writes back: an agent cannot share a JSON file in git
-with a dashboard. The recommended target is **Supabase** — free, and it is Postgres *plus* an
-auto-generated REST API, so there is no server to deploy.
+with a dashboard. The configured target is local Postgres + FastAPI in Docker, with the
+Playwright application worker running on the host.
 
 ```
 db/schema.sql     tables, indexes, status-change trigger, the `radar` view
-db/supabase.sql   row level security, the `hermes_queue` view, the four write functions
 db/sync.py        push / pull / stats between roles.json and Postgres
-api/main.py       a self-hosted FastAPI equivalent, if you would rather not use Supabase
+api/main.py       policy-enforcing local API
+hermes/           browser worker, Gmail matcher, and scheduled jobs
+compose.yaml      local Postgres and API
 ```
 
 `roles` is a cache the harvest overwrites. `applications` is your own state, and a harvest

@@ -1,96 +1,225 @@
 #!/usr/bin/env python3
-"""notify — Discord messages, so the human in the loop is a notification.
-
-Every call is best-effort and silent on failure. A Discord outage must never
-stop an application from being recorded: the database is the record, Discord is
-only the ping.
-
-    export DISCORD_WEBHOOK='https://discord.com/api/webhooks/...'
-"""
+"""Transactional Discord outbox producer and delivery worker."""
 
 from __future__ import annotations
 
 import json
 import os
-import urllib.request
+import shutil
+import subprocess
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+from urllib.parse import quote
 
-WEBHOOK = os.environ.get("DISCORD_WEBHOOK", "")
-DASHBOARD = os.environ.get("DASHBOARD_URL", "https://aishasalim.github.io/contributie/radar.html")
+import psycopg
+from psycopg.rows import dict_row
 
-BLUE, GREEN, AMBER, RED = 0x2F6FD6, 0x1F9D57, 0xB9770A, 0xD0555F
-TRACK = {"swe": "SWE", "ml": "ML", "hwv": "HW Verif"}
+from api.settings import settings
+
+def queue_event(
+    conn,
+    event_type: str,
+    role: dict,
+    dedupe_key: str,
+    *,
+    attempt_id: str | None = None,
+    detail: str = "",
+    detail_url: str = "",
+) -> None:
+    """Insert in the caller's transaction so state and alert cannot diverge."""
+    title = {
+        "applied": "Hermes applied",
+        "needs_human": "Needs you",
+        "short_answer": "Quick answer needed",
+        "human_handoff": "Application needs your voice",
+        "review_confirmed": "Answer confirmed",
+        "review_edited": "Answer updated",
+        "review_declined": "Left for you",
+        "dry_run": "Dry run complete",
+        "failed": "Application failed",
+        "harvest_failed": "Board refresh failed",
+        "unknown": "Submission needs verification",
+        "rejected": "Rejected",
+        "offer": "Offer",
+    }.get(event_type, "Application update")
+    payload = {
+        "title": f"{title} — {role.get('company', '?')}",
+        "role": role.get("title", "?"),
+        "company": role.get("company", "?"),
+        "track": str(role.get("best_track") or "?").upper(),
+        "url": role.get("url") or "",
+        "detail": detail[:1000],
+        "detail_url": detail_url,
+        "dashboard": f"{settings.dashboard_url}#role={quote(str(role['id']), safe='')}",
+        "event_type": event_type,
+    }
+    conn.execute(
+        """insert into notification_outbox
+           (event_type, role_id, attempt_id, dedupe_key, payload)
+           values (%s,%s,%s,%s,%s::jsonb)
+           on conflict (dedupe_key) do nothing""",
+        [event_type, role["id"], attempt_id, dedupe_key, json.dumps(payload)],
+    )
 
 
-def _send(embed: dict, content: str = "") -> None:
-    if not WEBHOOK:
-        return
-    body = json.dumps({"content": content, "embeds": [embed]}).encode()
-    req = urllib.request.Request(
-        WEBHOOK, data=body, headers={"Content-Type": "application/json"})
+def queue_system_event(
+    conn, event_type: str, dedupe_key: str, *, title: str, detail: str
+) -> None:
+    payload = {
+        "title": title,
+        "role": "Contribute automation",
+        "company": "local Hermes",
+        "track": "SYSTEM",
+        "url": "",
+        "detail": detail[:1000],
+        "detail_url": "",
+        "dashboard": settings.dashboard_url,
+        "event_type": event_type,
+    }
+    conn.execute(
+        """insert into notification_outbox(event_type,dedupe_key,payload)
+           values (%s,%s,%s::jsonb) on conflict(dedupe_key) do nothing""",
+        [event_type, dedupe_key, json.dumps(payload)],
+    )
+
+
+def _discord_target() -> str:
+    if settings.hermes_discord_target:
+        return settings.hermes_discord_target
+    directory_path = (
+        Path(os.environ.get("HERMES_HOME", "~/.hermes")).expanduser()
+        / "channel_directory.json"
+    )
     try:
-        urllib.request.urlopen(req, timeout=10).read()
-    except Exception:
-        pass  # the record is in Postgres; a missed ping is not a failure
+        directory = json.loads(directory_path.read_text())
+        dms = [
+            item for item in directory.get("platforms", {}).get("discord", [])
+            if item.get("type") == "dm" and item.get("id")
+        ]
+    except (OSError, ValueError) as exc:
+        raise RuntimeError(f"cannot read Hermes channel directory: {exc}") from exc
+    if len(dms) != 1:
+        raise RuntimeError(
+            "set HERMES_DISCORD_TARGET when Hermes has zero or multiple Discord DMs"
+        )
+    return f"discord:{dms[0]['id']}"
 
 
-def _role_line(role: dict) -> str:
-    url = role.get("url")
-    title = role.get("title", "?")
-    return f"[{title}]({url})" if url else title
+def _message(payload: dict) -> str:
+    event_type = payload.get("event_type")
+    role = payload.get("role", "?")
+    company = payload.get("company", "?")
+    track = payload.get("track", "?")
+    if event_type == "applied":
+        lines = [f"**I applied to the {track} role {role} at {company}.**"]
+    elif event_type == "short_answer":
+        lines = [
+            f"**I’m applying to the {track} role {role} at {company}.**",
+            "I need you to confirm a short answer before I retry.",
+        ]
+    elif event_type == "human_handoff":
+        lines = [
+            f"**The {track} role {role} at {company} needs your input.**",
+            "This application contains open-ended writing that should use your voice.",
+        ]
+    elif event_type == "dry_run":
+        lines = [
+            f"**Dry run complete for the {track} role {role} at {company}.**",
+            "No application was submitted. Review the captured details before approving a live run.",
+        ]
+    elif event_type in {"failed", "unknown"}:
+        lines = [
+            f"**I couldn’t complete the {track} application for {role} at {company}.**",
+            "No application was submitted. The technical details are stored in Contribute.",
+        ]
+    elif event_type == "harvest_failed":
+        lines = [
+            "**I couldn’t refresh the Contribute internship board.**",
+            "The previous board data is still available; technical details were kept locally.",
+        ]
+    else:
+        lines = [f"**{payload['title']}**", f"{role} at {company}"]
+    if payload.get("url"):
+        lines.append(f"Job posting: {payload['url']}")
+    if payload.get("detail") and event_type not in {"failed", "unknown", "harvest_failed"}:
+        lines.extend(["", payload["detail"]])
+    if payload.get("dashboard"):
+        lines.extend(["", f"Contribute: {payload['dashboard']}"])
+    if payload.get("detail_url"):
+        label = "Review and respond" if event_type in {"short_answer", "human_handoff"} else "Private details"
+        lines.extend(["", f"{label}: {payload['detail_url']}"])
+    return "\n".join(line for line in lines if line is not None)
 
 
-def applied(role: dict, resume: str, actor: str = "hermes") -> None:
-    who = "Hermes applied" if actor == "hermes" else "Applied"
-    _send({
-        "title": f"{who} — {role.get('company', '?')}",
-        "description": _role_line(role),
-        "color": GREEN,
-        "fields": [{"name": "Resume sent", "value": TRACK.get(resume, resume), "inline": True}],
-        "footer": {"text": "contributie radar"},
-    })
+def _deliver(payload: dict) -> None:
+    configured = str(Path(settings.hermes_binary).expanduser())
+    binary = shutil.which(configured) or str(Path.home() / ".local/bin/hermes")
+    if not Path(binary).is_file():
+        raise RuntimeError("Hermes CLI was not found; set HERMES_BINARY")
+    result = subprocess.run(
+        [binary, "send", "--to", _discord_target(), "--quiet"],
+        input=_message(payload),
+        text=True,
+        capture_output=True,
+        timeout=30,
+        check=False,
+    )
+    if result.returncode:
+        raise RuntimeError(
+            f"hermes send failed ({result.returncode}): {result.stderr.strip()[:300]}"
+        )
 
 
-def status_changed(role: dict, status: str, source: str = "manual") -> None:
-    colour = RED if status == "rejected" else GREEN if status == "offer" else BLUE
-    ping = "@here " if status == "offer" else ""
-    _send({
-        "title": f"{status.replace('_', ' ').title()} — {role.get('company', '?')}",
-        "description": _role_line(role),
-        "color": colour,
-        "fields": [{"name": "Detected by", "value": source, "inline": True}],
-        "footer": {"text": "contributie radar"},
-    }, content=ping)
+def deliver_once(limit: int = 20) -> int:
+    """Claim due rows with SKIP LOCKED and retry failures with bounded backoff."""
+    database_url = os.environ.get("HOST_DATABASE_URL", settings.database_url)
+    if not database_url:
+        raise RuntimeError("HOST_DATABASE_URL or DATABASE_URL is not configured")
+    delivered = 0
+    with psycopg.connect(database_url, row_factory=dict_row) as conn:
+        rows = conn.execute(
+            """select * from notification_outbox
+               where delivered_at is null and next_attempt_at <= now()
+               order by id for update skip locked limit %s""",
+            [limit],
+        ).fetchall()
+        for row in rows:
+            try:
+                _deliver(row["payload"])
+                conn.execute(
+                    "update notification_outbox set delivered_at=now() where id=%s",
+                    [row["id"]],
+                )
+                delivered += 1
+            except Exception as exc:
+                delay = min(3600, 30 * (2 ** min(row["attempts"], 7)))
+                conn.execute(
+                    """update notification_outbox
+                       set attempts=attempts+1,
+                           next_attempt_at=now()+(%s * interval '1 second'),
+                           last_error=%s where id=%s""",
+                    [delay, f"{type(exc).__name__}: {exc}"[:500], row["id"]],
+                )
+        conn.commit()
+    return delivered
 
 
-def needs_human(role: dict, reason: str) -> None:
-    """Hermes stopped. This is the message that actually needs a reply."""
-    _send({
-        "title": f"Needs you — {role.get('company', '?')}",
-        "description": _role_line(role),
-        "color": AMBER,
-        "fields": [
-            {"name": "Why Hermes stopped", "value": reason[:1000]},
-            {"name": "Dashboard", "value": DASHBOARD},
-        ],
-        "footer": {"text": "the application is still open — nothing was submitted"},
-    }, content="<@&0>".replace("<@&0>", ""))
+def worker() -> None:
+    while True:
+        try:
+            deliver_once()
+        except Exception as exc:
+            print(
+                f"{datetime.now(timezone.utc).isoformat()} outbox: {type(exc).__name__}: {exc}",
+                file=sys.stderr,
+            )
+        time.sleep(15)
 
 
-def fresh_digest(roles: list[dict], window_days: int = 3) -> None:
-    """One daily message with the new strong fits, not one per role."""
-    if not roles:
-        return
-    lines = []
-    for r in roles[:15]:
-        age = r.get("age_days")
-        stamp = "today" if age == 0 else f"{age}d"
-        lines.append(f"`{r.get('score', 0):>3}` {TRACK.get(r.get('best_track'), '?'):<8} "
-                     f"**{r.get('company', '?')}** — {_role_line(r)} · {stamp}")
-    more = f"\n\n+{len(roles) - 15} more on the dashboard." if len(roles) > 15 else ""
-    _send({
-        "title": f"{len(roles)} strong fit(s) posted in the last {window_days} days",
-        "description": "\n".join(lines) + more,
-        "color": BLUE,
-        "fields": [{"name": "Dashboard", "value": DASHBOARD}],
-        "footer": {"text": "contributie radar · daily digest"},
-    })
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "worker":
+        worker()
+    else:
+        print(deliver_once())

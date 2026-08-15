@@ -1,0 +1,31 @@
+[identity]
+first_name = "Aisha"
+last_name = "Salim"
+email = "you@example.com"
+phone = "+1-555-555-5555"
+address = ""
+city = ""
+state = ""
+postal_code = ""
+country = "United States"
+
+[education]
+school = ""
+degree = ""
+major = ""
+graduation_month = ""
+graduation_year = ""
+
+[links]
+linkedin = ""
+github = "https://github.com/aishasalim"
+portfolio = ""
+
+[eligibility]
+authorized_to_work_us = true
+requires_sponsorship = false
+
+[resumes]
+swe = "resumes/aisha-swe.pdf"
+ml = "resumes/aisha-ml.pdf"
+hwv = "resumes/aisha-hardware-verification.pdf"

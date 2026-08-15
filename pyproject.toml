@@ -1,0 +1,20 @@
+[project]
+name = "contribute-hermes"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115",
+  "google-api-python-client>=2.140",
+  "google-auth-oauthlib>=1.2",
+  "playwright>=1.48",
+  "psycopg[binary]>=3.2",
+  "pydantic>=2.9",
+  "uvicorn[standard]>=0.32",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-asyncio>=0.24"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

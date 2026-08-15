@@ -27,6 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ROLES = ROOT / "data" / "roles.json"
 SCHEMA = Path(__file__).resolve().parent / "schema.sql"
+MIGRATIONS = Path(__file__).resolve().parent / "migrations"
 
 APP_FIELDS = ("status", "applied", "resume", "recruiter", "network",
               "thank_you", "follow_up", "notes", "sheet_row")
@@ -105,6 +106,16 @@ def cmd_init() -> None:
     print("Schema applied.")
 
 
+def cmd_migrate() -> None:
+    """Apply idempotent SQL migrations in filename order."""
+    files = sorted(MIGRATIONS.glob("*.sql"))
+    with connect() as conn:
+        for migration in files:
+            conn.execute(migration.read_text())
+        conn.commit()
+    print(f"Applied {len(files)} migration(s).")
+
+
 def cmd_push() -> None:
     data = load()
     roles = data["roles"]
@@ -171,7 +182,13 @@ def cmd_stats() -> None:
             print(f"    {track or '?':<4} {tier or '?':<8} {n}")
 
 
-CMDS = {"init": cmd_init, "push": cmd_push, "pull": cmd_pull, "stats": cmd_stats}
+CMDS = {
+    "init": cmd_init,
+    "migrate": cmd_migrate,
+    "push": cmd_push,
+    "pull": cmd_pull,
+    "stats": cmd_stats,
+}
 
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
