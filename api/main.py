@@ -521,11 +521,13 @@ def flag(role_id: str, body: FlagBody) -> dict:
             and not str(question["text"]).startswith("<unlabelled")
         ]
         unique_named = list(dict.fromkeys(named_blockers))
+        # Not every escalation is about questions — an unsupported ATS has none,
+        # and "0 question(s) need review" tells you nothing about what to do.
         summary = (
             f"{len(blocked)} question(s) need review"
             + (f": {', '.join(unique_named[:3])}" if unique_named else "")
             + ("…" if len(unique_named) > 3 else "")
-        )
+        ) if blocked else body.reason[:300]
         conn.execute(
             """insert into application_review_requests
                (id,attempt_id,role_id,token_hash,kind,payload,expires_at)

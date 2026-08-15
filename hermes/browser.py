@@ -21,12 +21,21 @@ CONFIRMATION_TEXT = (
 )
 
 
+class NeedsHuman(ValueError):
+    """The posting is fine but this worker cannot drive it.
+
+    Raised instead of a plain failure so the caller hands the role to a person.
+    A failed attempt leaves the role claimable, so it would be picked up and
+    fail again on every subsequent batch; an escalated one leaves the queue.
+    """
+
+
 def validate_url(url: str) -> None:
     parsed = urlparse(url)
     if parsed.scheme != "https" or not parsed.hostname or parsed.username:
         raise ValueError("application URL must be public HTTPS without credentials")
     if adapter_for(url) is None:
-        raise ValueError(f"unsupported ATS host: {parsed.hostname}")
+        raise NeedsHuman(f"unsupported ATS host: {parsed.hostname}")
     for info in socket.getaddrinfo(parsed.hostname, 443, type=socket.SOCK_STREAM):
         address = ipaddress.ip_address(info[4][0])
         if not address.is_global:
@@ -304,7 +313,13 @@ def run_application(
     """Fill one application and return questions plus a final state."""
     from playwright.sync_api import sync_playwright
 
-    validate_url(role["url"])
+    try:
+        validate_url(role["url"])
+    except NeedsHuman as exc:
+        # Escalate rather than fail: Greenhouse/Lever/Ashby are the only hosts
+        # this worker drives, and the rest are a normal outcome, not an error.
+        return {"state": "pending", "detail": f"{exc}. Apply to this one yourself.",
+                "questions": [], "confirmation_url": None}
     adapter = adapter_for(role["url"])
     assert adapter is not None
     resume_value = profile.get("resumes", {}).get(role["best_track"])
