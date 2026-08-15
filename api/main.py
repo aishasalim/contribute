@@ -70,6 +70,7 @@ ROLE_COLS = """
 QUEUE_SQL = """
  tier='strong' and status='none' and not dead and citizenship is null
  and paid is not false and age_days <= %s and season = any(%s)
+ and exists (select 1 from unnest(%s::text[]) as host where radar.url ilike '%%'||host||'%%')
  and not exists (
    select 1 from application_attempts aa
    where aa.role_id=radar.id
@@ -102,7 +103,8 @@ def _eligible(conn, role_id: str, *, lock: bool = False) -> dict:
             raise HTTPException(404, "no such role")
     row = conn.execute(
         f"""select {ROLE_COLS} from radar where id=%s and {QUEUE_SQL}""",
-        [role_id, settings.max_age_days, list(settings.allowed_seasons)],
+        [role_id, settings.max_age_days, list(settings.allowed_seasons),
+         list(settings.applyable_hosts)],
     ).fetchone()
     if not row:
         raise HTTPException(409, "role no longer satisfies the auto-apply policy")
@@ -269,7 +271,8 @@ def queue(limit: int = Query(20, ge=1, le=100)) -> dict:
         rows = conn.execute(
             f"""select {ROLE_COLS} from radar where {QUEUE_SQL}
                 order by age_days asc nulls last, score desc limit %s""",
-            [settings.max_age_days, list(settings.allowed_seasons), limit],
+            [settings.max_age_days, list(settings.allowed_seasons),
+             list(settings.applyable_hosts), limit],
         ).fetchall()
     return {
         "count": len(rows),
@@ -918,7 +921,8 @@ def stats() -> dict:
             "roles": conn.execute("select count(*) as n from roles").fetchone()["n"],
             "queue": conn.execute(
                 f"select count(*) as n from radar where {QUEUE_SQL}",
-                [settings.max_age_days, list(settings.allowed_seasons)],
+                [settings.max_age_days, list(settings.allowed_seasons),
+                 list(settings.applyable_hosts)],
             ).fetchone()["n"],
             "pending": conn.execute(
                 "select count(*) as n from application_attempts where state='awaiting_human'"

@@ -32,6 +32,17 @@ class Settings:
     )
     max_age_days: int = int(os.environ.get("MAX_AGE_DAYS", "14"))
     company_daily_limit: int = int(os.environ.get("COMPANY_DAILY_LIMIT", "3"))
+    # Hosts the browser worker can actually drive. A role the worker cannot
+    # finish should never be claimed: it escalates, returns to the queue, and
+    # escalates again on the next batch. Extend this as adapters are added —
+    # it must stay in step with hermes/adapters/__init__.py.
+    applyable_hosts: tuple[str, ...] = tuple(
+        value.strip().lower()
+        for value in os.environ.get(
+            "APPLYABLE_ATS_HOSTS", "greenhouse.io,greenhouse.com,lever.co,ashbyhq.com"
+        ).split(",")
+        if value.strip()
+    )
 
 
 settings = Settings()
