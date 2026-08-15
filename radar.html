@@ -261,6 +261,13 @@ function appBlock(r){
   </div>`;
 }
 
+function manualAppliedButton(r){
+  if((r.application||{}).status!=="none") return "";
+  const api=CFG.api||"http://127.0.0.1:8080";
+  return `<a class="d-open" href="${esc(api)}/manual/${encodeURIComponent(r.id)}"
+    target="_blank" rel="noopener">Mark as applied</a>`;
+}
+
 function activityHTML(a){
   const attempts=(a.attempts||[]).map(x=>`<li><strong>${esc(x.state)}</strong> · ${esc(x.resume)}
     ${x.dry_run?" · dry run":""}<br><small>${esc(x.detail||"")}</small></li>`).join("");
@@ -289,6 +296,7 @@ function detailHTML(r){
     </div>
     ${(r.tags||[]).length?`<div class="d-k">Skills named</div><div class="d-labels">${r.tags.map(t=>`<span class="lchip">${esc(t)}</span>`).join("")}</div>`:""}
     ${appBlock(r)}
+    ${manualAppliedButton(r)}
     ${r.url?`<a class="d-open" href="${esc(r.url)}" target="_blank" rel="noopener">Open the posting ↗</a>`
             :'<div class="d-empty">No link recorded — this row came from the spreadsheet.</div>'}`;
 }

@@ -126,6 +126,27 @@ def _new_access_token() -> tuple[str, str]:
     return token, _lease_hash(token)
 
 
+def _manual_action_token(role_id: str, expires: int) -> str:
+    if not settings.api_token:
+        raise HTTPException(503, "API_TOKEN is required")
+    message = f"{role_id}:{expires}".encode()
+    signature = hmac.new(settings.api_token.encode(), message, hashlib.sha256).hexdigest()
+    return f"{expires}.{signature}"
+
+
+def _verify_manual_action_token(role_id: str, token: str) -> None:
+    try:
+        expires_text, supplied = token.split(".", 1)
+        expires = int(expires_text)
+    except (ValueError, AttributeError):
+        raise HTTPException(403, "invalid action token")
+    if expires < int(datetime.now(timezone.utc).timestamp()):
+        raise HTTPException(403, "action token expired")
+    expected = _manual_action_token(role_id, expires).split(".", 1)[1]
+    if not hmac.compare_digest(supplied, expected):
+        raise HTTPException(403, "invalid action token")
+
+
 def _attempt(conn, attempt_id: str, lease_token: str, *, lock: bool = False) -> dict:
     suffix = " for update" if lock else ""
     row = conn.execute(
@@ -233,6 +254,74 @@ def role_activity(role_id: str) -> dict:
             [role_id],
         ).fetchall()
     return {"role_id": role_id, "attempts": attempts, "questions": questions, "events": events}
+
+
+class ManualAppliedBody(BaseModel):
+    action_token: str
+
+
+@app.get("/manual/{role_id}", response_class=HTMLResponse)
+def manual_apply_page(role_id: str) -> HTMLResponse:
+    with db() as conn:
+        role = _role(conn, role_id)
+    expires = int((datetime.now(timezone.utc) + timedelta(minutes=10)).timestamp())
+    token = _manual_action_token(role_id, expires)
+    disabled = " disabled" if role["status"] != "none" else ""
+    status = (
+        "This role is already marked "
+        f"{escape(role['status'])}."
+        if role["status"] != "none"
+        else "Use this only if you submitted the application yourself."
+    )
+    return HTMLResponse(f"""<!doctype html>
+<html><head><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mark application — {escape(role['company'])}</title>
+<style>
+body{{font:16px system-ui;max-width:620px;margin:auto;padding:24px;line-height:1.5}}
+.card{{border:1px solid #ccc;border-radius:12px;padding:18px}}
+button{{font:inherit;padding:14px;width:100%;margin-top:16px;cursor:pointer}}
+</style></head><body><div class="card">
+<h1>{escape(role['title'])}</h1><p>{escape(role['company'])} · {escape(role['best_track'].upper())}</p>
+<p>{status}</p>
+<button id="apply"{disabled}>Mark as applied</button><p id="result"></p>
+</div><script>
+document.getElementById('apply').addEventListener('click', async () => {{
+  const button=document.getElementById('apply');
+  button.disabled=true;
+  const response=await fetch('/manual/{escape(role_id)}/applied', {{
+    method:'POST', headers:{{'Content-Type':'application/json'}},
+    body:JSON.stringify({{action_token:'{token}'}})
+  }});
+  const body=await response.json();
+  document.getElementById('result').textContent =
+    response.ok ? 'Marked as applied. You can return to Contribute.' : (body.detail||'Failed');
+}});
+</script></body></html>""")
+
+
+@app.post("/manual/{role_id}/applied")
+def mark_manually_applied(role_id: str, body: ManualAppliedBody) -> dict:
+    _verify_manual_action_token(role_id, body.action_token)
+    with db() as conn:
+        role = _role(conn, role_id, lock=True)
+        if role["status"] == "applied":
+            return {"ok": True, "status": "applied", "noop": True}
+        if role["status"] != "none":
+            raise HTTPException(409, f"cannot mark a {role['status']} role as applied")
+        conn.execute(
+            """insert into applications(role_id,status,applied,resume,notes)
+               values (%s,'applied',current_date,%s,'marked manually from Contribute')
+               on conflict(role_id) do update set
+                 status='applied',applied=current_date,resume=excluded.resume,
+                 notes=excluded.notes""",
+            [role_id, role["best_track"]],
+        )
+        notify.queue_event(
+            conn, "applied", role, f"manual-applied:{role_id}:{date.today()}",
+            detail=f"Marked manually. Resume: {role['best_track']}",
+        )
+        conn.commit()
+    return {"ok": True, "role_id": role_id, "status": "applied"}
 
 
 @app.get("/queue")
