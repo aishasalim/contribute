@@ -480,12 +480,24 @@ function apiHeaders(){
   return CFG.key?{Authorization:`Bearer ${CFG.key}`}:{};
 }
 
+/* The API caps a page at 500, so walk offsets until the board is exhausted.
+   A single page silently dropped the oldest roles, which are the applied
+   ones, and the tab counts then disagreed with the stat cards. */
+const API_PAGE=500;
 async function fromAPI(){
-  const r=await fetch(`${CFG.api}/roles?limit=500&sort=fresh&include_dead=true`,
-    {cache:"no-store",headers:apiHeaders()});
-  if(!r.ok) throw new Error(`API ${r.status}`);
-  const j=await r.json();
-  return {meta:{live:"api",total:j.total},resumes:RESUME_DEFS,roles:inflate(j.roles)};
+  const roles=[]; let total=null;
+  for(let offset=0; offset<20000; offset+=API_PAGE){
+    const r=await fetch(
+      `${CFG.api}/roles?limit=${API_PAGE}&offset=${offset}&sort=fresh&include_dead=true`,
+      {cache:"no-store",headers:apiHeaders()});
+    if(!r.ok) throw new Error(`API ${r.status}`);
+    const j=await r.json();
+    if(total===null) total=j.total;
+    const page=j.roles||[];
+    roles.push(...page);
+    if(page.length<API_PAGE) break;
+  }
+  return {meta:{live:"api",total:total??roles.length},resumes:RESUME_DEFS,roles:inflate(roles)};
 }
 
 async function boot(){
