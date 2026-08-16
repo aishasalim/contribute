@@ -60,7 +60,8 @@ an applied, pending, unknown, rejection, interview, or offer alert.
 
 ## Gmail
 
-The Gmail integration uses the read-only OAuth scope. It searches the last two
+The Gmail integration reads over IMAP with an app password and opens the
+mailbox readonly. It searches the last two
 days but stores only message ID, timestamp, classification, matching evidence,
 confidence, and decision—not email bodies.
 

@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
-"""Read-only Gmail scanner with conservative, auditable role matching."""
+"""Read-only inbox scanner with conservative, auditable role matching.
+
+Reads over IMAP with a Google App Password. The mailbox is opened readonly,
+so this can classify a reply but never mark, move or delete one.
+"""
 
 from __future__ import annotations
 
-import base64
+import email
+import imaplib
 import json
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from email.header import decode_header, make_header
 from email.utils import parsedate_to_datetime
-from pathlib import Path
 from urllib.parse import urlparse
 
 from hermes.client import Client
 
-ROOT = Path(__file__).resolve().parent.parent
-SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 STATUS_CLASSES = {"rejected", "phone_screen", "in_progress", "offer"}
 
 REJECTION = re.compile(
@@ -124,44 +127,95 @@ def choose_match(
     return best[0], best[1], best[2], unique
 
 
-def _payload_text(payload: dict) -> str:
+def _message_text(message) -> str:
+    """Flatten an email.message.Message to searchable text."""
     chunks: list[str] = []
-    body = payload.get("body", {}).get("data")
-    if body:
-        chunks.append(base64.urlsafe_b64decode(body + "==").decode(errors="replace"))
-    for part in payload.get("parts", []):
-        if part.get("mimeType") in {"text/plain", "text/html", "multipart/alternative"}:
-            chunks.append(_payload_text(part))
+    for part in message.walk():
+        if part.get_content_maintype() == "multipart":
+            continue
+        if part.get_content_type() not in {"text/plain", "text/html"}:
+            continue
+        payload = part.get_payload(decode=True)
+        if not payload:
+            continue
+        charset = part.get_content_charset() or "utf-8"
+        try:
+            chunks.append(payload.decode(charset, errors="replace"))
+        except LookupError:
+            chunks.append(payload.decode("utf-8", errors="replace"))
     return re.sub(r"<[^>]+>", " ", "\n".join(chunks))[:100_000]
 
 
-def _headers(payload: dict) -> dict[str, str]:
-    return {
-        item["name"].lower(): item["value"]
-        for item in payload.get("headers", [])
-    }
+def _decode_header(value: str) -> str:
+    """RFC 2047 headers arrive encoded; matching needs the readable text."""
+    if not value:
+        return ""
+    try:
+        return str(make_header(decode_header(value)))
+    except Exception:
+        return value
 
 
-def gmail_service():
-    from google.auth.transport.requests import Request
-    from google.oauth2.credentials import Credentials
-    from google_auth_oauthlib.flow import InstalledAppFlow
-    from googleapiclient.discovery import build
+def gmail_connection() -> imaplib.IMAP4_SSL:
+    """Read-only IMAP session using a Google App Password.
 
-    credentials_path = Path(os.environ.get("GMAIL_CREDENTIALS", ROOT / "credentials.json"))
-    token_path = Path(os.environ.get("GMAIL_TOKEN", ROOT / "token.json"))
-    credentials = None
-    if token_path.exists():
-        credentials = Credentials.from_authorized_user_file(token_path, SCOPES)
-    if not credentials or not credentials.valid:
-        if credentials and credentials.expired and credentials.refresh_token:
-            credentials.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
-            credentials = flow.run_local_server(port=0)
-        token_path.write_text(credentials.to_json())
-        token_path.chmod(0o600)
-    return build("gmail", "v1", credentials=credentials, cache_discovery=False)
+    An app password is scoped to mail and revocable on its own, and needs no
+    consent browser, so the nightly job runs headless without a token to
+    refresh. The mailbox is opened readonly so nothing here can mark, move or
+    delete a message.
+    """
+    address = os.environ.get("GMAIL_ADDRESS", "")
+    password = os.environ.get("GMAIL_APP_PASSWORD", "")
+    if not address or not password:
+        raise RuntimeError(
+            "set GMAIL_ADDRESS and GMAIL_APP_PASSWORD in .env "
+            "(Google account -> Security -> App passwords)"
+        )
+    connection = imaplib.IMAP4_SSL(
+        os.environ.get("GMAIL_IMAP_HOST", "imap.gmail.com"),
+        int(os.environ.get("GMAIL_IMAP_PORT", "993")),
+    )
+    connection.login(address, password)
+    connection.select("INBOX", readonly=True)
+    return connection
+
+
+def _recent_messages(connection, days: int = 2, limit: int = 200) -> list[dict]:
+    """Messages received in the last `days`, newest first.
+
+    IMAP SINCE is date-granular, so this over-selects slightly rather than
+    risk missing a reply that landed either side of midnight.
+    """
+    since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%d-%b-%Y")
+    status, data = connection.search(None, f'(SINCE "{since}")')
+    if status != "OK":
+        raise RuntimeError(f"IMAP search failed: {status}")
+    ids = data[0].split()[-limit:]
+    messages = []
+    for message_id in reversed(ids):
+        status, payload = connection.fetch(message_id, "(RFC822)")
+        if status != "OK" or not payload or not isinstance(payload[0], tuple):
+            continue
+        parsed = email.message_from_bytes(payload[0][1])
+        # Message-ID is stable across folders and refetches; the IMAP sequence
+        # number is not, and this is what dedupes the observations table.
+        identifier = (parsed.get("Message-ID") or "").strip("<> ")
+        if not identifier:
+            continue
+        received = None
+        if parsed.get("Date"):
+            try:
+                received = parsedate_to_datetime(parsed["Date"])
+            except (TypeError, ValueError):
+                received = None
+        messages.append({
+            "id": identifier,
+            "sender": _decode_header(parsed.get("From", "")),
+            "subject": _decode_header(parsed.get("Subject", "")),
+            "body": _message_text(parsed),
+            "received": received or datetime.now(timezone.utc),
+        })
+    return messages
 
 
 def scan() -> dict[str, int]:
@@ -171,18 +225,17 @@ def scan() -> dict[str, int]:
         roles.extend(client.get(
             "/roles", status=status, limit=500, paid_only="false", include_dead="true"
         )["roles"])
-    service = gmail_service()
-    listing = service.users().messages().list(
-        userId="me", q="newer_than:2d", maxResults=200
-    ).execute()
+    connection = gmail_connection()
+    try:
+        inbox = _recent_messages(connection)
+    finally:
+        try:
+            connection.logout()
+        except Exception:
+            pass
     counts = {"update": 0, "pending": 0, "ignore": 0, "duplicate": 0}
-    for item in listing.get("messages", []):
-        message = service.users().messages().get(
-            userId="me", id=item["id"], format="full"
-        ).execute()
-        headers = _headers(message["payload"])
-        body = _payload_text(message["payload"])
-        sender, subject = headers.get("from", ""), headers.get("subject", "")
+    for item in inbox:
+        sender, subject, body = item["sender"], item["subject"], item["body"]
         kind = classify(f"{subject}\n{body}")
         role, confidence, evidence_parts, unique = choose_match(
             roles, sender, subject, body
@@ -193,13 +246,10 @@ def scan() -> dict[str, int]:
             decision = "pending"
         else:
             decision = "ignore"
-        received = parsedate_to_datetime(headers.get("date", "")) if headers.get("date") else None
-        if not received:
-            received = datetime.fromtimestamp(int(message["internalDate"]) / 1000, timezone.utc)
         evidence = ", ".join(evidence_parts) or "no reliable role evidence"
         response = client.post("/email-observations", {
             "message_id": item["id"],
-            "received_at": received.isoformat(),
+            "received_at": item["received"].isoformat(),
             "classification": kind,
             "matched_role_id": role["id"] if role else None,
             "confidence": round(confidence, 3),

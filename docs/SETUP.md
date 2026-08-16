@@ -80,18 +80,20 @@ Set `REVIEW_BASE_URL` in `.env` to the HTTPS Tailscale URL shown by the final
 command. Review links use expiring random tokens, never change state on GET,
 and remain private to authenticated tailnet devices.
 
-## 4. Configure Gmail read-only OAuth
+## 4. Configure Gmail over IMAP
 
-1. In Google Cloud Console, create/select a project.
-2. Enable the Gmail API.
-3. Configure the OAuth consent screen for your own account.
-4. Create an OAuth client of type **Desktop app**.
-5. Download it as `credentials.json` in the repository root.
-6. Run `set -a; . ./.env; set +a; uv run python -m hermes.gmail`.
+1. Turn on 2-Step Verification for the Google account.
+2. Visit <https://myaccount.google.com/apppasswords> and create an app
+   password named `hermes`.
+3. Put it in `.env` as `GMAIL_APP_PASSWORD`, with the address in
+   `GMAIL_ADDRESS`.
+4. Run `set -a; . ./.env; set +a; uv run python -m hermes.gmail`.
 
-The first run opens Google consent. `token.json` is written with mode `0600`.
-Both files are git-ignored. Revoke access from your Google Account security
-page and delete `token.json` to disconnect Hermes.
+An app password is scoped to mail, is revocable on its own without touching
+the account password, and needs no consent browser — so the nightly job runs
+headless with no token to refresh. The mailbox is opened readonly, so Hermes
+can classify a reply but never mark, move or delete one. Revoke it from the
+same app-passwords page to disconnect Hermes.
 
 ## 5. Verify dry-run behavior
 
