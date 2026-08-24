@@ -3,8 +3,8 @@
     "owner": "aishasalim",
     "title": "Open-source contribution tracker",
     "focus": "Hardware verification & EDA \u2014 projects backed by Google, Intel, CHIPS Alliance, FOSSi.",
-    "generated": "2026-08-14T00:00:00Z",
-    "updated_by": "manual",
+    "generated": "2026-08-24T14:44:12Z",
+    "updated_by": "mcp",
     "schema": 1,
     "note": "Single source of truth for the tracker. Written by the `contributie` MCP server now (refresh/set_recap/add_* tools); designed so Hermes can write the same file later. index.html renders this at runtime.",
     "hermes_seam": "Any writer that preserves this schema (meta + contributions[] + potential_prs[] + potential_issues[]) can own updates. Statuses: merged | review | awaiting | closed. Keep `recap` human-written; refresh only touches status/comments/diff/dates."
@@ -19,16 +19,20 @@
       "kind": "feature",
       "url": "https://github.com/chipsalliance/verible/pull/2574",
       "title": "kythe: Add --output_path to write extracted facts to a file",
-      "status": "review",
+      "status": "merged",
       "created": "2026-08-11",
-      "ended": null,
-      "additions": 144,
-      "deletions": 27,
+      "ended": "2026-08-16",
+      "additions": 154,
+      "deletions": 25,
       "files": 5,
       "reviewer": null,
-      "review_decision": "REVIEW_REQUIRED",
+      "review_decision": "",
       "recap": "Closes issue #736 (open since 2021). verible-verilog-kythe-extractor could only write Kythe facts to stdout, so every caller had to capture the stream. Adds --output_path to name a destination file; empty or \"-\" keeps the stdout behavior. To make one flag serve all four print modes, KytheProtoOutput now takes a std::ostream wrapped in an OstreamOutputStream instead of a file descriptor, and the dead int-fd constructor and _WIN32/STDOUT_FILENO block are removed. The PR body also corrects the issue's premise: the tool never buffered the whole output, since PrintJsonStream already emitted fact-by-fact. Tests assert every mode writes bytes identical to its stdout output, including the binary proto stream.",
-      "latest_comment": null,
+      "latest_comment": {
+        "author": "hzeller",
+        "at": "2026-08-16",
+        "body": "Thanks!"
+      },
       "next_action": "await maintainer review (hzeller)",
       "blocked_on": "maintainer"
     },
@@ -50,7 +54,11 @@
       "reviewer": "mkorbel1",
       "review_decision": "",
       "recap": "Interface._setPort guarded duplicate port names with an assert, and Dart strips asserts in release mode. Outside of tests a duplicate name silently replaced the earlier entry in _ports, so the interface carried a port the caller never asked for. Replaces the assert with a new DuplicatePortNameException, placed beside the existing InterfaceNameException and InterfaceTypeException, so the collision raises in every build mode. Adds a regression test in interface_test.dart. Fixes #514.",
-      "latest_comment": null,
+      "latest_comment": {
+        "author": "mkorbel1",
+        "at": "2026-08-06",
+        "body": "Looks great, thank you for the contribution!"
+      },
       "next_action": "done \u2014 merged",
       "blocked_on": "none"
     },
@@ -75,7 +83,7 @@
       "latest_comment": {
         "author": "ktbarrett",
         "at": "2026-07-30",
-        "body": "The coverage hasn't changed so that's a good sign. [review: APPROVED]"
+        "body": "[review: APPROVED]"
       },
       "next_action": "done \u2014 merged",
       "blocked_on": "none"
@@ -96,12 +104,12 @@
       "deletions": 3,
       "files": 5,
       "reviewer": "wsnyder",
-      "review_decision": "",
+      "review_decision": "CHANGES_REQUESTED",
       "recap": "Teaches Verilator that a clocking block `output` is a driver of the signal it names, so a signal the design also drives is flagged as multiply driven. V3Undriven already caught the always_ff/always_comb mixes \u2014 including the exact example in issue #5675, which turned out to be already fixed \u2014 but silently accepted continuous assignments, plain always blocks and second clocking blocks. Continuous-assignment and clocking-vs-clocking conflicts report under MULTIDRIVEN; the plain-always pairing goes to the off-by-default MULTIDRIVENPROC because Verilator's own testbenches rely on that idiom. Five distinct messages naming the conflicting driver, both declaration orders tested.",
       "latest_comment": {
-        "author": "wsnyder",
-        "at": "2026-08-01",
-        "body": "@aishasalim, note this is blocked due to test failures - please fix and also merge in master, thanks."
+        "author": "verilator-ci",
+        "at": "2026-08-02",
+        "body": "Patch coverage from PR workflow [#3732](https://github.com/verilator/verilator/actions/runs/30765510558) (code coverage of lines changed relative to daf582661):\n<pre>\n  lines: 100.00% (37 of 37 lines)\n  branches: 98.15% (53 of 54 branches)\n"
       },
       "next_action": "done \u2014 merged",
       "blocked_on": "none"
@@ -122,9 +130,13 @@
       "deletions": 15,
       "files": 1,
       "reviewer": null,
-      "review_decision": "",
+      "review_decision": "APPROVED",
       "recap": "Rewrites Chisel's docs/README.md, whose build instructions no longer worked: the build moved from SBT (`docs/mdoc`) to Mill (`./mill mdoc`), the undocumented Scala CLI and Verilator prerequisites made the build fail partway with confusing errors, the website moved from a separate repo into `website/` (Docusaurus), `ChiselStage.emitVerilog` became `emitSystemVerilog`, and the per-directory Contents links pointed one directory too deep. Adds the two sections the issue asked for: where each kind of documentation belongs, and how to render the website locally. Fixes #4402.",
-      "latest_comment": null,
+      "latest_comment": {
+        "author": "jackkoenig",
+        "at": "2026-08-08",
+        "body": "I apologize for just now looking at this, thank you for the contribution. It looks great!"
+      },
       "next_action": "done \u2014 merged",
       "blocked_on": "none"
     },
@@ -227,7 +239,7 @@
       "latest_comment": {
         "author": "hzeller",
         "at": "2026-08-02",
-        "body": "Thanks for your contribution! Sorry it took so long to review, I was a bit busy with other projects. [review: APPROVED]"
+        "body": "Thanks for your contribution! Sorry it took so long to review, I was a bit busy with other projects."
       },
       "next_action": "done \u2014 merged",
       "blocked_on": "none"

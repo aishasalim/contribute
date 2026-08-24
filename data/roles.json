@@ -8,8 +8,8 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-08-14T00:00:00Z",
-    "updated_by": "manual",
+    "generated": "2026-08-24T14:46:27Z",
+    "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
     "note": "Page 2 of contributie. Roles scored against three resumes. The spreadsheet stays the source of truth for application state; the radar is the source of truth for discovery and relevancy."
@@ -236,7 +236,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-07-03",
         "resume": null,
         "sheet_row": 4,
@@ -244,7 +244,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Rejected 2026-08-21 (iCIMS email: moving forward with other candidates)."
       }
     },
     {
@@ -278,7 +278,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-07-03",
         "resume": null,
         "sheet_row": 5,
@@ -286,7 +286,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Rejected 2026-07-14 (iCIMS email)."
       }
     },
     {
@@ -448,7 +448,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-07-13",
         "resume": null,
         "sheet_row": 9,
@@ -456,7 +456,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Rejected 2026-07-14 (Rippling ATS email)."
       }
     },
     {
@@ -1006,7 +1006,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-07-14",
         "resume": null,
         "sheet_row": 22,
@@ -1014,7 +1014,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "HackerRank Web Assessment #1 invited 2026-07-14. No submission confirmation; expiry reminder 2026-08-06 said 7 days left, so the invite likely lapsed ~2026-08-13. Verify."
       },
       "snippet": "About Akuna: Akuna Capital is an innovative trading firm with a strong focus on collaboration, cutting-edge technology, data driven solutions, and automation. We specialize in providing liquidity as an options market maker, meaning we are committed to providing competitive quotes"
     },
@@ -1049,7 +1049,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-07-16",
         "resume": null,
         "sheet_row": 23,
@@ -1057,7 +1057,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "needs_human: no role title in the sheet"
+        "notes": "Rejected 2026-08-07. Role was AI Software Intern (Fall 2026)."
       }
     },
     {
@@ -1259,7 +1259,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-07-16",
         "resume": null,
         "sheet_row": 28,
@@ -1267,7 +1267,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Assessment invitations received 07/22, 07/25, 07/28"
+        "notes": "Optiver online assessments invited 2026-07-22; reminders 07-25 and 07-28. No completion email \u2014 treat as INCOMPLETE."
       }
     },
     {
@@ -2279,7 +2279,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "in_progress",
+        "status": "rejected",
         "applied": "2026-08-03",
         "resume": null,
         "sheet_row": 52,
@@ -2287,7 +2287,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Rejected 08/04 due to requisition error, then reactivated 08/10 - back in consideration"
+        "notes": "Rejected 2026-08-04 (Workday email, req JR2026521026)."
       }
     },
     {
@@ -2321,7 +2321,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-08-03",
         "resume": null,
         "sheet_row": 53,
@@ -2329,7 +2329,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "HackerRank OA (NAMR SWE Program Campus Hiring 2027) SUBMITTED 2026-08-24. Awaiting result."
       }
     },
     {
@@ -2405,7 +2405,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-08-04",
         "resume": null,
         "sheet_row": 55,
@@ -2413,7 +2413,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Criteria Assessment invited 2026-08-05. No completion email \u2014 treat as INCOMPLETE until confirmed."
       }
     },
     {
@@ -2705,7 +2705,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-08-04",
         "resume": null,
         "sheet_row": 62,
@@ -2713,7 +2713,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "TikTok/CodeSignal General Coding Assessment invited 2026-08-20. NOT STARTED \u2014 reminder 2026-08-24."
       }
     },
     {
@@ -2880,7 +2880,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-08-06",
         "resume": null,
         "sheet_row": 66,
@@ -2888,7 +2888,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Email verification reminder received 08/09 - may need to verify to proceed"
+        "notes": "5 assessments invited 2026-08-06, expired 2026-08-13 07:00 PT, all Incomplete. Extension request link was in the invite email."
       },
       "snippet": "Every day, tens of millions of people come to Roblox to explore, create, play, learn, and connect with friends in 3D immersive digital experiences\u2013 all created by our global community of developers and creators. At Roblox, we\u2019re building the tools and platform that empower our co"
     },
@@ -2923,7 +2923,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-08-06",
         "resume": null,
         "sheet_row": 67,
@@ -2931,7 +2931,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Closed 2026-08-16 \u2014 email verification not completed within a week of applying. Reopenable: support ticket at support.at.robloxlabs.com."
       }
     },
     {
@@ -3317,7 +3317,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-08-12",
         "resume": null,
         "sheet_row": 76,
@@ -3325,7 +3325,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Rejected 2026-08-17 (Greenhouse email)."
       }
     },
     {
@@ -15158,15 +15158,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-08-17",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Ashby confirmation email 2026-08-17."
       },
       "snippet": "Exa is an applied AI lab building a search engine unlike the world has ever seen. We build massive-scale infra to crawl the entire web, train state-of-the-art embedding models to process it, and design super high performant vector databases to retrieve over it. We now power searc"
     },
@@ -16851,15 +16851,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-08-16",
+        "resume": "hwv",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Workday confirmation email 2026-08-16."
       },
       "snippet": "We believe power is a promise - a shared commitment to be there for others when it matters most. For more than 65 years, we've turned big ideas into solutions that help protect homes, strengthen businesses and build a more resilient, efficient, sustainable energy future. Ready to"
     },
@@ -35310,15 +35310,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-08-17",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Req REQ36194. Confirmation email 2026-08-17."
       }
     },
     {
@@ -41164,15 +41164,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "in_progress",
+        "applied": "2026-08-16",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Two IBM assessments open: coding assessment (2026-08-17) and recorded competency interview (2026-08-24). Both INCOMPLETE."
       }
     },
     {
@@ -41512,15 +41512,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-08-16",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Req 334325. Confirmation email 2026-08-16."
       }
     },
     {
@@ -42570,6 +42570,260 @@
         "thank_you": false,
         "follow_up": false,
         "notes": ""
+      }
+    },
+    {
+      "id": "freeform-software-engineering-intern-summer-2027",
+      "company": "Freeform",
+      "title": "Software Engineering Intern (Summer 2027)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-17",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "rejected",
+        "applied": "2026-08-17",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-17 (Greenhouse). Rejected 2026-08-19."
+      }
+    },
+    {
+      "id": "abridge-early-career-software-engineer",
+      "company": "Abridge",
+      "title": "Early Career Software Engineer",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-17",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "in_progress",
+        "applied": "2026-08-17",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Advanced to a CoderPad take-home 2026-08-17. NOT STARTED \u2014 reminder 2026-08-21."
+      }
+    },
+    {
+      "id": "boomsupersonic-summer-2027-engineering-and-tech-internship",
+      "company": "Boom Supersonic",
+      "title": "Summer 2027 Engineering and Tech Internship",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-17",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-17",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-17 (Rippling ATS). No decision yet."
+      }
+    },
+    {
+      "id": "breakthroughtech-verizon-sprinternship",
+      "company": "Break Through Tech / Verizon",
+      "title": "Verizon Sprinternship (Summer)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-07-11",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 22,
+        "ml": 22,
+        "hwv": 22
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "rejected",
+        "applied": "2026-07-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Rejected 2026-07-25 by Break Through Tech."
+      }
+    },
+    {
+      "id": "medpace-ai-engineering-intern-fall-2026",
+      "company": "Medpace",
+      "title": "AI Engineering Intern - Fall 2026",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "fall-2026",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-16",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 71,
+        "ml": 71,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [
+        "ml"
+      ],
+      "tier": "fit",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-16",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-16 (iCIMS). No decision yet."
+      }
+    },
+    {
+      "id": "replit-software-engineering-intern-summer-2027",
+      "company": "Replit",
+      "title": "Software Engineering Intern (Summer 2027)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-16",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-16",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-16 (Ashby). No decision yet."
       }
     }
   ]
