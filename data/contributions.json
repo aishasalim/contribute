@@ -3,7 +3,7 @@
     "owner": "aishasalim",
     "title": "Open-source contribution tracker",
     "focus": "Hardware verification & EDA \u2014 projects backed by Google, Intel, CHIPS Alliance, FOSSi.",
-    "generated": "2026-08-24T15:24:11Z",
+    "generated": "2026-08-24T16:39:33Z",
     "updated_by": "mcp",
     "schema": 1,
     "note": "Single source of truth for the tracker. Written by the `contributie` MCP server now (refresh/set_recap/add_* tools); designed so Hermes can write the same file later. index.html renders this at runtime.",
@@ -287,6 +287,58 @@
         "Type:Enhancement",
         "Component:DV"
       ]
+    },
+    {
+      "repo": "cocotb",
+      "issue": 5684,
+      "lang": "C++/Python",
+      "org": "cocotb",
+      "url": "https://github.com/cocotb/issues/5684",
+      "title": "--coverage-per-instance has no effect under the cocotb Verilator harness",
+      "readiness": "ready",
+      "type": "bug",
+      "labels": [],
+      "why": "Root cause is already pinned down in the report: cocotb's verilator.cpp wrap_up() calls VerilatedCov::write() without forcePerInstance(true). Small, surgical C++ fix in a repo where two of her PRs already merged. Sits exactly on the cocotb+Verilator seam of her niche.",
+      "source": "added"
+    },
+    {
+      "repo": "verible",
+      "issue": 2569,
+      "lang": "C++/Bison",
+      "org": "chipsalliance",
+      "url": "https://github.com/verible/issues/2569",
+      "title": "Accepting !&lt;reduction_op&gt; without parentheses should be rejected",
+      "readiness": "ready",
+      "type": "bug",
+      "labels": [],
+      "why": "Grammar fix in verilog.y plus parser tests. Clusters with #2568 and #2576 \u2014 one PR can likely close all three. hzeller has already reviewed and merged her work in this repo.",
+      "source": "added"
+    },
+    {
+      "repo": "verilator",
+      "issue": 8186,
+      "lang": "C++",
+      "org": "verilator",
+      "url": "https://github.com/verilator/issues/8186",
+      "title": "SIMILARNAME warning affects localparams and parameters too",
+      "readiness": "ready",
+      "type": "fix",
+      "labels": [],
+      "why": "Narrow regression from #7992: the SIMILARNAME check should skip parameters and localparams. Reporter explicitly invited a fix. Smallest of the four, and two of her Verilator PRs already merged.",
+      "source": "added"
+    },
+    {
+      "repo": "ibex",
+      "issue": 2461,
+      "lang": "SystemVerilog/UVM",
+      "org": "lowRISC",
+      "url": "https://github.com/ibex/issues/2461",
+      "title": "[DV] Add regression tests for Zcmp instruction traps and atomicity",
+      "readiness": "ready",
+      "type": "test",
+      "labels": [],
+      "why": "Pure DV work in the target repo. Backup to #2057 if that one is taken, or a natural second Ibex PR once she knows the DV flow.",
+      "source": "added"
     }
   ],
   "potential_issues": [
