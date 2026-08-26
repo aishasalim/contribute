@@ -8,7 +8,7 @@
    "winter-2027",
    "spring-2027"
   ],
-  "generated": "2026-08-26T14:44:12Z",
+  "generated": "2026-08-26T14:47:02Z",
   "updated_by": "mcp",
   "schema": 1,
   "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -43454,6 +43454,186 @@
     "thank_you": false,
     "follow_up": false,
     "notes": "Req R00147803."
+   }
+  },
+  {
+   "id": "outreachy-december-2026-internship-cohort",
+   "company": "Outreachy",
+   "title": "December 2026 Internship Cohort",
+   "location": "Remote",
+   "workmode": "remote",
+   "season": "summer-2027",
+   "url": "https://www.outreachy.org/",
+   "source": "program-research",
+   "posted": null,
+   "found": "2026-08-26",
+   "paid": null,
+   "pay": "",
+   "eligibility": {
+    "sponsorship": null,
+    "citizenship": null,
+    "class_year": []
+   },
+   "tags": [
+    "program",
+    "fellowship"
+   ],
+   "tracks": {
+    "swe": 80,
+    "ml": 80,
+    "hwv": 80
+   },
+   "best_track": "hwv",
+   "also_tracks": [],
+   "tier": "strong",
+   "why": "Cohort program / fellowship, not an ATS posting. Researched 2026-08-26.",
+   "why_by": "research",
+   "dead": false,
+   "application": {
+    "status": "none",
+    "applied": null,
+    "resume": null,
+    "sheet_row": null,
+    "recruiter": "",
+    "network": "",
+    "thank_you": false,
+    "follow_up": false,
+    "notes": "DEADLINE 2026-08-31 (initial application). Paid $7,000, remote, Dec 7 2026 - Mar 8 2027, 30 hrs/week. Open-source FOSS orgs. Full-time commitment clashes with a spring term - check load first."
+   }
+  },
+  {
+   "id": "mlhfellowship-fall-2026-open-source-track",
+   "company": "MLH Fellowship",
+   "title": "Fall 2026 Open Source Track",
+   "location": "Remote",
+   "workmode": "remote",
+   "season": "fall-2026",
+   "url": "https://fellowship.mlh.com/programs/open-source",
+   "source": "program-research",
+   "posted": null,
+   "found": "2026-08-26",
+   "paid": null,
+   "pay": "",
+   "eligibility": {
+    "sponsorship": null,
+    "citizenship": null,
+    "class_year": []
+   },
+   "tags": [
+    "program",
+    "fellowship"
+   ],
+   "tracks": {
+    "swe": 80,
+    "ml": 80,
+    "hwv": 80
+   },
+   "best_track": "swe",
+   "also_tracks": [],
+   "tier": "strong",
+   "why": "Cohort program / fellowship, not an ATS posting. Researched 2026-08-26.",
+   "why_by": "research",
+   "dead": false,
+   "application": {
+    "status": "none",
+    "applied": null,
+    "resume": null,
+    "sheet_row": null,
+    "recruiter": "",
+    "network": "",
+    "thank_you": false,
+    "follow_up": false,
+    "notes": "DEADLINE 2026-08-31, batch starts 2026-09-14. 12 weeks, 20+ hrs/week, educational stipend. Rolling admission - apply early."
+   }
+  },
+  {
+   "id": "developforgood-winter-2027-engineer-fellowship",
+   "company": "Develop for Good",
+   "title": "Winter 2027 Engineer Fellowship",
+   "location": "Remote",
+   "workmode": "remote",
+   "season": "winter-2027",
+   "url": "https://www.developforgood.org/for-students",
+   "source": "program-research",
+   "posted": null,
+   "found": "2026-08-26",
+   "paid": null,
+   "pay": "",
+   "eligibility": {
+    "sponsorship": null,
+    "citizenship": null,
+    "class_year": []
+   },
+   "tags": [
+    "program",
+    "fellowship"
+   ],
+   "tracks": {
+    "swe": 80,
+    "ml": 80,
+    "hwv": 80
+   },
+   "best_track": "swe",
+   "also_tracks": [],
+   "tier": "strong",
+   "why": "Cohort program / fellowship, not an ATS posting. Researched 2026-08-26.",
+   "why_by": "research",
+   "dead": false,
+   "application": {
+    "status": "none",
+    "applied": null,
+    "resume": null,
+    "sheet_row": null,
+    "recruiter": "",
+    "network": "",
+    "thank_you": false,
+    "follow_up": false,
+    "notes": "DEADLINE 2026-09-19. Offers 2026-10-05 to 10-16, batch starts 2026-10-25. 16 weeks, 5-10 hrs/week. Volunteer, not paid. Engineer / Manager roles."
+   }
+  },
+  {
+   "id": "googlesummerofcode-gsoc-2027-via-fossi-foundation",
+   "company": "Google Summer of Code",
+   "title": "GSoC 2027 via FOSSi Foundation",
+   "location": "Remote",
+   "workmode": "remote",
+   "season": "summer-2027",
+   "url": "https://fossi-foundation.org/gsoc",
+   "source": "program-research",
+   "posted": null,
+   "found": "2026-08-26",
+   "paid": null,
+   "pay": "",
+   "eligibility": {
+    "sponsorship": null,
+    "citizenship": null,
+    "class_year": []
+   },
+   "tags": [
+    "program",
+    "fellowship"
+   ],
+   "tracks": {
+    "swe": 80,
+    "ml": 80,
+    "hwv": 80
+   },
+   "best_track": "hwv",
+   "also_tracks": [],
+   "tier": "strong",
+   "why": "Cohort program / fellowship, not an ATS posting. Researched 2026-08-26.",
+   "why_by": "research",
+   "dead": false,
+   "application": {
+    "status": "none",
+    "applied": null,
+    "resume": null,
+    "sheet_row": null,
+    "recruiter": "",
+    "network": "",
+    "thank_you": false,
+    "follow_up": false,
+    "notes": "Orgs announced ~Feb 2027, contributor applications ~Mar 2027. FOSSi is the umbrella for open-source silicon. Best niche fit - cocotb and Verilator maintainers already merged her PRs."
    }
   }
  ]
