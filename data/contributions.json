@@ -3,7 +3,7 @@
     "owner": "aishasalim",
     "title": "Open-source contribution tracker",
     "focus": "Hardware verification & EDA \u2014 projects backed by Google, Intel, CHIPS Alliance, FOSSi.",
-    "generated": "2026-08-24T16:39:33Z",
+    "generated": "2026-08-26T14:24:48Z",
     "updated_by": "mcp",
     "schema": 1,
     "note": "Single source of truth for the tracker. Written by the `contributie` MCP server now (refresh/set_recap/add_* tools); designed so Hermes can write the same file later. index.html renders this at runtime.",

@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-08-24T15:24:41Z",
+    "generated": "2026-08-26T14:26:46Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -1931,7 +1931,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-07-25",
         "resume": null,
         "sheet_row": 44,
@@ -1939,7 +1939,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Rejection email 2026-08-24 from no-reply@metrea.aero"
       }
     },
     {
@@ -2713,7 +2713,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "TikTok/CodeSignal General Coding Assessment invited 2026-08-20. NOT STARTED \u2014 reminder 2026-08-24."
+        "notes": "TikTok CodeSignal General Coding Assessment EXPIRED 2026-08-25 - not taken. Needs a re-invite request or close out."
       }
     },
     {
@@ -2888,7 +2888,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "5 assessments invited 2026-08-06, expired 2026-08-13 07:00 PT, all Incomplete. Extension request link was in the invite email."
+        "notes": "Roblox asked 2026-08-20 whether you are still interested - reply needed to stay in process."
       },
       "snippet": "Every day, tens of millions of people come to Roblox to explore, create, play, learn, and connect with friends in 3D immersive digital experiences\u2013 all created by our global community of developers and creators. At Roblox, we\u2019re building the tools and platform that empower our co"
     },
@@ -6498,7 +6498,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
+        "status": "rejected",
         "applied": null,
         "resume": null,
         "sheet_row": null,
@@ -6506,7 +6506,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Applied earlier; rejection email 2026-08-21 (req 26WD100593)"
       }
     },
     {
@@ -41172,7 +41172,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Two IBM assessments open: coding assessment (2026-08-17) and recorded competency interview (2026-08-24). Both INCOMPLETE."
+        "notes": "Recorded competency interview + assessments invited 2026-08-24 (req 128497). Action required, not yet done."
       }
     },
     {
@@ -42653,7 +42653,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Advanced to a CoderPad take-home 2026-08-17. NOT STARTED \u2014 reminder 2026-08-21."
+        "notes": "CoderPad screen still not taken - reminder 2026-08-21. Open OA."
       }
     },
     {
@@ -42908,6 +42908,468 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Applied 2026-08-24 (Workday). No decision yet."
+      }
+    },
+    {
+      "id": "northropgrumman-2027-software-engineering-intern-huntsville-al",
+      "company": "Northrop Grumman",
+      "title": "2027 Software Engineering Intern - Huntsville AL",
+      "location": "Huntsville, AL",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": true,
+      "application": {
+        "status": "rejected",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req R10247486. Applied and rejected same day, 2026-08-26."
+      }
+    },
+    {
+      "id": "northropgrumman-2027-software-test-engineering-intern-huntsville-al",
+      "company": "Northrop Grumman",
+      "title": "2027 Software Test Engineering Intern - Huntsville AL",
+      "location": "Huntsville, AL",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": true,
+      "application": {
+        "status": "rejected",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req R10247487. Applied and rejected same day, 2026-08-26."
+      }
+    },
+    {
+      "id": "oracle-application-developer-intern-2027-intern-program",
+      "company": "Oracle",
+      "title": "Application Developer Intern [2027 Intern Program]",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req 214459."
+      }
+    },
+    {
+      "id": "brunswick-software-engineering-intern",
+      "company": "Brunswick",
+      "title": "Software Engineering Intern",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "brunswick-mercury-marine-software-validation-intern",
+      "company": "Brunswick",
+      "title": "Mercury Marine: Software Validation Intern",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Validation track - relevant to HW verification goal."
+      }
+    },
+    {
+      "id": "honeywell-software-engineer-computer-science-summer-2027-intern",
+      "company": "Honeywell",
+      "title": "Software Engineer & Computer Science - Summer 2027 Intern",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req 155558."
+      }
+    },
+    {
+      "id": "honeywell-software-engineer-computer-science-summer-2027-intern-us-person-required",
+      "company": "Honeywell",
+      "title": "Software Engineer & Computer Science - Summer 2027 Intern (US Person Required)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req 155557."
+      }
+    },
+    {
+      "id": "ibm-hardware-and-systems-developer-intern-2027",
+      "company": "IBM",
+      "title": "Hardware and Systems Developer Intern 2027",
+      "location": "Austin, TX",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req 130110."
+      }
+    },
+    {
+      "id": "ibm-hardware-developer-intern-2027",
+      "company": "IBM",
+      "title": "Hardware Developer Intern 2027",
+      "location": "Austin, TX",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-26",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-26",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req 129936."
+      }
+    },
+    {
+      "id": "bny-2027-bny-summer-internship-program-engineering-data-science-jersey-city-nj",
+      "company": "BNY",
+      "title": "2027 BNY Summer Internship Program - Engineering (Data Science) - Jersey City, NJ",
+      "location": "Jersey City, NJ",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-24",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-24",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req 81238."
+      }
+    },
+    {
+      "id": "deltaairlines-intern-innovation-ai-engineering-spring-2027",
+      "company": "Delta Air Lines",
+      "title": "Intern, Innovation - AI Engineering (Spring 2027)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "spring-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-21",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recorded from application confirmation email; not scored against a posting.",
+      "why_by": "email",
+      "dead": true,
+      "application": {
+        "status": "rejected",
+        "applied": "2026-08-21",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Req 33707. Rejection email 2026-08-21."
       }
     }
   ]
