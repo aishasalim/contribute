@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-08-27T00:48:52Z",
+    "generated": "2026-08-27T14:26:28Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -41172,7 +41172,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Recorded competency interview + assessments invited 2026-08-24 (req 128497). Action required, not yet done."
+        "notes": "Recorded competency interview + coding assessment SUBMITTED 2026-08-27 (user-reported; no confirmation email yet). Req 128497. IBM treats this as one assessment covering reqs 128497, 130110 and 129936. Awaiting result."
       }
     },
     {
@@ -43235,7 +43235,7 @@
       "why_by": "email",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-08-26",
         "resume": null,
         "sheet_row": null,
@@ -43243,7 +43243,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Req 130110."
+        "notes": "Req 130110. Assessment invited 2026-08-27. Covered by the single IBM assessment submitted 2026-08-27 under req 128497 - no separate submission needed. Awaiting result."
       }
     },
     {
@@ -43277,7 +43277,7 @@
       "why_by": "email",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-08-26",
         "resume": null,
         "sheet_row": null,
@@ -43285,7 +43285,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Req 129936."
+        "notes": "Req 129936. Assessment invited 2026-08-27. Covered by the single IBM assessment submitted 2026-08-27 under req 128497 - no separate submission needed. Awaiting result."
       }
     },
     {
