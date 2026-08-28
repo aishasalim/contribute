@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-08-27T14:26:28Z",
+    "generated": "2026-08-28T21:39:24Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -31679,7 +31679,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-08-26",
         "resume": "swe",
         "sheet_row": null,
@@ -31687,7 +31687,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Req 01868886. Second RTX requisition, distinct from 01869890."
+        "notes": "Rejected 2026-08-28 (req 01868886), RTX Global Talent Acquisition."
       },
       "snippet": "Date Posted: 2026-08-13 Country: United States of America Location: US-MA-TEWKSBURY-TB3 ~ 50 Apple Hill Dr ~ CONCORD BLDG, Tewksbury Tb3 300 Concord Position Role Type: Onsite U.S. Citizen, U.S. Person, or Immigration Status Requirements: Active and transferable U.S. government i"
     },
@@ -32152,7 +32152,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-08-26",
         "resume": "swe",
         "sheet_row": null,
@@ -32160,7 +32160,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Req 01869890. Confirmation from RTX Global Talent Acquisition."
+        "notes": "Rejected 2026-08-28 (req 01869890), RTX Global Talent Acquisition."
       },
       "snippet": "Date Posted: 2026-08-10 Country: United States of America Location: US-FL-LARGO-382SR ~ 7887 Bryan Dairy Rd ~ BLDG 600 Position Role Type: Onsite U.S. Citizen, U.S. Person, or Immigration Status Requirements: The ability to obtain and maintain a U.S. government issued security cl"
     },
@@ -43285,7 +43285,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Req 129936. Assessment invited 2026-08-27. Covered by the single IBM assessment submitted 2026-08-27 under req 128497 - no separate submission needed. Awaiting result."
+        "notes": "2026-08-28: passed initial screening (assessment reviewed). Interviews 60-120 days after assessments."
       }
     },
     {
@@ -43793,7 +43793,7 @@
       "why_by": "email-sweep",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-08-26",
         "resume": "swe",
         "sheet_row": null,
@@ -43801,7 +43801,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Req R185388. Applied 2026-08-26 (Workday). ACTION: outstanding questionnaires in candidate home are not complete."
+        "notes": "Rejected 2026-08-27 (req R185388)."
       }
     },
     {
