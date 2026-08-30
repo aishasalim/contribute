@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-08-28T21:57:38Z",
+    "generated": "2026-08-30T16:35:01Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -10553,15 +10553,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-08-30",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Applied 2026-08-30 (SmartRecruiters). Confirmation email received."
       }
     },
     {
@@ -21614,15 +21614,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-08-30",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Applied 2026-08-30 (Lever). Confirmation email received."
       },
       "snippet": "At Layup Parts, we're developing the technology that will build the future. We're a manufacturing technology company replacing months of lead time with days, using proprietary software, automation, and advanced manufacturing systems built for speed. Our customers are inventing wh"
     },
@@ -30795,15 +30795,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-08-30",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Applied 2026-08-30. Confirmation email from RE/SPEC Inc."
       }
     },
     {
@@ -41164,7 +41164,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "in_progress",
+        "status": "rejected",
         "applied": "2026-08-16",
         "resume": "swe",
         "sheet_row": null,
@@ -41172,7 +41172,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Recorded competency interview + coding assessment SUBMITTED 2026-08-27 (user-reported; no confirmation email yet). Req 128497. IBM treats this as one assessment covering reqs 128497, 130110 and 129936. Awaiting result."
+        "notes": "Rejected 2026-08-29 (req 128497) after the recorded competency interview + coding assessment. The two Austin hardware reqs (129936, 130110) stay live \u2014 129936 passed initial screening 2026-08-28."
       }
     },
     {
@@ -44688,6 +44688,132 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Applied 2026-08-28 (Ashby). Recovered from Gmail."
+      }
+    },
+    {
+      "id": "intuit-summer-2027-software-engineering-intern-full-stack",
+      "company": "Intuit",
+      "title": "Summer 2027: Software Engineering Intern - Full Stack",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-30",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 76,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-30",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-30. Recovered from Gmail (do_not_reply@intuit.com)."
+      }
+    },
+    {
+      "id": "emerson-application-engineering-intern",
+      "company": "Emerson",
+      "title": "Application Engineering Intern (26008043)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-30",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-30",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-30 (Oracle Recruiting). Recovered from Gmail."
+      }
+    },
+    {
+      "id": "charlesschwab-technology-2027-intern-ai-cybersecurity",
+      "company": "Charles Schwab",
+      "title": "Technology 2027 Intern - AI & CyberSecurity (2026-126226)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-30",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-30",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-30 (iCIMS). Recovered from Gmail."
       }
     }
   ]
