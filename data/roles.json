@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-08-30T16:35:01Z",
+    "generated": "2026-08-30T16:39:01Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -43243,7 +43243,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Req 130110. Assessment invited 2026-08-27. Covered by the single IBM assessment submitted 2026-08-27 under req 128497 - no separate submission needed. Awaiting result."
+        "notes": "Req 130110. Covered by the single IBM recorded competency interview + coding assessment submitted 2026-08-27 under req 128497 \u2014 one assessment serves reqs 128497, 129936 and 130110, so no separate submission is needed. Awaiting result; no action open."
       }
     },
     {
@@ -43285,7 +43285,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "2026-08-28: passed initial screening (assessment reviewed). Interviews 60-120 days after assessments."
+        "notes": "Req 129936. Covered by the single IBM recorded competency interview + coding assessment submitted 2026-08-27 under req 128497 \u2014 one assessment serves reqs 128497, 129936 and 130110, so no separate submission is needed. 2026-08-28: passed initial screening (assessment reviewed). Interviews come 60-120 days after the assessment. Awaiting IBM; no action open."
       }
     },
     {
