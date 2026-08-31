@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-08-30T16:39:01Z",
+    "generated": "2026-08-31T20:00:00Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -1302,14 +1302,14 @@
       "dead": false,
       "application": {
         "status": "applied",
-        "applied": null,
+        "applied": "2026-07-20",
         "resume": null,
         "sheet_row": 29,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Response received 07/20; exact apply date not in inbox needs_human: no role title in the sheet"
+        "notes": "Applied 2026-07-20 (confirmation from noreply@google.com). needs_human: role title not recorded. See google-2027-role-title-not-recorded for the 2026-08-31 application."
       }
     },
     {
@@ -41128,7 +41128,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Duplicate posting of req 210773759, already tracked as jpmorganchase-2027-namr-software-engineer-program-summer-internship-job-210773759 (applied 2026-08-15, in_progress). Applications under review as of 2026-08-31; Columbus event Oct 6-7, Brooklyn Oct 16-17."
       }
     },
     {
@@ -44814,6 +44814,216 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Applied 2026-08-30 (iCIMS). Recovered from Gmail."
+      }
+    },
+    {
+      "id": "qorvo-software-engineering-intern-10621",
+      "company": "Qorvo",
+      "title": "Software Engineering Intern (10621)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-31",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 76,
+        "ml": 27,
+        "hwv": 40
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-31",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-31. Recovered from Gmail (system@successfactors.com)."
+      }
+    },
+    {
+      "id": "draftkings-software-engineer-intern-summer-2027",
+      "company": "DraftKings",
+      "title": "Software Engineer Intern (Summer 2027)",
+      "location": "Boston, MA",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-31",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 76,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-31",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-31. Recovered from Gmail (draftkings@myworkday.com)."
+      }
+    },
+    {
+      "id": "medline-rpa-agentic-ai-software-technologies-intern-summer-2027",
+      "company": "Medline",
+      "title": "RPA & Agentic AI Software Technologies Intern - Summer 2027",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-31",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 60,
+        "ml": 76,
+        "hwv": 22
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-31",
+        "resume": "ml",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-31. Recovered from Gmail (medline@myworkday.com)."
+      }
+    },
+    {
+      "id": "aerotech-software-engineering-internship-or-co-op-2027",
+      "company": "Aerotech",
+      "title": "Software Engineering Internship or Co-op 2027",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-31",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 76,
+        "ml": 27,
+        "hwv": 40
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-31",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-31. Recovered from Gmail (noreply@applytojob.com / careers@aerotech.com)."
+      }
+    },
+    {
+      "id": "google-2027-role-title-not-recorded",
+      "company": "Google",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-08-31",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 60,
+        "ml": 40,
+        "hwv": 40
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "Recovered from the Gmail application trail; not seen on a polled board.",
+      "why_by": "email-sweep",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-08-31",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Applied 2026-08-31. Confirmation went to the TAMU school account by mistake, not to Gmail. needs_human: record the role title. Separate from the 2026-07-20 Google application."
       }
     }
   ]
