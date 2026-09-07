@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-07T20:39:26Z",
+    "generated": "2026-09-07T20:44:27Z",
     "updated_by": "harvest.py",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -855,9 +855,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2026"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -1328,9 +1326,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -1792,9 +1788,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2026"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -2861,9 +2855,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -3253,7 +3245,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -4136,9 +4128,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -6443,9 +6433,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -7483,9 +7471,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -7776,9 +7762,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -7963,7 +7947,7 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
@@ -7971,9 +7955,9 @@
         "React"
       ],
       "tracks": {
-        "swe": 50,
-        "ml": 26,
-        "hwv": 26
+        "swe": 44,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -8673,9 +8657,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2026"
-        ]
+        "class_year": []
       },
       "tags": [
         "TypeScript",
@@ -8721,9 +8703,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "TypeScript",
@@ -8810,8 +8790,8 @@
       "id": "modal-ml-research-intern",
       "company": "Modal",
       "title": "ML Research Intern",
-      "location": "New York",
-      "workmode": "onsite",
+      "location": "New York, NY, San Francisco, CA",
+      "workmode": "unspecified",
       "season": "summer-2027",
       "url": "https://jobs.ashbyhq.com/modal/38888294-6bc7-4dab-b072-6d0f0c2ed79a",
       "source": "ashby",
@@ -8960,7 +8940,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -9178,7 +9158,7 @@
       "company": "Notion",
       "title": "Software Engineer Intern (Summer 2027)",
       "location": "San Francisco, California",
-      "workmode": "remote",
+      "workmode": "unspecified",
       "season": "summer-2027",
       "url": "https://jobs.ashbyhq.com/notion/3fba1c39-c5cb-47d7-9ad2-1cec4d7e9d0c",
       "source": "ashby",
@@ -9189,9 +9169,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2028"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -9238,9 +9216,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2026"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -9377,9 +9353,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -9566,9 +9540,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -10345,7 +10317,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -12026,7 +11998,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -12110,7 +12082,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -12363,7 +12335,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -12409,7 +12381,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -12459,7 +12431,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -13658,9 +13630,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2026"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -13754,9 +13724,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -14100,9 +14068,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -14314,9 +14280,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -14441,7 +14405,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -14483,7 +14447,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -14566,15 +14530,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 29,
-        "hwv": 29
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -14652,9 +14616,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -14695,7 +14657,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -14822,9 +14784,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -14950,9 +14910,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -16269,9 +16227,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -17121,9 +17077,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -17321,9 +17275,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Python",
@@ -18068,9 +18020,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Firmware"
@@ -19814,49 +19764,6 @@
       "snippet": "Rockwell Automation is a global technology leader focused on helping the world\u2019s manufacturers be more productive, sustainable, and agile. With more than 28,000 employees who make the world better every day, we know we have something special. Behind our customers - amazing compan"
     },
     {
-      "id": "rockwellautomation-intern-content-ide-software-development-lcs",
-      "company": "Rockwell Automation",
-      "title": "Intern, Content IDE Software Development (LCS)",
-      "location": "Mayfield Heights, Ohio, United States",
-      "workmode": "unspecified",
-      "season": "not-stated",
-      "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation/job/Mayfield-Heights-Ohio-United-States/Intern--Content-IDE-Software-Development--LCS-_R26-5010-2",
-      "source": "workday",
-      "posted": "2026-09-01",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": true,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 29,
-        "ml": 38,
-        "hwv": 29
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Rockwell Automation is a global technology leader focused on helping the world\u2019s manufacturers be more productive, sustainable, and agile. With more than 28,000 employees who make the world better every day, we know we have something special. Behind our customers - amazing compan"
-    },
-    {
       "id": "rtx-electrical-engineering-intern-summer-2027",
       "company": "RTX",
       "title": "Electrical Engineering Intern (Summer 2027)",
@@ -21481,19 +21388,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 79,
-        "ml": 30,
-        "hwv": 30
+        "swe": 73,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -22485,9 +22392,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -22529,9 +22434,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -22921,9 +22824,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -23090,7 +22991,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -23131,19 +23032,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
-        "ml": 30,
-        "hwv": 30
+        "swe": 68,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -23175,9 +23076,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -23561,9 +23460,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -23873,9 +23770,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -23959,9 +23854,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -24003,9 +23896,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -24175,9 +24066,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -24566,7 +24455,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -24609,9 +24498,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -24779,9 +24666,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -24865,9 +24750,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -25332,7 +25215,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -25595,9 +25478,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -25856,7 +25737,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -25898,7 +25779,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -25983,9 +25864,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -26195,9 +26074,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Embedded"
@@ -26243,9 +26120,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -26459,9 +26334,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -26503,9 +26376,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -27495,9 +27366,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -28104,7 +27973,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -28357,9 +28226,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -28688,7 +28555,7 @@
       "location": "Fort Walton Beach, FL",
       "workmode": "unspecified",
       "season": "summer-2027",
-      "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Fort-Walton-Beach-FL/University---2027-Summer-Games-Data-Scientist-Intern---Ft-Walton-Beach--FL_R0248409",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Fort-Walton-Beach-FL/University---2027-Summer-Games-Data-Scientist-Intern---Ft-Walton-Beach--FL_R0248409",
       "source": "earlycareerradar",
       "posted": "2026-09-01",
       "found": "2026-09-07",
@@ -28829,9 +28696,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -28873,9 +28738,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -28995,10 +28858,10 @@
       "id": "boozallen-systems-engineer-intern-summer-games",
       "company": "Booz Allen",
       "title": "Systems Engineer Intern - Summer Games",
-      "location": "Atlanta, GA",
+      "location": "Honolulu, HI",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Atlanta-GA/University---2027-Summer-Games--Systems-Engineer-Intern---Atlanta--GA_R0248381",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Honolulu-HI/University---2027-Summer-Games-Systems-Engineer-Intern---Honolulu--HI_R0248370",
       "source": "earlycareerradar",
       "posted": "2026-09-01",
       "found": "2026-09-07",
@@ -29089,15 +28952,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 29,
-        "ml": 54,
-        "hwv": 29
+        "swe": 23,
+        "ml": 47,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29397,9 +29260,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -29649,15 +29510,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": false,
+        "sponsorship": null,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
-        "ml": 68,
-        "hwv": 23
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29905,9 +29766,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -29947,15 +29806,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 29,
-        "hwv": 29
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29989,15 +29848,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 29,
-        "ml": 74,
-        "hwv": 29
+        "swe": 23,
+        "ml": 68,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -30161,9 +30020,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -30204,7 +30061,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30246,7 +30103,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30288,7 +30145,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30330,7 +30187,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30372,7 +30229,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30414,7 +30271,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30456,7 +30313,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30498,7 +30355,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30540,7 +30397,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30624,7 +30481,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -30742,7 +30599,7 @@
       "location": "Huntsville, AL",
       "workmode": "unspecified",
       "season": "summer-2027",
-      "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Huntsville-AL/University---2027-Summer-Games-Software-Developer-Intern---Huntsville--AL_R0248394",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Huntsville-AL/University---2027-Summer-Games-Software-Developer-Intern---Huntsville--AL_R0248394",
       "source": "earlycareerradar",
       "posted": "2026-09-01",
       "found": "2026-09-07",
@@ -30786,7 +30643,7 @@
       "location": "Annapolis Junction, MD",
       "workmode": "unspecified",
       "season": "summer-2027",
-      "url": "https://bah.wd1.myworkdayjobs.com/en-US/BAH_Jobs/job/Annapolis-Junction-MD/University---2027-Summer-Games-Data-Scientist-Intern---Annapolis-Junction--MD_R0248408",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Annapolis-Junction-MD/University---2027-Summer-Games-Data-Scientist-Intern---Annapolis-Junction--MD_R0248408",
       "source": "earlycareerradar",
       "posted": "2026-09-01",
       "found": "2026-09-07",
@@ -31103,9 +30960,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -31189,9 +31044,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Embedded"
@@ -31307,10 +31160,10 @@
       "id": "boozallen-systems-engineer-intern",
       "company": "Booz Allen",
       "title": "Systems Engineer Intern",
-      "location": "McLean, VA",
+      "location": "San Diego, CA",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/McLean-VA/University---2027-Summer-Games-Systems-Engineer-Intern---McLean--VA_R0248361",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/San-Diego-CA/University---2027-Summer-Games-Systems-Engineer-Intern---San-Diego--CA_R0248365",
       "source": "earlycareerradar",
       "posted": "2026-09-01",
       "found": "2026-09-07",
@@ -31359,15 +31212,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 29,
-        "ml": 74,
-        "hwv": 29
+        "swe": 23,
+        "ml": 68,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -31403,9 +31256,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -31711,9 +31562,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "AWS"
@@ -32137,9 +31986,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Embedded"
@@ -32609,9 +32456,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -32653,9 +32498,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -32781,9 +32624,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -32825,9 +32666,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -33374,7 +33213,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -33501,9 +33340,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -33545,9 +33382,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -33716,7 +33551,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -33751,10 +33586,10 @@
       "id": "boozallenhamilton-university-2027-summer-games-software-developer-intern",
       "company": "Booz Allen Hamilton",
       "title": "University, 2027 Summer Games Software Developer Intern",
-      "location": "El Segundo, CA",
+      "location": "McLean, VA",
       "workmode": "hybrid",
       "season": "summer-2027",
-      "url": "https://careers.boozallen.com/jobs/JobDetail/University-2027-Summer-Games-Software-Developer-Intern/129486",
+      "url": "https://careers.boozallen.com/jobs/JobDetail/University-2027-Summer-Games-Software-Developer-Intern/129513",
       "source": "earlycareerradar",
       "posted": "2026-08-29",
       "found": "2026-09-07",
@@ -33793,10 +33628,10 @@
       "id": "boozallenhamilton-university-2027-summer-games-data-scientist-intern",
       "company": "Booz Allen Hamilton",
       "title": "University, 2027 Summer Games Data Scientist Intern",
-      "location": "Colorado Springs, CO",
+      "location": "San Diego, CA",
       "workmode": "hybrid",
       "season": "summer-2027",
-      "url": "https://careers.boozallen.com/jobs/JobDetail/Colorado-Springs-University-2027-Summer-Games-Data-Scientist-Intern-R0248132/129577",
+      "url": "https://careers.boozallen.com/jobs/JobDetail/San-Diego-University-2027-Summer-Games-Data-Scientist-Intern-R0248045/129485",
       "source": "earlycareerradar",
       "posted": "2026-08-29",
       "found": "2026-09-07",
@@ -34060,7 +33895,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -34709,15 +34544,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 29,
-        "hwv": 29
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34753,10 +34588,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027",
-          "2028"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -34797,7 +34629,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -35002,10 +34834,10 @@
       "id": "boozallen-data-scientist-intern-university",
       "company": "Booz Allen",
       "title": "Data Scientist Intern - University",
-      "location": "McLean, VA",
+      "location": "San Diego, CA",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/McLean-VA/University---2027-Summer-Games-Data-Scientist-Intern---McLean--VA_R0248037",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/San-Diego-CA/University---2027-Summer-Games-Data-Scientist-Intern---San-Diego--CA_R0248045",
       "source": "earlycareerradar",
       "posted": "2026-08-28",
       "found": "2026-09-07",
@@ -35044,10 +34876,10 @@
       "id": "boozallen-software-developer-intern-summer-games",
       "company": "Booz Allen",
       "title": "Software Developer Intern - Summer Games",
-      "location": "El Segundo, CA",
+      "location": "San Diego, CA",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/El-Segundo-CA/University---2027-Summer-Games-Software-Developer-Intern---El-Segundo--CA_R0248046",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/San-Diego-CA/University---2027-Summer-Games-Software-Developer-Intern---San-Diego--CA_R0248038",
       "source": "earlycareerradar",
       "posted": "2026-08-28",
       "found": "2026-09-07",
@@ -35098,9 +34930,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -36316,7 +36146,7 @@
       "id": "microsoft-silicon-engineering-intern",
       "company": "Microsoft",
       "title": "Silicon Engineering INTERN",
-      "location": "Santa Clara, California, United States \u00b7 Mountain View, California, United States \u00b7 Raleigh, North Carolina, United States",
+      "location": "Santa Clara, CA",
       "workmode": "unspecified",
       "season": null,
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556958170",
@@ -36502,9 +36332,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -36630,9 +36458,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -36804,15 +36630,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 73,
-        "ml": 28,
-        "hwv": 28
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36890,9 +36716,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -36932,15 +36756,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 53,
-        "ml": 28,
-        "hwv": 28
+        "swe": 46,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37369,7 +37193,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -37456,9 +37280,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -37500,9 +37322,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [
         "Embedded"
@@ -37630,9 +37450,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -37758,15 +37576,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": null,
+        "sponsorship": true,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 73,
+        "ml": 28,
+        "hwv": 28
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37800,15 +37618,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": null,
+        "sponsorship": true,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 73,
+        "ml": 28,
+        "hwv": 28
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37842,7 +37660,7 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": null,
+        "sponsorship": true,
         "citizenship": null,
         "class_year": []
       },
@@ -37850,15 +37668,15 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 74
+        "swe": 73,
+        "ml": 28,
+        "hwv": 77
       },
       "best_track": "hwv",
       "also_tracks": [
         "swe"
       ],
-      "tier": "fit",
+      "tier": "strong",
       "why": "The title reads as HW Verif; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -37888,19 +37706,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": null,
+        "sponsorship": true,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 25,
-        "hwv": 25
+        "swe": 77,
+        "ml": 28,
+        "hwv": 28
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "fit",
+      "tier": "strong",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -37930,19 +37748,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": null,
+        "sponsorship": true,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 25,
-        "hwv": 25
+        "swe": 77,
+        "ml": 28,
+        "hwv": 28
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "fit",
+      "tier": "strong",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -38088,10 +37906,10 @@
       "id": "compeerfinancial-engineering-intern",
       "company": "Compeer Financial",
       "title": "Engineering Intern",
-      "location": "Sun Prairie, WI \u00b7 Mankato, MN \u00b7 Bloomington, IL",
+      "location": "3 locations Sun Prairie, WI \u00b7 Mankato, MN \u00b7 Bloomington, IL \u00b7 Sun Prairie, WI",
       "workmode": "hybrid",
       "season": null,
-      "url": "https://job-boards.greenhouse.io/compeerfinancial/jobs/5404994008",
+      "url": "https://job-boards.greenhouse.io/compeerfinancial/jobs/5404850008",
       "source": "earlycareerradar",
       "posted": "2026-08-25",
       "found": "2026-09-07",
@@ -38319,7 +38137,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -38404,9 +38222,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -38448,9 +38264,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -38662,9 +38476,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -38790,9 +38602,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -38834,9 +38644,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -39006,15 +38814,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 73,
-        "ml": 28,
-        "hwv": 28
+        "swe": 66,
+        "ml": 21,
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -39048,15 +38856,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 73,
-        "ml": 28,
-        "hwv": 28
+        "swe": 66,
+        "ml": 21,
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -39092,9 +38900,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -39991,7 +39797,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -40844,9 +40650,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -41234,9 +41038,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -41905,7 +41707,7 @@
       "id": "goldmansachs-quantitative-strategist-associate-intern-the-core-quantitative-strats",
       "company": "Goldman Sachs",
       "title": "Quantitative Strategist Associate Intern - The Core Quantitative Strats",
-      "location": "New York, NY",
+      "location": "New York, NY \u00b7 NYC",
       "workmode": "unspecified",
       "season": null,
       "url": "https://higher.gs.com/roles/171535?type=students",
@@ -41947,10 +41749,10 @@
       "id": "ibm-intern-data-scientist-2027-ai-data-analytics",
       "company": "IBM",
       "title": "Intern Data Scientist 2027 \u2013 AI & Data Analytics",
-      "location": "Dallas, United States",
+      "location": "Chicago, United States",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128613",
+      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128611",
       "source": "earlycareerradar",
       "posted": "2026-08-14",
       "found": "2026-09-07",
@@ -41991,10 +41793,10 @@
       "id": "ibm-intern-oracle-cloud-2027",
       "company": "IBM",
       "title": "Intern Oracle Cloud - 2027",
-      "location": "Dallas, United States",
+      "location": "Chicago, United States",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128591",
+      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128563",
       "source": "earlycareerradar",
       "posted": "2026-08-14",
       "found": "2026-09-07",
@@ -47791,10 +47593,10 @@
       "id": "bytedance-software-engineer-intern-ai-infra-compute-2027-summer",
       "company": "ByteDance",
       "title": "Software Engineer Intern (AI Infra Compute) - 2027 Summer",
-      "location": "Seattle, Washington, United States \u00b7 Seattle, WA",
+      "location": "San Jose, California, United States \u00b7 San Jose, CA",
       "workmode": "unspecified",
       "season": "summer-2027",
-      "url": "https://jobs.bytedance.com/en/position/7667378931599214853/detail",
+      "url": "https://jobs.bytedance.com/en/position/7667377525182662965/detail",
       "source": "earlycareerradar",
       "posted": "2026-07-28",
       "found": "2026-09-07",
@@ -48583,9 +48385,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2026"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -48627,9 +48427,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -48755,9 +48553,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -48797,19 +48593,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
-        "ml": 30,
-        "hwv": 30
+        "swe": 68,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -48841,9 +48637,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -48885,9 +48679,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49054,7 +48846,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -49096,7 +48888,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -49138,7 +48930,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -49180,7 +48972,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -49222,7 +49014,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -49266,7 +49058,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -49397,9 +49189,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49441,9 +49231,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49485,9 +49273,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49615,9 +49401,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49659,9 +49443,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49703,9 +49485,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49747,9 +49527,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49791,9 +49569,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49835,9 +49611,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49879,9 +49653,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -49923,9 +49695,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -50009,9 +49779,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -50053,9 +49821,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -50097,9 +49863,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -50567,9 +50331,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -50610,7 +50372,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [
@@ -50655,9 +50417,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -50699,9 +50459,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -50743,9 +50501,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -51251,9 +51007,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -51295,9 +51049,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2026"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -51380,7 +51132,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51422,7 +51174,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51464,7 +51216,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51506,7 +51258,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51548,7 +51300,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51590,7 +51342,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51632,7 +51384,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51674,7 +51426,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51716,7 +51468,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51758,7 +51510,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51800,7 +51552,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51842,7 +51594,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51884,7 +51636,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -51926,7 +51678,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -52011,9 +51763,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -52055,9 +51805,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -52099,9 +51847,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2026"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -52143,9 +51889,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -52269,19 +52013,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 30,
-        "ml": 75,
-        "hwv": 30
+        "swe": 24,
+        "ml": 68,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as ML; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -52311,19 +52055,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
-        "ml": 30,
-        "hwv": 30
+        "swe": 68,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -52395,19 +52139,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 76,
-        "hwv": 27
+        "swe": 21,
+        "ml": 70,
+        "hwv": 21
       },
       "best_track": "ml",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as ML; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -52439,9 +52183,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -52524,7 +52266,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -52566,7 +52308,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -52649,19 +52391,19 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
-        "ml": 30,
-        "hwv": 30
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -52691,15 +52433,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 29,
-        "hwv": 29
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -52733,15 +52475,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 29,
-        "hwv": 29
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -52903,15 +52645,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 29,
-        "ml": 74,
-        "hwv": 29
+        "swe": 23,
+        "ml": 68,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -52945,15 +52687,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 64,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -52987,15 +52729,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 29,
-        "hwv": 29
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -53030,7 +52772,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -53073,9 +52815,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -53370,7 +53110,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -53412,7 +53152,7 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": "citizens-only",
+        "citizenship": "U.S. citizens only",
         "class_year": []
       },
       "tags": [],
@@ -53537,15 +53277,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 29,
-        "hwv": 29
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -53579,15 +53319,15 @@
       "paid": null,
       "pay": "",
       "eligibility": {
-        "sponsorship": true,
+        "sponsorship": false,
         "citizenship": null,
         "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
-        "ml": 29,
-        "hwv": 29
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -53707,9 +53447,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -53751,9 +53489,7 @@
       "eligibility": {
         "sponsorship": null,
         "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "class_year": []
       },
       "tags": [],
       "tracks": {
@@ -58550,6 +58286,1600 @@
         "follow_up": false,
         "notes": ""
       }
+    },
+    {
+      "id": "astera-system-validation-engineer-intern",
+      "company": "Astera Labs",
+      "title": "System Validation Engineer Intern",
+      "location": "San Jose, California, United States",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://job-boards.greenhouse.io/asteralabs/jobs/4724488005",
+      "source": "earlycareerradar",
+      "posted": "2026-09-07",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 76
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "aerospace-2027-digital-systems-engineering-graduate-intern",
+      "company": "Aerospace Corporation",
+      "title": "2027 Digital Systems Engineering Graduate Intern",
+      "location": "El Segundo, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://aero.wd5.myworkdayjobs.com/External/job/El-Segundo-CA/XMLNAME-2027-Digital-Systems-Engineering-Graduate-Intern_R016466",
+      "source": "earlycareerradar",
+      "posted": "2026-09-07",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "microsoft-software-engineer-intern-ai-and-ml-projects",
+      "company": "Microsoft",
+      "title": "Software Engineer Intern - AI and ML Projects",
+      "location": "Mountain View, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556972687",
+      "source": "earlycareerradar",
+      "posted": "2026-09-01",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "microsoft-software-engineer-intern-ai-and-ml",
+      "company": "Microsoft",
+      "title": "Software Engineer Intern - AI and ML",
+      "location": "Boston, MA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556972698",
+      "source": "earlycareerradar",
+      "posted": "2026-09-01",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "certik-security-research-internship",
+      "company": "CertiK",
+      "title": "Security Research Internship",
+      "location": "2 locations New York, NY \u00b7 Seattle, WA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://jobs.lever.co/certik/148afcf8-106b-42fa-a516-6bb8f1184e33",
+      "source": "earlycareerradar",
+      "posted": "2026-08-29",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 30,
+        "ml": 71,
+        "hwv": 26
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About CertiK One of the fastest-growing and most trusted companies in blockchain security, CertiK is a true market leader. To date, CertiK has worked with over 3,200 Enterprise clients, secured over $310 billion worth of digital assets, and has detected over 60,000 vulnerabilitie"
+    },
+    {
+      "id": "n1-software-engineer-intern-fullstack",
+      "company": "N1",
+      "title": "Software Engineer Intern (Fullstack)",
+      "location": "New York, NY",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://jobs.ashbyhq.com/N1/298585c3-96b1-4728-8d37-31482f85a064",
+      "source": "earlycareerradar",
+      "posted": "2026-08-29",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 88,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names database, react, rest.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About N1: N1 is the first hyper-performant and horizontally scalable blockchain network designed to enable trustless computing at internet scale. N1 is comprised of a team spanning backgrounds from Harvard, CMU, DFINITY, VMWare, Galaxy Digital, and more, and is backed by top-tier"
+    },
+    {
+      "id": "ambarella-software-engineer-intern",
+      "company": "Ambarella",
+      "title": "Software Engineer Intern",
+      "location": "US Headquarters",
+      "workmode": "unspecified",
+      "season": "not-stated",
+      "url": "https://ambarella.wd108.myworkdayjobs.com/ambarella/job/US-Headquarters/Software-Engineer-Intern_JR100363",
+      "source": "earlycareerradar",
+      "posted": "2026-08-27",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 75,
+        "ml": 38,
+        "hwv": 42
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "AI Vision Processors For Edge Applications Our solutions make cameras smarter by extracting valuable data from high-resolution video streams. Job Description Microcode summer intern engineers at Ambarella are responsible for the design, implement and test of advanced imaging and "
+    },
+    {
+      "id": "boozallen-data-scientist-intern-university-summer-games",
+      "company": "Booz Allen",
+      "title": "Data Scientist Intern - University - Summer Games",
+      "location": "El Segundo, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/El-Segundo-CA/University--2027-Summer-Games-Data-Scientist-Intern_R0248050",
+      "source": "earlycareerradar",
+      "posted": "2026-08-27",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "n1-software-engineer-intern-backend-rust",
+      "company": "N1",
+      "title": "Software Engineer Intern - Backend - Rust",
+      "location": "New York City",
+      "workmode": "unspecified",
+      "season": "not-stated",
+      "url": "https://jobs.ashbyhq.com/n1/afe7deb5-9cfd-4926-bcb4-058d418592a6",
+      "source": "earlycareerradar",
+      "posted": "2026-08-19",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "Rust"
+      ],
+      "tracks": {
+        "swe": 82,
+        "ml": 24,
+        "hwv": 24
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About N1: N1 is the first hyper-performant and horizontally scalable blockchain network designed to enable trustless computing at internet scale. N1 is comprised of a team spanning backgrounds from Harvard, CMU, DFINITY, VMWare, Galaxy Digital, and more, and is backed by top-tier"
+    },
+    {
+      "id": "neuralink-software-engineer-intern-implant",
+      "company": "Neuralink",
+      "title": "Software Engineer Intern, Implant",
+      "location": "2 locations Austin, TX \u00b7 South San Francisco, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://boards.greenhouse.io/neuralink/jobs/6569018003",
+      "source": "earlycareerradar",
+      "posted": "2026-08-17",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 81,
+        "ml": 24,
+        "hwv": 32
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About Neuralink: We are creating devices that enable a bi-directional interface with the brain. These devices allow us to restore movement to the paralyzed, restore sight to the blind, and revolutionize how humans interact with their digital world. Team Description: The Brain Int"
+    },
+    {
+      "id": "neuralink-software-engineer-intern-robotics",
+      "company": "Neuralink",
+      "title": "Software Engineer Intern, Robotics",
+      "location": "2 locations Austin, TX \u00b7 South San Francisco, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://boards.greenhouse.io/neuralink/jobs/5469305003",
+      "source": "earlycareerradar",
+      "posted": "2026-08-17",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 81,
+        "ml": 28,
+        "hwv": 32
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About Neuralink: We are creating devices that enable a bi-directional interface with the brain. These devices allow us to restore movement to the paralyzed, restore sight to the blind, and revolutionize how humans interact with their digital world. Team Description: The Robot Sof"
+    },
+    {
+      "id": "neuralink-software-engineer-intern-internal-apps",
+      "company": "Neuralink",
+      "title": "Software Engineer Intern, Internal Apps",
+      "location": "2 locations Austin, TX \u00b7 South San Francisco, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://boards.greenhouse.io/neuralink/jobs/6083322003",
+      "source": "earlycareerradar",
+      "posted": "2026-08-17",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 85,
+        "ml": 24,
+        "hwv": 24
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names api, react, rest.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About Neuralink: We are creating devices that enable a bi-directional interface with the brain. These devices allow us to restore movement to the paralyzed, restore sight to the blind, and revolutionize how humans interact with their digital world. Team Description: The internal "
+    },
+    {
+      "id": "neuralink-embedded-software-engineer-intern-implant-embedded-systems",
+      "company": "Neuralink",
+      "title": "Embedded Software Engineer Intern, Implant Embedded Systems",
+      "location": "2 locations Austin, TX \u00b7 South San Francisco, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://boards.greenhouse.io/neuralink/jobs/6283663003",
+      "source": "earlycareerradar",
+      "posted": "2026-08-17",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "Embedded"
+      ],
+      "tracks": {
+        "swe": 77,
+        "ml": 28,
+        "hwv": 85
+      },
+      "best_track": "hwv",
+      "also_tracks": [
+        "swe"
+      ],
+      "tier": "strong",
+      "why": "The title reads as HW Verif; the description names embedded, firmware, fpga.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About Neuralink: We are creating devices that enable a bi-directional interface with the brain. These devices allow us to restore movement to the paralyzed, restore sight to the blind, and revolutionize how humans interact with their digital world. Team Description: The Brain Int"
+    },
+    {
+      "id": "point72-quantitative-developer-intern",
+      "company": "Point72",
+      "title": "Quantitative Developer Intern",
+      "location": "New York, NY",
+      "workmode": "unspecified",
+      "season": "winter-2027",
+      "url": "https://job-boards.greenhouse.io/point72/jobs/8721562002?gh_jid=8721562002",
+      "source": "earlycareerradar",
+      "posted": "2026-08-17",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 89,
+        "ml": 36,
+        "hwv": 24
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names aws, ci/cd, cloud.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Job Description A highly collaborative, fast-growing team, Point72 Internal Alpha Capture (IAC) is developing scalable quantitative equity trading signals that leverage rigorous research, state-of-the-art machine learning methods, a broad range of public and proprietary data sour"
+    },
+    {
+      "id": "neuralink-firmware-engineer-intern-robotics-and-surgery-engineering",
+      "company": "Neuralink",
+      "title": "Firmware Engineer Intern, Robotics and Surgery Engineering",
+      "location": "South San Francisco, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://boards.greenhouse.io/neuralink/jobs/6648992003?gh_jid=6648992003",
+      "source": "earlycareerradar",
+      "posted": "2026-08-17",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "Firmware"
+      ],
+      "tracks": {
+        "swe": 36,
+        "ml": 24,
+        "hwv": 94
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as HW Verif; the description names embedded, firmware, fpga.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About Neuralink: We are creating devices that enable a bi-directional interface with the brain. These devices allow us to restore movement to the paralyzed, restore sight to the blind, and revolutionize how humans interact with their digital world. Team Description: At Neuralink,"
+    },
+    {
+      "id": "goldmansachs-summer-associate-intern",
+      "company": "Goldman Sachs",
+      "title": "Summer Associate Intern",
+      "location": "NYC",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://higher.gs.com/roles/171552?type=students",
+      "source": "earlycareerradar",
+      "posted": "2026-08-15",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 23,
+        "ml": 23,
+        "hwv": 72
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "goldmansachs-summer-associate-intern-multiple-teams",
+      "company": "Goldman Sachs",
+      "title": "Summer Associate Intern - Multiple Teams",
+      "location": "NYC",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://higher.gs.com/roles/171566?type=students",
+      "source": "earlycareerradar",
+      "posted": "2026-08-15",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 23,
+        "ml": 23,
+        "hwv": 72
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "goldmansachs-associate-intern-the-core-quantitative-strats",
+      "company": "Goldman Sachs",
+      "title": "Associate Intern - The Core Quantitative Strats",
+      "location": "Dallas, TX",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://higher.gs.com/roles/171546?type=students",
+      "source": "earlycareerradar",
+      "posted": "2026-08-15",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 23,
+        "ml": 23,
+        "hwv": 72
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "teledyne-computer-engineering-intern",
+      "company": "Teledyne",
+      "title": "Computer Engineering Intern",
+      "location": "Lincoln, NE",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://flir.wd1.myworkdayjobs.com/en-US/flircareers/job/US---Lincoln-NE/Computer-Engineering-Intern_REQ29119",
+      "source": "earlycareerradar",
+      "posted": "2026-08-14",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "microsoft-software-engineering-intern",
+      "company": "Microsoft",
+      "title": "Software Engineering Intern",
+      "location": "Remote (US)",
+      "workmode": "remote",
+      "season": null,
+      "url": "https://apply.careers.microsoft.com/careers/job/1970393556957962",
+      "source": "earlycareerradar",
+      "posted": "2026-08-07",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "point72-summer-2027-quantitative-research-internship",
+      "company": "Point72",
+      "title": "Summer 2027 Quantitative Research Internship",
+      "location": "New York",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://job-boards.greenhouse.io/point72/jobs/7297642002",
+      "source": "earlycareerradar",
+      "posted": "2026-08-03",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 22,
+        "ml": 75,
+        "hwv": 22
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Please send CVs to KEPL-talent@cubistsystematic.com with \u201c202 7 QR Summer Internship Application\u201d in the subject line. When your application is received, we will consider you for all similar positions at Cubist. About Our Firm: Cubist Systematic Strategies, an affiliate of Point7"
+    },
+    {
+      "id": "chicagotrading-software-engineering-internship-summer-2027",
+      "company": "Chicago Trading Company",
+      "title": "Software Engineering Internship - Summer 2027",
+      "location": "Chicago, IL",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://job-boards.greenhouse.io/chicagotradingcampus/jobs/4716932005",
+      "source": "earlycareerradar",
+      "posted": "2026-08-03",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "drw-quantitative-research-intern",
+      "company": "DRW",
+      "title": "Quantitative Research Intern",
+      "location": "Chicago, IL, New York City, NY",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://www.drw.com/work-at-drw/listings/quantitative-research-intern-3413670",
+      "source": "earlycareerradar",
+      "posted": "2026-07-31",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 80,
+        "hwv": 34
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Our formula for success is to hire exceptional people, encourage their ideas and reward their results. As a Quantitative Research Intern you will have an opportunity to solve challenging problems arising in a trading environment while utilizing the latest statistical scientific a"
+    },
+    {
+      "id": "drw-fpga-intern",
+      "company": "DRW",
+      "title": "FPGA Intern",
+      "location": "Chicago, IL",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://www.drw.com/work-at-drw/listings/fpga-intern-3484423",
+      "source": "earlycareerradar",
+      "posted": "2026-07-31",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": true,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "FPGA"
+      ],
+      "tracks": {
+        "swe": 29,
+        "ml": 29,
+        "hwv": 91
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as HW Verif; the description names fpga, hardware, soc.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Our formula for success is to hire exceptional people, encourage their ideas and reward their results. As a n FPGA Intern , you will build advanced trading applications leveraging cutting-edge technology. DRW enables our FPGA Interns to develop a real-world trading centric FPGA a"
+    },
+    {
+      "id": "drw-software-developer-intern",
+      "company": "DRW",
+      "title": "Software Developer Intern",
+      "location": "Chicago, IL",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://www.drw.com/work-at-drw/listings/software-developer-intern-3467328",
+      "source": "earlycareerradar",
+      "posted": "2026-07-30",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 88,
+        "ml": 34,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names api, full stack, java.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Our formula for success is to hire exceptional people, encourage their ideas and reward their results. As a Software Developer Intern , you will join one of our development teams supporting our network development initiatives or trading businesses. Depending on the team you join,"
+    },
+    {
+      "id": "neuralink-software-engineer-intern-infrastructure",
+      "company": "Neuralink",
+      "title": "Software Engineer Intern, Infrastructure",
+      "location": "South San Francisco, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://boards.greenhouse.io/neuralink/jobs/5469298003?gh_jid=5469298003",
+      "source": "earlycareerradar",
+      "posted": "2026-07-26",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 92,
+        "ml": 22,
+        "hwv": 30
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names api, aws, cloud.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About Neuralink: We are creating devices that enable a bi-directional interface with the brain. These devices allow us to restore movement to the paralyzed, restore sight to the blind, and revolutionize how humans interact with their digital world. Team Description: The Infrastru"
+    },
+    {
+      "id": "neuralink-machine-learning-engineer-intern",
+      "company": "Neuralink",
+      "title": "Machine Learning Engineer Intern",
+      "location": "South San Francisco, CA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://boards.greenhouse.io/neuralink/jobs/6594261003?gh_jid=6594261003",
+      "source": "earlycareerradar",
+      "posted": "2026-07-26",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 30,
+        "ml": 80,
+        "hwv": 22
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "About Neuralink: We are creating devices that enable a bi-directional interface with the brain. These devices allow us to restore movement to the paralyzed, restore sight to the blind, and revolutionize how humans interact with their digital world. Team Description: The Brain Com"
+    },
+    {
+      "id": "phonely-software-engineer-intern",
+      "company": "Phonely",
+      "title": "Software Engineer Intern",
+      "location": "San Francisco, CA",
+      "workmode": "unspecified",
+      "season": "fall-2026",
+      "url": "https://jobs.ashbyhq.com/phonely/c83696cb-ca3a-4a9d-9e87-bfcf4f79fef5?embed=true",
+      "source": "vanshb03",
+      "posted": "2026-07-24",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 92,
+        "ml": 22,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names api, aws, backend.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Software Engineer Internship This is a high-impact internship where you\u2019ll write real code, ship features, and see your work in production. Note: This is an in-office role, 5 days a week in San Francisco. What You\u2019ll Do - Investigate and troubleshoot real customer issues across f"
+    },
+    {
+      "id": "appian-product-manager-intern",
+      "company": "Appian",
+      "title": "Product Manager Intern",
+      "location": "McLean, VA",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://careers.appian.com/jobs/8041243-product-manager-intern-",
+      "source": "vanshb03",
+      "posted": "2026-07-24",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 31,
+        "ml": 27,
+        "hwv": 39
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "stretch",
+      "why": "The description names asic, coverage, ddr; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Here at Appian, our values of Intensity and Excellence define who we are. We set high standards and live up to them, ensuring that everything we do is done with care and quality. We approach every challenge with ambition and commitment, holding ourselves and each other accountabl"
+    },
+    {
+      "id": "appian-software-engineering-intern",
+      "company": "Appian",
+      "title": "Software Engineering Intern",
+      "location": "McLean, VA",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://job-boards.greenhouse.io/appian/jobs/8041237",
+      "source": "vanshb03",
+      "posted": "2026-07-24",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 39
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Here at Appian, our values of Intensity and Excellence define who we are. We set high standards and live up to them, ensuring that everything we do is done with care and quality. We approach every challenge with ambition and commitment, holding ourselves and each other accountabl"
+    },
+    {
+      "id": "tenstorrent-software-engineering-intern-power-modeling-ai-tools",
+      "company": "Tenstorrent",
+      "title": "Software Engineering Intern, Power Modeling & AI Tools",
+      "location": "Santa Clara, CA",
+      "workmode": "unspecified",
+      "season": "fall-2026",
+      "url": "https://job-boards.greenhouse.io/tenstorrentuniversity/jobs/5186916007",
+      "source": "vanshb03",
+      "posted": "2026-07-27",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": true,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 82,
+        "ml": 58,
+        "hwv": 33
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Tenstorrent is leading the industry on cutting-edge AI technology, revolutionizing performance expectations, ease of use, and cost efficiency. With AI redefining the computing paradigm, solutions must evolve to unify innovations in software models, compilers, platforms, networkin"
+    },
+    {
+      "id": "grittrobotics-ml-cloud-infrastructure-engineer-intern",
+      "company": "GRITT ROBOTICS INC",
+      "title": "ML & Cloud Infrastructure Engineer Intern",
+      "location": "South San Francisco, CA",
+      "workmode": "unspecified",
+      "season": "fall-2026",
+      "url": "https://jobs.ashbyhq.com/gritt/46af6e69-40fc-4e53-940e-a99757137523",
+      "source": "vanshb03",
+      "posted": "2026-07-27",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 71,
+        "ml": 22,
+        "hwv": 22
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "rendezvousrobotics-software-engineering-intern-spring-2027",
+      "company": "Rendezvous Robotics",
+      "title": "Software Engineering Intern, Spring 2027",
+      "location": "Golden, CO",
+      "workmode": "unspecified",
+      "season": "spring-2027",
+      "url": "https://job-boards.greenhouse.io/rendezvousrobotics/jobs/4329122009?gh_src=kpek4mqz9us",
+      "source": "vanshb03",
+      "posted": "2026-07-28",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": "U.S. Citizenship is Required",
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 60,
+        "ml": 15,
+        "hwv": 15
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "drw-ai-ml-research-intern",
+      "company": "DRW",
+      "title": "AI/ML Research Intern",
+      "location": "Montr\u00e9al",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://www.drw.com/work-at-drw/listings/aiml-research-intern-3466679",
+      "source": "vanshb03",
+      "posted": "2026-07-31",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 92,
+        "hwv": 26
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as ML; the description names computer vision, deep learning, large language model.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Our formula for success is to hire exceptional people, encourage their ideas and reward their results. As an AI/ML Research Intern , you will be an integral member of a team of experienced technologists, quantitative researchers, and traders. You will collaborate closely with oth"
+    },
+    {
+      "id": "copart-devops-engineering-intern",
+      "company": "Copart",
+      "title": "DevOps Engineering Intern",
+      "location": "Dallas, TX",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://copart.wd12.myworkdayjobs.com/en-US/copart/job/Dallas-TX---Headquarters/DevOps-Engineering-Intern_JR109490",
+      "source": "vanshb03",
+      "posted": "2026-08-21",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": "U.S. Citizenship is Required",
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 87,
+        "ml": 42,
+        "hwv": 22
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names aws, ci/cd, cloud.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Copart, Inc. a technology leader and the premier online vehicle auction platform globally, with over 200 facilities located across the world, Copart links vehicle sellers to more than 750,000 buyers in over 190 countries. We believe in providing an unmatched experience, every day"
+    },
+    {
+      "id": "copart-qa-engineering-intern",
+      "company": "Copart",
+      "title": "QA Engineering Intern",
+      "location": "Dallas, TX",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://copart.wd12.myworkdayjobs.com/en-US/copart/job/Dallas-TX---Headquarters/QA-Engineering-Intern_JR109671",
+      "source": "vanshb03",
+      "posted": "2026-08-21",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 90,
+        "ml": 24,
+        "hwv": 24
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names database, java, react.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Copart, Inc. a technology leader and the premier online vehicle auction platform globally, with over 200 facilities located across the world, Copart links vehicle sellers to more than 750,000 buyers in over 190 countries. We believe in providing an unmatched experience, every day"
+    },
+    {
+      "id": "campbellsoup-agentic-ai-engineer-co-op",
+      "company": "Campbell Soup Company",
+      "title": "Agentic AI Engineer Co-Op",
+      "location": "Remote",
+      "workmode": "remote",
+      "season": "fall-2026",
+      "url": "https://campbellsoup.wd5.myworkdayjobs.com/en-US/externalcareers_globalsite/job/USA---Remote/Agentic-AI-Engineer-Co-Op_Req-66014",
+      "source": "vanshb03",
+      "posted": "2026-08-21",
+      "found": "2026-09-07",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 49,
+        "ml": 90,
+        "hwv": 24
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as ML; the description names embedding, fine-tun, llm.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Since 1869, we've connected people through food they love. We\u2019re proud to be stewards of amazing brands that people trust. Our portfolio includes the iconic Campbell\u2019s brand, as well as Cape Cod, Chunky, Goldfish, Kettle Brand, Lance, Late July, Pacific Foods, Pepperidge Farm, Pr"
     }
   ]
 }
