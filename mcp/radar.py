@@ -14,6 +14,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -979,15 +980,22 @@ FETCHERS = {
 
 
 def _poll_one(company: dict) -> tuple[dict, list[dict] | None, str]:
-    """Poll one board. Never raises: a dead board must not stop the sweep."""
-    try:
-        fn = FETCHERS[company["ats"]]
-        if company["ats"] == "workday":
-            return company, fn(company["slug"], company.get("name", ""),
-                               company.get("wd", ""), company.get("site", "")), ""
-        return company, fn(company["slug"], company.get("name", "")), ""
-    except Exception as e:  # network, JSON, or a board that no longer exists
-        return company, None, type(e).__name__
+    """Poll one board. Never raises: a dead board must not stop the sweep.
+    One retry after a pause, because a DNS blip on a scheduled run otherwise
+    costs that source for the whole day."""
+    fn = FETCHERS[company["ats"]]
+    err = ""
+    for attempt in (1, 2):
+        try:
+            if company["ats"] == "workday":
+                return company, fn(company["slug"], company.get("name", ""),
+                                   company.get("wd", ""), company.get("site", "")), ""
+            return company, fn(company["slug"], company.get("name", "")), ""
+        except Exception as e:  # network, JSON, or a board that no longer exists
+            err = type(e).__name__
+            if attempt == 1:
+                time.sleep(3)
+    return company, None, err
 
 
 def harvest(scope: str = "priority", ats: str | None = None, early_only: bool = True,

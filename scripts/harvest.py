@@ -19,6 +19,7 @@ import argparse
 import json
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -45,18 +46,31 @@ def run(scope: str, ats: str | None) -> str:
     CACHE.write_text(json.dumps(cache) + "\n")
     ROLES.write_text(json.dumps(data, indent=2) + "\n")
     apps = radar.count_applications(data["roles"])["total"]
+    errors = (" errors " + json.dumps(stats["errors"])) if stats["errors"] else ""
     return (f"{stats['ok']}/{stats['boards']} sources ok, {stats['seen']} seen, "
             f"{stats['kept']} kept, +{added} new, {updated} known, {dropped} pruned, "
-            f"{len(data['roles'])} on the board, {apps} applications")
+            f"{len(data['roles'])} on the board, {apps} applications{errors}")
+
+
+def _git(*args: str) -> subprocess.CompletedProcess:
+    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, timeout=120)
 
 
 def push(summary: str) -> None:
-    for cmd in (["git", "add", "data/roles.json"],
-                ["git", "commit", "-q", "-m", f"chore(radar): harvest {radar.today()} — {summary}"],
-                ["git", "push", "-q"]):
-        r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, timeout=120)
-        if r.returncode != 0 and "nothing to commit" not in (r.stdout + r.stderr):
-            raise SystemExit(f"{' '.join(cmd)} failed: {(r.stderr or r.stdout).strip()}")
+    """Commit, then push with retries. A failed push is not lost: the commit
+    stays local and the next day's push carries it."""
+    _git("add", "data/roles.json")
+    r = _git("commit", "-q", "-m", f"chore(radar): harvest {radar.today()} — {summary}")
+    if r.returncode != 0 and "nothing to commit" not in (r.stdout + r.stderr):
+        raise SystemExit(f"git commit failed: {(r.stderr or r.stdout).strip()}")
+    for attempt in range(1, 4):
+        r = _git("push", "-q")
+        if r.returncode == 0:
+            return
+        print(f"git push attempt {attempt} failed: {(r.stderr or r.stdout).strip()}")
+        if attempt < 3:
+            time.sleep(60 * attempt)
+    raise SystemExit("git push failed 3 times; the commit is local and will go with the next run")
 
 
 def main() -> int:
