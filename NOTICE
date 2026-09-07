@@ -38,6 +38,21 @@ with `"added_by": "contributie"`.
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
 
+Feeds read at harvest time
+--------------------------
+`mcp/radar.py` reads these published lists on every harvest. Nothing from them
+is vendored; each row keeps the employer's own apply link, and the `source`
+field on every role names where it came from.
+
+  - earlycareerradar.com — `GET /api/jobs`, the same JSON its own page loads.
+    Rows are filtered to U.S. hubs and engineering tracks.
+  - zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships (MIT)
+    — `data/jobs.json`, the list's own harvest output, refreshed daily upstream.
+  - vanshb03/Summer2027-Internships (MIT) — `.github/scripts/listings.json`,
+    the structured file behind its README table.
+  - workatastartup.com — the public `/jobs/l/software-engineer` page, whose
+    rows sit in an Inertia `data-page` attribute; Intern rows only.
+
 Prior art
 ---------
 The radar's design follows patterns established by these projects. No code was

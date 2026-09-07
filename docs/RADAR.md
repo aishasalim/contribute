@@ -204,7 +204,61 @@ Rule: **Step 1 columns flow radar → sheet. Step 2 columns flow sheet → radar
 
 `sheet_push()` appends only. It never edits or deletes a row you wrote by hand.
 
+## The application count
+
+There is one number, and one place it is computed: `radar.count_applications()`, printed by
+the `applications` and `radar_summary` tools.
+
+> One application = one role in `roles.json` whose `application.status` is not `none`.
+
+A rejection still counts as an application sent. `applied` is a *current status* (awaiting a
+reply), not the running total — reading it as the total was what made the count look
+different every time someone asked. Do not recount from email receipts or spreadsheet rows;
+if an application is missing, record it with `add_application` and the count follows.
+
+## Freshness
+
+`MAX_AGE_DAYS = 45` in `mcp/radar.py`, mirrored as `MAX_AGE` in `radar.html`.
+
+- A harvest drops any posting the employer dated more than 45 days ago before it reaches
+  the board.
+- `prune()` (run on every harvest) drops unapplied roles that are dead or whose `posted`
+  (falling back to `found`) is older than 45 days. Applied roles and spreadsheet history are
+  kept whatever their age.
+- A feed that reports a posting closed (`is_open: false`, `closed: true`) marks the known copy
+  `dead`, which removes it from every open section.
+- The page applies the same cutoff to **Last 3 days**, **Strong fit** and **All open**, so a
+  stale snapshot never shows an old posting as open.
+
+Freshness is still only 5% of the score. The cutoff is what keeps the board current; the
+score decides the order within the window.
+
 ## Sourcing
+
+Two layers. The **feeds** are curated internship lists that already poll thousands of boards
+daily and publish JSON with the employer's own apply link; three GETs cover more employers
+than the ATS sweep does. The **ATS boards** below add full descriptions, which the score
+uses, for the companies that matter most. Both run in the default `priority` scope.
+
+| Feed | `source` | What it is | Rows kept |
+|------|----------|------------|-----------|
+| [earlycareerradar.com](https://earlycareerradar.com) | `earlycareerradar` | `GET /api/jobs`; ~3,400 rows, refreshed daily, direct `applyUrl` | U.S. hubs, engineering tracks |
+| [zshah101 list](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships) | `zshah101` | `data/jobs.json`, its own harvest of 4,700 boards across 12 ATS types | `is_open` rows; closed ones mark the known copy dead |
+| [vanshb03 list](https://github.com/vanshb03/Summer2027-Internships) | `vanshb03` | `.github/scripts/listings.json`, with sponsorship flags | `active` rows |
+| [Work at a Startup](https://www.workatastartup.com/jobs/l/software-engineer) | `workatastartup` | YC's public list, ~30 rows a page | `Intern` rows |
+
+Pass `ats=<source>` to `find_roles` to poll one feed alone; it takes seconds.
+
+**JobRight rows are not kept.** Its links route through jobright.ai instead of the employer,
+and the feeds above list the same postings with direct links. The fetcher still exists
+(`ats="jobright"`) for a one-off look, but `prune()` drops any unapplied row whose link goes
+through jobright.ai on the next harvest. Rows you applied to keep their link and history.
+
+Not wired up, and why:
+
+- **a16z portfolio jobs** runs on Consider. Its search API answers, but with all 16,000
+  portfolio jobs and no working seniority filter found yet. Follow-up.
+- **Wellfound** sits behind Cloudflare (403 to any non-browser client). Link out only.
 
 Poll public ATS endpoints. They return JSON, they are stable, and they do not need a browser.
 

@@ -441,16 +441,70 @@ def list_roles(track: str = "all", tier: str = "all", status: str = "all",
     return f"{len(rows)} role(s):\n\n" + "\n".join(_line(r) for r in rows[:limit]) + more
 
 
+_applications_block = radar.applications_block
+
+
+@mcp.tool()
+def applications(since: str = "") -> str:
+    """How many applications you have sent. This is the canonical number.
+
+    One application = one role in data/roles.json whose application.status is
+    not 'none'. A rejection still counts as sent. Do not recount from email or
+    the spreadsheet; record a missing one with add_application instead.
+    since: YYYY-MM-DD to count only applications dated on or after it."""
+    roles = load_roles()["roles"]
+    out = _applications_block(roles)
+    if since:
+        out += f"\n  since {since}: {radar.count_applications(roles, since=since)['total']}"
+    return out + ("\nDefinition: rows with application.status != 'none', rejections included.")
+
+
+@mcp.tool()
+def add_application(company: str, title: str, url: str = "", date: str = "",
+                    status: str = "applied", resume: str = "", location: str = "",
+                    notes: str = "") -> str:
+    """Record an application the radar never listed — one you found on LinkedIn
+    or a careers page and only the confirmation email shows. If the same
+    company + title already exists, its status is updated instead.
+    date: YYYY-MM-DD applied (defaults to today). status: applied|in_progress|
+    phone_screen|rejected|offer. resume: swe|ml|hwv."""
+    allowed = radar.APPLIED_STATES
+    if status not in allowed:
+        return f"status must be one of {allowed}."
+    data = load_roles()
+    valid = [r["id"] for r in data["resumes"]]
+    if resume and resume not in valid:
+        return f"resume must be one of {valid}."
+    role = radar.new_application(company, title, url=url, applied=date, status=status,
+                                 resume=resume or None, location=location, notes=notes)
+    old = _find_role(data, role["id"])
+    if old:
+        was = old["application"]["status"]
+        old["application"].update({k: v for k, v in role["application"].items() if v})
+        if url:
+            old["url"] = url
+        save_roles(data)
+        return (f"Already listed: {old['company']} — {old['title']}: {was} → {status}.\n"
+                + _applications_block(data["roles"]))
+    radar.score_role(role, data["resumes"])
+    data["roles"].append(role)
+    save_roles(data)
+    return (f"Recorded: {company} — {title} ({status}, {role['application']['applied']}).\n"
+            + _applications_block(data["roles"]) + "\n(Run `sync` to push.)")
+
+
 @mcp.tool()
 def find_roles(scope: str = "priority", ats: str = "") -> str:
-    """Poll the ATS boards, keep PAID internships and co-ops in the US,
-    de-duplicate, score, and append what is new.
+    """Poll the feeds and ATS boards, keep PAID internships and co-ops in the
+    US posted in the last 45 days, de-duplicate, score, and append what is new.
+    Roles that closed or aged past 45 days drop off unless you applied.
 
-    scope: priority   33 fast boards + 41 curated Workday employers  (~5 min)
+    scope: priority   4 curated feeds + 33 fast boards + 41 Workday employers (~5 min)
            all        every greenhouse/ashby/lever/smartrecruiters   (~7 min)
            workday    all 1,710 Workday tenants                      (~25 min)
            everything both
-    ats:   greenhouse | ashby | lever | smartrecruiters | workday"""
+    ats:   earlycareerradar | zshah101 | vanshb03 | workatastartup  (one feed, seconds)
+           greenhouse | ashby | lever | smartrecruiters | workday | jobright"""
     data = load_roles()
     harvested, stats = radar.harvest(scope=scope, ats=ats or None)
     added, updated = radar.merge(data["roles"], harvested)
@@ -634,12 +688,17 @@ def radar_summary() -> str:
     open_strong = [r for r in rows if r["tier"] == "strong"
                    and r["application"]["status"] == "none" and not r["dead"]]
     open_strong.sort(key=lambda r: -r["tracks"][r["best_track"]])
+    latest = max((r.get("found") or "" for r in rows), default="never")
+    fresh = sum(1 for r in rows if r["application"]["status"] == "none" and not r["dead"]
+                and (radar.age_days(r) or 99) <= 7)
     lines = [
         f"Internship radar — {data['meta'].get('owner')}",
-        f"Roles: {len(rows)}  |  tiers: {tiers}",
+        _applications_block(rows),
+        f"Open roles: {states.get('none', 0)}  |  posted in the last 7 days: {fresh}"
+        f"  |  tiers: {tiers}",
         f"Best track: {tracks}",
-        f"Applications: {states}",
-        f"Last write: {data['meta'].get('generated')} by {data['meta'].get('updated_by')}",
+        f"Last harvest: {latest}  |  last write: {data['meta'].get('generated')} "
+        f"by {data['meta'].get('updated_by')}",
     ]
     if open_strong:
         lines.append(f"\nStrong fits not yet applied to ({len(open_strong)}):")

@@ -18,7 +18,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 UA = "contributie-radar/1 (+https://github.com/aishasalim/contributie)"
@@ -47,6 +47,11 @@ def load_boards() -> dict:
 
 
 SCOPES = ("priority", "all", "workday", "everything")
+
+# A posting older than this never reaches the board, and an unapplied role
+# ages off it. Freshness is only 5% of the score, so without a hard cutoff a
+# six-month-old posting still ranked "strong" and the board read as stale.
+MAX_AGE_DAYS = 45
 
 
 def board_list(scope: str = "priority", ats: str | None = None) -> list[dict]:
@@ -339,6 +344,74 @@ def role_id(company: str, title: str) -> str:
 
 def today() -> str:
     return date.today().isoformat()
+
+
+def age_days(role: dict) -> int | None:
+    """Days since the employer posted it, or since the radar first saw it."""
+    stamp = role.get("posted") or role.get("found")
+    if not stamp:
+        return None
+    try:
+        return (date.today() - date.fromisoformat(str(stamp)[:10])).days
+    except ValueError:
+        return None
+
+
+def is_stale(role: dict, max_age: int = MAX_AGE_DAYS) -> bool:
+    age = age_days(role)
+    return age is not None and age > max_age
+
+
+# -------------------------------------------------------------- applications
+APPLIED_STATES = ("applied", "in_progress", "phone_screen", "rejected", "offer")
+
+
+def count_applications(roles: list[dict], since: str = "") -> dict:
+    """The canonical application count.
+
+    One application = one role whose application.status is not "none". A
+    rejection still counts as an application sent. Counting any other way
+    (email receipts, spreadsheet rows, the "applied" status alone) gives a
+    different number every time, which is exactly the confusion this exists
+    to stop.
+    """
+    rows = [r for r in roles if (r.get("application") or {}).get("status", "none") != "none"]
+    if since:
+        rows = [r for r in rows if str(r["application"].get("applied") or "") >= since]
+    by = {s: 0 for s in APPLIED_STATES}
+    for r in rows:
+        by[r["application"]["status"]] = by.get(r["application"]["status"], 0) + 1
+    dates = sorted(str(r["application"].get("applied") or "") for r in rows
+                   if r["application"].get("applied"))
+    return {"total": len(rows), "by_status": by,
+            "first": dates[0] if dates else None, "last": dates[-1] if dates else None}
+
+
+def applications_block(roles: list[dict]) -> str:
+    """The one application count, worded the same everywhere it is printed —
+    the MCP tools, scripts/stats.py, and the /apps command all use this."""
+    c = count_applications(roles)
+    by = c["by_status"]
+    july = count_applications(roles, since="2026-07-01")["total"]
+    return (f"Applications sent: {c['total']}  ({c['first']} → {c['last']}; {july} since 2026-07-01)\n"
+            f"  awaiting reply: {by['applied']} | in progress: {by['in_progress'] + by['phone_screen']}"
+            f" | rejected: {by['rejected']} | offers: {by['offer']}")
+
+
+def new_application(company: str, title: str, url: str = "", applied: str = "",
+                    status: str = "applied", resume: str | None = None,
+                    location: str = "", notes: str = "", source: str = "email") -> dict:
+    """A role record for an application made outside the radar — one you found
+    on LinkedIn or a careers page and only the confirmation email records."""
+    role = _blank_role(
+        id=role_id(company, title), company=company, title=title, location=location,
+        url=url, source=source, season=season_of(title), tags=tags_of(title),
+        eligibility=eligibility_of(title),
+    )
+    role["application"].update({
+        "status": status, "applied": applied or today(), "resume": resume, "notes": notes,
+    })
+    return role
 
 
 # -------------------------------------------------------------------- extraction
@@ -736,6 +809,161 @@ def fetch_workday(board: str, display: str = "", wd: str = "", site: str = "") -
     return out
 
 
+# ------------------------------------------------------------------ feeds
+# Curated internship lists that already poll thousands of boards daily and
+# publish the result as JSON with the employer's own apply link. They are the
+# radar layer: three GETs cover more employers than the ATS sweep, and every
+# link is direct. See NOTICE for attribution.
+ECR_URL = "https://earlycareerradar.com/api/jobs"
+ECR_SKIP_TRACKS = {
+    "Operations", "Finance", "PM", "People", "Marketing", "Consulting", "Business",
+    "Design", "Sales", "Chemical & Process", "Program Management", "Mechanical",
+    "Manufacturing", "Civil & Structural", "Aerospace", "Legal", "Healthcare",
+    "Education", "Technical Sales", "Customer Success", "Public Sector",
+}
+ZSHAH_URL = ("https://raw.githubusercontent.com/zshah101/"
+             "Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships/main/data/jobs.json")
+ZSHAH_SPONSOR = {"citizens-only": "U.S. citizens only", "no-sponsorship": "no sponsorship",
+                 "offers": "offers sponsorship"}
+VANSH_URL = ("https://raw.githubusercontent.com/vanshb03/Summer2027-Internships/"
+             "dev/.github/scripts/listings.json")
+VANSH_SEASON = {"Summer": "summer-2027", "Fall": "fall-2026",
+                "Winter": "winter-2027", "Spring": "spring-2027"}
+WAAS_URL = "https://www.workatastartup.com/jobs/l/software-engineer"
+WAAS_PAGE_RE = re.compile(r'data-page="([^"]+)"')
+
+
+def _get_text(url: str, timeout: int = 30) -> str:
+    # an HTML page, so ask for one: Work at a Startup answers 406 to Accept: */*
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def _sponsorship_of(words: str) -> dict:
+    """Map a feed's free-text work-authorization label onto the eligibility shape."""
+    low = re.sub(r"[_\-]+", " ", (words or "").lower())
+    elig = {"sponsorship": None, "citizenship": None, "class_year": []}
+    if "citizen" in low:
+        elig["citizenship"] = words[:60]
+    if "sponsor" in low:
+        # "no_sponsorship", "Does Not Offer Sponsorship", "without sponsorship"
+        elig["sponsorship"] = not re.search(r"\b(no|not|without)\b", low)
+    return elig
+
+
+def _feed_role(company: str, title: str, url: str, location: str, source: str,
+               posted: str | None, season: str | None = None, workmode: str = "",
+               eligibility: dict | None = None, dead: bool = False) -> dict:
+    # a list row carries no description, so scoring falls back to the title
+    return _blank_role(
+        id=role_id(company, title), company=company, title=title, location=location,
+        workmode=workmode or _workmode(location), season=season or season_of(title),
+        url=url, source=source, posted=posted, description="",
+        eligibility=eligibility or eligibility_of(title), tags=tags_of(title), dead=dead,
+    )
+
+
+def parse_earlycareerradar(rows: list[dict]) -> list[dict]:
+    out = []
+    for j in rows:
+        if j.get("hub") == "International" or j.get("track") in ECR_SKIP_TRACKS:
+            continue
+        auth = " ".join(j.get("workAuthorization") or [])
+        elig = _sponsorship_of(auth) if auth and "not stated" not in auth.lower() else None
+        out.append(_feed_role(
+            company=j.get("company") or "", title=j.get("title") or "",
+            url=j.get("applyUrl") or "", location=j.get("location") or "",
+            source="earlycareerradar", posted=_date(j.get("postedAt")),
+            workmode=_workmode(j.get("mode") or ""), eligibility=elig,
+            dead=bool(j.get("closed")),
+        ))
+    return out
+
+
+def fetch_earlycareerradar(board: str = "", display: str = "") -> list[dict]:
+    data = _get_json(ECR_URL)
+    rows = data if isinstance(data, list) else data.get("jobs") or data.get("data") or []
+    return parse_earlycareerradar(rows)
+
+
+def parse_zshah(data: dict | list) -> list[dict]:
+    rows = list(data.values()) if isinstance(data, dict) else data
+    out = []
+    for j in rows:
+        season = (j.get("season") or "").lower().replace(" ", "-") or None
+        out.append(_feed_role(
+            company=j.get("company") or "", title=j.get("title") or "",
+            url=j.get("url") or "", location=j.get("location") or "",
+            source="zshah101", posted=_date(j.get("posted_at")), season=season,
+            # upstream labels: unknown | citizens-only | no-sponsorship | offers
+            eligibility=_sponsorship_of(ZSHAH_SPONSOR.get(j.get("sponsorship") or "", "")) or None,
+            dead=j.get("is_open") is False,
+        ))
+    return out
+
+
+def fetch_zshah(board: str = "", display: str = "") -> list[dict]:
+    return parse_zshah(_get_json(ZSHAH_URL))
+
+
+def parse_vansh(rows: list[dict]) -> list[dict]:
+    out = []
+    for j in rows:
+        if j.get("is_visible") is False:
+            continue
+        stamp = j.get("date_posted")
+        posted = (datetime.fromtimestamp(stamp, timezone.utc).strftime("%Y-%m-%d")
+                  if isinstance(stamp, (int, float)) and stamp else None)
+        sponsor = j.get("sponsorship") or ""
+        out.append(_feed_role(
+            company=j.get("company_name") or "", title=j.get("title") or "",
+            url=j.get("url") or "", location=", ".join(j.get("locations") or []),
+            source="vanshb03", posted=posted,
+            season=VANSH_SEASON.get((j.get("season") or "").split("/")[0]),
+            eligibility=_sponsorship_of(sponsor) if sponsor and sponsor != "Other" else None,
+            dead=j.get("active") is False,
+        ))
+    return out
+
+
+def fetch_vansh(board: str = "", display: str = "") -> list[dict]:
+    return parse_vansh(_get_json(VANSH_URL))
+
+
+def parse_waas(page_html: str) -> list[dict]:
+    """Work at a Startup renders its public job list as an Inertia page: the
+    rows sit in a data-page attribute. Only what a visitor sees, ~30 rows, and
+    only the Intern rows survive."""
+    m = WAAS_PAGE_RE.search(page_html)
+    if not m:
+        return []
+    page = json.loads(html.unescape(m.group(1)))
+    out = []
+    for j in (page.get("props") or {}).get("jobs") or []:
+        if (j.get("jobType") or "").lower() != "intern":
+            continue
+        out.append(_feed_role(
+            company=j.get("companyName") or "", title=j.get("title") or "",
+            url=j.get("applyUrl") or "", location=j.get("location") or "",
+            source="workatastartup", posted=None,
+        ))
+        if j.get("salary"):
+            out[-1]["paid"], out[-1]["pay"] = True, j["salary"]
+    return out
+
+
+def fetch_waas(board: str = "", display: str = "") -> list[dict]:
+    return parse_waas(_get_text(WAAS_URL))
+
+
+FEEDS = (
+    {"name": "Early Career Radar", "slug": "earlycareerradar", "ats": "earlycareerradar"},
+    {"name": "zshah101 internship list", "slug": "zshah101", "ats": "zshah101"},
+    {"name": "vanshb03 internship list", "slug": "vanshb03", "ats": "vanshb03"},
+    {"name": "Work at a Startup", "slug": "workatastartup", "ats": "workatastartup"},
+)
+
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "ashby": fetch_ashby,
@@ -743,6 +971,10 @@ FETCHERS = {
     "smartrecruiters": fetch_smartrecruiters,
     "workday": fetch_workday,
     "jobright": fetch_jobright,
+    "earlycareerradar": fetch_earlycareerradar,
+    "zshah101": fetch_zshah,
+    "vanshb03": fetch_vansh,
+    "workatastartup": fetch_waas,
 }
 
 
@@ -768,9 +1000,16 @@ def harvest(scope: str = "priority", ats: str | None = None, early_only: bool = 
     """
     blocked, block_rx = load_blocklist()
     companies = [c for c in board_list(scope, ats) if c["slug"] not in blocked]
-    if scope in ("priority", "everything") and ats in (None, "", "jobright"):
-        companies += [{"name": f"JobRight {r}", "slug": r, "ats": "jobright"}
-                      for r in JOBRIGHT_REPOS]
+    feed_names = {f["ats"] for f in FEEDS}
+    if ats in feed_names:
+        companies = [f for f in FEEDS if f["ats"] == ats]
+    elif scope in ("priority", "everything") and not ats:
+        companies += list(FEEDS)
+    # JobRight is opt-in (ats="jobright"): its links go through jobright.ai, not
+    # to the employer, and the feeds above cover the same postings directly.
+    if ats == "jobright":
+        companies = [{"name": f"JobRight {r}", "slug": r, "ats": "jobright"}
+                     for r in JOBRIGHT_REPOS]
     roles: list[dict] = []
     stats = {"boards": len(companies), "ok": 0, "failed": 0, "seen": 0,
              "kept": 0, "errors": {}, "top": []}
@@ -796,6 +1035,10 @@ def harvest(scope: str = "priority", ats: str | None = None, early_only: bool = 
                 # only drop what says it is unpaid; `None` means the posting is
                 # silent, and dropping those would empty the board.
                 found = [r for r in found if r.get("paid") is not False]
+            # a posting the employer dated more than MAX_AGE_DAYS ago is not
+            # "open" in any useful sense; a closed one rides through so merge
+            # can mark the known copy dead
+            found = [r for r in found if r.get("dead") or not is_stale(r)]
             if found:
                 per_board.append((company["name"], len(found)))
                 roles.extend(found)
@@ -804,17 +1047,24 @@ def harvest(scope: str = "priority", ats: str | None = None, early_only: bool = 
     return roles, stats
 
 
-def prune(roles: list[dict]) -> tuple[list[dict], int]:
-    """Drop harvested roles that scored below the stretch floor.
+def prune(roles: list[dict], max_age: int = MAX_AGE_DAYS) -> tuple[list[dict], int]:
+    """Drop harvested roles that scored below the stretch floor, went dead, or
+    aged past `max_age` days.
 
-    They are noise the page never shows, and at ~1,100 rows they were 60% of
-    roles.json. Spreadsheet history and anything applied to is kept whatever it
-    scores: that is your record, not a recommendation.
+    Sub-floor rows are noise the page never shows, and at ~1,100 rows they were
+    60% of roles.json. Old rows are the other half of "the board is stale": a
+    posting from March still ranked strong in September. Spreadsheet history
+    and anything applied to is kept whatever it scores or however old it is:
+    that is your record, not a recommendation.
     """
-    keep = [r for r in roles
-            if r.get("tier") != "none"
-            or r.get("source") == "sheet"
-            or (r.get("application") or {}).get("status", "none") != "none"]
+    def _keep(r: dict) -> bool:
+        if r.get("source") == "sheet" or (r.get("application") or {}).get("status", "none") != "none":
+            return True
+        if "jobright.ai" in (r.get("url") or ""):
+            return False  # a link through an aggregator is not a posting; the feeds carry the direct one
+        return r.get("tier") != "none" and not r.get("dead") and not is_stale(r, max_age)
+
+    keep = [r for r in roles if _keep(r)]
     return keep, len(roles) - len(keep)
 
 
@@ -853,6 +1103,8 @@ def merge(existing: list[dict], incoming: list[dict]) -> tuple[int, int]:
     for role in incoming:
         old = by_id.get(role["id"])
         if not old:
+            if role.get("dead"):
+                continue  # a closed posting we never listed is not news
             existing.append(role)
             by_id[role["id"]] = role
             added += 1
@@ -864,6 +1116,9 @@ def merge(existing: list[dict], incoming: list[dict]) -> tuple[int, int]:
                 old[field] = role[field]
         if role.get("paid") is not None:
             old["paid"] = role["paid"]
-        old["dead"] = False
+        if role.get("posted") and not old.get("posted"):
+            old["posted"] = role["posted"]
+        # a feed that says the posting closed wins over a feed that still lists it
+        old["dead"] = bool(role.get("dead"))
         updated += 1
     return added, updated

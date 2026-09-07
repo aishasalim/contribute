@@ -52,7 +52,21 @@ Sections: **Today** · **Strong fit** · **All open** · **Applied** · **Closed
   reason. See [Relevancy model](docs/RADAR.md#relevancy-model).
 
 The page reads a static JSON file. It is **not** live — it changes when `find_roles` runs and
-the file is pushed.
+the file is pushed. `scripts/install_radar_launchd.sh` schedules `scripts/harvest.py` daily
+so that happens without anyone at the keyboard.
+
+**Where roles come from.** Four curated feeds run on every harvest and carry the employer's
+own apply link — [earlycareerradar.com](https://earlycareerradar.com), the
+[zshah101](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships)
+and [vanshb03](https://github.com/vanshb03/Summer2027-Internships) lists, and YC's
+[Work at a Startup](https://www.workatastartup.com/jobs) — plus the ATS boards in
+`data/boards.json`. Anything posted more than **45 days** ago is dropped, and a posting a
+feed reports closed goes dead. JobRight is opt-in. Details and attribution:
+[docs/RADAR.md](docs/RADAR.md#sourcing), [NOTICE](NOTICE).
+
+**How many did I apply to?** Ask `applications`. One application is one role whose status
+is not `none`; a rejection still counts. That is the only definition, so the number is the
+same whoever asks. A missing one goes in with `add_application`.
 
 ## Backend (optional)
 

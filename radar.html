@@ -338,10 +338,14 @@ const ageShort=n=>n===null?"—":n===0?"today":n+"d";
 const ageLong=n=>n===null?"not stated":n===0?"today":n===1?"yesterday":n+" days ago";
 const ageCls=n=>n===null?"":n<=3?"fresh":n>30?"stale":"";
 const applied=r=>r.application.status!=="none";
+// Mirrors MAX_AGE_DAYS in mcp/radar.py. The file is pruned on harvest, but the
+// page also filters so a stale snapshot never shows a posting as open.
+const MAX_AGE=45;
+const open=r=>!applied(r)&&!r.dead&&r.tier!=="none"&&(ageDays(r)??0)<=MAX_AGE;
 const SECTIONS=[
-  {key:"fresh",  label:"Last 3 days", color:"var(--accent)", get:d=>d.filter(r=>(ageDays(r)??99)<=3&&!applied(r)&&!r.dead&&r.tier!=="none")},
-  {key:"strong", label:"Strong fit", color:"var(--strong)", get:d=>d.filter(r=>r.tier==="strong"&&!applied(r)&&!r.dead)},
-  {key:"open",   label:"All open",   color:"var(--fit)",    get:d=>d.filter(r=>!applied(r)&&!r.dead&&r.tier!=="none")},
+  {key:"fresh",  label:"Last 3 days", color:"var(--accent)", get:d=>d.filter(r=>(ageDays(r)??99)<=3&&open(r))},
+  {key:"strong", label:"Strong fit", color:"var(--strong)", get:d=>d.filter(r=>r.tier==="strong"&&open(r))},
+  {key:"open",   label:"All open",   color:"var(--fit)",    get:d=>d.filter(open)},
   // Every role with a status lives here, rejections included, so this tab
   // always matches the "Applied" stat card.
   {key:"applied",label:"Applied",    color:"var(--merged)", get:d=>d.filter(applied)},
@@ -425,8 +429,8 @@ function renderSection(){
 function renderMini(){
   const r=DATA.roles;
   const cells=[
-    {n:r.filter(x=>(ageDays(x)??99)<=3&&!applied(x)&&x.tier!=="none").length,l:"≤3 days",cls:"accent"},
-    {n:r.filter(x=>x.tier==="strong"&&!applied(x)).length,l:"Strong",cls:"strong"},
+    {n:r.filter(x=>(ageDays(x)??99)<=3&&open(x)).length,l:"≤3 days",cls:"accent"},
+    {n:r.filter(x=>x.tier==="strong"&&open(x)).length,l:"Strong",cls:"strong"},
     {n:r.filter(applied).length,l:"Applied"},
     {n:r.filter(x=>x.application.status==="rejected").length,l:"Rejected"},
   ];
