@@ -329,7 +329,7 @@ def _date(value) -> str | None:
 COMPANY_NOISE = re.compile(
     r"\b(inc|incorporated|llc|l\.l\.c|corp|corporation|co|company|ltd|limited|plc|"
     r"gmbh|nv|sa|ag|holdings?|group|technologies|technology|solutions|systems|"
-    r"labs?|the)\b\.?", re.I)
+    r"semiconductors?|labs?|the)\b\.?", re.I)
 
 
 def _norm_company(company: str) -> str:

@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-07T21:03:17Z",
+    "generated": "2026-09-07T21:03:33Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -21059,17 +21059,17 @@
       "tier": "strong",
       "why": "The title reads as ML; it is an internship or co-op posting.",
       "why_by": "auto",
-      "dead": false,
+      "dead": true,
       "application": {
-        "status": "applied",
-        "applied": "2026-09-07",
-        "resume": "ml",
+        "status": "none",
+        "applied": null,
+        "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "confirmation 2026-09-07 (workday)"
+        "notes": "duplicate of the NXP Semiconductors row (same posting)"
       }
     },
     {
