@@ -8,8 +8,8 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-07T19:24:21Z",
-    "updated_by": "mcp",
+    "generated": "2026-09-07T20:39:26Z",
+    "updated_by": "harvest.py",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
     "note": "Page 2 of contributie. Roles scored against three resumes. The spreadsheet stays the source of truth for application state; the radar is the source of truth for discovery and relevancy."
@@ -8810,8 +8810,8 @@
       "id": "modal-ml-research-intern",
       "company": "Modal",
       "title": "ML Research Intern",
-      "location": "New York, NY, San Francisco, CA",
-      "workmode": "unspecified",
+      "location": "New York",
+      "workmode": "onsite",
       "season": "summer-2027",
       "url": "https://jobs.ashbyhq.com/modal/38888294-6bc7-4dab-b072-6d0f0c2ed79a",
       "source": "ashby",
@@ -9178,7 +9178,7 @@
       "company": "Notion",
       "title": "Software Engineer Intern (Summer 2027)",
       "location": "San Francisco, California",
-      "workmode": "unspecified",
+      "workmode": "remote",
       "season": "summer-2027",
       "url": "https://jobs.ashbyhq.com/notion/3fba1c39-c5cb-47d7-9ad2-1cec4d7e9d0c",
       "source": "ashby",
@@ -9190,7 +9190,7 @@
         "sponsorship": null,
         "citizenship": null,
         "class_year": [
-          "2027"
+          "2028"
         ]
       },
       "tags": [
