@@ -8,8 +8,8 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-07T21:32:49Z",
-    "updated_by": "mcp",
+    "generated": "2026-09-08T14:01:13Z",
+    "updated_by": "harvest.py",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
     "note": "Page 2 of contributie. Roles scored against three resumes. The spreadsheet stays the source of truth for application state; the radar is the source of truth for discovery and relevancy."
@@ -3448,8 +3448,8 @@
       ],
       "tracks": {
         "swe": 36,
-        "ml": 86,
-        "hwv": 16
+        "ml": 85,
+        "hwv": 15
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -3848,9 +3848,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -4048,7 +4048,7 @@
       "tracks": {
         "swe": 23,
         "ml": 31,
-        "hwv": 81
+        "hwv": 80
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -4156,51 +4156,6 @@
       "snippet": "Belvedere Trading is a leading proprietary trading firm proudly headquartered in downtown Chicago. Our traders work hard to provide liquidity to the market through their market-making activities and are the masters of a diverse set of commodities, interest rates, exchange-traded "
     },
     {
-      "id": "blackedgecapital-quantitative-developer-intern",
-      "company": "BlackEdge Capital",
-      "title": "Quantitative Developer Intern",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://job-boards.greenhouse.io/blackedgecapital/jobs/4703821005",
-      "source": "greenhouse",
-      "posted": "2026-07-24",
-      "found": "2026-08-14",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "Compilers"
-      ],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "If you are looking to join a small, dynamic, growing firm in the financial technology sector, you have come to the right place. BlackEdge has built a strong foundation of success as an industry leading market maker in the treasury options space. Now we need talented people like y"
-    },
-    {
       "id": "blueorigin-2026-intern-conversion-fluid-systems-engineer-i",
       "company": "Blue Origin",
       "title": "2026 Intern Conversion - Fluid Systems Engineer I",
@@ -4269,9 +4224,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 61,
-        "ml": 16,
-        "hwv": 16
+        "swe": 60,
+        "ml": 15,
+        "hwv": 15
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -4315,9 +4270,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 61,
-        "ml": 16,
-        "hwv": 16
+        "swe": 60,
+        "ml": 15,
+        "hwv": 15
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -4540,9 +4495,9 @@
         "Python"
       ],
       "tracks": {
-        "swe": 23,
+        "swe": 22,
         "ml": 72,
-        "hwv": 23
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -4762,8 +4717,8 @@
       ],
       "tracks": {
         "swe": 35,
-        "ml": 93,
-        "hwv": 23
+        "ml": 92,
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -4938,7 +4893,7 @@
       "tracks": {
         "swe": 15,
         "ml": 15,
-        "hwv": 65
+        "hwv": 64
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -4966,7 +4921,7 @@
       "location": "In-Office",
       "workmode": "unspecified",
       "season": "fall-2026",
-      "url": "https://boards.greenhouse.io/cloudflare/jobs/8118855?gh_jid=8118855",
+      "url": "https://boards.greenhouse.io/cloudflare/jobs/8118845?gh_jid=8118845",
       "source": "greenhouse",
       "posted": "2026-08-10",
       "found": "2026-08-14",
@@ -5352,7 +5307,7 @@
       "tracks": {
         "swe": 31,
         "ml": 27,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -5444,7 +5399,7 @@
       "tracks": {
         "swe": 31,
         "ml": 27,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -5487,7 +5442,7 @@
         "AWS"
       ],
       "tracks": {
-        "swe": 36,
+        "swe": 35,
         "ml": 27,
         "hwv": 31
       },
@@ -5575,7 +5530,7 @@
       "tracks": {
         "swe": 31,
         "ml": 31,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -5762,7 +5717,7 @@
       "tracks": {
         "swe": 31,
         "ml": 27,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -5896,7 +5851,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 36,
+        "swe": 35,
         "ml": 27,
         "hwv": 31
       },
@@ -5939,7 +5894,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 36,
+        "swe": 35,
         "ml": 27,
         "hwv": 31
       },
@@ -5988,7 +5943,7 @@
       "tracks": {
         "swe": 48,
         "ml": 31,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -6031,7 +5986,7 @@
       "tracks": {
         "swe": 31,
         "ml": 31,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -6075,7 +6030,7 @@
       ],
       "tracks": {
         "swe": 31,
-        "ml": 40,
+        "ml": 39,
         "hwv": 31
       },
       "best_track": "ml",
@@ -6126,7 +6081,7 @@
       "tracks": {
         "swe": 93,
         "ml": 93,
-        "hwv": 40
+        "hwv": 39
       },
       "best_track": "swe",
       "also_tracks": [
@@ -6634,7 +6589,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 36,
+        "swe": 35,
         "ml": 27,
         "hwv": 31
       },
@@ -6780,7 +6735,7 @@
       "tracks": {
         "swe": 92,
         "ml": 22,
-        "hwv": 27
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -7222,49 +7177,6 @@
       "snippet": "About GenScript Founded in 2002 in New Jersey, GenScript Biotech Corporation accelerates innovation in biotech and healthcare by providing researchers and companies with the building blocks needed to develop groundbreaking treatments and products. Guided by its mission to Make Pe"
     },
     {
-      "id": "geocomply-security-software-engineer-intern",
-      "company": "GeoComply",
-      "title": "Security Software Engineer Intern",
-      "location": "Ho Chi Minh, Vietnam",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://jobs.lever.co/geocomply-2/4057ba13-28ca-440f-b4b4-ead0fdd93fd4",
-      "source": "lever",
-      "posted": "2026-07-24",
-      "found": "2026-08-14",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "About GeoComply We\u2019re GeoComply! We are at the forefront of geolocation, cybersecurity, and anti-fraud innovation, developing and delivering cutting-edge technologies to help ensure regulatory compliance, combat bad online actors, alleviate user friction, and protect businesses f"
-    },
-    {
       "id": "globalfoundries-ip-design-engineering-intern-fall-2026",
       "company": "GlobalFoundries",
       "title": "IP & Design Engineering Intern (Fall 2026)",
@@ -7526,9 +7438,9 @@
         "C"
       ],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -8095,7 +8007,7 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 36,
+        "swe": 35,
         "ml": 23,
         "hwv": 44
       },
@@ -8144,7 +8056,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 36,
+        "swe": 35,
         "ml": 31,
         "hwv": 23
       },
@@ -8851,7 +8763,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 20,
+        "swe": 19,
         "ml": 15,
         "hwv": 60
       },
@@ -9082,8 +8994,8 @@
       "tags": [],
       "tracks": {
         "swe": 47,
-        "ml": 23,
-        "hwv": 23
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -9338,49 +9250,6 @@
       "snippet": "Company Overview Founded in 1989, PanAgora (Greek for across marketplace) Asset Management is a premier provider of investment solutions spanning most major asset classes and risk ranges. We seek to provide investment solutions using sophisticated quantitative techniques that inc"
     },
     {
-      "id": "pdtpartners-summer-2027-software-engineering-intern",
-      "company": "PDT Partners",
-      "title": "Summer 2027 Software Engineering Intern",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://job-boards.greenhouse.io/pdtpartners/jobs/8077685",
-      "source": "greenhouse",
-      "posted": "2026-07-24",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Eligibility: Current Bachelor's, Master's, or PhD students pursuing degrees in rigorous, highly technical fields (e.g., Computer Science, Computer Engineering) who are eligible for full-time roles starting in 2028 or 2029. Program Length: 10 Weeks (Early June \u2013 Mid August) Applic"
-    },
-    {
       "id": "pennstateuniversity-ncems-undergraduate-research-intern",
       "company": "PennState University",
       "title": "NCEMS Undergraduate Research Intern",
@@ -9523,52 +9392,6 @@
         "notes": ""
       },
       "snippet": "Who Are We? Postman is the world\u2019s leading API platform, used by more than 45 million+ developers and 500,000 organizations, including 98% of the Fortune 500. Postman is helping developers and professionals across the globe build the API-first world by simplifying each step of th"
-    },
-    {
-      "id": "quadrillion-software-engineering-intern-summer-2027",
-      "company": "Quadrillion",
-      "title": "Software Engineering Intern (Summer 2027)",
-      "location": "New York City",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://jobs.ashbyhq.com/quadrillion-labs/a4acc44c-31ce-41a0-ab44-2500487b4d05",
-      "source": "ashby",
-      "posted": "2026-07-24",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "Python",
-        "React"
-      ],
-      "tracks": {
-        "swe": 84,
-        "ml": 30,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "strong",
-      "why": "The title reads as SWE; the description names api, backend, cloud.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "About us Quadrillion is a startup building Qualia, an agentic research platform (think Jupyter or VS Code, but with AI agents that do the actual research). Our users are ML researchers, quants, and data scientists who use Qualia to run an entire research project from a single pro"
     },
     {
       "id": "rainmaker-electrical-engineering-intern-fall",
@@ -9814,7 +9637,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
+        "swe": 26,
         "ml": 35,
         "hwv": 39
       },
@@ -9957,9 +9780,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 61,
-        "ml": 16,
-        "hwv": 16
+        "swe": 60,
+        "ml": 15,
+        "hwv": 15
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -10471,7 +10294,7 @@
       "tracks": {
         "swe": 61,
         "ml": 20,
-        "hwv": 29
+        "hwv": 28
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -10517,7 +10340,7 @@
       "tracks": {
         "swe": 61,
         "ml": 20,
-        "hwv": 29
+        "hwv": 28
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -10564,7 +10387,7 @@
       "tracks": {
         "swe": 65,
         "ml": 44,
-        "hwv": 37
+        "hwv": 36
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -10703,7 +10526,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 61,
+        "swe": 60,
         "ml": 20,
         "hwv": 32
       },
@@ -10749,9 +10572,9 @@
         "Java"
       ],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -11024,9 +10847,9 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -11827,9 +11650,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -12752,7 +12575,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
+        "swe": 22,
         "ml": 27,
         "hwv": 35
       },
@@ -14114,9 +13937,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -14156,9 +13979,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
-        "ml": 24,
-        "hwv": 24
+        "swe": 23,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -14580,7 +14403,7 @@
       "tracks": {
         "swe": 25,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -14872,13 +14695,13 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
+        "swe": 74,
         "ml": 25,
         "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "Recorded from application confirmation email; not scored against a posting.",
       "why_by": "email",
       "dead": false,
@@ -14961,7 +14784,7 @@
       "tracks": {
         "swe": 16,
         "ml": 16,
-        "hwv": 66
+        "hwv": 65
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -15551,9 +15374,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
-        "ml": 24,
-        "hwv": 24
+        "swe": 23,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -15593,9 +15416,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
-        "ml": 24,
-        "hwv": 24
+        "swe": 23,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -15677,9 +15500,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 71,
-        "hwv": 26
+        "swe": 70,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [
@@ -15721,9 +15544,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
-        "hwv": 26
+        "swe": 25,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -16990,7 +16813,7 @@
         "Distributed systems"
       ],
       "tracks": {
-        "swe": 87,
+        "swe": 86,
         "ml": 21,
         "hwv": 25
       },
@@ -17086,7 +16909,7 @@
       ],
       "tracks": {
         "swe": 93,
-        "ml": 44,
+        "ml": 43,
         "hwv": 27
       },
       "best_track": "swe",
@@ -17133,7 +16956,7 @@
       "tracks": {
         "swe": 92,
         "ml": 30,
-        "hwv": 35
+        "hwv": 34
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -17327,7 +17150,7 @@
       "tracks": {
         "swe": 31,
         "ml": 27,
-        "hwv": 44
+        "hwv": 43
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -18026,7 +17849,7 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 40,
+        "swe": 39,
         "ml": 31,
         "hwv": 97
       },
@@ -18559,7 +18382,7 @@
       ],
       "tracks": {
         "swe": 35,
-        "ml": 40,
+        "ml": 39,
         "hwv": 27
       },
       "best_track": "ml",
@@ -18709,7 +18532,7 @@
       "tracks": {
         "swe": 28,
         "ml": 28,
-        "hwv": 81
+        "hwv": 80
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -18965,7 +18788,7 @@
       "tracks": {
         "swe": 32,
         "ml": 49,
-        "hwv": 37
+        "hwv": 36
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -19013,7 +18836,7 @@
       "tracks": {
         "swe": 24,
         "ml": 49,
-        "hwv": 53
+        "hwv": 52
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -19072,7 +18895,7 @@
       "tracks": {
         "swe": 94,
         "ml": 49,
-        "hwv": 37
+        "hwv": 36
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -19180,7 +19003,7 @@
       "tracks": {
         "swe": 24,
         "ml": 94,
-        "hwv": 37
+        "hwv": 36
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -19288,7 +19111,7 @@
       "tracks": {
         "swe": 45,
         "ml": 94,
-        "hwv": 37
+        "hwv": 36
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -19532,7 +19355,7 @@
       ],
       "tracks": {
         "swe": 24,
-        "ml": 81,
+        "ml": 80,
         "hwv": 32
       },
       "best_track": "ml",
@@ -19584,7 +19407,7 @@
       ],
       "tracks": {
         "swe": 24,
-        "ml": 37,
+        "ml": 36,
         "hwv": 69
       },
       "best_track": "hwv",
@@ -19687,8 +19510,8 @@
         "Distributed systems"
       ],
       "tracks": {
-        "swe": 94,
-        "ml": 28,
+        "swe": 93,
+        "ml": 27,
         "hwv": 32
       },
       "best_track": "swe",
@@ -19979,8 +19802,8 @@
         "Python"
       ],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
+        "swe": 68,
+        "ml": 23,
         "hwv": 28
       },
       "best_track": "swe",
@@ -20270,7 +20093,7 @@
       "tracks": {
         "swe": 67,
         "ml": 22,
-        "hwv": 35
+        "hwv": 34
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -20317,7 +20140,7 @@
       "tracks": {
         "swe": 66,
         "ml": 25,
-        "hwv": 38
+        "hwv": 37
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -20512,7 +20335,7 @@
       "tracks": {
         "swe": 25,
         "ml": 45,
-        "hwv": 54
+        "hwv": 53
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -20561,7 +20384,7 @@
         "C"
       ],
       "tracks": {
-        "swe": 62,
+        "swe": 61,
         "ml": 21,
         "hwv": 29
       },
@@ -21059,7 +20882,7 @@
       "tier": "strong",
       "why": "The title reads as ML; it is an internship or co-op posting.",
       "why_by": "auto",
-      "dead": true,
+      "dead": false,
       "application": {
         "status": "none",
         "applied": null,
@@ -22051,8 +21874,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -22093,8 +21916,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -22569,8 +22392,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -22594,7 +22417,7 @@
       "id": "cox-software-engineering-intern-summer-2027-north-hills-ny",
       "company": "Cox",
       "title": "Software Engineering Intern - Summer 2027 - North Hills - NY",
-      "location": "Long Island City, NY \u00b7 Long Island NY \u00b7 Long Island, New York",
+      "location": "Long Island City, NY",
       "workmode": "unspecified",
       "season": "summer-2027",
       "url": "https://cox.wd1.myworkdayjobs.com/en-US/cox_external_career_site_1/job/Long-Island-NY/Software-Engineering-Intern---Summer-2027--North-Hills--NY-_R202682171-1",
@@ -22611,8 +22434,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -22741,8 +22564,8 @@
       ],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 73
+        "ml": 23,
+        "hwv": 72
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -23039,8 +22862,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23209,8 +23032,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23251,8 +23074,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24316,10 +24139,10 @@
       "id": "sierranevada-systems-engineering-intern-summer-2027",
       "company": "Sierra Nevada Corp",
       "title": "Systems Engineering Intern (Summer 2027)",
-      "location": "Lone Tree, CO",
+      "location": "Hagerstown, MD",
       "workmode": "unspecified",
       "season": "summer-2027",
-      "url": "https://snc.wd1.myworkdayjobs.com/en-US/SNC_External_Career_Site/job/Lone-Tree-CO/Systems-Engineering-Intern--Summer-2027-_R0030750",
+      "url": "https://snc.wd1.myworkdayjobs.com/en-US/SNC_External_Career_Site/job/Hagerstown-MD/Systems-Engineering-Intern--Summer-2027-_R0030753",
       "source": "earlycareerradar",
       "posted": "2026-09-03",
       "found": "2026-09-07",
@@ -25262,9 +25085,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25306,9 +25129,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 72,
-        "hwv": 27
+        "swe": 71,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [
@@ -25352,9 +25175,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -25397,8 +25220,8 @@
       "tags": [],
       "tracks": {
         "swe": 76,
-        "ml": 27,
-        "hwv": 27
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25440,9 +25263,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25482,9 +25305,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -25569,8 +25392,8 @@
       "tags": [],
       "tracks": {
         "swe": 51,
-        "ml": 27,
-        "hwv": 27
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25610,9 +25433,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25654,9 +25477,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -25700,8 +25523,8 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
+        "swe": 71,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "swe",
@@ -25742,9 +25565,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25784,9 +25607,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 20,
-        "ml": 65,
-        "hwv": 20
+        "swe": 19,
+        "ml": 64,
+        "hwv": 19
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -25826,9 +25649,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25868,9 +25691,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25910,8 +25733,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "hwv",
@@ -25952,9 +25775,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25994,9 +25817,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -26036,9 +25859,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -26080,8 +25903,8 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
+        "swe": 71,
+        "ml": 26,
         "hwv": 76
       },
       "best_track": "hwv",
@@ -26124,9 +25947,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -26166,9 +25989,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26210,9 +26033,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26255,8 +26078,8 @@
       "tags": [],
       "tracks": {
         "swe": 51,
-        "ml": 27,
-        "hwv": 27
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26296,9 +26119,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26338,9 +26161,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26380,9 +26203,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26464,9 +26287,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26506,9 +26329,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26548,9 +26371,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27240,7 +27063,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 76,
+        "swe": 75,
         "ml": 26,
         "hwv": 26
       },
@@ -27413,7 +27236,7 @@
       "tags": [],
       "tracks": {
         "swe": 64,
-        "ml": 69,
+        "ml": 68,
         "hwv": 19
       },
       "best_track": "ml",
@@ -27768,7 +27591,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 76,
+        "swe": 75,
         "ml": 26,
         "hwv": 26
       },
@@ -28188,7 +28011,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 76,
+        "swe": 75,
         "ml": 26,
         "hwv": 26
       },
@@ -28316,7 +28139,7 @@
       "tracks": {
         "swe": 26,
         "ml": 26,
-        "hwv": 76
+        "hwv": 75
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -28858,10 +28681,10 @@
       "id": "boozallen-systems-engineer-intern-summer-games",
       "company": "Booz Allen",
       "title": "Systems Engineer Intern - Summer Games",
-      "location": "Honolulu, HI",
+      "location": "Atlanta, GA",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Honolulu-HI/University---2027-Summer-Games-Systems-Engineer-Intern---Honolulu--HI_R0248370",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Atlanta-GA/University---2027-Summer-Games--Systems-Engineer-Intern---Atlanta--GA_R0248381",
       "source": "earlycareerradar",
       "posted": "2026-09-01",
       "found": "2026-09-07",
@@ -29390,7 +29213,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 76,
+        "swe": 75,
         "ml": 26,
         "hwv": 26
       },
@@ -31093,7 +30916,7 @@
       "tags": [],
       "tracks": {
         "swe": 19,
-        "ml": 69,
+        "ml": 68,
         "hwv": 19
       },
       "best_track": "ml",
@@ -31118,10 +30941,10 @@
       "id": "boozallen-systems-engineer-intern-university",
       "company": "Booz Allen",
       "title": "Systems Engineer Intern - University",
-      "location": "Colorado Springs, CO",
+      "location": "Rome, NY",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Colorado-Springs-CO/University---2027-Summer-Games-Systems-Engineer-Intern---Charleston--SC_R0248369",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/Rome-NY/University---2027-Summer-Games-Systems-Engineer-Intern---Rome--NY_R0248386",
       "source": "earlycareerradar",
       "posted": "2026-09-01",
       "found": "2026-09-07",
@@ -31160,10 +30983,10 @@
       "id": "boozallen-systems-engineer-intern",
       "company": "Booz Allen",
       "title": "Systems Engineer Intern",
-      "location": "San Diego, CA",
+      "location": "McLean, VA",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/San-Diego-CA/University---2027-Summer-Games-Systems-Engineer-Intern---San-Diego--CA_R0248365",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/McLean-VA/University---2027-Summer-Games-Systems-Engineer-Intern---McLean--VA_R0248361",
       "source": "earlycareerradar",
       "posted": "2026-09-01",
       "found": "2026-09-07",
@@ -31740,7 +31563,7 @@
       "tracks": {
         "swe": 26,
         "ml": 26,
-        "hwv": 76
+        "hwv": 75
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -31994,7 +31817,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 76
+        "hwv": 75
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -32290,7 +32113,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 51,
+        "swe": 50,
         "ml": 26,
         "hwv": 26
       },
@@ -33628,10 +33451,10 @@
       "id": "boozallenhamilton-university-2027-summer-games-data-scientist-intern",
       "company": "Booz Allen Hamilton",
       "title": "University, 2027 Summer Games Data Scientist Intern",
-      "location": "San Diego, CA",
+      "location": "Atlanta, GA",
       "workmode": "hybrid",
       "season": "summer-2027",
-      "url": "https://careers.boozallen.com/jobs/JobDetail/San-Diego-University-2027-Summer-Games-Data-Scientist-Intern-R0248045/129485",
+      "url": "https://careers.boozallen.com/jobs/JobDetail/Atlanta-University-2027-Summer-Games-Data-Scientist-Intern-R0248140/129565",
       "source": "earlycareerradar",
       "posted": "2026-08-29",
       "found": "2026-09-07",
@@ -34876,10 +34699,10 @@
       "id": "boozallen-software-developer-intern-summer-games",
       "company": "Booz Allen",
       "title": "Software Developer Intern - Summer Games",
-      "location": "San Diego, CA",
+      "location": "El Segundo, CA",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/San-Diego-CA/University---2027-Summer-Games-Software-Developer-Intern---San-Diego--CA_R0248038",
+      "url": "https://bah.wd1.myworkdayjobs.com/bah_jobs/job/El-Segundo-CA/University---2027-Summer-Games-Software-Developer-Intern---El-Segundo--CA_R0248046",
       "source": "earlycareerradar",
       "posted": "2026-08-28",
       "found": "2026-09-07",
@@ -35106,9 +34929,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35152,8 +34975,8 @@
         "ASIC"
       ],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 75
       },
       "best_track": "hwv",
@@ -35197,7 +35020,7 @@
       "tags": [],
       "tracks": {
         "swe": 50,
-        "ml": 26,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -35242,9 +35065,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35286,9 +35109,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35330,9 +35153,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35374,8 +35197,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "hwv",
@@ -35418,9 +35241,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35462,9 +35285,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35506,9 +35329,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35550,9 +35373,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35594,9 +35417,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35638,9 +35461,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35684,8 +35507,8 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -35728,9 +35551,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35772,9 +35595,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35816,9 +35639,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35860,9 +35683,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35946,9 +35769,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35988,9 +35811,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36032,9 +35855,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36076,9 +35899,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36120,13 +35943,13 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
+        "swe": 74,
         "ml": 25,
         "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -36146,7 +35969,7 @@
       "id": "microsoft-silicon-engineering-intern",
       "company": "Microsoft",
       "title": "Silicon Engineering INTERN",
-      "location": "Santa Clara, CA",
+      "location": "Santa Clara, California, United States \u00b7 Mountain View, California, United States \u00b7 Raleigh, North Carolina, United States",
       "workmode": "unspecified",
       "season": null,
       "url": "https://apply.careers.microsoft.com/careers/job/1970393556958170",
@@ -36164,13 +35987,13 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 75
+        "hwv": 74
       },
       "best_track": "hwv",
       "also_tracks": [
         "swe"
       ],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as HW Verif; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -36596,11 +36419,11 @@
       "tracks": {
         "swe": 25,
         "ml": 25,
-        "hwv": 75
+        "hwv": 74
       },
       "best_track": "hwv",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as HW Verif; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -36850,7 +36673,7 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36894,7 +36717,7 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36982,7 +36805,7 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37028,7 +36851,7 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37072,7 +36895,7 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37116,7 +36939,7 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37244,7 +37067,7 @@
       "tracks": {
         "swe": 25,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -37330,7 +37153,7 @@
       "tracks": {
         "swe": 25,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -37880,9 +37703,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
+        "swe": 66,
+        "ml": 21,
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37906,10 +37729,10 @@
       "id": "compeerfinancial-engineering-intern",
       "company": "Compeer Financial",
       "title": "Engineering Intern",
-      "location": "3 locations Sun Prairie, WI \u00b7 Mankato, MN \u00b7 Bloomington, IL \u00b7 Sun Prairie, WI",
+      "location": "Sun Prairie, WI \u00b7 Mankato, MN \u00b7 Bloomington, IL",
       "workmode": "hybrid",
       "season": null,
-      "url": "https://job-boards.greenhouse.io/compeerfinancial/jobs/5404850008",
+      "url": "https://job-boards.greenhouse.io/compeerfinancial/jobs/5404994008",
       "source": "earlycareerradar",
       "posted": "2026-08-25",
       "found": "2026-09-07",
@@ -37922,9 +37745,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
+        "swe": 66,
+        "ml": 21,
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -38338,10 +38161,10 @@
       "id": "bny-data-science-intern-engineering",
       "company": "BNY",
       "title": "Data Science Intern - Engineering",
-      "location": "Lake Mary, FL \u00b7 Lake Mary, FL, United States",
+      "location": "Pittsburgh, PA \u00b7 Pittsburgh, PA, United States",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/81239",
+      "url": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/81241",
       "source": "earlycareerradar",
       "posted": "2026-08-24",
       "found": "2026-09-07",
@@ -39200,9 +39023,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -39244,9 +39067,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -39288,9 +39111,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -39588,7 +39411,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
+        "swe": 73,
         "ml": 24,
         "hwv": 24
       },
@@ -39762,7 +39585,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -40528,9 +40351,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 21,
-        "ml": 66,
-        "hwv": 21
+        "swe": 20,
+        "ml": 65,
+        "hwv": 20
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -41133,7 +40956,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 64
+        "hwv": 63
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -41301,9 +41124,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -41343,9 +41166,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -41427,9 +41250,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 62,
-        "ml": 17,
-        "hwv": 17
+        "swe": 61,
+        "ml": 16,
+        "hwv": 16
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -41511,9 +41334,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -41553,9 +41376,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -41597,9 +41420,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -41639,9 +41462,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
-        "ml": 69,
-        "hwv": 24
+        "swe": 23,
+        "ml": 68,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -41749,10 +41572,10 @@
       "id": "ibm-intern-data-scientist-2027-ai-data-analytics",
       "company": "IBM",
       "title": "Intern Data Scientist 2027 \u2013 AI & Data Analytics",
-      "location": "Chicago, United States",
+      "location": "Dallas, United States",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128611",
+      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128613",
       "source": "earlycareerradar",
       "posted": "2026-08-14",
       "found": "2026-09-07",
@@ -41796,7 +41619,7 @@
       "location": "Chicago, United States",
       "workmode": "unspecified",
       "season": null,
-      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128563",
+      "url": "https://careers.ibm.com/careers/JobDetail?jobId=128560",
       "source": "earlycareerradar",
       "posted": "2026-08-14",
       "found": "2026-09-07",
@@ -41811,7 +41634,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 48,
+        "swe": 47,
         "ml": 23,
         "hwv": 23
       },
@@ -41937,9 +41760,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 20,
-        "ml": 65,
-        "hwv": 20
+        "swe": 19,
+        "ml": 64,
+        "hwv": 19
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -42455,9 +42278,9 @@
         "LLM"
       ],
       "tracks": {
-        "swe": 23,
+        "swe": 22,
         "ml": 47,
-        "hwv": 23
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -42499,9 +42322,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -42543,9 +42366,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -42587,9 +42410,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -42676,7 +42499,7 @@
       "tags": [],
       "tracks": {
         "swe": 22,
-        "ml": 72,
+        "ml": 71,
         "hwv": 22
       },
       "best_track": "ml",
@@ -42720,7 +42543,7 @@
       "tags": [],
       "tracks": {
         "swe": 22,
-        "ml": 72,
+        "ml": 71,
         "hwv": 22
       },
       "best_track": "ml",
@@ -42764,7 +42587,7 @@
       "tags": [],
       "tracks": {
         "swe": 22,
-        "ml": 72,
+        "ml": 71,
         "hwv": 22
       },
       "best_track": "ml",
@@ -42848,7 +42671,7 @@
       "tags": [],
       "tracks": {
         "swe": 67,
-        "ml": 72,
+        "ml": 71,
         "hwv": 22
       },
       "best_track": "ml",
@@ -46208,7 +46031,7 @@
       "location": "Seattle, Washington, United States \u00b7 Seattle, WA",
       "workmode": "unspecified",
       "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7668582146236631349",
+      "url": "https://lifeattiktok.com/search/7668582086899763461",
       "source": "earlycareerradar",
       "posted": "2026-07-31",
       "found": "2026-09-07",
@@ -46853,10 +46676,10 @@
       "id": "bytedance-software-engineer-intern-distributed-nosql-database-systems-2027-summer",
       "company": "ByteDance",
       "title": "Software Engineer Intern (Distributed NoSQL Database Systems) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
+      "location": "Seattle, Washington, United States \u00b7 Seattle, WA",
       "workmode": "unspecified",
       "season": "summer-2027",
-      "url": "https://joinbytedance.com/search/7668374190764050741",
+      "url": "https://joinbytedance.com/search/7668373268886161669",
       "source": "earlycareerradar",
       "posted": "2026-07-30",
       "found": "2026-09-07",
@@ -47804,179 +47627,6 @@
       }
     },
     {
-      "id": "janestreet-linux-engineer-intern",
-      "company": "Jane Street",
-      "title": "Linux Engineer Intern",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.janestreet.com/join-jane-street/position/8626260002/",
-      "source": "earlycareerradar",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "Linux"
-      ],
-      "tracks": {
-        "swe": 46,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "janestreet-hardware-engineer-fpga-asic-intern",
-      "company": "Jane Street",
-      "title": "Hardware Engineer (FPGA/ASIC) Intern",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.janestreet.com/join-jane-street/position/8624440002/",
-      "source": "earlycareerradar",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "FPGA",
-        "ASIC"
-      ],
-      "tracks": {
-        "swe": 22,
-        "ml": 22,
-        "hwv": 80
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "strong",
-      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "palantir-software-engineer-intern",
-      "company": "Palantir",
-      "title": "Software Engineer Intern",
-      "location": "Denver, CO",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://jobs.lever.co/palantir/373eb939-6f57-4836-8479-be79a5e07249",
-      "source": "earlycareerradar",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "quadrillion-software-engineering-intern",
-      "company": "Quadrillion Labs",
-      "title": "Software Engineering Intern",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://jobs.ashbyhq.com/quadrillion-labs/a4acc44c-31ce-41a0-ab44-2500487b4d05",
-      "source": "earlycareerradar",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
       "id": "google-software-engineering-intern-ms-summer-2027",
       "company": "Google",
       "title": "Software Engineering Intern, MS, Summer 2027",
@@ -48117,7 +47767,7 @@
       "season": "summer-2027",
       "url": "https://emit.fa.ca3.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/94207",
       "source": "earlycareerradar",
-      "posted": null,
+      "posted": "2026-09-07",
       "found": "2026-09-07",
       "paid": null,
       "pay": "",
@@ -48300,9 +47950,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -48345,8 +47995,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
+        "swe": 71,
+        "ml": 26,
         "hwv": 80
       },
       "best_track": "hwv",
@@ -48600,8 +48250,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49152,8 +48802,8 @@
       "tags": [],
       "tracks": {
         "swe": 76,
-        "ml": 27,
-        "hwv": 27
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49405,9 +49055,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49447,9 +49097,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49531,9 +49181,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49573,9 +49223,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
-        "ml": 69,
-        "hwv": 24
+        "swe": 23,
+        "ml": 68,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -49615,9 +49265,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
-        "ml": 69,
-        "hwv": 24
+        "swe": 23,
+        "ml": 68,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -50039,7 +49689,7 @@
       "tracks": {
         "swe": 26,
         "ml": 26,
-        "hwv": 76
+        "hwv": 75
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -50083,7 +49733,7 @@
       "tracks": {
         "swe": 26,
         "ml": 26,
-        "hwv": 76
+        "hwv": 75
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -50124,7 +49774,7 @@
       "tags": [],
       "tracks": {
         "swe": 26,
-        "ml": 76,
+        "ml": 75,
         "hwv": 26
       },
       "best_track": "ml",
@@ -50381,7 +50031,7 @@
       "tracks": {
         "swe": 18,
         "ml": 18,
-        "hwv": 43
+        "hwv": 42
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -50528,48 +50178,6 @@
       }
     },
     {
-      "id": "bosch-autonomous-driving-internship-in-machine-learning",
-      "company": "Bosch",
-      "title": "Autonomous Driving \u2013 Internship in Machine Learning",
-      "location": "Sunnyvale, CA, United States",
-      "workmode": "unspecified",
-      "season": "not-stated",
-      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000140462550",
-      "source": "zshah101",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 22,
-        "ml": 71,
-        "hwv": 22
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as ML; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
       "id": "bosch-adas-software-engineering-intern",
       "company": "Bosch",
       "title": "ADAS Software Engineering Intern",
@@ -50673,9 +50281,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50841,9 +50449,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -51053,8 +50661,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "hwv",
@@ -51389,9 +50997,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -51431,9 +51039,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -51473,9 +51081,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -51515,9 +51123,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -51641,9 +51249,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -51683,9 +51291,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -51851,9 +51459,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -52019,9 +51627,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
+        "swe": 23,
         "ml": 68,
-        "hwv": 24
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -52062,8 +51670,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -52355,9 +51963,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -52819,9 +52427,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -53241,9 +52849,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -53367,9 +52975,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
-        "ml": 69,
-        "hwv": 24
+        "swe": 23,
+        "ml": 68,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -53409,9 +53017,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
-        "ml": 69,
-        "hwv": 24
+        "swe": 23,
+        "ml": 68,
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -53451,9 +53059,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
+        "swe": 25,
         "ml": 75,
-        "hwv": 26
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -53501,1232 +53109,6 @@
       "also_tracks": [],
       "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "google-software-engineering-intern",
-      "company": "Google",
-      "title": "Software Engineering Intern",
-      "location": "Mountain View, CA, Atlanta, GA, Austin, TX, Boulder, CO, Cambridge, MA, Bellevue, WA, Chicago, IL, Houston, TX, Irvine, CA, Kirkland, WA, Los Angeles, CA, Madison, WI, New York, NY, Palo Alto, CA, Portland, OR, Pittsburgh, PA, Raleigh, NC, Durham, NC, Reston, VA, Redmond, WA, Redwood City, CA, San Diego, CA, Goleta, CA, San Bruno, CA, Seattle, WA, San Francisco, CA, San Jose, CA, Santa Cruz, CA, South San Francisco, CA, Sunnyvale, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/85564713261245126-software-engineering-intern-bs-summer-2027",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "astranis-software-engineer-intern-enterprise-systems",
-      "company": "Astranis",
-      "title": "Software Engineer Intern, Enterprise Systems",
-      "location": "San Francisco, CA",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://job-boards.greenhouse.io/astranis/jobs/4699071006",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "U.S. Citizenship is Required",
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 60,
-        "ml": 15,
-        "hwv": 15
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "netic-software-engineer-intern",
-      "company": "Netic",
-      "title": "Software Engineer Intern",
-      "location": "San Francisco, CA",
-      "workmode": "unspecified",
-      "season": "winter-2027",
-      "url": "https://jobs.ashbyhq.com/netic/b0ea7aab-8eea-4d31-96f9-278364180ae7?embed=true",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "fiverings-software-developer-intern",
-      "company": "Five Rings",
-      "title": "Software Developer Intern",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://job-boards.greenhouse.io/fiveringsllc/jobs/5349707008",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "U.S. Citizenship is Required",
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 60,
-        "ml": 15,
-        "hwv": 15
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "akunacapital-software-engineer-intern-c",
-      "company": "Akuna Capital",
-      "title": "Software Engineer Intern, C++",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://akunacapital.com/careers/job/8018847/?gh_jid=8018847",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "U.S. Citizenship is Required",
-        "class_year": []
-      },
-      "tags": [
-        "C++"
-      ],
-      "tracks": {
-        "swe": 60,
-        "ml": 15,
-        "hwv": 15
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "akunacapital-platform-engineer-intern",
-      "company": "Akuna Capital",
-      "title": "Platform Engineer Intern",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://akunacapital.com/careers/job/8018856/?gh_jid=8018856",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "U.S. Citizenship is Required",
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 60,
-        "ml": 15,
-        "hwv": 15
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "akunacapital-hardware-engineer-intern",
-      "company": "Akuna Capital",
-      "title": "Hardware Engineer Intern",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://akunacapital.com/careers/job/8018880/?gh_jid=8018880",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "U.S. Citizenship is Required",
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 15,
-        "ml": 15,
-        "hwv": 64
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "akunacapital-python-software-engineer-intern",
-      "company": "Akuna Capital",
-      "title": "Python Software Engineer Intern",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://akunacapital.com/careers/job/8018853/?gh_jid=8018853",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "U.S. Citizenship is Required",
-        "class_year": []
-      },
-      "tags": [
-        "Python"
-      ],
-      "tracks": {
-        "swe": 60,
-        "ml": 15,
-        "hwv": 15
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "akunacapital-software-engineer-intern-full-stack-web",
-      "company": "Akuna Capital",
-      "title": "Software Engineer Intern, Full Stack Web",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://akunacapital.com/careers/job/8018893/?gh_jid=8018893",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "U.S. Citizenship is Required",
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 64,
-        "ml": 15,
-        "hwv": 15
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "akunacapital-software-engineer-intern-c-net-desktop",
-      "company": "Akuna Capital",
-      "title": "Software Engineer Intern, C# .NET Desktop",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://akunacapital.com/careers/job/8018886/?gh_jid=8018886",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "C"
-      ],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "hudsonrivertrading-software-engineer-intern",
-      "company": "Hudson River Trading",
-      "title": "Software Engineer Intern",
-      "location": "Austin, TX, Chicago, IL, New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.hudsonrivertrading.com/hrt-job/software-engineering-internship-c-or-python-summer-2027/?gh_src=",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "spreeai-software-engineer-intern-ai-infrastructure-training-inference",
-      "company": "SPREEAI",
-      "title": "Software Engineer Intern, AI Infrastructure / Training / Inference",
-      "location": "San Francisco, CA",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://ats.rippling.com/en-GB/spreeai/jobs/d34aed29-7a11-4e37-b5bc-e9317f82f0b1",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": true,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 70,
-        "ml": 65,
-        "hwv": 25
-      },
-      "best_track": "swe",
-      "also_tracks": [
-        "ml"
-      ],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "spreeai-mobile-software-engineer-intern",
-      "company": "SpreeAI",
-      "title": "Mobile Software Engineer Intern",
-      "location": "San Francisco, CA",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://ats.rippling.com/en-GB/spreeai/jobs/c52472cb-2671-45d7-b666-17196dc3df25",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "moon-software-engineer-intern-backend-api",
-      "company": "Moon",
-      "title": "Software Engineer Intern, Backend & API",
-      "location": "Glendale, CA",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://ats.rippling.com/en-GB/moon/jobs/8b81bca7-1a64-4377-8ea8-869aac03080b",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 75,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "strong",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "mobiusrenewables-software-engineer-intern",
-      "company": "Mobius Renewables",
-      "title": "Software Engineer Intern",
-      "location": "Houston, TX",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://ats.rippling.com/en-GB/greengas/jobs/b2938290-cc66-4f54-9888-bbe286c1d9b6",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": false,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 64,
-        "ml": 18,
-        "hwv": 18
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "fab2-software-engineering-intern",
-      "company": "fab2",
-      "title": "Software Engineering Intern",
-      "location": "San Francisco, CA",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://jobs.ashbyhq.com/fab2/947338ca-e135-4398-9aa3-79e131bc03d5?embed=true",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": true,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "deepgram-software-engineering-intern",
-      "company": "Deepgram",
-      "title": "Software Engineering Intern",
-      "location": "Remote, US",
-      "workmode": "remote",
-      "season": "summer-2027",
-      "url": "https://jobs.ashbyhq.com/deepgram/dc8693b5-72ce-4ca3-ab15-9c8434d35da1",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "netic-full-stack-software-engineer-intern",
-      "company": "Netic",
-      "title": "Full-Stack Software Engineer Intern",
-      "location": "San Francisco, CA",
-      "workmode": "unspecified",
-      "season": "winter-2027",
-      "url": "https://jobs.ashbyhq.com/netic/f291394a-f3c5-4f46-9b87-77aea3d487ef?embed=true",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "janestreet-machine-learning-engineer-intern",
-      "company": "Jane Street",
-      "title": "Machine Learning Engineer Intern",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.janestreet.com/join-jane-street/position/8611307002/",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 22,
-        "ml": 71,
-        "hwv": 22
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as ML; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "janestreet-machine-learning-researcher-intern",
-      "company": "Jane Street",
-      "title": "Machine Learning Researcher Intern",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.janestreet.com/join-jane-street/position/8384490002/",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": true,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 25,
-        "ml": 74,
-        "hwv": 25
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as ML; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "janestreet-software-engineer-intern",
-      "company": "Jane Street",
-      "title": "Software Engineer Intern",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.janestreet.com/join-jane-street/position/8599644002/",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "palantir-forward-deployed-software-engineer-intern",
-      "company": "Palantir Technologies",
-      "title": "Forward Deployed Software Engineer Intern",
-      "location": "Washington, D.C.",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://jobs.lever.co/palantir/9e40d77f-b07c-437b-98e7-def9b0184d89",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": true,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "palantir-software-engineer-intern-defense-tech",
-      "company": "Palantir Technologies",
-      "title": "Software Engineer Intern, Defense Tech",
-      "location": "New York, NY",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://jobs.lever.co/palantir/8bcf4f33-0a79-4248-bbfd-49ac4be9dd8e",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": true,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "palantir-software-engineer-intern-infrastructure",
-      "company": "Palantir Technologies",
-      "title": "Software Engineer Intern, Infrastructure",
-      "location": "Palo Alto, CA",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://jobs.lever.co/palantir/f221738b-e97c-4ce3-a12a-17ada2b855e4",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "palantir-software-engineer-intern-production-infrastructure",
-      "company": "Palantir Technologies",
-      "title": "Software Engineer Intern, Production Infrastructure",
-      "location": "Seattle, WA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://jobs.lever.co/palantir/373367a9-3160-49d8-b7af-2efec062fad1",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "akunacapital-quantitative-research-intern",
-      "company": "Akuna Capital",
-      "title": "Quantitative Research Intern",
-      "location": "Chicago",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://akunacapital.com/careers/job/8036614/?gh_jid=8036614",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "U.S. Citizenship is Required",
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 15,
-        "ml": 60,
-        "hwv": 15
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as ML; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "oldmission-software-engineer-intern",
-      "company": "Old Mission",
-      "title": "Software Engineer Intern",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.oldmissioncapital.com/careers/?gh_jid=7796180003",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "imc-quantitative-research-intern",
-      "company": "IMC",
-      "title": "Quantitative Research Intern",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.imc.com/us/careers/jobs/4907399101",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": true,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as ML; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "imc-hardware-engineer-intern",
-      "company": "IMC",
-      "title": "Hardware Engineer Intern",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://www.imc.com/us/careers/jobs/4823945101",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": true,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 25,
-        "ml": 25,
-        "hwv": 74
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
       "application": {
@@ -58223,7 +56605,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 77,
+        "swe": 76,
         "ml": 27,
         "hwv": 27
       },
@@ -58344,16 +56726,14 @@
       "pay": "",
       "eligibility": {
         "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
+        "citizenship": "Citizenship or residency required",
+        "class_year": []
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 65,
+        "ml": 20,
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -58520,7 +56900,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 88,
+        "swe": 87,
         "ml": 26,
         "hwv": 26
       },
@@ -58606,9 +56986,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -58650,7 +57030,7 @@
         "Rust"
       ],
       "tracks": {
-        "swe": 82,
+        "swe": 81,
         "ml": 24,
         "hwv": 24
       },
@@ -58694,7 +57074,7 @@
       "tags": [],
       "tracks": {
         "swe": 81,
-        "ml": 24,
+        "ml": 23,
         "hwv": 32
       },
       "best_track": "swe",
@@ -58780,8 +57160,8 @@
       "tags": [],
       "tracks": {
         "swe": 85,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -58871,7 +57251,7 @@
       "tracks": {
         "swe": 89,
         "ml": 36,
-        "hwv": 24
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -58915,8 +57295,8 @@
       ],
       "tracks": {
         "swe": 36,
-        "ml": 24,
-        "hwv": 94
+        "ml": 23,
+        "hwv": 93
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -59454,135 +57834,6 @@
       "snippet": "About Neuralink: We are creating devices that enable a bi-directional interface with the brain. These devices allow us to restore movement to the paralyzed, restore sight to the blind, and revolutionize how humans interact with their digital world. Team Description: The Brain Com"
     },
     {
-      "id": "phonely-software-engineer-intern",
-      "company": "Phonely",
-      "title": "Software Engineer Intern",
-      "location": "San Francisco, CA",
-      "workmode": "unspecified",
-      "season": "fall-2026",
-      "url": "https://jobs.ashbyhq.com/phonely/c83696cb-ca3a-4a9d-9e87-bfcf4f79fef5?embed=true",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 92,
-        "ml": 22,
-        "hwv": 26
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "strong",
-      "why": "The title reads as SWE; the description names api, aws, backend.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Software Engineer Internship This is a high-impact internship where you\u2019ll write real code, ship features, and see your work in production. Note: This is an in-office role, 5 days a week in San Francisco. What You\u2019ll Do - Investigate and troubleshoot real customer issues across f"
-    },
-    {
-      "id": "appian-product-manager-intern",
-      "company": "Appian",
-      "title": "Product Manager Intern",
-      "location": "McLean, VA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://careers.appian.com/jobs/8041243-product-manager-intern-",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": false,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 31,
-        "ml": 27,
-        "hwv": 39
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "The description names asic, coverage, ddr; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Here at Appian, our values of Intensity and Excellence define who we are. We set high standards and live up to them, ensuring that everything we do is done with care and quality. We approach every challenge with ambition and commitment, holding ourselves and each other accountabl"
-    },
-    {
-      "id": "appian-software-engineering-intern",
-      "company": "Appian",
-      "title": "Software Engineering Intern",
-      "location": "McLean, VA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://job-boards.greenhouse.io/appian/jobs/8041237",
-      "source": "vanshb03",
-      "posted": "2026-07-24",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": false,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 39
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Here at Appian, our values of Intensity and Excellence define who we are. We set high standards and live up to them, ensuring that everything we do is done with care and quality. We approach every challenge with ambition and commitment, holding ourselves and each other accountabl"
-    },
-    {
       "id": "tenstorrent-software-engineering-intern-power-modeling-ai-tools",
       "company": "Tenstorrent",
       "title": "Software Engineering Intern, Power Modeling & AI Tools",
@@ -59758,7 +58009,7 @@
       "title": "DevOps Engineering Intern",
       "location": "Dallas, TX",
       "workmode": "unspecified",
-      "season": null,
+      "season": "not-stated",
       "url": "https://copart.wd12.myworkdayjobs.com/en-US/copart/job/Dallas-TX---Headquarters/DevOps-Engineering-Intern_JR109490",
       "source": "vanshb03",
       "posted": "2026-08-21",
@@ -59774,7 +58025,7 @@
       "tracks": {
         "swe": 87,
         "ml": 42,
-        "hwv": 22
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -59892,7 +58143,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -59937,7 +58187,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -59982,7 +58231,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -60027,7 +58275,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -60072,7 +58319,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -60115,7 +58361,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -60158,7 +58403,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -60201,7 +58445,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -60244,7 +58487,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -60289,7 +58531,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-07",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -60319,6 +58560,1145 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "needs_human: Paycom confirmation 2026-09-07 names neither company nor role; clientkey F621CC54DE031A5CBB718202D5216C37"
+      }
+    },
+    {
+      "id": "analogdevices-mixed-signal-engineer-intern",
+      "company": "Analog Devices",
+      "title": "Mixed Signal Engineer Intern",
+      "location": "Wilmington, MA \u00b7 2 Locations",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://analogdevices.wd1.myworkdayjobs.com/en-US/External/job/US-MA-Wilmington/Mixed-Signal-Engineer-Intern_R265299",
+      "source": "workday",
+      "posted": "2026-08-20",
+      "found": "2026-09-08",
+      "paid": true,
+      "pay": "$22 \u2013 $41",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "Python",
+        "C",
+        "PyTorch"
+      ],
+      "tracks": {
+        "swe": 24,
+        "ml": 41,
+        "hwv": 41
+      },
+      "best_track": "ml",
+      "also_tracks": [
+        "hwv"
+      ],
+      "tier": "stretch",
+      "why": "The description names machine learning, model, pytorch; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Are you a problem solver looking for a hands-on internship position with a market-leading company that will help develop your career and reward you intellectually and professionally? About Analog Devices Analog Devices, Inc. (NASDAQ: ADI ) is a global semiconductor leader that br"
+    },
+    {
+      "id": "capitalone-current-master-s-ai-engineering-internship-program-summer-2027",
+      "company": "Capital One",
+      "title": "Current Master's, AI Engineering Internship Program - Summer 2027",
+      "location": "New York, NY \u00b7 3 Locations",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/New-York-NY/Current-Master-s--AI-Engineering-Internship-Program---Summer-2027_R249109-1",
+      "source": "workday",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": true,
+      "pay": "$147,000 \u2013 $147,000",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "Python",
+        "Java",
+        "AWS",
+        "PyTorch",
+        "LLM"
+      ],
+      "tracks": {
+        "swe": 89,
+        "ml": 94,
+        "hwv": 40
+      },
+      "best_track": "ml",
+      "also_tracks": [
+        "swe"
+      ],
+      "tier": "strong",
+      "why": "The title reads as ML; the description names computer vision, fine-tun, gpu.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Current Master's, AI Engineering Internship Program - Summer 2027 Key Role Details This is a full-time paid internship program spanning twelve weeks from June through August. Participation in the internship requires that you are located in the continental United States with in-pe"
+    },
+    {
+      "id": "micron-intern-dram-customer-enablement-engineering",
+      "company": "Micron Technology",
+      "title": "Intern - DRAM Customer Enablement Engineering",
+      "location": "Boise, ID - Main Site",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---DRAM-Customer-Enablement-Engineering_JR107740",
+      "source": "workday",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "Python",
+        "C++",
+        "C",
+        "SQL",
+        "Firmware",
+        "Linux"
+      ],
+      "tracks": {
+        "swe": 44,
+        "ml": 27,
+        "hwv": 44
+      },
+      "best_track": "swe",
+      "also_tracks": [
+        "hwv"
+      ],
+      "tier": "stretch",
+      "why": "The description names aws, cloud, linux; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Our vision is to transform how the world uses information to enrich life for all . Micron Technology is a world leader in innovating memory and storage solutions that accelerate the transformation of information into intelligence, inspiring the world to learn, communicate and adv"
+    },
+    {
+      "id": "micron-intern-photomask-sustaining-engineering",
+      "company": "Micron Technology",
+      "title": "Intern - Photomask Sustaining Engineering",
+      "location": "Boise, ID - Main Site",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Photomask-Sustaining-Engineering_JR108456",
+      "source": "workday",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "Python",
+        "SQL"
+      ],
+      "tracks": {
+        "swe": 40,
+        "ml": 35,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [
+        "ml"
+      ],
+      "tier": "stretch",
+      "why": "It is an internship or co-op posting; the description names aws, rest, sql.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Our vision is to transform how the world uses information to enrich life for all . Micron Technology is a world leader in innovating memory and storage solutions that accelerate the transformation of information into intelligence, inspiring the world to learn, communicate and adv"
+    },
+    {
+      "id": "micron-intern-software-engineer",
+      "company": "Micron Technology",
+      "title": "Intern - Software Engineer",
+      "location": "Boise, ID - Main Site",
+      "workmode": "unspecified",
+      "season": "not-stated",
+      "url": "https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---Software-Engineer_JR108550",
+      "source": "workday",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "Python",
+        "C",
+        "JavaScript",
+        "SQL",
+        "LLM"
+      ],
+      "tracks": {
+        "swe": 97,
+        "ml": 48,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; the description names api, aws, cloud.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      },
+      "snippet": "Our vision is to transform how the world uses information to enrich life for all . Micron Technology is a world leader in innovating memory and storage solutions that accelerate the transformation of information into intelligence, inspiring the world to learn, communicate and adv"
+    },
+    {
+      "id": "coxenterprises-software-engineering-intern-summer-2027-austin-tx",
+      "company": "Cox Enterprises",
+      "title": "Software Engineering Intern - Summer 2027 (Austin, TX)",
+      "location": "Austin TX",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://cox.wd1.myworkdayjobs.com/en-US/Cox_External_Career_Site_1/job/Austin-TX/Software-Engineering-Intern---Summer-2027--Austin--TX-_R202682168",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 68,
+        "ml": 24,
+        "hwv": 24
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "merck-2027-future-talent-program-nonclinical-drug-safety-data-scientist-intern",
+      "company": "Merck & Co.",
+      "title": "2027 Future Talent Program - Nonclinical Drug Safety Data Scientist - Intern",
+      "location": "USA - Massachusetts - Boston (MA Parcel B Laboratory)",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Massachusetts---Boston-MA-Parcel-B-Laboratory/XMLNAME-2027-Future-Talent-Program---Nonclinical-Drug-Safety-Data-Scientist---Intern_R412861",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 24,
+        "ml": 68,
+        "hwv": 24
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "merck-2027-future-talent-program-medical-data-scientist-intern",
+      "company": "Merck & Co.",
+      "title": "2027 Future Talent Program - Medical Data Scientist - Intern",
+      "location": "USA - Pennsylvania - North Wales (Upper Gwynedd)",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Pennsylvania---North-Wales-Upper-Gwynedd/XMLNAME-2027-Future-Talent-Program---Medical-Data-Scientist---Intern_R412403",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 24,
+        "ml": 68,
+        "hwv": 24
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "cox-software-engineering-intern-summer-2027-irvine-ca",
+      "company": "Cox",
+      "title": "Software Engineering Intern - Summer 2027 (Irvine, CA)",
+      "location": "Irvine CA",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Irvine-CA/Software-Engineering-Intern---Summer-2027--Irvine--CA-_R202682173",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 68,
+        "ml": 24,
+        "hwv": 24
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "cox-software-engineering-intern-summer-2027-draper-ut",
+      "company": "Cox",
+      "title": "Software Engineering Intern - Summer 2027 (Draper UT)",
+      "location": "Draper UT",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Draper-UT/Software-Engineering-Intern---Summer-2027--Draper-UT-_R202682169",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "dickssportinggoods-software-engineer-intern-corporate-internship",
+      "company": "Dick's Sporting Goods",
+      "title": "Software Engineer Intern - Corporate Internship",
+      "location": "Pittsburgh, PA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://dickssportinggoods.wd1.myworkdayjobs.com/en-US/DSG/job/Customer-Support-Center/Software-Engineering---Summer-2027-Corporate-Internship_202608792-1",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "merck-optical-imaging-data-science-intern",
+      "company": "Merck",
+      "title": "Optical Imaging Data Science Intern",
+      "location": "Boston, MA",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Massachusetts---Boston-MA-Parcel-B-Laboratory/XMLNAME-2027-Future-Talent-Program---Optical-Imaging-Data-Science-Intern---Intern_R412885",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 24,
+        "ml": 68,
+        "hwv": 24
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "cox-software-engineering-intern-summer-2027-austin-tx",
+      "company": "Cox",
+      "title": "Software Engineering Intern - Summer 2027 (Austin, TX)",
+      "location": "Austin TX",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Austin-TX/Software-Engineering-Intern---Summer-2027--Austin--TX-_R202682168",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 68,
+        "ml": 24,
+        "hwv": 24
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "cox-data-scientist-intern-summer-2027-atlanta-ga",
+      "company": "Cox",
+      "title": "Data Scientist Intern - Summer 2027 (Atlanta, GA)",
+      "location": "Atlanta GA",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Atlanta-GA/Data-Scientist-Intern---Summer-2027--Atlanta--GA-_R202682164",
+      "source": "earlycareerradar",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 24,
+        "ml": 68,
+        "hwv": 24
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "nxp-microcontrollers-system-engineering-intern",
+      "company": "NXP Semiconductors",
+      "title": "Microcontrollers System Engineering Intern",
+      "location": "Austin, TX",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://nxp.wd3.myworkdayjobs.com/en-US/careers/job/Austin-Oakhill-Office/Microcontrollers-System-Engineering-Intern---Summer-2027_R-10066400-1",
+      "source": "earlycareerradar",
+      "posted": "2026-09-07",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "nxp-digital-validation-intern-summer-2027",
+      "company": "NXP Semiconductors",
+      "title": "Digital Validation Intern - Summer 2027",
+      "location": "Austin (Oakhill, Office) \u00b7 Austin, TX",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://nxp.wd3.myworkdayjobs.com/en-US/careers/job/Austin-Oakhill-Office/Digital-Validation-Intern---Summer-2027_R-10065557",
+      "source": "earlycareerradar",
+      "posted": "2026-09-07",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 51
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "stretch",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "nxp-digital-verification-intern-summer-2027",
+      "company": "NXP Semiconductors",
+      "title": "Digital Verification Intern - Summer 2027",
+      "location": "Austin (Oakhill, Office) \u00b7 Austin, TX",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://nxp.wd3.myworkdayjobs.com/en-US/careers/job/Austin-Oakhill-Office/Digital-Verification-Intern---Summer-2027_R-10065552",
+      "source": "earlycareerradar",
+      "posted": "2026-09-07",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 51
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "stretch",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "honeywell-information-systems-intern-it-cyber-engineer-data-science",
+      "company": "Honeywell",
+      "title": "Information Systems Intern - IT - Cyber Engineer & Data Science",
+      "location": "Remote (US) \u00b7 United States",
+      "workmode": "remote",
+      "season": null,
+      "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/155554",
+      "source": "earlycareerradar",
+      "posted": "2026-08-25",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "ibm-federal-developer-intern-2027",
+      "company": "IBM",
+      "title": "Federal Developer Intern 2027",
+      "location": "Herndon, United States",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://careers.ibm.com/careers/JobDetail?jobId=127714",
+      "source": "earlycareerradar",
+      "posted": "2026-08-10",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": "Citizenship or residency required",
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 60,
+        "ml": 15,
+        "hwv": 15
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "northropgrumman-2027-systems-engineering-intern-huntsville-al",
+      "company": "Northrop Grumman",
+      "title": "2027 Systems Engineering Intern- Huntsville AL",
+      "location": "United States-Alabama-Huntsville",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Alabama-Huntsville/XMLNAME-2027-Systems-Engineering-Intern--Huntsville-AL_R10249774",
+      "source": "earlycareerradar",
+      "posted": null,
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": "Citizenship or residency required",
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 65,
+        "ml": 20,
+        "hwv": 20
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "northropgrumman-2027-systems-engineer-intern-colorado-springs-co",
+      "company": "Northrop Grumman",
+      "title": "2027 Systems Engineer Intern - Colorado Springs CO",
+      "location": "United States-Colorado-Colorado ...",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Colorado-Colorado-Springs/XMLNAME-2027--Systems-Engineer-Intern---Colorado-Springs-CO_R10249777",
+      "source": "earlycareerradar",
+      "posted": null,
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "gileadsciences-intern-development-cds-ai-research-center",
+      "company": "Gilead Sciences",
+      "title": "Intern - Development - CDS AI Research Center",
+      "location": "United States - California - Foster City",
+      "workmode": "unspecified",
+      "season": "not-stated",
+      "url": "https://gilead.wd1.myworkdayjobs.com/gileadcareers/job/United-States---California---Foster-City/Intern---Development---CDS-AI-Research-Center_R0054721",
+      "source": "zshah101",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 24,
+        "ml": 68,
+        "hwv": 24
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "gileadsciences-intern-cfo-it-ai-engineer",
+      "company": "Gilead Sciences",
+      "title": "Intern - CFO - IT (AI Engineer)",
+      "location": "United States - North Carolina - Raleigh",
+      "workmode": "unspecified",
+      "season": "not-stated",
+      "url": "https://gilead.wd1.myworkdayjobs.com/gileadcareers/job/United-States---North-Carolina---Raleigh/Intern---CFO---IT--AI-Engineer-_R0054744",
+      "source": "zshah101",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": false,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 24,
+        "ml": 68,
+        "hwv": 24
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "atkinsralis-water-infrastructure-engineering-intern-summer-2027",
+      "company": "AtkinsR\u00e9alis",
+      "title": "Water Infrastructure Engineering Intern - Summer 2027",
+      "location": "US.GA.Atlanta.2018 Powers Ferry Rd",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://slihrms.wd3.myworkdayjobs.com/careers/job/USGAAtlanta2018-Powers-Ferry-Rd/Water-Infrastructure-Engineering-Intern---Summer-2027_R-163480-1",
+      "source": "zshah101",
+      "posted": "2026-09-08",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "stryker-summer-2027-internship-data-science-remote",
+      "company": "Stryker",
+      "title": "Summer 2027 Internship - Data Science - Remote",
+      "location": "Florida, Virtual Address",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/Florida-Virtual-Address/Data-Science-Intern_R572731",
+      "source": "zshah101",
+      "posted": "2026-09-01",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
+      }
+    },
+    {
+      "id": "stryker-summer-2027-internship-software-engineering-commercial-operations-texas",
+      "company": "Stryker",
+      "title": "Summer 2027 Internship -  Software Engineering, Commercial Operations - Texas",
+      "location": "Flower Mound, Texas",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/Flower-Mound-Texas/Commercial-Operations-Software-Engineering-Intern---Flower-Mound--TX_R572941",
+      "source": "zshah101",
+      "posted": "2026-09-02",
+      "found": "2026-09-08",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "none",
+        "applied": null,
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": ""
       }
     }
   ]
