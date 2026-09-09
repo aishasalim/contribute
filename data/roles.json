@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-08T14:01:13Z",
+    "generated": "2026-09-09T14:26:02Z",
     "updated_by": "harvest.py",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -3301,9 +3301,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 14,
-        "ml": 14,
-        "hwv": 14
+        "swe": 13,
+        "ml": 13,
+        "hwv": 13
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -3583,7 +3583,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 16,
+        "swe": 15,
         "ml": 40,
         "hwv": 20
       },
@@ -4178,9 +4178,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 61,
-        "ml": 16,
-        "hwv": 16
+        "swe": 60,
+        "ml": 15,
+        "hwv": 15
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -4496,7 +4496,7 @@
       ],
       "tracks": {
         "swe": 22,
-        "ml": 72,
+        "ml": 71,
         "hwv": 22
       },
       "best_track": "ml",
@@ -5076,7 +5076,7 @@
         "AWS"
       ],
       "tracks": {
-        "swe": 85,
+        "swe": 84,
         "ml": 27,
         "hwv": 23
       },
@@ -5123,7 +5123,7 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 85,
+        "swe": 84,
         "ml": 27,
         "hwv": 23
       },
@@ -5352,9 +5352,9 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 40,
+        "swe": 39,
         "ml": 27,
-        "hwv": 40
+        "hwv": 39
       },
       "best_track": "swe",
       "also_tracks": [
@@ -5486,7 +5486,7 @@
       "tags": [],
       "tracks": {
         "swe": 32,
-        "ml": 24,
+        "ml": 23,
         "hwv": 36
       },
       "best_track": "hwv",
@@ -5575,7 +5575,7 @@
       "tracks": {
         "swe": 44,
         "ml": 31,
-        "hwv": 40
+        "hwv": 39
       },
       "best_track": "swe",
       "also_tracks": [
@@ -5622,7 +5622,7 @@
       "tracks": {
         "swe": 44,
         "ml": 27,
-        "hwv": 40
+        "hwv": 39
       },
       "best_track": "swe",
       "also_tracks": [
@@ -5761,9 +5761,9 @@
         "SQL"
       ],
       "tracks": {
-        "swe": 40,
+        "swe": 39,
         "ml": 31,
-        "hwv": 40
+        "hwv": 39
       },
       "best_track": "swe",
       "also_tracks": [
@@ -6124,9 +6124,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -6683,7 +6683,7 @@
       "tracks": {
         "swe": 22,
         "ml": 22,
-        "hwv": 47
+        "hwv": 46
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -6928,8 +6928,8 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 61,
-        "ml": 16,
+        "swe": 60,
+        "ml": 15,
         "hwv": 40
       },
       "best_track": "swe",
@@ -7067,7 +7067,7 @@
       "tracks": {
         "swe": 31,
         "ml": 23,
-        "hwv": 85
+        "hwv": 84
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -7112,7 +7112,7 @@
       "tracks": {
         "swe": 23,
         "ml": 23,
-        "hwv": 40
+        "hwv": 39
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -7483,9 +7483,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -7867,7 +7867,7 @@
         "React"
       ],
       "tracks": {
-        "swe": 44,
+        "swe": 43,
         "ml": 19,
         "hwv": 19
       },
@@ -8907,9 +8907,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
-        "ml": 68,
-        "hwv": 23
+        "swe": 22,
+        "ml": 67,
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -9183,7 +9183,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
+        "swe": 26,
         "ml": 35,
         "hwv": 31
       },
@@ -9271,9 +9271,9 @@
         "Python"
       ],
       "tracks": {
-        "swe": 23,
-        "ml": 68,
-        "hwv": 23
+        "swe": 22,
+        "ml": 67,
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -9457,8 +9457,8 @@
       "tags": [],
       "tracks": {
         "swe": 47,
-        "ml": 23,
-        "hwv": 23
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -9638,13 +9638,11 @@
       "tags": [],
       "tracks": {
         "swe": 26,
-        "ml": 35,
+        "ml": 34,
         "hwv": 39
       },
       "best_track": "hwv",
-      "also_tracks": [
-        "ml"
-      ],
+      "also_tracks": [],
       "tier": "stretch",
       "why": "The description names asic, soc, validation; it is an internship or co-op posting.",
       "why_by": "auto",
@@ -10480,7 +10478,7 @@
         "C"
       ],
       "tracks": {
-        "swe": 61,
+        "swe": 60,
         "ml": 24,
         "hwv": 20
       },
@@ -10527,7 +10525,7 @@
       "tags": [],
       "tracks": {
         "swe": 60,
-        "ml": 20,
+        "ml": 19,
         "hwv": 32
       },
       "best_track": "swe",
@@ -10894,9 +10892,9 @@
         "JavaScript"
       ],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -11170,9 +11168,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -12576,7 +12574,7 @@
       "tags": [],
       "tracks": {
         "swe": 22,
-        "ml": 27,
+        "ml": 26,
         "hwv": 35
       },
       "best_track": "hwv",
@@ -12841,9 +12839,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
-        "ml": 68,
-        "hwv": 23
+        "swe": 22,
+        "ml": 67,
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -12890,7 +12888,7 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 85,
+        "swe": 84,
         "ml": 23,
         "hwv": 31
       },
@@ -13551,9 +13549,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -14529,7 +14527,7 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -14571,7 +14569,7 @@
       "tracks": {
         "swe": 70,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -15458,9 +15456,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -15586,9 +15584,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -15628,9 +15626,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 71,
-        "hwv": 26
+        "swe": 70,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [
@@ -15672,9 +15670,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 17,
-        "ml": 62,
-        "hwv": 17
+        "swe": 16,
+        "ml": 61,
+        "hwv": 16
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -15714,9 +15712,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -15756,9 +15754,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
-        "hwv": 26
+        "swe": 25,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -15798,9 +15796,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 71,
-        "hwv": 26
+        "swe": 70,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [
@@ -15970,9 +15968,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
-        "hwv": 26
+        "swe": 25,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -16814,7 +16812,7 @@
       ],
       "tracks": {
         "swe": 86,
-        "ml": 21,
+        "ml": 20,
         "hwv": 25
       },
       "best_track": "swe",
@@ -16908,7 +16906,7 @@
         "React"
       ],
       "tracks": {
-        "swe": 93,
+        "swe": 92,
         "ml": 43,
         "hwv": 27
       },
@@ -17059,9 +17057,9 @@
         "JavaScript"
       ],
       "tracks": {
-        "swe": 97,
-        "ml": 27,
-        "hwv": 27
+        "swe": 96,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -17193,7 +17191,7 @@
         "C"
       ],
       "tracks": {
-        "swe": 68,
+        "swe": 67,
         "ml": 27,
         "hwv": 31
       },
@@ -18195,7 +18193,7 @@
       ],
       "tracks": {
         "swe": 75,
-        "ml": 26,
+        "ml": 25,
         "hwv": 38
       },
       "best_track": "swe",
@@ -18734,7 +18732,7 @@
       ],
       "tracks": {
         "swe": 77,
-        "ml": 41,
+        "ml": 40,
         "hwv": 49
       },
       "best_track": "swe",
@@ -18949,7 +18947,7 @@
         "Compilers"
       ],
       "tracks": {
-        "swe": 41,
+        "swe": 40,
         "ml": 49,
         "hwv": 49
       },
@@ -19052,7 +19050,7 @@
       "tracks": {
         "swe": 24,
         "ml": 49,
-        "hwv": 41
+        "hwv": 40
       },
       "best_track": "ml",
       "also_tracks": [
@@ -19109,7 +19107,7 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 45,
+        "swe": 44,
         "ml": 94,
         "hwv": 36
       },
@@ -19459,7 +19457,7 @@
       "tracks": {
         "swe": 32,
         "ml": 49,
-        "hwv": 41
+        "hwv": 40
       },
       "best_track": "ml",
       "also_tracks": [
@@ -19512,7 +19510,7 @@
       "tracks": {
         "swe": 93,
         "ml": 27,
-        "hwv": 32
+        "hwv": 31
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -19705,7 +19703,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 41
+        "hwv": 40
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -19757,7 +19755,7 @@
       "tracks": {
         "swe": 31,
         "ml": 35,
-        "hwv": 52
+        "hwv": 51
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -19804,7 +19802,7 @@
       "tracks": {
         "swe": 68,
         "ml": 23,
-        "hwv": 28
+        "hwv": 27
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -19851,7 +19849,7 @@
       "tracks": {
         "swe": 64,
         "ml": 85,
-        "hwv": 28
+        "hwv": 27
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -19895,8 +19893,8 @@
       "tags": [],
       "tracks": {
         "swe": 64,
-        "ml": 28,
-        "hwv": 28
+        "ml": 27,
+        "hwv": 27
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -19947,7 +19945,7 @@
       ],
       "tracks": {
         "swe": 23,
-        "ml": 32,
+        "ml": 31,
         "hwv": 40
       },
       "best_track": "hwv",
@@ -19995,8 +19993,8 @@
         "C"
       ],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
+        "swe": 67,
+        "ml": 22,
         "hwv": 35
       },
       "best_track": "swe",
@@ -20017,51 +20015,6 @@
         "notes": ""
       },
       "snippet": "Date Posted: 2026-08-27 Country: United States of America Location: US-IA-CEDAR RAPIDS-130 ~ 5350 C Ave NE ~ BLDG 130 Position Role Type: Onsite U.S. Citizen, U.S. Person, or Immigration Status Requirements: U.S. citizenship is required, as only U.S. citizens are authorized to ac"
-    },
-    {
-      "id": "rtx-electro-optic-intern-summer-2027",
-      "company": "RTX",
-      "title": "Electro-Optic Intern (Summer 2027)",
-      "location": "US-AZ-TUCSON-9070 ~ 9070 S Rita Rd ~ BLDG 9070",
-      "workmode": "onsite",
-      "season": "summer-2027",
-      "url": "https://globalhr.wd5.myworkdayjobs.com/Private_Posting_No_TMP/job/US-AZ-TUCSON-9070--9070-S-Rita-Rd--BLDG-9070/Electro-Optic-Intern--Summer-2027-_01862487",
-      "source": "workday",
-      "posted": "2026-08-25",
-      "found": "2026-09-07",
-      "paid": true,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "security clearance",
-        "class_year": [
-          "2026"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 18,
-        "ml": 26,
-        "hwv": 35
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "The description names hardware, simulation, soc; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Date Posted: 2026-08-25 Country: United States of America Location: US-AZ-TUCSON-9070 ~ 9070 S Rita Rd ~ BLDG 9070 Position Role Type: Onsite U.S. Citizen, U.S. Person, or Immigration Status Requirements: Active and transferable U.S. government issued security clearance is requir"
     },
     {
       "id": "rtx-intern-systems-engineering-2027",
@@ -20185,8 +20138,8 @@
         "C"
       ],
       "tracks": {
-        "swe": 66,
-        "ml": 21,
+        "swe": 65,
+        "ml": 20,
         "hwv": 33
       },
       "best_track": "swe",
@@ -20233,7 +20186,7 @@
         "C++"
       ],
       "tracks": {
-        "swe": 62,
+        "swe": 61,
         "ml": 21,
         "hwv": 21
       },
@@ -20283,7 +20236,7 @@
       ],
       "tracks": {
         "swe": 70,
-        "ml": 21,
+        "ml": 20,
         "hwv": 33
       },
       "best_track": "swe",
@@ -20385,7 +20338,7 @@
       ],
       "tracks": {
         "swe": 61,
-        "ml": 21,
+        "ml": 20,
         "hwv": 29
       },
       "best_track": "swe",
@@ -21654,7 +21607,7 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
+        "ml": 23,
         "hwv": 48
       },
       "best_track": "swe",
@@ -22005,7 +21958,7 @@
       "tracks": {
         "swe": 27,
         "ml": 27,
-        "hwv": 67
+        "hwv": 66
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -23115,9 +23068,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -23157,9 +23110,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23201,9 +23154,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23245,8 +23198,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "hwv",
@@ -23287,9 +23240,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23332,8 +23285,8 @@
       "tags": [],
       "tracks": {
         "swe": 76,
-        "ml": 27,
-        "hwv": 27
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23375,9 +23328,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -23419,9 +23372,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23464,8 +23417,8 @@
       "tags": [],
       "tracks": {
         "swe": 76,
-        "ml": 27,
-        "hwv": 27
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23509,8 +23462,8 @@
         "FPGA"
       ],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
+        "swe": 71,
+        "ml": 26,
         "hwv": 76
       },
       "best_track": "hwv",
@@ -23555,9 +23508,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23597,9 +23550,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
+        "swe": 26,
         "ml": 80,
-        "hwv": 27
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -23681,9 +23634,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23723,9 +23676,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23767,9 +23720,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23809,9 +23762,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23851,8 +23804,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 76
       },
       "best_track": "hwv",
@@ -23893,9 +23846,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -23937,9 +23890,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -23981,9 +23934,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24025,9 +23978,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24069,8 +24022,8 @@
         "FPGA"
       ],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
+        "swe": 64,
+        "ml": 19,
         "hwv": 69
       },
       "best_track": "hwv",
@@ -24157,9 +24110,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24199,9 +24152,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24241,9 +24194,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24283,9 +24236,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24326,8 +24279,8 @@
       "tags": [],
       "tracks": {
         "swe": 76,
-        "ml": 27,
-        "hwv": 27
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24367,9 +24320,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24409,9 +24362,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24451,9 +24404,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24493,9 +24446,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24577,9 +24530,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -24745,7 +24698,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 48,
+        "swe": 47,
         "ml": 23,
         "hwv": 23
       },
@@ -24873,7 +24826,7 @@
       "tracks": {
         "swe": 23,
         "ml": 23,
-        "hwv": 48
+        "hwv": 47
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -25043,9 +24996,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25219,7 +25172,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 76,
+        "swe": 75,
         "ml": 26,
         "hwv": 26
       },
@@ -25905,7 +25858,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 76
+        "hwv": 75
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -26459,7 +26412,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26845,7 +26798,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26933,7 +26886,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27021,7 +26974,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27109,7 +27062,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27153,7 +27106,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27283,7 +27236,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27417,7 +27370,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27461,7 +27414,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27549,7 +27502,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29171,7 +29124,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 51,
+        "swe": 50,
         "ml": 26,
         "hwv": 26
       },
@@ -30310,8 +30263,8 @@
       "tags": [],
       "tracks": {
         "swe": 64,
-        "ml": 44,
-        "hwv": 44
+        "ml": 43,
+        "hwv": 43
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30875,7 +30828,7 @@
       "tracks": {
         "swe": 26,
         "ml": 26,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -31391,7 +31344,7 @@
         "AWS"
       ],
       "tracks": {
-        "swe": 80,
+        "swe": 79,
         "ml": 26,
         "hwv": 26
       },
@@ -32029,9 +31982,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
-        "ml": 68,
-        "hwv": 23
+        "swe": 22,
+        "ml": 67,
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -32155,8 +32108,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
-        "ml": 23,
+        "swe": 22,
+        "ml": 22,
         "hwv": 72
       },
       "best_track": "hwv",
@@ -32577,9 +32530,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -32703,9 +32656,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -33125,9 +33078,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -33767,9 +33720,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -33811,9 +33764,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -33855,9 +33808,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -33899,9 +33852,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -33985,8 +33938,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -34071,9 +34024,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34157,9 +34110,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34201,9 +34154,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34245,9 +34198,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34290,8 +34243,8 @@
       "tags": [],
       "tracks": {
         "swe": 50,
-        "ml": 26,
-        "hwv": 26
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34331,9 +34284,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34415,8 +34368,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 75
       },
       "best_track": "hwv",
@@ -34457,9 +34410,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 64,
-        "hwv": 19
+        "swe": 63,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [
@@ -34503,9 +34456,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34547,9 +34500,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34589,9 +34542,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34631,9 +34584,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34673,9 +34626,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34715,9 +34668,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34757,9 +34710,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34801,9 +34754,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34843,9 +34796,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34977,11 +34930,11 @@
       "tracks": {
         "swe": 25,
         "ml": 25,
-        "hwv": 75
+        "hwv": 74
       },
       "best_track": "hwv",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as HW Verif; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -36032,7 +35985,7 @@
       "tags": [],
       "tracks": {
         "swe": 25,
-        "ml": 50,
+        "ml": 49,
         "hwv": 25
       },
       "best_track": "ml",
@@ -36119,7 +36072,7 @@
       "tracks": {
         "swe": 25,
         "ml": 25,
-        "hwv": 50
+        "hwv": 49
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -36159,7 +36112,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 50,
+        "swe": 49,
         "ml": 25,
         "hwv": 25
       },
@@ -36327,9 +36280,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
+        "swe": 66,
+        "ml": 21,
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36459,9 +36412,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
+        "swe": 66,
+        "ml": 21,
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36501,9 +36454,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
+        "swe": 66,
+        "ml": 21,
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36586,8 +36539,8 @@
       "tags": [],
       "tracks": {
         "swe": 46,
-        "ml": 22,
-        "hwv": 22
+        "ml": 21,
+        "hwv": 21
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -39497,9 +39450,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 21,
-        "ml": 66,
-        "hwv": 21
+        "swe": 20,
+        "ml": 65,
+        "hwv": 20
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -39539,9 +39492,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 21,
-        "ml": 66,
-        "hwv": 21
+        "swe": 20,
+        "ml": 65,
+        "hwv": 20
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -39669,9 +39622,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 21,
+        "swe": 20,
         "ml": 45,
-        "hwv": 21
+        "hwv": 20
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -39711,9 +39664,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 21,
+        "swe": 20,
         "ml": 70,
-        "hwv": 21
+        "hwv": 20
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -39798,7 +39751,7 @@
       ],
       "tracks": {
         "swe": 24,
-        "ml": 64,
+        "ml": 63,
         "hwv": 24
       },
       "best_track": "ml",
@@ -39969,7 +39922,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 64
+        "hwv": 63
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -40521,9 +40474,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40565,9 +40518,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40609,9 +40562,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40653,9 +40606,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40697,9 +40650,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40781,9 +40734,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 62,
-        "ml": 17,
-        "hwv": 17
+        "swe": 61,
+        "ml": 16,
+        "hwv": 16
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40823,9 +40776,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 62,
-        "ml": 17,
-        "hwv": 17
+        "swe": 61,
+        "ml": 16,
+        "hwv": 16
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40865,9 +40818,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40907,9 +40860,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -40954,8 +40907,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 24,
-        "ml": 24,
+        "swe": 23,
+        "ml": 23,
         "hwv": 63
       },
       "best_track": "hwv",
@@ -41080,9 +41033,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -42148,7 +42101,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 44,
+        "swe": 43,
         "ml": 19,
         "hwv": 19
       },
@@ -42232,9 +42185,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
+        "swe": 22,
         "ml": 72,
-        "hwv": 23
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -42757,8 +42710,8 @@
       "tags": [],
       "tracks": {
         "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -47868,7 +47821,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -48801,7 +48754,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 76,
+        "swe": 75,
         "ml": 26,
         "hwv": 26
       },
@@ -49013,9 +48966,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49139,9 +49092,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49392,8 +49345,8 @@
       "tags": [],
       "tracks": {
         "swe": 48,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50578,8 +50531,8 @@
       "tags": [],
       "tracks": {
         "swe": 75,
-        "ml": 26,
-        "hwv": 26
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50745,9 +50698,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50787,9 +50740,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -50829,9 +50782,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -50871,9 +50824,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50913,9 +50866,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -50955,9 +50908,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -51165,9 +51118,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -51207,9 +51160,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -51753,9 +51706,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 21,
+        "swe": 20,
         "ml": 70,
-        "hwv": 21
+        "hwv": 20
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -52089,9 +52042,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -52385,9 +52338,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -52639,9 +52592,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -52681,9 +52634,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -52765,9 +52718,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -53060,12 +53013,12 @@
       "tags": [],
       "tracks": {
         "swe": 25,
-        "ml": 75,
+        "ml": 74,
         "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as ML; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -53101,9 +53054,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56649,7 +56602,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56943,13 +56896,13 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
+        "swe": 74,
         "ml": 38,
         "hwv": 42
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -57117,7 +57070,7 @@
       "tags": [],
       "tracks": {
         "swe": 81,
-        "ml": 28,
+        "ml": 27,
         "hwv": 32
       },
       "best_track": "swe",
@@ -57205,7 +57158,7 @@
       ],
       "tracks": {
         "swe": 77,
-        "ml": 28,
+        "ml": 27,
         "hwv": 85
       },
       "best_track": "hwv",
