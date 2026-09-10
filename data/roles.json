@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-10T21:12:49Z",
+    "generated": "2026-09-10T21:50:16Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -62424,15 +62424,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Oracle HCM (Tradeweb tenant ecnf, job 301906). Filled by Claude 2026-09-10, submitted by Aisha."
       }
     },
     {
@@ -62722,15 +62722,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": "hwv",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Ashby. Filled by Claude 2026-09-10, submitted by Aisha. Hardware resume."
       }
     },
     {
@@ -69320,15 +69320,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Lever. Filled by Claude 2026-09-10, submitted by Aisha."
       }
     },
     {
@@ -70484,6 +70484,184 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Workday job 26010473; confirmation 2026-09-10. needs_human: confirm this is an internship and not a full-time development program."
+      }
+    },
+    {
+      "id": "rocket-flight-software-intern-summer-2027",
+      "company": "Rocket Lab",
+      "title": "Flight Software Intern Summer 2027",
+      "location": "Littleton, CO",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://job-boards.greenhouse.io/rocketlab/jobs/7989722003",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Greenhouse. Filled by Claude 2026-09-10, submitted by Aisha. GPA picked by Aisha."
+      }
+    },
+    {
+      "id": "rocket-electrical-engineering-intern-summer-2027",
+      "company": "Rocket Lab",
+      "title": "Electrical Engineering Intern Summer 2027",
+      "location": "Long Beach, CA",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://job-boards.greenhouse.io/rocketlab/jobs/7990683003",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": "hwv",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Greenhouse. Filled by Claude 2026-09-10, submitted by Aisha. Hardware resume."
+      }
+    },
+    {
+      "id": "tanium-software-engineering-intern-summer-2027",
+      "company": "Tanium",
+      "title": "Software Engineering Intern - Summer 2027",
+      "location": "Durham, NC (hybrid)",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "https://job-boards.greenhouse.io/tanium/jobs/8181017",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Greenhouse. Filled by Claude 2026-09-10, submitted by Aisha."
+      }
+    },
+    {
+      "id": "hudl-software-engineering-intern",
+      "company": "Hudl",
+      "title": "Software Engineering Intern",
+      "location": "Lincoln, NE",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://job-boards.greenhouse.io/hudl/jobs/8114314",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Greenhouse. Filled by Claude 2026-09-10, submitted by Aisha. On-site Lincoln May 17 to early Aug; $30-31/hr."
       }
     }
   ]
