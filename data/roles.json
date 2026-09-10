@@ -8,8 +8,8 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-10T15:22:33Z",
-    "updated_by": "harvest.py",
+    "generated": "2026-09-10T21:12:49Z",
+    "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
     "note": "Page 2 of contributie. Roles scored against three resumes. The spreadsheet stays the source of truth for application state; the radar is the source of truth for discovery and relevancy."
@@ -59592,7 +59592,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "rejected",
+        "status": "applied",
         "applied": "2026-09-09",
         "resume": null,
         "sheet_row": null,
@@ -59600,7 +59600,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Rejected same day 2026-09-09."
+        "notes": "Reverted 2026-09-10: the 2026-09-09 email is a receipt, not a rejection (\"unable to contact every applicant\"). Awaiting reply."
       }
     },
     {
@@ -61933,15 +61933,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "applied",
+        "applied": "2026-09-10",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Workday; confirmation 2026-09-10"
       },
       "snippet": "About Marvell Marvell\u2019s semiconductor solutions are the essential building blocks of the data infrastructure that connects our world. Across enterprise, cloud and AI, and carrier architectures, our innovative technology is enabling new possibilities. At Marvell, you can affect th"
     },
@@ -66768,15 +66768,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "applied",
+        "applied": "2026-09-10",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Workday; confirmation 2026-09-10"
       }
     },
     {
@@ -69488,15 +69488,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "applied",
+        "applied": "2026-09-10",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Rippling; confirmation 2026-09-10"
       }
     },
     {
@@ -70133,6 +70133,358 @@
         "notes": ""
       },
       "snippet": "Here at Appian, our values of Intensity and Excellence define who we are. We set high standards and live up to them, ensuring that everything we do is done with care and quality. We approach every challenge with ambition and commitment, holding ourselves and each other accountabl"
+    },
+    {
+      "id": "skyworks-data-engineering-summer-fall-co-op-june-dec-27",
+      "company": "Skyworks",
+      "title": "Data Engineering Summer/Fall Co-Op (June - Dec '27)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "confirmation from careers@skyworksinc.com 2026-09-10"
+      }
+    },
+    {
+      "id": "skyworks-data-engineering-summer-intern-may-aug-27",
+      "company": "Skyworks",
+      "title": "Data Engineering Summer Intern (May-Aug '27)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "confirmation from careers@skyworksinc.com 2026-09-10"
+      }
+    },
+    {
+      "id": "skyworks-data-engineering-winter-spring-co-op-jan-june-27",
+      "company": "Skyworks",
+      "title": "Data Engineering Winter/Spring Co-Op (Jan-June '27)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "confirmation from careers@skyworksinc.com 2026-09-10"
+      }
+    },
+    {
+      "id": "woodmackenzie-2027-internship-role-title-not-recorded-application-1-of-2",
+      "company": "Wood Mackenzie",
+      "title": "2027 internship (role title not recorded) - application 1 of 2",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (woodmac@myworkday.com). Two confirmations 2026-09-10 at 19:46 and 19:47 UTC, neither names a role. needs_human: record the role title."
+      }
+    },
+    {
+      "id": "woodmackenzie-2027-internship-role-title-not-recorded-application-2-of-2",
+      "company": "Wood Mackenzie",
+      "title": "2027 internship (role title not recorded) - application 2 of 2",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (woodmac@myworkday.com). Second of two confirmations 2026-09-10; no role named. needs_human: record the role title."
+      }
+    },
+    {
+      "id": "aristanetworks-2027-internship-role-title-not-recorded",
+      "company": "Arista Networks",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "SmartRecruiters; confirmation from notification@arista.com 2026-09-10 names no role. needs_human: record the role title."
+      }
+    },
+    {
+      "id": "allegion-summer-intern-systems-engineer",
+      "company": "Allegion",
+      "title": "Summer Intern - Systems Engineer",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday; confirmation 2026-09-10"
+      }
+    },
+    {
+      "id": "cigna-artificial-intelligence-innovation-development-program-aiidp-start-date-july-12-2027",
+      "company": "The Cigna Group",
+      "title": "Artificial Intelligence Innovation Development Program (AIIDP) - Start Date July 12, 2027 (26010473)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-10",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 18,
+        "ml": 18,
+        "hwv": 18
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "No sponsorship or citizenship bar is listed; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday job 26010473; confirmation 2026-09-10. needs_human: confirm this is an internship and not a full-time development program."
+      }
     }
   ]
 }
