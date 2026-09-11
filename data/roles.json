@@ -8,8 +8,8 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-11T16:20:06Z",
-    "updated_by": "harvest.py",
+    "generated": "2026-09-11T23:22:15Z",
+    "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
     "note": "Page 2 of contributie. Roles scored against three resumes. The spreadsheet stays the source of truth for application state; the radar is the source of truth for discovery and relevancy."
@@ -58916,7 +58916,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-09-09",
         "resume": null,
         "sheet_row": null,
@@ -58924,7 +58924,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Workday."
+        "notes": "2026-09-11: DICK'S closed the requisition (\"no longer looking to fill\"). Application will not proceed."
       }
     },
     {
@@ -69196,7 +69196,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-09-10",
         "resume": null,
         "sheet_row": null,
@@ -69204,7 +69204,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Workday (woodmac@myworkday.com). Two confirmations 2026-09-10 at 19:46 and 19:47 UTC, neither names a role. Aisha 2026-09-10: two consulting internship applications."
+        "notes": "Rejected 2026-09-11. Workday email names the roles: Supply Chain Intern (Houston/Boston, Summer 2027) and Consulting Co-Op (Houston) Jan-Jun 2027; both rejected."
       }
     },
     {
@@ -69240,7 +69240,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-09-10",
         "resume": null,
         "sheet_row": null,
@@ -69248,7 +69248,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Workday (woodmac@myworkday.com). Second of two confirmations 2026-09-10; no role named. Aisha 2026-09-10: two consulting internship applications."
+        "notes": "Rejected 2026-09-11. Workday email names the roles: Supply Chain Intern (Houston/Boston, Summer 2027) and Consulting Co-Op (Houston) Jan-Jun 2027; both rejected."
       }
     },
     {
@@ -69546,7 +69546,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Greenhouse. Filled by Claude 2026-09-10, submitted by Aisha. On-site Lincoln May 17 to early Aug; $30-31/hr."
+        "notes": "ATS: Greenhouse. Confirmation 2026-09-10."
       }
     },
     {
@@ -70337,7 +70337,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
+        "status": "in_progress",
         "applied": null,
         "resume": null,
         "sheet_row": null,
@@ -70345,7 +70345,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "HireVue assessment invite 2026-09-11; 4-day window, due 2026-09-15, no extensions. Link: https://sus.hvue.io/lQK3C139dfLhrmc3. needs_human: original application date not in inbox sweep."
       }
     },
     {
@@ -70513,15 +70513,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "applied",
+        "applied": "2026-09-11",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "ATS: Workday (ttc@myworkday.com). Confirmation 2026-09-11."
       }
     },
     {
@@ -72444,15 +72444,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "applied",
+        "applied": "2026-09-11",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "ATS: Workday (ttc@myworkday.com). Confirmation 2026-09-11."
       }
     },
     {
@@ -75910,6 +75910,364 @@
         "thank_you": false,
         "follow_up": false,
         "notes": ""
+      }
+    },
+    {
+      "id": "momentive-summer-2027-intern-software-development",
+      "company": "Momentive",
+      "title": "Summer 2027 Intern - Software Development",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Workday (momentive@myworkday.com). Confirmation 2026-09-11."
+      }
+    },
+    {
+      "id": "momentive-summer-2027-it-intern-digital-workplace-services",
+      "company": "Momentive",
+      "title": "Summer 2027 (IT) Intern - Digital Workplace Services",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Workday (momentive@myworkday.com). Confirmation 2026-09-11."
+      }
+    },
+    {
+      "id": "motorola-2027-software-engineering-summer-internship",
+      "company": "Motorola Solutions",
+      "title": "2027 Software Engineering Summer Internship",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Workday. Confirmation 2026-09-11."
+      }
+    },
+    {
+      "id": "motorola-dsp-digital-signal-processing-software-engineering-intern-summer-2027",
+      "company": "Motorola Solutions",
+      "title": "DSP (Digital Signal Processing) Software Engineering Intern - Summer 2027",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Workday. Confirmation 2026-09-11."
+      }
+    },
+    {
+      "id": "commure-software-engineering-intern-summer-2027",
+      "company": "Commure",
+      "title": "Software Engineering Intern, Summer 2027",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Ashby. Confirmation 2026-09-11."
+      }
+    },
+    {
+      "id": "bascomhunter-ai-ml-engineering-intern-baton-rouge-la-frederick-md",
+      "company": "Bascom Hunter Technologies",
+      "title": "AI/ML Engineering Intern (Baton Rouge, LA / Frederick, MD)",
+      "location": "Baton Rouge, LA / Frederick, MD",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 72,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [
+        "ml"
+      ],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: ADP. Confirmation 2026-09-11."
+      }
+    },
+    {
+      "id": "lasvegassands-intern-information-technology",
+      "company": "Las Vegas Sands",
+      "title": "Intern - Information Technology",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Workday (sands@myworkday.com). Confirmation 2026-09-11. Recruiter invited application after TAMU engineering career fair."
+      }
+    },
+    {
+      "id": "tradewebmarkets-summer-2027-ifi-application-software-engineering-internship-301906",
+      "company": "Tradeweb Markets",
+      "title": "Summer 2027 IFI Application Software Engineering Internship (301906)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-10",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Oracle Cloud. Job 301906. Confirmation 2026-09-10."
       }
     }
   ]
