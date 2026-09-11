@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-11T23:22:15Z",
+    "generated": "2026-09-11T23:30:16Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -76268,6 +76268,51 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "ATS: Oracle Cloud. Job 301906. Confirmation 2026-09-10."
+      }
+    },
+    {
+      "id": "garmin-software-engineering-intern-second-application-2026-09-11",
+      "company": "Garmin",
+      "title": "Software Engineering Intern (second application, 2026-09-11)",
+      "location": "Olathe, KS",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-11",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2026"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-11",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: iCIMS. Confirmation 2026-09-11. Second Garmin application; first was Software Engineer Intern on 2026-08-26 (job 19693)."
       }
     }
   ]
