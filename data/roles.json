@@ -8,8 +8,8 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-12T15:51:50Z",
-    "updated_by": "harvest.py",
+    "generated": "2026-09-12T16:23:42Z",
+    "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
     "note": "Page 2 of contributie. Roles scored against three resumes. The spreadsheet stays the source of truth for application state; the radar is the source of truth for discovery and relevancy."
@@ -1341,7 +1341,7 @@
       "why_by": "auto",
       "dead": true,
       "application": {
-        "status": "in_progress",
+        "status": "rejected",
         "applied": "2026-07-21",
         "resume": null,
         "sheet_row": 30,
@@ -1349,7 +1349,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Recruiter screening questions sent via SmartRecruiters 2026-09-08; answer pending."
+        "notes": "Rejected 2026-09-12 (SmartRecruiters). Req now titled \"Summer 2027 Intern - Software Engineering\"; same single application from 2026-07-21, recruiter questions answered 2026-09-08."
       }
     },
     {
@@ -49682,15 +49682,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "in_progress",
+        "applied": "2026-09-12",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "ATS: Workable. Confirmation 2026-09-12. Next step: Pluto AI screening by text or call, +1 (929) 600-6918, 5-10 min, required to be considered. Email did not name which Talentpluto role."
       }
     },
     {
@@ -77618,15 +77618,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "applied",
+        "applied": "2026-09-12",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "ATS: K&S careers (careers@kns.com). Job 11648. Confirmation 2026-09-12."
       }
     },
     {
@@ -78049,6 +78049,94 @@
         "thank_you": false,
         "follow_up": false,
         "notes": ""
+      }
+    },
+    {
+      "id": "talentpluto-forward-deployed-engineering-intern",
+      "company": "Talentpluto",
+      "title": "Forward Deployed Engineering Intern",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-12",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "in_progress",
+        "applied": "2026-09-12",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Workable. Confirmation 2026-09-12. Next step: Pluto AI screening by text or call, +1 (929) 600-6918, 5-10 min, required to be considered. Email did not name which Talentpluto role."
+      }
+    },
+    {
+      "id": "newsbreak-2027-internship-role-title-not-recorded",
+      "company": "NewsBreak",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-12",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-12",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "ATS: Greenhouse. Confirmation 2026-09-12. needs_human: email names no role title; fill in the role."
       }
     }
   ]
