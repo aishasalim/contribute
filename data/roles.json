@@ -8,8 +8,8 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-12T16:23:42Z",
-    "updated_by": "mcp",
+    "generated": "2026-09-13T14:30:15Z",
+    "updated_by": "harvest.py",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
     "note": "Page 2 of contributie. Roles scored against three resumes. The spreadsheet stays the source of truth for application state; the radar is the source of truth for discovery and relevancy."
@@ -3956,7 +3956,7 @@
       ],
       "tracks": {
         "swe": 22,
-        "ml": 31,
+        "ml": 30,
         "hwv": 80
       },
       "best_track": "hwv",
@@ -5145,49 +5145,6 @@
       "snippet": "Copart, Inc. a technology leader and the premier online vehicle auction platform globally, with over 200 facilities located across the world, Copart links vehicle sellers to more than 750,000 buyers in over 190 countries. We believe in providing an unmatched experience, every day"
     },
     {
-      "id": "crowe-digital-forensics-intern",
-      "company": "Crowe",
-      "title": "Digital Forensics Intern",
-      "location": "Chicago IL USA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://crowe.wd12.myworkdayjobs.com/External_Careers/job/Chicago-IL-USA/Digital-Forensics-Intern_R-71608",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$27.00 \u2013 $42.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 31,
-        "ml": 26,
-        "hwv": 35
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names ddr, soc, verification.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
-    },
-    {
       "id": "crowe-incident-response-intern",
       "company": "Crowe",
       "title": "Incident Response Intern",
@@ -5221,94 +5178,6 @@
       ],
       "tier": "stretch",
       "why": "The description names aws, cloud, linux; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
-    },
-    {
-      "id": "crowe-technology-advisory-intern",
-      "company": "Crowe",
-      "title": "Technology Advisory Intern",
-      "location": "Chicago IL USA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://crowe.wd12.myworkdayjobs.com/External_Careers/job/Chicago-IL-USA/Technology-Advisory-Intern_R-71003",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$27.00 \u2013 $42.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 31,
-        "ml": 26,
-        "hwv": 35
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names ddr, soc, verification.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
-    },
-    {
-      "id": "crowe-servicenow-implementation-intern",
-      "company": "Crowe",
-      "title": "ServiceNow Implementation Intern",
-      "location": "Chicago IL USA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://crowe.wd12.myworkdayjobs.com/External_Careers/job/Chicago-IL-USA/ServiceNow-Implementation-Intern_R-71036",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$27.00 \u2013 $42.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "AWS"
-      ],
-      "tracks": {
-        "swe": 35,
-        "ml": 26,
-        "hwv": 31
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names aws, cloud, rest.",
       "why_by": "auto",
       "dead": false,
       "application": {
@@ -5368,49 +5237,6 @@
       "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
     },
     {
-      "id": "crowe-risk-intern",
-      "company": "Crowe",
-      "title": "Risk Intern",
-      "location": "Chicago, IL",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://crowe.wd12.myworkdayjobs.com/external_careers/job/Chicago-IL-USA/Risk-Intern_R-71052",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$27.00 \u2013 $42.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 31,
-        "ml": 31,
-        "hwv": 35
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names ddr, soc, verification.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
-    },
-    {
       "id": "crowe-power-platform-business-solutions-intern",
       "company": "Crowe",
       "title": "Power Platform Business Solutions Intern",
@@ -5433,7 +5259,7 @@
       ],
       "tracks": {
         "swe": 43,
-        "ml": 31,
+        "ml": 30,
         "hwv": 39
       },
       "best_track": "swe",
@@ -5552,52 +5378,6 @@
       "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
     },
     {
-      "id": "crowe-loan-review-intern",
-      "company": "Crowe",
-      "title": "Loan Review Intern",
-      "location": "Chicago IL USA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://crowe.wd12.myworkdayjobs.com/External_Careers/job/Chicago-IL-USA/Loan-Review-Intern_R-71053",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$27.00 \u2013 $42.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "Python",
-        "C"
-      ],
-      "tracks": {
-        "swe": 31,
-        "ml": 26,
-        "hwv": 35
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names ddr, soc, verification.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
-    },
-    {
       "id": "crowe-data-consultant-intern",
       "company": "Crowe",
       "title": "Data Consultant Intern",
@@ -5621,7 +5401,7 @@
       ],
       "tracks": {
         "swe": 39,
-        "ml": 31,
+        "ml": 30,
         "hwv": 39
       },
       "best_track": "swe",
@@ -5667,7 +5447,7 @@
         "SQL"
       ],
       "tracks": {
-        "swe": 85,
+        "swe": 84,
         "ml": 27,
         "hwv": 27
       },
@@ -5687,92 +5467,6 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Confirmation email 2026-08-15 from workday@workday.crowe.com."
-      },
-      "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
-    },
-    {
-      "id": "crowe-d365-erp-project-coordinator-intern",
-      "company": "Crowe",
-      "title": "D365 ERP Project Coordinator Intern",
-      "location": "Chicago IL USA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://crowe.wd12.myworkdayjobs.com/External_Careers/job/Chicago-IL-USA/D365-ERP-Project-Coordinator-Intern_R-71038",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$27.00 \u2013 $42.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 35,
-        "ml": 26,
-        "hwv": 31
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names aws, cloud, rest.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
-    },
-    {
-      "id": "crowe-d365-erp-implementation-intern",
-      "company": "Crowe",
-      "title": "D365 ERP Implementation Intern",
-      "location": "Chicago IL USA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://crowe.wd12.myworkdayjobs.com/External_Careers/job/Chicago-IL-USA/D365-ERP-Implementation-Intern_R-71037",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$27.00 \u2013 $42.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 35,
-        "ml": 26,
-        "hwv": 31
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names aws, cloud, rest.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
       },
       "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
     },
@@ -5801,56 +5495,13 @@
       ],
       "tracks": {
         "swe": 47,
-        "ml": 31,
-        "hwv": 35
+        "ml": 30,
+        "hwv": 34
       },
       "best_track": "swe",
       "also_tracks": [],
       "tier": "stretch",
       "why": "The description names aws, cloud, database; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Your Journey at Crowe Starts Here: At Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you\u2019re trusted to deliver results and make an impact. We embrace you for who you are, care for your well-being, and nurture your "
-    },
-    {
-      "id": "crowe-ai-project-coordinator-intern",
-      "company": "Crowe",
-      "title": "AI Project Coordinator Intern",
-      "location": "Chicago IL USA",
-      "workmode": "unspecified",
-      "season": "not-stated",
-      "url": "https://crowe.wd12.myworkdayjobs.com/external_careers/job/Chicago-IL-USA/AI-Project-Coordinator-Intern_R-71007",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$27.00 \u2013 $42.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 31,
-        "ml": 31,
-        "hwv": 35
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names asic, soc, verification.",
       "why_by": "auto",
       "dead": false,
       "application": {
@@ -6426,52 +6077,6 @@
       "snippet": "Exa is an applied AI lab building a search engine unlike the world has ever seen. We build massive-scale infra to crawl the entire web, train state-of-the-art embedding models to process it, and design super high performant vector databases to retrieve over it. We now power searc"
     },
     {
-      "id": "fermilab-cryogenic-engineering-co-op",
-      "company": "Fermilab",
-      "title": "Cryogenic Engineering Co-op",
-      "location": "Batavia",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://fermilab.wd5.myworkdayjobs.com/FermilabCareers/job/Batavia/Cryogenic-Engineering-Co-op_R_008511",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$21.26 \u2013 $25.93",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2026",
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 35,
-        "ml": 26,
-        "hwv": 31
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names aws, react, rest.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "The expected hiring range for this position is: $21.26-$25.93. Please note that the pay range information is a general guideline only. The pay offered to a selected candidate will be determined based on factors such the scope and responsibilities of the position, qualifications o"
-    },
-    {
       "id": "fieldai-electrical-engineer-robotics-hardware-part-time-internship",
       "company": "Field AI",
       "title": "Electrical Engineer, Robotics Hardware- Part-time Internship",
@@ -6924,7 +6529,7 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 31,
+        "swe": 30,
         "ml": 22,
         "hwv": 84
       },
@@ -7681,7 +7286,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
+        "swe": 23,
         "ml": 19,
         "hwv": 81
       },
@@ -7866,14 +7471,12 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 35,
+        "swe": 34,
         "ml": 22,
         "hwv": 43
       },
       "best_track": "hwv",
-      "also_tracks": [
-        "swe"
-      ],
+      "also_tracks": [],
       "tier": "stretch",
       "why": "The description names asic, hardware, soc; it is an internship or co-op posting.",
       "why_by": "auto",
@@ -7890,53 +7493,6 @@
         "notes": ""
       },
       "snippet": "Title: Junior Engineer - Intern KBR is seeking a motivated Junior Engineer - Intern to support the modernization and sustainment of the Satellite Communications Network (SCN), a global network of ground sites that enable critical satellite communications capabilities for U.S. Gov"
-    },
-    {
-      "id": "keybank-2027-summer-risk-management-internship-program-cleveland",
-      "company": "KeyBank",
-      "title": "2027 Summer Risk Management Internship Program- Cleveland",
-      "location": "Cleveland, OH",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://keybank.wd5.myworkdayjobs.com/External_Career_Site/job/Cleveland-OH/XMLNAME-2027-Summer-Risk-Management-Internship-Program--Cleveland_R-41378",
-      "source": "workday",
-      "posted": "2026-08-14",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2026",
-          "2027",
-          "2028"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 35,
-        "ml": 31,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names api, aws, rest.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Location: 127 Public Square, Cleveland Ohio Job Description Summer 2027 Risk Management Internship If you are interested in more than one KeyBank Internship opportunity, please consider applying for your top 3 internship roles within 12 months to ensure you are not duplicating ef"
     },
     {
       "id": "kion-controls-engineering-intern-co-op",
@@ -8022,51 +7578,6 @@
         "notes": "Applied 2026-08-30 (Lever). Confirmation email received."
       },
       "snippet": "At Layup Parts, we're developing the technology that will build the future. We're a manufacturing technology company replacing months of lead time with days, using proprietary software, automation, and advanced manufacturing systems built for speed. Our customers are inventing wh"
-    },
-    {
-      "id": "louisianablue-cw-data-modeler-intern",
-      "company": "Louisiana Blue",
-      "title": "CW Data Modeler Intern",
-      "location": "Corporate - Baton Rouge, LA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://bcbsla.wd1.myworkdayjobs.com/Generation_Blue/job/Corporate---Baton-Rouge-LA/CW-Data-Modeler-Intern_R11956",
-      "source": "workday",
-      "posted": "2026-07-29",
-      "found": "2026-08-14",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "SQL"
-      ],
-      "tracks": {
-        "swe": 22,
-        "ml": 46,
-        "hwv": 22
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "The title reads as ML; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "We take great strides to ensure our employees have the resources to live well, be healthy, continue learning, develop skills, grow professionally and serve our local communities. We invite you to apply for a career with us. Residency in or relocation to Louisiana is preferred for"
     },
     {
       "id": "lplfinancial-summer-intern-2027-software-engineer",
@@ -8625,9 +8136,9 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 69,
+        "swe": 68,
         "ml": 15,
-        "hwv": 24
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -8804,7 +8315,7 @@
       ],
       "tracks": {
         "swe": 88,
-        "ml": 31,
+        "ml": 30,
         "hwv": 26
       },
       "best_track": "swe",
@@ -8851,7 +8362,7 @@
       ],
       "tracks": {
         "swe": 88,
-        "ml": 31,
+        "ml": 30,
         "hwv": 26
       },
       "best_track": "swe",
@@ -9911,8 +9422,8 @@
       "tags": [],
       "tracks": {
         "swe": 60,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -9962,7 +9473,7 @@
       "tracks": {
         "swe": 60,
         "ml": 19,
-        "hwv": 24
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -10356,52 +9867,6 @@
         "notes": ""
       },
       "snippet": "Who we are Samsara (NYSE: IOT) is the pioneer of the Connected Operations\u2122 Cloud, which is a platform that enables organizations that depend on physical operations to harness Internet of Things (IoT) data to develop actionable insights and improve their operations. At Samsara, we"
-    },
-    {
-      "id": "schonfeld-operations-associate-or-internship",
-      "company": "Schonfeld",
-      "title": "Operations Associate or Internship",
-      "location": "Fort Lauderdale, Florida, United States",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://job-boards.greenhouse.io/schonfeld/jobs/8094080",
-      "source": "greenhouse",
-      "posted": "2026-07-29",
-      "found": "2026-08-14",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "Python",
-        "SQL"
-      ],
-      "tracks": {
-        "swe": 30,
-        "ml": 22,
-        "hwv": 80
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "strong",
-      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "The Role We are seeking a highly motivated and detail-oriented Operations Associate to join our growing quantitative investment firm in Fort Lauderdale. This role is ideal for someone who thrives in a fast-paced environment and is eager to learn hedge fund and trading operations."
     },
     {
       "id": "schweitzerengineeringlaboratories-engineering-intern",
@@ -10840,7 +10305,7 @@
         "TensorFlow"
       ],
       "tracks": {
-        "swe": 31,
+        "swe": 30,
         "ml": 92,
         "hwv": 26
       },
@@ -11996,48 +11461,6 @@
       }
     },
     {
-      "id": "tomra-systems-and-sensors-optics-engineering-intern-summer-2026-2027",
-      "company": "TOMRA",
-      "title": "Systems and Sensors, Optics Engineering Intern - Summer 2026 - 2027",
-      "location": "Auckland, nz",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://jobs.smartrecruiters.com/Tomra/744000140551592",
-      "source": "smartrecruiters",
-      "posted": "2026-07-29",
-      "found": "2026-08-14",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
       "id": "transmarket-software-engineering-intern",
       "company": "TransMarket Group",
       "title": "Software Engineering Intern",
@@ -12130,53 +11553,6 @@
         "notes": ""
       },
       "snippet": "Space is a warfighting domain. True Anomaly seeks those with the talent and ambition to build the technology that secures it. OUR MISSION True Anomaly delivers decisive capabilities for space superiority. We build autonomous spacecraft, advanced payloads, mission software, and sp"
-    },
-    {
-      "id": "tsc-hardware-engineering-fall-intern",
-      "company": "TSC",
-      "title": "Hardware Engineering Fall Intern",
-      "location": "Plymouth, MA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://tsc.wd12.myworkdayjobs.com/TSC-Careers/job/Plymouth-MA/Hardware-Engineering-Fall-Co-Op_JR2559",
-      "source": "workday",
-      "posted": "2026-07-29",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": "security clearance",
-        "class_year": []
-      },
-      "tags": [
-        "Python",
-        "Embedded",
-        "Firmware"
-      ],
-      "tracks": {
-        "swe": 19,
-        "ml": 19,
-        "hwv": 81
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "strong",
-      "why": "The title reads as HW Verif; the description names asic, embedded, firmware.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "TSC is seeking a highly motivated students who are pursuing a degree in Mechanical, Electrical, and/or Computer Engineering for a Hardware Engineering Fall Intern position in Plymouth, Massachusetts , supporting the Commercial Product Cell division. These students shall excel aca"
     },
     {
       "id": "uline-business-intelligence-developer-internship-summer-2027",
@@ -12472,7 +11848,7 @@
       "tracks": {
         "swe": 84,
         "ml": 22,
-        "hwv": 31
+        "hwv": 30
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -12871,151 +12247,6 @@
         "notes": ""
       },
       "snippet": "Join us in pioneering breakthroughs in healthcare. For everyone. Everywhere. Sustainably. Our inspiring and caring environment forms a global community that celebrates diversity and individuality. We encourage you to step beyond your comfort zone, offering resources and flexibili"
-    },
-    {
-      "id": "virtufinancial-2027-internship-frontend-engineer-ui",
-      "company": "Virtu Financial",
-      "title": "2027 Internship - Frontend Engineer (UI)",
-      "location": "New York",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://job-boards.greenhouse.io/virtu/jobs/8657500002",
-      "source": "greenhouse",
-      "posted": "2026-07-29",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$5,000 \u2013 $5,800 / week",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027",
-          "2028"
-        ]
-      },
-      "tags": [
-        "Python",
-        "C++",
-        "Java",
-        "TypeScript",
-        "JavaScript",
-        "React"
-      ],
-      "tracks": {
-        "swe": 46,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Virtu is an industry-leading financial technology firm that operates both proprietary trading and client-facing businesses in the global financial marketplace. Our cutting edge, proprietary technology is core to everything we do. We trade in over 35 countries, across 235 financia"
-    },
-    {
-      "id": "virtufinancial-2027-internship-hardware-engineer-fpga",
-      "company": "Virtu Financial",
-      "title": "2027 Internship- Hardware Engineer (FPGA)",
-      "location": "Austin, TX",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://job-boards.greenhouse.io/virtu/jobs/8657286002",
-      "source": "greenhouse",
-      "posted": "2026-07-29",
-      "found": "2026-08-14",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [
-        "FPGA"
-      ],
-      "tracks": {
-        "swe": 22,
-        "ml": 22,
-        "hwv": 75
-      },
-      "best_track": "hwv",
-      "also_tracks": [],
-      "tier": "strong",
-      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Virtu is an industry-leading financial technology firm that operates both proprietary trading and client-facing businesses in the global financial marketplace. Our cutting edge, proprietary technology is core to everything we do. We trade in over 35 countries, across 235 financia"
-    },
-    {
-      "id": "vitalant-data-analytics-internship-on-site-in-scottsdale-az",
-      "company": "Vitalant",
-      "title": "Data Analytics Internship - On-site in Scottsdale, AZ",
-      "location": "AZ Scottsdale Corporate",
-      "workmode": "onsite",
-      "season": null,
-      "url": "https://vitalant.wd12.myworkdayjobs.com/Careers/job/AZ-Scottsdale-Corporate/Data-Analytics-Internship_R26_0000000083",
-      "source": "workday",
-      "posted": "2026-07-29",
-      "found": "2026-08-14",
-      "paid": true,
-      "pay": "$20.00 / hour",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [
-        "Python"
-      ],
-      "tracks": {
-        "swe": 30,
-        "ml": 39,
-        "hwv": 30
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "The description names dataset, machine learning, model; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "At Vitalant, the impact you make doing work that is purposeful, meaningful, and worthwhile is vital. As a member of our non-profit organization, you can be impact-inspired to provide vital clinical services to communities nationwide, vital products to those in need of a donor's g"
     },
     {
       "id": "warnerbros-bleacher-report-social-programming-intern-la-fall-2026",
@@ -13640,9 +12871,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 68,
-        "hwv": 23
+        "swe": 67,
+        "ml": 67,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [
@@ -13987,7 +13218,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -14279,7 +13510,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
+        "swe": 73,
         "ml": 24,
         "hwv": 24
       },
@@ -14368,7 +13599,7 @@
       "tracks": {
         "swe": 15,
         "ml": 15,
-        "hwv": 65
+        "hwv": 64
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -14450,9 +13681,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 66,
-        "ml": 21,
-        "hwv": 21
+        "swe": 65,
+        "ml": 20,
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -14874,9 +14105,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
-        "ml": 68,
-        "hwv": 23
+        "swe": 22,
+        "ml": 67,
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -14916,8 +14147,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
+        "swe": 67,
+        "ml": 22,
         "hwv": 47
       },
       "best_track": "swe",
@@ -15084,9 +14315,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 70,
-        "hwv": 25
+        "swe": 69,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [
@@ -15128,9 +14359,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 25,
-        "hwv": 25
+        "swe": 24,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -15852,9 +15083,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
-        "hwv": 26
+        "swe": 25,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -15903,7 +15134,7 @@
         "ASIC"
       ],
       "tracks": {
-        "swe": 32,
+        "swe": 31,
         "ml": 23,
         "hwv": 89
       },
@@ -15948,8 +15179,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
+        "swe": 71,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "swe",
@@ -15993,9 +15224,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -16035,8 +15266,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
+        "swe": 71,
+        "ml": 26,
         "hwv": 76
       },
       "best_track": "hwv",
@@ -16081,8 +15312,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
+        "swe": 71,
+        "ml": 26,
         "hwv": 76
       },
       "best_track": "hwv",
@@ -16169,9 +15400,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -16213,9 +15444,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -16257,9 +15488,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 18,
-        "ml": 18,
-        "hwv": 18
+        "swe": 17,
+        "ml": 17,
+        "hwv": 17
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -16301,9 +15532,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -16541,8 +15772,8 @@
       ],
       "tracks": {
         "swe": 91,
-        "ml": 30,
-        "hwv": 34
+        "ml": 29,
+        "hwv": 33
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -16857,55 +16088,6 @@
       "snippet": "Job Description Summary At GE Aerospace, our AI engineers don\u2019t just support projects \u2014 they help drive them. From day one, interns and co-ops take on real-world challenges, owning work from start to finish and building solutions that connect data, tools, cloud, AI, and engineeri"
     },
     {
-      "id": "generalmotors-2027-summer-intern-global-manufacturing-electrical-sdv",
-      "company": "General Motors",
-      "title": "2027 Summer Intern \u2013 Global Manufacturing Electrical & SDV",
-      "location": "Warren, Michigan, United States of America",
-      "workmode": "onsite",
-      "season": "summer-2027",
-      "url": "https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern---Global-Manufacturing-Electrical---SDV_JR-202619352",
-      "source": "workday",
-      "posted": "2026-09-01",
-      "found": "2026-09-07",
-      "paid": true,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": false,
-        "citizenship": null,
-        "class_year": [
-          "2026",
-          "2027"
-        ]
-      },
-      "tags": [
-        "C++",
-        "Linux"
-      ],
-      "tracks": {
-        "swe": 35,
-        "ml": 26,
-        "hwv": 30
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "stretch",
-      "why": "It is an internship or co-op posting; the description names aws, linux, rest.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      },
-      "snippet": "Job Description The Role: Global Manufacturing Electrical & SDV is seeking curious, driven students who want to be part of something bigger than themselves. If you're energized by real challenges, eager to learn, and ready to contribute to meaningful work that shapes the future o"
-    },
-    {
       "id": "generalmotors-fall-2026-phd-battery-sustainability-intern-physics-based-battery-modeling",
       "company": "General Motors",
       "title": "Fall 2026 PhD Battery & Sustainability Intern - Physics-Based Battery Modeling",
@@ -16975,8 +16157,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 76,
-        "ml": 31,
+        "swe": 75,
+        "ml": 30,
         "hwv": 43
       },
       "best_track": "swe",
@@ -17020,8 +16202,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 76,
-        "ml": 31,
+        "swe": 75,
+        "ml": 30,
         "hwv": 43
       },
       "best_track": "swe",
@@ -17064,7 +16246,7 @@
       "tags": [],
       "tracks": {
         "swe": 26,
-        "ml": 31,
+        "ml": 30,
         "hwv": 92
       },
       "best_track": "hwv",
@@ -17107,7 +16289,7 @@
       "tags": [],
       "tracks": {
         "swe": 26,
-        "ml": 31,
+        "ml": 30,
         "hwv": 92
       },
       "best_track": "hwv",
@@ -17150,7 +16332,7 @@
       "tags": [],
       "tracks": {
         "swe": 71,
-        "ml": 31,
+        "ml": 30,
         "hwv": 63
       },
       "best_track": "swe",
@@ -17195,7 +16377,7 @@
       "tags": [],
       "tracks": {
         "swe": 71,
-        "ml": 31,
+        "ml": 30,
         "hwv": 63
       },
       "best_track": "swe",
@@ -17245,8 +16427,8 @@
       ],
       "tracks": {
         "swe": 31,
-        "ml": 23,
-        "hwv": 93
+        "ml": 22,
+        "hwv": 92
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -17293,8 +16475,8 @@
       ],
       "tracks": {
         "swe": 31,
-        "ml": 23,
-        "hwv": 93
+        "ml": 22,
+        "hwv": 92
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -17347,7 +16529,7 @@
         "ASIC"
       ],
       "tracks": {
-        "swe": 32,
+        "swe": 31,
         "ml": 23,
         "hwv": 89
       },
@@ -17392,7 +16574,7 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 39,
+        "swe": 38,
         "ml": 30,
         "hwv": 96
       },
@@ -17442,7 +16624,7 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 32,
+        "swe": 31,
         "ml": 23,
         "hwv": 89
       },
@@ -17496,7 +16678,7 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 32,
+        "swe": 31,
         "ml": 19,
         "hwv": 64
       },
@@ -17547,7 +16729,7 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 32,
+        "swe": 31,
         "ml": 19,
         "hwv": 44
       },
@@ -17598,7 +16780,7 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 32,
+        "swe": 31,
         "ml": 19,
         "hwv": 44
       },
@@ -17690,7 +16872,7 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 32,
+        "swe": 31,
         "ml": 23,
         "hwv": 89
       },
@@ -17928,7 +17110,7 @@
       ],
       "tracks": {
         "swe": 34,
-        "ml": 39,
+        "ml": 38,
         "hwv": 26
       },
       "best_track": "ml",
@@ -18031,7 +17213,7 @@
       "tracks": {
         "swe": 27,
         "ml": 27,
-        "hwv": 80
+        "hwv": 79
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -18283,7 +17465,7 @@
       "tracks": {
         "swe": 31,
         "ml": 48,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -18388,7 +17570,7 @@
       "tracks": {
         "swe": 93,
         "ml": 48,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -18494,7 +17676,7 @@
       "tracks": {
         "swe": 23,
         "ml": 93,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -18600,7 +17782,7 @@
       "tracks": {
         "swe": 44,
         "ml": 93,
-        "hwv": 36
+        "hwv": 35
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -18844,7 +18026,7 @@
       ],
       "tracks": {
         "swe": 23,
-        "ml": 80,
+        "ml": 79,
         "hwv": 31
       },
       "best_track": "ml",
@@ -18896,7 +18078,7 @@
       ],
       "tracks": {
         "swe": 23,
-        "ml": 36,
+        "ml": 35,
         "hwv": 68
       },
       "best_track": "hwv",
@@ -18999,7 +18181,7 @@
         "Distributed systems"
       ],
       "tracks": {
-        "swe": 93,
+        "swe": 92,
         "ml": 27,
         "hwv": 31
       },
@@ -19050,7 +18232,7 @@
         "Distributed systems"
       ],
       "tracks": {
-        "swe": 51,
+        "swe": 50,
         "ml": 34,
         "hwv": 30
       },
@@ -19100,7 +18282,7 @@
       "tracks": {
         "swe": 64,
         "ml": 23,
-        "hwv": 32
+        "hwv": 31
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -19141,7 +18323,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
+        "swe": 67,
         "ml": 27,
         "hwv": 27
       },
@@ -19334,7 +18516,7 @@
         "Python"
       ],
       "tracks": {
-        "swe": 64,
+        "swe": 63,
         "ml": 84,
         "hwv": 27
       },
@@ -19379,7 +18561,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
+        "swe": 63,
         "ml": 27,
         "hwv": 27
       },
@@ -19431,7 +18613,7 @@
         "Distributed systems"
       ],
       "tracks": {
-        "swe": 23,
+        "swe": 22,
         "ml": 31,
         "hwv": 39
       },
@@ -19775,7 +18957,7 @@
       "tracks": {
         "swe": 24,
         "ml": 44,
-        "hwv": 53
+        "hwv": 52
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -19869,8 +19051,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
+        "swe": 26,
+        "ml": 71,
         "hwv": 51
       },
       "best_track": "ml",
@@ -19913,9 +19095,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -19959,7 +19141,7 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 27,
+        "swe": 26,
         "ml": 76,
         "hwv": 51
       },
@@ -20003,9 +19185,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -20047,8 +19229,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "hwv",
@@ -20093,8 +19275,8 @@
         "ASIC"
       ],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 76
       },
       "best_track": "hwv",
@@ -20135,9 +19317,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -20179,9 +19361,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -20223,8 +19405,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "hwv",
@@ -20267,8 +19449,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "hwv",
@@ -20313,7 +19495,7 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 27,
+        "swe": 26,
         "ml": 76,
         "hwv": 51
       },
@@ -20357,9 +19539,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -20401,9 +19583,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -20447,8 +19629,8 @@
         "ASIC"
       ],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 76
       },
       "best_track": "hwv",
@@ -20489,9 +19671,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -20531,9 +19713,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -20573,9 +19755,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -20615,9 +19797,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -20701,8 +19883,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "hwv",
@@ -20745,9 +19927,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -21005,7 +20187,7 @@
       "tracks": {
         "swe": 71,
         "ml": 26,
-        "hwv": 80
+        "hwv": 79
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -21051,7 +20233,7 @@
       "tracks": {
         "swe": 71,
         "ml": 71,
-        "hwv": 51
+        "hwv": 50
       },
       "best_track": "swe",
       "also_tracks": [
@@ -21313,9 +20495,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -21355,9 +20537,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -21831,9 +21013,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -22003,8 +21185,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
+        "swe": 67,
+        "ml": 22,
         "hwv": 72
       },
       "best_track": "hwv",
@@ -22301,9 +21483,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -22471,9 +21653,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -22513,9 +21695,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -24057,7 +23239,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
+        "swe": 71,
         "ml": 22,
         "hwv": 22
       },
@@ -24355,7 +23537,7 @@
       "tracks": {
         "swe": 22,
         "ml": 22,
-        "hwv": 72
+        "hwv": 71
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -24441,7 +23623,7 @@
       "tracks": {
         "swe": 22,
         "ml": 22,
-        "hwv": 72
+        "hwv": 71
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -25851,9 +25033,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -25895,8 +25077,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -25937,9 +25119,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -25979,9 +25161,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26021,9 +25203,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26063,9 +25245,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -26105,9 +25287,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26149,9 +25331,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26193,9 +25375,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26237,9 +25419,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26281,8 +25463,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -26325,9 +25507,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26369,8 +25551,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -26413,9 +25595,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26457,8 +25639,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -26502,8 +25684,8 @@
       "tags": [],
       "tracks": {
         "swe": 75,
-        "ml": 26,
-        "hwv": 26
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26545,8 +25727,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -26589,8 +25771,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -26631,9 +25813,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26673,9 +25855,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
+        "swe": 63,
         "ml": 68,
-        "hwv": 19
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [
@@ -26719,8 +25901,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -26763,9 +25945,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26807,9 +25989,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -26853,8 +26035,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -26897,8 +26079,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -26941,9 +26123,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -26985,8 +26167,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "swe",
@@ -27030,8 +26212,8 @@
       "tags": [],
       "tracks": {
         "swe": 75,
-        "ml": 26,
-        "hwv": 26
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27071,9 +26253,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27113,9 +26295,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27239,9 +26421,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27281,9 +26463,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27323,9 +26505,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27365,9 +26547,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27407,9 +26589,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27450,8 +26632,8 @@
       "tags": [],
       "tracks": {
         "swe": 75,
-        "ml": 26,
-        "hwv": 26
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27491,9 +26673,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27533,9 +26715,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -27575,8 +26757,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 75
       },
       "best_track": "hwv",
@@ -27787,9 +26969,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27831,9 +27013,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -27875,9 +27057,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27919,9 +27101,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -27961,9 +27143,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -28003,9 +27185,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 71,
-        "hwv": 26
+        "swe": 70,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [
@@ -28049,9 +27231,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
-        "hwv": 71
+        "swe": 25,
+        "ml": 25,
+        "hwv": 70
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -28093,9 +27275,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28135,9 +27317,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28263,9 +27445,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28307,9 +27489,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -28351,9 +27533,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28395,9 +27577,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -28439,9 +27621,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28483,9 +27665,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28525,9 +27707,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28567,9 +27749,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28610,8 +27792,8 @@
       "tags": [],
       "tracks": {
         "swe": 50,
-        "ml": 26,
-        "hwv": 26
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28652,8 +27834,8 @@
       "tags": [],
       "tracks": {
         "swe": 75,
-        "ml": 26,
-        "hwv": 26
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28693,9 +27875,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28735,9 +27917,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -28777,9 +27959,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -28819,9 +28001,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -28861,9 +28043,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -28989,9 +28171,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29031,9 +28213,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29159,9 +28341,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29201,9 +28383,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29243,9 +28425,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29285,9 +28467,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29327,9 +28509,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29369,9 +28551,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29411,9 +28593,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29453,9 +28635,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29495,9 +28677,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29537,9 +28719,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29579,9 +28761,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29621,9 +28803,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
-        "ml": 64,
-        "hwv": 19
+        "swe": 18,
+        "ml": 63,
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29663,9 +28845,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29747,7 +28929,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
+        "swe": 63,
         "ml": 43,
         "hwv": 43
       },
@@ -29789,9 +28971,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29875,9 +29057,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -29919,9 +29101,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -29963,9 +29145,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30007,9 +29189,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -30051,9 +29233,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30095,9 +29277,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30139,9 +29321,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -30183,9 +29365,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30225,9 +29407,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -30267,9 +29449,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30311,8 +29493,8 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 50
       },
       "best_track": "hwv",
@@ -30353,9 +29535,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
+        "swe": 18,
         "ml": 68,
-        "hwv": 19
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -30395,9 +29577,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30437,9 +29619,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30521,9 +29703,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30565,9 +29747,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30609,9 +29791,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30653,9 +29835,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30697,9 +29879,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30741,9 +29923,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30785,9 +29967,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30830,8 +30012,8 @@
       ],
       "tracks": {
         "swe": 79,
-        "ml": 26,
-        "hwv": 26
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30913,9 +30095,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30955,9 +30137,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -30999,8 +30181,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 75
       },
       "best_track": "hwv",
@@ -31041,9 +30223,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -31209,9 +30391,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 64,
-        "ml": 19,
-        "hwv": 19
+        "swe": 63,
+        "ml": 18,
+        "hwv": 18
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -31253,8 +30435,8 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
+        "swe": 70,
+        "ml": 25,
         "hwv": 75
       },
       "best_track": "hwv",
@@ -31297,9 +30479,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -31381,9 +30563,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -31427,11 +30609,11 @@
       "tracks": {
         "swe": 25,
         "ml": 25,
-        "hwv": 75
+        "hwv": 74
       },
       "best_track": "hwv",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as HW Verif; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -31763,13 +30945,13 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
+        "swe": 74,
         "ml": 25,
         "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -34367,9 +33549,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34413,8 +33595,8 @@
         "ASIC"
       ],
       "tracks": {
-        "swe": 25,
-        "ml": 25,
+        "swe": 24,
+        "ml": 24,
         "hwv": 74
       },
       "best_track": "hwv",
@@ -34458,7 +33640,7 @@
       "tags": [],
       "tracks": {
         "swe": 49,
-        "ml": 25,
+        "ml": 24,
         "hwv": 49
       },
       "best_track": "swe",
@@ -34503,9 +33685,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
+        "swe": 24,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34547,9 +33729,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
+        "swe": 24,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34591,9 +33773,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34635,8 +33817,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 25,
+        "swe": 24,
+        "ml": 24,
         "hwv": 49
       },
       "best_track": "hwv",
@@ -34679,9 +33861,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34723,9 +33905,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34767,9 +33949,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34811,9 +33993,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34855,9 +34037,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
+        "swe": 24,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -34899,9 +34081,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -34945,8 +34127,8 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
+        "swe": 69,
+        "ml": 24,
         "hwv": 49
       },
       "best_track": "swe",
@@ -34989,9 +34171,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
+        "swe": 24,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35033,9 +34215,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
+        "swe": 24,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35077,9 +34259,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35121,9 +34303,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35207,9 +34389,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
+        "swe": 24,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -35249,9 +34431,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35293,9 +34475,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35337,9 +34519,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -35381,7 +34563,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
+        "swe": 73,
         "ml": 24,
         "hwv": 24
       },
@@ -35425,7 +34607,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 74
+        "hwv": 73
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -35857,7 +35039,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 74
+        "hwv": 73
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -36111,7 +35293,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36155,7 +35337,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36243,7 +35425,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36289,7 +35471,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36333,7 +35515,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36377,7 +35559,7 @@
       "tracks": {
         "swe": 69,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -36505,7 +35687,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -36591,7 +35773,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 49
+        "hwv": 48
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -37783,9 +36965,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 66,
-        "ml": 21,
-        "hwv": 21
+        "swe": 65,
+        "ml": 20,
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -37995,9 +37177,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 66,
-        "ml": 66,
-        "hwv": 21
+        "swe": 65,
+        "ml": 65,
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [
@@ -38039,9 +37221,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 21,
-        "ml": 66,
-        "hwv": 21
+        "swe": 20,
+        "ml": 65,
+        "hwv": 20
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -38081,9 +37263,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 66,
-        "ml": 21,
-        "hwv": 21
+        "swe": 65,
+        "ml": 20,
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -38123,9 +37305,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 66,
-        "ml": 21,
-        "hwv": 21
+        "swe": 65,
+        "ml": 20,
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -38333,9 +37515,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 66,
-        "ml": 21,
-        "hwv": 21
+        "swe": 65,
+        "ml": 20,
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -38461,9 +37643,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -38505,9 +37687,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -38549,9 +37731,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 69,
-        "ml": 24,
-        "hwv": 24
+        "swe": 68,
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -38849,7 +38031,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 73,
+        "swe": 72,
         "ml": 23,
         "hwv": 23
       },
@@ -39193,7 +38375,7 @@
       "tracks": {
         "swe": 23,
         "ml": 23,
-        "hwv": 48
+        "hwv": 47
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -39321,7 +38503,7 @@
       "tracks": {
         "swe": 23,
         "ml": 23,
-        "hwv": 48
+        "hwv": 47
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -39619,7 +38801,7 @@
       "tracks": {
         "swe": 23,
         "ml": 23,
-        "hwv": 48
+        "hwv": 47
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -39789,9 +38971,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 20,
-        "ml": 65,
-        "hwv": 20
+        "swe": 19,
+        "ml": 64,
+        "hwv": 19
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -40944,7 +40126,7 @@
       "tracks": {
         "swe": 22,
         "ml": 22,
-        "hwv": 72
+        "hwv": 71
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -41030,7 +40212,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 47,
+        "swe": 46,
         "ml": 22,
         "hwv": 22
       },
@@ -41156,9 +40338,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 19,
+        "swe": 18,
         "ml": 64,
-        "hwv": 19
+        "hwv": 18
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -46195,574 +45377,6 @@
       }
     },
     {
-      "id": "tiktok-design-engineering-intern-design-system-ai-workflow-tiktok-design-2027-summer",
-      "company": "TikTok",
-      "title": "Design Engineering Intern (Design System & AI Workflow - TikTok-Design) - 2027 Summer",
-      "location": "San Jose, California, United States",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667857406611343621",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-backend-software-engineer-intern-tiktok-global-live-foundation-2027-summer",
-      "company": "TikTok",
-      "title": "Backend Software Engineer Intern (TikTok-Global Live-Foundation) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667935150530840837",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": false,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 68,
-        "ml": 18,
-        "hwv": 18
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-backend-software-engineer-intern-tiktok-product-infrastructure-2027-summer",
-      "company": "TikTok",
-      "title": "Backend Software Engineer Intern (TikTok - Product Infrastructure) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667935633764370741",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 71,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-ai-engineer-intern-tiktok-client-arch-2027-summer",
-      "company": "TikTok",
-      "title": "AI Engineer Intern (TikTok-Client Arch)- 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667935738190465285",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": false,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 18,
-        "ml": 64,
-        "hwv": 18
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as ML; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-software-engineer-intern-tiktok-generalized-arch-code-intelligence-quality-validati",
-      "company": "TikTok",
-      "title": "Software Engineer Intern (TikTok-Generalized Arch-Code Intelligence & Quality Validation) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667935738376227077",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": false,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 64,
-        "ml": 18,
-        "hwv": 43
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-backend-software-engineer-intern-tiktok-privacy-and-security-2027-summer",
-      "company": "TikTok",
-      "title": "Backend Software Engineer Intern (TikTok-Privacy and Security) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667935739300317493",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 71,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-software-engineer-intern-tiktok-developer-platform-2027-summer",
-      "company": "TikTok",
-      "title": "Software Engineer Intern (TikTok- Developer Platform) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667935739300792629",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-backend-software-engineer-intern-tiktok-social-friending-2027-summer",
-      "company": "TikTok",
-      "title": "Backend Software Engineer Intern (TikTok-Social-Friending) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667934635573692725",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 71,
-        "ml": 22,
-        "hwv": 71
-      },
-      "best_track": "swe",
-      "also_tracks": [
-        "hwv"
-      ],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-backend-software-engineer-intern-tiktok-search-2027-summer",
-      "company": "TikTok",
-      "title": "Backend Software Engineer Intern (TikTok-Search) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667933335084124469",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": false,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 68,
-        "ml": 18,
-        "hwv": 18
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-backend-software-engineer-intern-tiktok-growth-innovative-growth-2027-summer",
-      "company": "TikTok",
-      "title": "Backend Software Engineer Intern (TikTok-Growth-Innovative Growth) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667934860750063925",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 71,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-backend-software-engineer-intern-tiktok-social-foundation-2027-summer",
-      "company": "TikTok",
-      "title": "Backend Software Engineer Intern (TikTok-Social-Foundation) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667935565120112949",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 71,
-        "ml": 22,
-        "hwv": 71
-      },
-      "best_track": "swe",
-      "also_tracks": [
-        "hwv"
-      ],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "tiktok-software-engineer-intern-tiktok-social-friending-2027-summer",
-      "company": "TikTok",
-      "title": "Software Engineer Intern (TikTok-Social-Friending) - 2027 Summer",
-      "location": "San Jose, California, United States \u00b7 San Jose, CA",
-      "workmode": "unspecified",
-      "season": "summer-2027",
-      "url": "https://lifeattiktok.com/search/7667935399050692917",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": [
-          "2027"
-        ]
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 71
-      },
-      "best_track": "hwv",
-      "also_tracks": [
-        "swe"
-      ],
-      "tier": "fit",
-      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
-      "id": "rapdev-servicenow-engineering-intern",
-      "company": "RapDev",
-      "title": "ServiceNow Engineering Intern",
-      "location": "Boston, MA",
-      "workmode": "unspecified",
-      "season": null,
-      "url": "https://jobs.ashbyhq.com/rapdev/b022388e-79d0-43b8-b524-64aaed9ff4dc",
-      "source": "earlycareerradar",
-      "posted": "2026-07-29",
-      "found": "2026-09-07",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 67,
-        "ml": 22,
-        "hwv": 22
-      },
-      "best_track": "swe",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as SWE; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
-      }
-    },
-    {
       "id": "google-software-engineering-intern-ms-summer-2027",
       "company": "Google",
       "title": "Software Engineering Intern, MS, Summer 2027",
@@ -46784,9 +45398,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -46828,9 +45442,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -46872,9 +45486,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -46916,9 +45530,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -47343,9 +45957,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -47385,9 +45999,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 68,
-        "ml": 23,
-        "hwv": 23
+        "swe": 67,
+        "ml": 22,
+        "hwv": 22
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -47979,9 +46593,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -48021,9 +46635,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -48443,9 +47057,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -48485,9 +47099,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -48737,9 +47351,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -48779,9 +47393,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -48823,8 +47437,8 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 75
       },
       "best_track": "hwv",
@@ -48867,8 +47481,8 @@
         "Firmware"
       ],
       "tracks": {
-        "swe": 26,
-        "ml": 26,
+        "swe": 25,
+        "ml": 25,
         "hwv": 75
       },
       "best_track": "hwv",
@@ -48909,9 +47523,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
+        "swe": 25,
         "ml": 75,
-        "hwv": 26
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -48951,9 +47565,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -48993,9 +47607,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49035,9 +47649,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 71,
-        "hwv": 26
+        "swe": 70,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [
@@ -49079,9 +47693,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -49167,7 +47781,7 @@
       "tracks": {
         "swe": 17,
         "ml": 17,
-        "hwv": 42
+        "hwv": 41
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -49629,13 +48243,13 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 75,
+        "swe": 74,
         "ml": 25,
         "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as SWE; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -49713,9 +48327,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -49755,8 +48369,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 25,
+        "swe": 24,
+        "ml": 24,
         "hwv": 49
       },
       "best_track": "hwv",
@@ -50091,9 +48705,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 63,
-        "ml": 18,
-        "hwv": 18
+        "swe": 62,
+        "ml": 17,
+        "hwv": 17
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50133,9 +48747,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 18,
-        "ml": 63,
-        "hwv": 18
+        "swe": 17,
+        "ml": 62,
+        "hwv": 17
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -50175,9 +48789,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 18,
-        "ml": 63,
-        "hwv": 18
+        "swe": 17,
+        "ml": 62,
+        "hwv": 17
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -50217,9 +48831,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 63,
-        "ml": 18,
-        "hwv": 18
+        "swe": 62,
+        "ml": 17,
+        "hwv": 17
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50343,9 +48957,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 18,
-        "ml": 63,
-        "hwv": 18
+        "swe": 17,
+        "ml": 62,
+        "hwv": 17
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -50385,9 +48999,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 63,
-        "ml": 18,
-        "hwv": 18
+        "swe": 62,
+        "ml": 17,
+        "hwv": 17
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50679,9 +49293,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -50721,9 +49335,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 23,
-        "ml": 68,
-        "hwv": 23
+        "swe": 22,
+        "ml": 67,
+        "hwv": 22
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -51479,9 +50093,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 70,
-        "ml": 25,
-        "hwv": 25
+        "swe": 69,
+        "ml": 24,
+        "hwv": 24
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -51608,12 +50222,12 @@
       "tags": [],
       "tracks": {
         "swe": 25,
-        "ml": 75,
+        "ml": 74,
         "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
-      "tier": "strong",
+      "tier": "fit",
       "why": "The title reads as ML; it is an internship or co-op posting.",
       "why_by": "auto",
       "dead": false,
@@ -51859,9 +50473,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -52111,9 +50725,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
+        "swe": 24,
         "ml": 74,
-        "hwv": 25
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -55067,7 +53681,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 76,
+        "swe": 75,
         "ml": 26,
         "hwv": 26
       },
@@ -55151,8 +53765,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 76
       },
       "best_track": "hwv",
@@ -55193,9 +53807,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 65,
-        "ml": 20,
-        "hwv": 20
+        "swe": 64,
+        "ml": 19,
+        "hwv": 19
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -55235,9 +53849,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -55277,9 +53891,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 26,
-        "hwv": 26
+        "swe": 70,
+        "ml": 25,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -55362,7 +53976,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 87,
+        "swe": 86,
         "ml": 25,
         "hwv": 25
       },
@@ -55448,9 +54062,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
+        "swe": 24,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -55492,7 +54106,7 @@
         "Rust"
       ],
       "tracks": {
-        "swe": 81,
+        "swe": 80,
         "ml": 23,
         "hwv": 23
       },
@@ -55711,7 +54325,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 89,
+        "swe": 88,
         "ml": 35,
         "hwv": 23
       },
@@ -55801,7 +54415,7 @@
       "tracks": {
         "swe": 22,
         "ml": 22,
-        "hwv": 72
+        "hwv": 71
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -55843,7 +54457,7 @@
       "tracks": {
         "swe": 22,
         "ml": 22,
-        "hwv": 72
+        "hwv": 71
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -55885,7 +54499,7 @@
       "tracks": {
         "swe": 22,
         "ml": 22,
-        "hwv": 72
+        "hwv": 71
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -56274,7 +54888,7 @@
       "tracks": {
         "swe": 86,
         "ml": 41,
-        "hwv": 21
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56403,9 +55017,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56447,9 +55061,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56491,9 +55105,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56535,9 +55149,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56577,9 +55191,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56619,9 +55233,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 72,
-        "hwv": 27
+        "swe": 26,
+        "ml": 71,
+        "hwv": 26
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -56661,9 +55275,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56703,9 +55317,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56747,9 +55361,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -56789,9 +55403,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
-        "hwv": 27
+        "swe": 26,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -57038,7 +55652,7 @@
       ],
       "tracks": {
         "swe": 97,
-        "ml": 48,
+        "ml": 47,
         "hwv": 27
       },
       "best_track": "swe",
@@ -57374,9 +55988,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -57418,8 +56032,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "hwv",
@@ -57462,8 +56076,8 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 27,
-        "ml": 27,
+        "swe": 26,
+        "ml": 26,
         "hwv": 51
       },
       "best_track": "hwv",
@@ -57798,9 +56412,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -59351,8 +57965,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -59895,7 +58509,7 @@
       ],
       "tracks": {
         "swe": 39,
-        "ml": 93,
+        "ml": 92,
         "hwv": 35
       },
       "best_track": "ml",
@@ -60166,7 +58780,7 @@
       "tracks": {
         "swe": 36,
         "ml": 72,
-        "hwv": 32
+        "hwv": 31
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -60348,7 +58962,7 @@
         "Linux"
       ],
       "tracks": {
-        "swe": 78,
+        "swe": 77,
         "ml": 20,
         "hwv": 45
       },
@@ -60480,7 +59094,7 @@
         "SQL"
       ],
       "tracks": {
-        "swe": 44,
+        "swe": 43,
         "ml": 27,
         "hwv": 27
       },
@@ -60531,7 +59145,7 @@
       "tracks": {
         "swe": 65,
         "ml": 24,
-        "hwv": 37
+        "hwv": 36
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -61232,8 +59846,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -61316,8 +59930,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -61400,8 +60014,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -61442,8 +60056,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 73
+        "ml": 23,
+        "hwv": 72
       },
       "best_track": "hwv",
       "also_tracks": [
@@ -62010,8 +60624,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -62222,8 +60836,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -62264,8 +60878,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -62306,8 +60920,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -62518,8 +61132,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -62560,8 +61174,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -62689,9 +61303,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
+        "swe": 23,
         "ml": 68,
-        "hwv": 24
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -63323,9 +61937,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 24,
+        "swe": 23,
         "ml": 68,
-        "hwv": 24
+        "hwv": 23
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -65705,9 +64319,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -65749,9 +64363,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 72,
-        "ml": 27,
-        "hwv": 27
+        "swe": 71,
+        "ml": 26,
+        "hwv": 26
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -66005,9 +64619,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 26,
-        "ml": 71,
-        "hwv": 26
+        "swe": 25,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -66263,9 +64877,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 25,
-        "ml": 70,
-        "hwv": 25
+        "swe": 24,
+        "ml": 69,
+        "hwv": 24
       },
       "best_track": "ml",
       "also_tracks": [],
@@ -66347,7 +64961,7 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 74,
+        "swe": 73,
         "ml": 24,
         "hwv": 24
       },
@@ -66393,7 +65007,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 74
+        "hwv": 73
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -67578,8 +66192,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -67681,48 +66295,6 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Rippling; confirmation 2026-09-10"
-      }
-    },
-    {
-      "id": "bosch-autonomous-driving-internship-in-machine-learning",
-      "company": "Bosch",
-      "title": "Autonomous Driving \u2013 Internship in Machine Learning",
-      "location": "Sunnyvale, CA, United States",
-      "workmode": "unspecified",
-      "season": "not-stated",
-      "url": "https://jobs.smartrecruiters.com/BoschGroup/744000140462550",
-      "source": "zshah101",
-      "posted": "2026-07-29",
-      "found": "2026-09-10",
-      "paid": null,
-      "pay": "",
-      "eligibility": {
-        "sponsorship": null,
-        "citizenship": null,
-        "class_year": []
-      },
-      "tags": [],
-      "tracks": {
-        "swe": 22,
-        "ml": 71,
-        "hwv": 22
-      },
-      "best_track": "ml",
-      "also_tracks": [],
-      "tier": "fit",
-      "why": "The title reads as ML; it is an internship or co-op posting.",
-      "why_by": "auto",
-      "dead": false,
-      "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
-        "sheet_row": null,
-        "recruiter": "",
-        "network": "",
-        "thank_you": false,
-        "follow_up": false,
-        "notes": ""
       }
     },
     {
@@ -68817,7 +67389,7 @@
         "Embedded"
       ],
       "tracks": {
-        "swe": 24,
+        "swe": 23,
         "ml": 28,
         "hwv": 40
       },
@@ -69102,7 +67674,7 @@
       "tracks": {
         "swe": 31,
         "ml": 31,
-        "hwv": 44
+        "hwv": 43
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -72703,7 +71275,7 @@
       "tracks": {
         "swe": 24,
         "ml": 24,
-        "hwv": 74
+        "hwv": 73
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -72743,9 +71315,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 66,
-        "ml": 21,
-        "hwv": 21
+        "swe": 65,
+        "ml": 20,
+        "hwv": 20
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -77055,7 +75627,7 @@
       "tracks": {
         "swe": 65,
         "ml": 20,
-        "hwv": 82
+        "hwv": 81
       },
       "best_track": "hwv",
       "also_tracks": [],
@@ -77138,8 +75710,8 @@
       "tags": [],
       "tracks": {
         "swe": 68,
-        "ml": 24,
-        "hwv": 24
+        "ml": 23,
+        "hwv": 23
       },
       "best_track": "swe",
       "also_tracks": [],
@@ -77269,9 +75841,9 @@
       },
       "tags": [],
       "tracks": {
-        "swe": 71,
-        "ml": 71,
-        "hwv": 26
+        "swe": 70,
+        "ml": 70,
+        "hwv": 25
       },
       "best_track": "swe",
       "also_tracks": [
@@ -78062,7 +76634,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-12",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
@@ -78105,7 +76676,6 @@
       "source": "email",
       "posted": null,
       "found": "2026-09-12",
-      "description": "",
       "paid": null,
       "pay": "",
       "eligibility": {
