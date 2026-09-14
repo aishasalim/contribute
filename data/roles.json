@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-14T15:23:08Z",
+    "generated": "2026-09-14T15:40:35Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -2877,7 +2877,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "in_progress",
+        "status": "rejected",
         "applied": "2026-08-06",
         "resume": null,
         "sheet_row": 66,
@@ -2885,7 +2885,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Roblox asked 2026-08-20 whether you are still interested - reply needed to stay in process."
+        "notes": "Closed out by user 2026-09-14: Roblox \"still interested?\" check-in 2026-08-20 never answered. No rejection email."
       },
       "snippet": "Every day, tens of millions of people come to Roblox to explore, create, play, learn, and connect with friends in 3D immersive digital experiences\u2013 all created by our global community of developers and creators. At Roblox, we\u2019re building the tools and platform that empower our co"
     },
@@ -12756,7 +12756,7 @@
       "why_by": "email-sweep",
       "dead": false,
       "application": {
-        "status": "in_progress",
+        "status": "rejected",
         "applied": "2026-08-17",
         "resume": null,
         "sheet_row": null,
@@ -12764,7 +12764,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "CoderPad screen still not taken - reminder 2026-08-21. Open OA."
+        "notes": "Closed out by user 2026-09-14: CoderPad screen never taken (reminder 2026-08-21). No rejection email."
       }
     },
     {
@@ -13700,7 +13700,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "ONLINE ASSESSMENT INVITED 2026-08-26, same day as the application. Not started."
+        "notes": "Online assessment invited 2026-08-26. Completed (confirmed by user 2026-09-14). Awaiting result."
       }
     },
     {
@@ -56820,7 +56820,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Avature. Campus questionnaire due by 2026-09-16. Recruiter contact Corbin Leonard (resume sent by email 2026-09-08)."
+        "notes": "Avature. Campus questionnaire completed (confirmed by user 2026-09-14). Recruiter contact Corbin Leonard (resume sent by email 2026-09-08). Awaiting result."
       }
     },
     {
@@ -56862,7 +56862,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Avature. Campus questionnaire due by 2026-09-16."
+        "notes": "Avature. Campus questionnaire completed (confirmed by user 2026-09-14). Awaiting result."
       }
     },
     {
@@ -56904,7 +56904,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Avature. Campus questionnaire due by 2026-09-16."
+        "notes": "Avature. Campus questionnaire completed (confirmed by user 2026-09-14). Awaiting result."
       }
     },
     {
@@ -57599,7 +57599,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Resume sent to Todd via ZLP, A&M email. Todd said Yashu will schedule a phone conversation; follow up if silent by 2026-09-16."
+        "notes": "Resume sent to Todd via ZLP, A&M email. Follow-up with Todd done (confirmed by user 2026-09-14). Awaiting Yashu to schedule a phone conversation."
       }
     },
     {
