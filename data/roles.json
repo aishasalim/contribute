@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-14T19:25:08Z",
+    "generated": "2026-09-16T22:20:03Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -13361,7 +13361,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Req 130110. Covered by the single IBM recorded competency interview + coding assessment submitted 2026-08-27 under req 128497 \u2014 one assessment serves reqs 128497, 129936 and 130110, so no separate submission is needed. Awaiting result; no action open."
+        "notes": "2026-09-15: passed initial screening (Austin, TX). Interviews expected 60-120 days after assessment; wait for invite."
       }
     },
     {
@@ -15094,7 +15094,7 @@
       "why_by": "auto",
       "dead": true,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-09-02",
         "resume": "ml",
         "sheet_row": null,
@@ -15102,7 +15102,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "confirmation 2026-09-02 (smartrecruiters)"
+        "notes": "Rejected 2026-09-15 (SmartRecruiters, \"position has been filled\")."
       }
     },
     {
@@ -15235,7 +15235,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-09-06",
         "resume": "swe",
         "sheet_row": null,
@@ -15243,7 +15243,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "confirmation 2026-09-06 (icims)"
+        "notes": "Phone interview confirmed for Mon 2026-09-21 3:30-4:00 PM CDT with William Brown (will.brown@schwab.com), 30 min, S.T.A.R. behavioral. needs_human: iCIMS names the role \"2027 Charles Schwab Technology Internship - RBCT SERVICE TECH\", no req number; confirm this is 2026-126228 and not 2026-126226 (AI & CyberSecurity)."
       }
     },
     {
@@ -55202,7 +55202,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-09-07",
         "resume": "hwv",
         "sheet_row": null,
@@ -55210,7 +55210,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "confirmation 2026-09-07 (ultipro)"
+        "notes": "Rejected 2026-09-15 (UltiPro, \"candidates more closely aligned\")."
       }
     },
     {
@@ -58019,7 +58019,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-09-09",
         "resume": "swe",
         "sheet_row": null,
@@ -58027,7 +58027,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Workday (gevernova.wd5); confirmation 2026-09-09"
+        "notes": "Rejected 2026-09-15 (Workday R5049950, \"did not select you\")."
       }
     },
     {
@@ -76795,6 +76795,272 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Confirmation 2026-09-14 (no-reply@robinhood.com). needs_human: email names no role title."
+      }
+    },
+    {
+      "id": "basspro-it-developer-intern-summer-2027",
+      "company": "Bass Pro",
+      "title": "IT Developer Intern Summer 2027",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (basspro), req R267441; confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "workshop-software-engineer-intern-summer-2027",
+      "company": "Workshop",
+      "title": "Software Engineer Intern (Summer 2027)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-15",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Greenhouse; confirmation 2026-09-15"
+      }
+    },
+    {
+      "id": "etched-core-engineering-intern",
+      "company": "Etched",
+      "title": "Core Engineering Intern",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-15",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Ashby; confirmation 2026-09-15"
+      }
+    },
+    {
+      "id": "northatlanticindustries-intern-full-stack-software-engineer-summer-2027",
+      "company": "North Atlantic Industries",
+      "title": "Intern - Full Stack Software Engineer (Summer 2027)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 76,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-15",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Paylocity; confirmation 2026-09-15. Separate from the Fall 2026 row (rejected 2026-09-01)."
+      }
+    },
+    {
+      "id": "figma-software-engineer-intern-summer-2027",
+      "company": "Figma",
+      "title": "Software Engineer Intern (Summer 2027)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-14",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Figma careers (no-reply@figma.com); confirmation 2026-09-14"
+      }
+    },
+    {
+      "id": "acronaviation-software-engineer-intern-phoenix-site",
+      "company": "Acron Aviation",
+      "title": "Software Engineer Intern - Phoenix Site",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-14",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Lever; confirmation 2026-09-14"
       }
     }
   ]
