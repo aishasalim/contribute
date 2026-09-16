@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-16T23:34:13Z",
+    "generated": "2026-09-16T23:58:32Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -77552,6 +77552,51 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Workday (aspentech); confirmation 2026-09-16. needs_human: email names no role; add the title."
+      }
+    },
+    {
+      "id": "covar-2027-internship-role-title-not-recorded",
+      "company": "CoVar",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Greenhouse; confirmation 2026-09-16. needs_human: email names no role; add the title."
       }
     }
   ]
