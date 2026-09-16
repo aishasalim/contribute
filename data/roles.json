@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-16T22:20:03Z",
+    "generated": "2026-09-16T23:34:13Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -77061,6 +77061,497 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Lever; confirmation 2026-09-14"
+      }
+    },
+    {
+      "id": "micron-intern-asic-validation",
+      "company": "Micron Technology",
+      "title": "Intern - ASIC Validation",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [
+        "ASIC"
+      ],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 80
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "hwv",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (micron); confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "micron-intern-ai-hardware-and-memory-systems",
+      "company": "Micron Technology",
+      "title": "Intern - AI Hardware and Memory Systems",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 51
+      },
+      "best_track": "hwv",
+      "also_tracks": [],
+      "tier": "stretch",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "hwv",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (micron); confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "analogdevices-information-technology-intern",
+      "company": "Analog Devices",
+      "title": "Information Technology Intern",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (analogdevices); confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "liveoakbank-summer-2027-intern-ai-enablement-forward-deployed-engineering",
+      "company": "Live Oak Bank",
+      "title": "Summer 2027 Intern: AI Enablement & Forward-Deployed Engineering",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (liveoakbancshares); confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "cesiumastro-summer-2027-embedded-software-engineering-internship",
+      "company": "CesiumAstro",
+      "title": "Summer 2027 - Embedded Software Engineering Internship",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [
+        "Embedded"
+      ],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 76
+      },
+      "best_track": "hwv",
+      "also_tracks": [
+        "swe"
+      ],
+      "tier": "strong",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Lever; confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "cesiumastro-summer-2027-electrical-engineering-internship-hardware",
+      "company": "CesiumAstro",
+      "title": "Summer 2027 - Electrical Engineering Internship, Hardware",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 51
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "hwv",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Lever; confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "apexanalytix-automation-developer-intern-summer-2027",
+      "company": "apexanalytix",
+      "title": "Automation Developer Intern (Summer 2027)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Rippling ATS; confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "relay-relay-launchpad-intern-software-engineer-device-team",
+      "company": "Relay",
+      "title": "Relay Launchpad Intern - Software Engineer (Device Team)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Greenhouse; confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "persona-software-engineer-intern-summer-2027",
+      "company": "Persona",
+      "title": "Software Engineer, Intern (Summer 2027)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Ashby; confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "geckorobotics-full-stack-software-engineering-intern",
+      "company": "Gecko Robotics",
+      "title": "Full Stack Software Engineering Intern",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 76,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Ashby; confirmation 2026-09-16"
+      }
+    },
+    {
+      "id": "aspentech-2027-internship-role-title-not-recorded",
+      "company": "AspenTech",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-16",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-16",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (aspentech); confirmation 2026-09-16. needs_human: email names no role; add the title."
       }
     }
   ]
