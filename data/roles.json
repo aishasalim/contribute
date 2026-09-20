@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-17T22:36:54Z",
+    "generated": "2026-09-20T19:41:56Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -56854,7 +56854,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "in_progress",
+        "status": "rejected",
         "applied": "2026-09-08",
         "resume": null,
         "sheet_row": null,
@@ -56862,7 +56862,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Avature. Campus questionnaire completed (confirmed by user 2026-09-14). Awaiting result."
+        "notes": "Avature. Campus questionnaire completed (confirmed by user 2026-09-14). Email 2026-09-19: job 294896 is filled, screening complete."
       }
     },
     {
@@ -77640,6 +77640,186 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "SES-imagotag recruiting portal (notification@recruiting.ses-imagotag.com); confirmation 2026-09-17."
+      }
+    },
+    {
+      "id": "brownbrothersharriman-2027-internal-audit-information-technology-cybersecurity-summer-inte",
+      "company": "Brown Brothers Harriman",
+      "title": "2027 Internal Audit - Information Technology & Cybersecurity Summer Internship",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-20",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-20",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (bbh.wd5.myworkdayjobs.com). Req 72899. Confirmation email 2026-09-20."
+      }
+    },
+    {
+      "id": "microsoft-hardware-engineering-internship-6-month-program-job-200057051",
+      "company": "Microsoft",
+      "title": "Hardware Engineering Internship (6-Month Program) (Job 200057051)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-20",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 76
+      },
+      "best_track": "hwv",
+      "also_tracks": [
+        "swe"
+      ],
+      "tier": "strong",
+      "why": "The title reads as HW Verif; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-20",
+        "resume": "hwv",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Microsoft Careers. Job number 200057051. Confirmation email 2026-09-20."
+      }
+    },
+    {
+      "id": "lazard-2027-software-engineer-summer-internship",
+      "company": "Lazard",
+      "title": "2027 Software Engineer Summer Internship",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-20",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-20",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Lazard OneHR ATS. Confirmation email 2026-09-20."
+      }
+    },
+    {
+      "id": "entergy-student-intern-ai-summer-2027",
+      "company": "Entergy",
+      "title": "Student Intern AI Summer 2027",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-20",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "rejected",
+        "applied": "2026-09-18",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "SuccessFactors. Requisition #124050. No confirmation email on file; rejection email 2026-09-18 (\"not selected to move forward\"). needs_human: confirm the applied date."
       }
     }
   ]
