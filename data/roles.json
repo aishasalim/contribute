@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-21T15:22:04Z",
+    "generated": "2026-09-21T15:49:54Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -62948,7 +62948,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "in_progress",
         "applied": "2026-09-11",
         "resume": null,
         "sheet_row": null,
@@ -62956,7 +62956,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "ATS: Workday (sands@myworkday.com). Confirmation 2026-09-11. Recruiter invited application after TAMU engineering career fair."
+        "notes": "HackerRank \"Sands Software Engineer Intern Hiring Test\" invite 2026-09-21; 60 min; complete within 5 calendar days (by 2026-09-26)."
       }
     },
     {
@@ -70753,15 +70753,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "applied",
+        "applied": "2026-09-21",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Workday, JR112163. Minneapolis, MN."
       },
       "snippet": "Our vision is to transform how the world uses information to enrich life for all . Micron Technology is a world leader in innovating memory and storage solutions that accelerate the transformation of information into intelligence, inspiring the world to learn, communicate and adv"
     },
@@ -72614,15 +72614,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
+        "status": "applied",
+        "applied": "2026-09-21",
         "resume": null,
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Workday, JR-119335. Remote - Texas."
       },
       "snippet": "Sony AI America, a branch of Sony AI, is a remotely distributed organization spread across the U.S. and Canada. Sony AI is Sony\u2019s new research organization pursuing the mission to use AI to unleash human creativity. Sony AI works closely with Sony\u2019s other business units, includin"
     },
@@ -90899,6 +90899,51 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Confirmation from recruiting@jobalerts.itw.com."
+      }
+    },
+    {
+      "id": "togetherai-2027-internship-role-title-not-recorded",
+      "company": "Together AI",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-21",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-21",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "needs_human: Greenhouse confirmation names no role. Board has two Together AI roles: Software Engineer Intern (Summer 2027) and Research Intern, Inference (Summer 2027). Pick one and merge."
       }
     }
   ]
