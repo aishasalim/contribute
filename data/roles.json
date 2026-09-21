@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-21T16:00:05Z",
+    "generated": "2026-09-21T16:06:48Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -77252,15 +77252,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-09-21",
+        "resume": "hwv",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Ashby. Pittsburgh, PA."
       }
     },
     {
@@ -89030,15 +89030,15 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "none",
-        "applied": null,
-        "resume": null,
+        "status": "applied",
+        "applied": "2026-09-21",
+        "resume": "swe",
         "sheet_row": null,
         "recruiter": "",
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": ""
+        "notes": "Oracle HCM, job 260839. Fort Worth, TX."
       }
     },
     {
