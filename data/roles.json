@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-21T16:06:48Z",
+    "generated": "2026-09-21T18:51:22Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -10424,7 +10424,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Applied 2026-08-15. HackerRank OA completed 2026-08-24; awaiting result."
+        "notes": "Applied 2026-08-15. HackerRank OA completed 2026-08-24; awaiting result. Code for Good Hackathon posting. Update 2026-09-21: still under review; Brooklyn event Oct 16-17 decisions in 1-2 weeks, Columbus event Nov 6-7 decisions in October."
       }
     },
     {
@@ -46519,7 +46519,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Assessment required (email 2026-09-21)."
+        "notes": "Assessment required (email 2026-09-21). Assessment PASSED 2026-09-21; Verizon still reviewing applications."
       }
     },
     {
@@ -90944,6 +90944,94 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "needs_human: Greenhouse confirmation names no role. Board has two Together AI roles: Software Engineer Intern (Summer 2027) and Research Intern, Inference (Summer 2027). Pick one and merge."
+      }
+    },
+    {
+      "id": "upbound-software-engineer-intern",
+      "company": "Upbound",
+      "title": "Software Engineer Intern",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-21",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-21",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (upbound@myworkday.com; Upbound/RAC Recruiting). Confirmation email 2026-09-21."
+      }
+    },
+    {
+      "id": "fidelityinvestments-summer-2027-undergraduate-internship-software-2134524",
+      "company": "Fidelity Investments",
+      "title": "Summer 2027 Undergraduate Internship - Software (2134524)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-21",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-21",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (fmr, wd1.myworkdaysite.com/recruiting/fmr/FidelityCareers). Job 2134524. Confirmation email 2026-09-21."
       }
     }
   ]
