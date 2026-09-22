@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-22T01:42:54Z",
+    "generated": "2026-09-22T15:35:39Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -11591,7 +11591,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Phone interview with William Brown (talent advisor) done 2026-09-21; advanced same day. FINAL ROUND: Fri 2026-09-25 10:30 AM CT, Microsoft Teams, with Prudhvi Garikipati (Sr. Manager - Software Development & Engineering Lead). Teams link and dial-in in email \"Final Round Interview | Charles Schwab Technology Internship\" from will.brown@schwab.com. iCIMS names the role \"2027 Charles Schwab Technology Internship - RBCT SERVICE TECH\"; Schwab confirmed req 2026-126228 applied 2026-09-06."
+        "notes": "Final round scheduled Friday 2026-09-25, 10:30 AM CT, Microsoft Teams, with Prudhvi Garikipati (Sr. Manager, Software Development & Engineering Lead). Coordinator will.brown@schwab.com. Phone screen was 2026-09-21."
       }
     },
     {
@@ -46519,7 +46519,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Assessment required (email 2026-09-21). Assessment PASSED 2026-09-21; Verizon still reviewing applications."
+        "notes": "Passed the assessment 2026-09-21. Verizon still reviewing applications."
       }
     },
     {
@@ -62956,7 +62956,7 @@
         "network": "Texas A&M Engineering career fair, Sept 2026",
         "thank_you": false,
         "follow_up": false,
-        "notes": "HackerRank \"Sands Software Engineer Intern Hiring Test\" invite 2026-09-21; 60 min; complete within 5 calendar days (by 2026-09-26). Onsite Plano TX tech hub, ~10 weeks June-Aug. Workday R26_0204; heard-about: Campus > University."
+        "notes": "HackerRank \"Sands Software Engineer Intern Hiring Test\" invite sent 2026-09-21 by Danielle.Buckner@sands.com. Not yet completed \u2014 open action."
       }
     },
     {
@@ -91165,6 +91165,321 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Confirmation from no-reply@parkplacetech.com 2026-09-21."
+      }
+    },
+    {
+      "id": "rentvision-software-engineering-intern",
+      "company": "RentVision",
+      "title": "Software Engineering Intern",
+      "location": "Lincoln, NE (on-site)",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "https://apply.workable.com/rentvision/",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-22",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": []
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-22",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workable. Term May 17 - Aug 13, 2027. Confirmation 2026-09-22 from noreply@candidates.workablemail.com + aj.carlson@rentvision.com \"Next Steps\"."
+      }
+    },
+    {
+      "id": "waymo-2027-summer-intern-bs-ms-embedded-software-engineer",
+      "company": "Waymo",
+      "title": "2027 Summer Intern, BS/MS, Embedded, Software Engineer",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-22",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [
+        "Embedded"
+      ],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 51
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-22",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Greenhouse. Confirmation 2026-09-22."
+      }
+    },
+    {
+      "id": "atlassian-machine-learning-intern-2027-summer-us",
+      "company": "Atlassian",
+      "title": "Machine Learning Intern, 2027 Summer US",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-22",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 76,
+        "hwv": 27
+      },
+      "best_track": "ml",
+      "also_tracks": [],
+      "tier": "strong",
+      "why": "The title reads as ML; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-22",
+        "resume": "ml",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "iCIMS. \"Thanks for Completing Your Application\" 2026-09-22; team still reviewing."
+      }
+    },
+    {
+      "id": "jpmorganchase-code-for-good-hackathon-software-engineer-program-2027-summer-internship-uni",
+      "company": "JPMorganChase",
+      "title": "Code for Good Hackathon - Software Engineer Program - 2027 Summer Internship (United States)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-22",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-21",
+        "resume": "swe",
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Confirmation 2026-09-21 from sep.campus.sourcing@jpmchase.com."
+      }
+    },
+    {
+      "id": "bracco-2027-internship-role-title-not-recorded",
+      "company": "Bracco",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-22",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-22",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "needs_human: Workday confirmation names no role. Board lists two Bracco roles in Eden Prairie MN \u2014 Software Engineering Intern (JR100328) and Software Engineering Intern/Co-op R&D Sustaining (JR100327). Confirm which one."
+      }
+    },
+    {
+      "id": "aerovironment-2027-internship-role-title-not-recorded",
+      "company": "AeroVironment",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-22",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-22",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "needs_human: Workday confirmation addressed \"Dear Candidate\" and names no role. Board lists 9 AeroVironment intern roles. Confirm which one."
+      }
+    },
+    {
+      "id": "botauto-2027-internship-role-title-not-recorded",
+      "company": "Bot Auto",
+      "title": "2027 internship (role title not recorded)",
+      "location": "",
+      "workmode": "unspecified",
+      "season": null,
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-22",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-22",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "needs_human: Greenhouse confirmation names no role. Only Bot Auto row on the board is \"Intern, Software Engineer AI Agents (Fall/Winter 2026)\" \u2014 a Fall/Winter term, not Summer 2027. Confirm the term."
       }
     }
   ]
