@@ -8,7 +8,7 @@
       "winter-2027",
       "spring-2027"
     ],
-    "generated": "2026-09-21T19:54:13Z",
+    "generated": "2026-09-22T01:42:54Z",
     "updated_by": "mcp",
     "schema": 1,
     "sheet": "https://docs.google.com/spreadsheets/d/1afc67q-MdqMuV5lhJqVRs1X0EbclHwM9iTT29g5-hro/edit",
@@ -11591,7 +11591,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Phone interview confirmed for Mon 2026-09-21 3:30-4:00 PM CDT with William Brown (will.brown@schwab.com), 30 min, S.T.A.R. behavioral. needs_human: iCIMS names the role \"2027 Charles Schwab Technology Internship - RBCT SERVICE TECH\", no req number; confirm this is 2026-126228 and not 2026-126226 (AI & CyberSecurity)."
+        "notes": "Phone interview with William Brown (talent advisor) done 2026-09-21; advanced same day. FINAL ROUND: Fri 2026-09-25 10:30 AM CT, Microsoft Teams, with Prudhvi Garikipati (Sr. Manager - Software Development & Engineering Lead). Teams link and dial-in in email \"Final Round Interview | Charles Schwab Technology Internship\" from will.brown@schwab.com. iCIMS names the role \"2027 Charles Schwab Technology Internship - RBCT SERVICE TECH\"; Schwab confirmed req 2026-126228 applied 2026-09-06."
       }
     },
     {
@@ -65812,7 +65812,7 @@
       "why_by": "auto",
       "dead": false,
       "application": {
-        "status": "applied",
+        "status": "rejected",
         "applied": "2026-09-15",
         "resume": "swe",
         "sheet_row": null,
@@ -65820,7 +65820,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "Greenhouse; confirmation 2026-09-15"
+        "notes": "Applied 2026-09-15 (Greenhouse). Rejected 2026-09-21 (\"decided to move forward with other candidates\")."
       }
     },
     {
@@ -66789,7 +66789,7 @@
         "network": "",
         "thank_you": false,
         "follow_up": false,
-        "notes": "needs_human: confirmation email (Greenhouse) does not name the role; add title. ATS: Greenhouse."
+        "notes": "ATS: Greenhouse. Two confirmation emails: 2026-09-21 10:15 CDT and 2026-09-21 19:32 CDT. needs_human: confirmations name no role; confirm whether this is one or two applications (board lists SingleStore Software Engineer Intern) and add the title(s)."
       }
     },
     {
@@ -91075,6 +91075,96 @@
         "thank_you": false,
         "follow_up": false,
         "notes": "Confirmation from notification@wellmark.com 2026-09-21. Distinct from the two Wellmark SmartRecruiters rows already on the board (SWE Intern; SWE Internship - UX Team)."
+      }
+    },
+    {
+      "id": "mastercard-product-management-intern-summer-2027-united-states",
+      "company": "Mastercard",
+      "title": "Product Management Intern, Summer 2027 - United States",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-21",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 27,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "none",
+      "why": "It is an internship or co-op posting; no sponsorship or citizenship bar is listed.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-21",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Workday (mastercard). Confirmation email 2026-09-21 (19:21 CDT). Separate from the SWE Intern row applied 2026-08-24."
+      }
+    },
+    {
+      "id": "parkplace-artificial-intelligence-engineering-intern-summer-2027",
+      "company": "Park Place Technologies",
+      "title": "Artificial Intelligence Engineering Intern - Summer 2027",
+      "location": "",
+      "workmode": "unspecified",
+      "season": "summer-2027",
+      "url": "",
+      "source": "email",
+      "posted": null,
+      "found": "2026-09-21",
+      "description": "",
+      "paid": null,
+      "pay": "",
+      "eligibility": {
+        "sponsorship": null,
+        "citizenship": null,
+        "class_year": [
+          "2027"
+        ]
+      },
+      "tags": [],
+      "tracks": {
+        "swe": 72,
+        "ml": 27,
+        "hwv": 27
+      },
+      "best_track": "swe",
+      "also_tracks": [],
+      "tier": "fit",
+      "why": "The title reads as SWE; it is an internship or co-op posting.",
+      "why_by": "auto",
+      "dead": false,
+      "application": {
+        "status": "applied",
+        "applied": "2026-09-21",
+        "resume": null,
+        "sheet_row": null,
+        "recruiter": "",
+        "network": "",
+        "thank_you": false,
+        "follow_up": false,
+        "notes": "Confirmation from no-reply@parkplacetech.com 2026-09-21."
       }
     }
   ]
